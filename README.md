@@ -55,7 +55,7 @@ python3 scripts/route-development.py --request '{"work_type":"ui","new_flow":tru
 | `harness/evidence-memory/` | 프로젝트·주제·목적별 근거 저장과 어휘 검색 |
 | `harness/codex-broker/` | 별도 Codex 컨테이너·주제별 세션 재개·요청 멱등성 |
 | `harness/preservation/` | 소스·실행 이미지 태그·해시·실패 상태 보존 |
-| `harness/capacity-retry/` | 구조화된 용량 오류의 60초 재시도 정책. 전달 어댑터 제약으로 자동 활성화되지 않음 |
+| `harness/capacity-retry/` | 구조화된 용량 오류 후60초 native Orca 예약 재개. 개발 환경에서 활성·54 tests; Docker는 관찰 전용이며 clone만으로 활성화되지 않음 |
 | `knowledge/` | 제품별 assistant 수리 사례. 사용자 채택 기록과 구분 |
 
 디자인 Hook은 프로젝트의 `DESIGN.md`와 유효한 계약을 먼저 준비한 뒤 설치합니다. [설정 안내](docs/hooks-and-verification.md)를 따릅니다.

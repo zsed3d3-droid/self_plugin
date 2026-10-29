@@ -1,24 +1,76 @@
 {
   "date": "2026-10-29",
+  "native_automatic_retry_enabled": true,
+  "native_delivery_mode": "fresh_best_effort_preflight",
   "diagnostic_observer_active": true,
-  "automatic_retry_enabled": false,
-  "delivery_status": "blocked_by_current_host_integration",
-  "applied_component": "read_only_docker_observer",
-  "policy_tests": {"passed": 31, "failed": 0, "clock": "injected", "real_wait_seconds": 0},
-  "host_versions": {"orca": "1.4.230", "codex_cli": "0.165.0"},
-  "live_validation": {
-    "observer_health": "healthy",
-    "network_mode": "none",
-    "active_work_detected": true,
-    "real_rollout_append_followed": true,
-    "pending_retries_after_startup_baseline": 0,
-    "prompts_sent": 0,
-    "credentials_mounted": false,
-    "host_daemon_created": false,
-    "new_login_requested": false,
-    "live_failure_injected": false,
-    "docker_mac_unix_socket_mount": "rejected_bind_source_path_does_not_exist",
-    "docker_to_host_tcp_6768": "reachable_but_separate_pairing_and_e2ee_required"
+  "docker_observer_automatic_retry_enabled": false,
+  "policy_and_adapter_tests": {
+    "passed": 54,
+    "failed": 0,
+    "clock": "injected",
+    "real_delay_waits": 0,
+    "delivery_integration": "private_fake_cli"
   },
-  "public_package_excludes": ["scope.json", ".env", "state/", "local/", "*.local.json", "raw_rollouts", "terminal_output", "account_credentials"]
+  "host_versions": {
+    "orca": "1.4.230",
+    "codex_cli": "0.165.0"
+  },
+  "native_integration": {
+    "isolated_scheduled_marker": "passed_exit_1_skipped_precheck_no_agent_or_terminal",
+    "marker_automation_disabled_after_validation": true,
+    "live_native_schedule": "enabled_every_minute",
+    "precheck_timeout_seconds": 120,
+    "wrapper_always_nonzero": true,
+    "scheduled_runs_after_final_adapter_change_verified": 2,
+    "scheduled_run_results": [
+      {
+        "status": "skipped_precheck",
+        "trigger": "scheduled",
+        "exit_code": 1,
+        "agent_created": false,
+        "dispatch_started": false,
+        "stderr_present": false
+      },
+      {
+        "status": "skipped_precheck",
+        "trigger": "scheduled",
+        "exit_code": 1,
+        "agent_created": false,
+        "dispatch_started": false,
+        "stderr_present": false
+      }
+    ],
+    "current_scope_check": "active_work_no_delivery",
+    "pending_retries": 0,
+    "fresh_prompt_attempts": 0,
+    "live_prompts_sent": 0,
+    "root_failure_injected": false,
+    "deadline": "provider_event_timestamp_plus_60_seconds",
+    "real_capacity_recovery_forced_or_observed": false,
+    "composer_guard": "native_draft_metadata_plus_strict_visible_input_check",
+    "placeholder_guard": "fresh_current_cli_status_version_must_equal_1.4.230",
+    "atomic_complete_prompt_guard": false,
+    "timing_and_read_write_limit": "scheduler_and_native_parser_dependent_best_effort",
+    "manual_run": "forbidden_operator_action_bypasses_precheck"
+  },
+  "boundaries": {
+    "new_host_daemon_created": false,
+    "new_cron_or_launchd_created": false,
+    "credentials_copied_or_mounted": false,
+    "new_login_requested": false,
+    "provider_model_or_session_changed": false,
+    "mac_socket_container_probe": "rejected",
+    "native_precheck_uses_existing_host_app": true
+  },
+  "public_package_excludes": [
+    "scope.json",
+    ".env",
+    "state/",
+    "local/",
+    "*.local.json",
+    "raw_rollouts",
+    "terminal_output",
+    "account_credentials"
+  ],
+  "native_adapter_sha256": "b3913412482454957403f7940fcc6627cd8e98e2d2db06271ab689ece5c2a5fa"
 }

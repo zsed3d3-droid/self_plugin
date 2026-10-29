@@ -8,7 +8,7 @@
 | DESIGN Hook | 초기35, 0.5.0에서 새 가이드 설치·변조 검사를 포함한36 tests 통과 |
 | UX 저자 판단 선택기 | 14 tests 통과 |
 | 결과물 보존 도구 | 24 tests 통과. synthetic 파일·가짜 Docker 어댑터 |
-| Capacity 상태 머신 | 31 tests 통과. fake clock·scope·중복·사용자 우선·전달 불가 경계 |
+| Capacity 정책·native 어댑터 | 54 tests 통과. fake clock·provider 이벤트·비공개 fake CLI로 deadline·scope·draft·중복·모호한 receipt 경계 확인 |
 | 기존 LBS / Plain Writing / Unbox 패키지 | 각각 7 / 2 / 2 tests 통과 |
 | 프로젝트 설치 smoke | 유효한 템플릿 계약 로드·9개 wrapper·양쪽 호스트 PostToolUse/Stop 각1개 생성 확인 |
 | Feedback / Memory 재사용 서비스 | 두 Docker 이미지 실제 빌드·기동·health 확인. 10 tests 통과 |
@@ -22,7 +22,7 @@
 
 - **Native 디자인 Hook 자동 발화:** 프로젝트 설정은 생성하지만 호스트 신뢰는 자동 승인하지 않습니다. 위 smoke는 설정 생성 확인입니다.
 - **실제 LLM 시각 검수:** 전용 Codex Broker 로그인을 건너뛴 상태입니다. API/가짜 실행기 검증과 실제 모델 추론은 다릅니다.
-- **용량 오류 자동 재개:** 개발 환경의 Docker observer는 실제 가동·healthy·현재 작업 감지를 확인했습니다. 하지만 macOS Orca의 같은 세션으로 전달할 경로가 없어 자동 retry는 비활성입니다. 과거 오류 재생과 prompt 전송은0건입니다. 자세한 범위는 [VALIDATION](../harness/capacity-retry/VALIDATION.json)에 있습니다.
+- **실제 용량 오류 복구:** 개발 환경에서는 기존 Orca의 1분 예약 shell precheck로 native 자동 재개를 활성화했습니다. Docker observer는 계속 관찰 전용이며 전달은 비활성입니다. 최종 어댑터 변경 후 예약 실행2회가 `skipped_precheck`로 끝났고 agent 생성·dispatch·현재 root prompt 전송은0건입니다. 실제 capacity 오류를 주입하거나 복구를 관찰하지 않았으므로 실오류 복구 성공은 미검증입니다. Orca1.4.230·Codex CLI0.165.0에서 확인한 결과이며 clone에 native 설정이나 개인 scope를 복제하지 않습니다. 새 host daemon·cron·launchd는 만들지 않았습니다. 자세한 범위는 [VALIDATION](../harness/capacity-retry/VALIDATION.json)에 있습니다.
 - **Broker 독립 배포본:** 원래 구현 소스·테스트를 유지한 Compose 패키지입니다. 이 공개 패키징에서 추가 Broker 컨테이너 로그인·실제 모델 호출을 하지 않았습니다. 새 Compose는 임시 자리표시자 환경으로 구문 검사를 통과했습니다. 실제 인증은 생성하거나 연결하지 않았습니다.
 - **의미 검색·선호 자동 학습:** Memory는 PostgreSQL 어휘 검색입니다. 51개 공개 사례는 assistant 경험 요약이며 사용자 채택이 아닙니다.
 - **실제 제품 백업:** 제품과 DB는 이 저장소에 포함하지 않습니다. 소스 보존 도구의 tests가 제품 전체 복원 검증을 의미하지 않습니다.

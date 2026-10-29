@@ -1,0 +1,15 @@
+{
+  "thread_id": "YOUR_EXISTING_THREAD_ID",
+  "terminal_handle": "YOUR_EXISTING_TERMINAL_HANDLE",
+  "terminal_incarnation": "YOUR_EXISTING_PROCESS_INCARNATION",
+  "account_scope": "YOUR_LOCAL_ACCOUNT_SCOPE_HASH",
+  "model_id": "YOUR_EXISTING_MODEL_ID",
+  "orca_cli": "/ABSOLUTE/PATH/TO/THE_RESOLVED_ORCA_EXECUTABLE",
+  "rollout_path": "/ABSOLUTE/PATH/TO/THE_SELECTED_ROLLOUT.jsonl",
+  "workspace_path": "/ABSOLUTE/PATH/TO/THE_EXISTING_WORKSPACE",
+  "pty_id": "YOUR_EXISTING_PTY_ID",
+  "account_id": "YOUR_EXISTING_PANE_ACCOUNT_ID",
+  "pane_accounts_path": "/YOUR_ORCA_USER_DATA/codex-pane-accounts.json",
+  "native_state_dir": "/PRIVATE/PATH/TO/CAPACITY_RETRY_STATE",
+  "delivery_enabled": false
+}

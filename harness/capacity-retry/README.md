@@ -1,46 +1,43 @@
-# Capacity retry policy and local observer
+# Capacity retry policy and native Orca adapter
 
-**Diagnostic observer active: true. Automatic retry enabled: false.** These are the verified states in the development workspace; installing this source elsewhere does not start anything automatically. The policy and read-only Docker observer are implemented and tested. The current macOS Orca integration cannot deliver a retry under the required container-only service boundary. This package must not be described as a working recovery hook.
+**Native capacity retry schedule enabled: true, with best-effort checks. Docker diagnostic observer active: true, with delivery disabled.** These are the development workspace's states; copying this package does not enable anything elsewhere. A real capacity failure was not forced, and no live test prompt was sent to the active agent.
 
-The desired behavior is one retry 60 seconds after a new provider capacity failure, using the same terminal process, account, model, and thread. A new capacity failure may schedule another 60-second wait. A user message, stop, active task, changed scope, quota error, authentication error, or billing error cancels the pending retry. Quoted error text is never a trigger.
+`native_precheck.py` runs as an existing Orca scheduled **shell precheck**, before any model call. Every invocation and its shell wrapper exit nonzero, so the automation's required placeholder prompt is skipped. There is no new host daemon, cron service, login, credential copy, provider/model change, or replacement session.
 
-## What is implemented
+## Recovery behavior
 
-- `retry_state.py` admits only the observed structured Codex `event_msg` → `task_complete` → `error` with `codex_error_info: "server_overloaded"` and the exact provider capacity message. It requires a matching active turn and assigns a stable per-event identity.
-- `due()` uses an injected clock and emits at most one delivery intent per event. It requires exact scope, latest error, and an atomic host sendable-status guard. It fails closed when the delivery transport is unavailable. It never changes model, signs in, copies credentials, starts a session, or guesses whether an ambiguous send failed.
-- `observer.py` folds only the selected thread's history to identify current work, then baselines at EOF. Historical capacity failures do not schedule retries. State is small JSON plus a transition log; transcript text and credentials are not logged.
-- The Docker observer has no network, ports, credentials, host binary execution, or host service. It records a future capacity event and its due time, then records why delivery is blocked. It does **not** send a prompt.
+- Only a new provider-owned Codex `event_msg/task_complete/error` with `codex_error_info: "server_overloaded"` and the exact capacity message can arm recovery. User quotes, assistant/tool output, authentication, quota, and billing failures cannot.
+- The deadline is **provider event timestamp + 60 seconds**. A one-minute scheduled tick waits only the remaining 0–60 seconds. Scheduler delay, app sleep, and availability can make recovery later; it does not wait another full minute after first noticing an old error.
+- Installation baselines at EOF after identifying current work. Historical capacity errors never arm a retry. An exclusive state lock, per-event identity, and persisted delivery attempt prevent duplicate fresh sends.
+- New user messages, stop/pause events, active work, changed process/account/thread/model evidence, or a non-capacity result cancel pending recovery. The selected existing terminal/process, pane account selection, scoped rollout identity/model, idle condition, and current native capacity notice are checked again before delivery.
+- Unsent drafts have priority. Orca screen reads can extract a draft into the separate `draft` field and replace its visible row with `›`; **any `draft` field refuses delivery**. Other nonempty composer text also refuses delivery. Source-confirmed stock placeholders without draft metadata are accepted only after a fresh supported `orca status` verifies the currently audited **1.4.230** build. A host upgrade cannot retain that assumption from a saved scope value.
+- The complete prompt check/write is not atomic. The adapter uses fresh best-effort reads and inherits Orca's native composer parsing; an unrecognized layout is refused. It does not claim a transactional thread/input fence.
+- A returned ambiguous request ID is reconciled once with the **same** ID and exact payload, after fresh user/activity/scope/composer checks. Silence without an ID or a process crash after the saved attempt never authorizes a second fresh send. `input_accepted` alone is not claimed as `turn_started`.
 
-## Verified host boundary
+## Validation
 
-On Orca 1.4.230 / Codex CLI 0.165.0, the native capacity notice tracker marks a newly rendered TUI notice as failure, but exposes no capacity retry setting. Scheduled automations run prompts and may create a fresh session when a reused terminal disappears, so they do not satisfy this policy.
+The policy and native adapter currently pass **54 tests** using fake time, fake provider events, and a private fake CLI executable. Coverage includes timestamp deadlines, first-send user/stop races before receipt reconciliation, multiline/placeholder-shaped real drafts, current host-version changes, ambiguous receipts, crash recovery, locks, duplicates, and consecutive fresh failures.
 
-Orca's local CLI uses a macOS UNIX socket and its local runtime token. A Docker bind mount of that actual socket was rejected by Docker Desktop (`bind source path does not exist: /socket_mnt/...`). Container-to-host TCP port 6768 is reachable, but Orca's WebSocket transport requires a separately paired device token and E2EE handshake. The local UNIX token does not authorize that protocol. No pairing credentials or OpenAI credentials were read/copied, no new login was requested, and no additional host daemon was created.
-
-The existing Codex lifecycle hooks do not establish that a transport failure invokes a hook before a model turn begins. A project `PostToolUse` hook cannot recover a failure at that boundary.
-
-## Run tests
+A harmless **scheduled** precheck ran in an isolated dummy workspace. It wrote a marker, exited 1, recorded `skipped_precheck`, and created no agent or terminal. The actual scoped adapter's read-only check reported active work with no pending retry, delivery, or prompt sent. See `VALIDATION.json` for the current integration summary.
 
 ```sh
 python3 -m unittest discover -s harness/capacity-retry -p 'test_*.py' -v
 ```
 
-Tests use fake time and fake host proofs. They do not wait 60 real seconds or inject errors into a live agent.
+## Native installation and operation
 
-## Apply the diagnostic observer locally
+1. Follow the installed `orca-cli` skill: resolve its executable once and read its version-matched `skills get orca-cli` guide. The precheck option is documented by `automations create --help` in the tested build.
+2. Copy `native-scope.example.json` to ignored `native-scope.local.json`. Bind it to the existing terminal/process/account/thread/model, exact rollout file, account-selection metadata, and a private state directory. Never copy authentication files. Confirm the values against public terminal metadata and the selected rollout's metadata.
+3. Run `native_precheck.py --scope native-scope.local.json --initialize` to baseline, then `--check-only`. Both intentionally exit **1**. Inspect the private native `status.json`; initialization must not schedule old errors.
+4. Create an existing-workspace automation **disabled** with a one-minute trigger, provider `codex`, an inert placeholder prompt, and precheck `<absolute-python> <absolute-native_precheck.py> --scope <absolute-private-scope>; exit 1`. Use a 120-second precheck timeout. After validation, enable it with `automations edit <id> --enabled`.
+5. Inspect `automations runs --id <id> --json` and the private native state. Scheduled runs should end in `skipped_precheck`; delivery truth is in the native state and prompt receipt, not that automation status.
 
-This installs observation only. It does not enable automatic recovery.
+**Never invoke `automations run` or the automation's manual Run button.** Orca's manual path bypasses precheck and can launch its required placeholder prompt. This adapter is for scheduled execution only. Disable it with `automations edit <id> --disabled`; keep its state and run history.
 
-1. Follow the installed `orca-cli` skill: resolve its executable once, read `skills get orca-cli`, then obtain the existing terminal handle and process incarnation with `terminal show --json`. Never launch a replacement agent.
-2. Copy `scope.example.json` to ignored `scope.json` and fill the exact existing thread/terminal/account scope. Use only the selected thread's rollout file; never mount the whole Codex home or authentication directory.
-3. Create ignored `.env` containing `CAPACITY_ROLLOUT="/absolute/path/to/the-selected-rollout.jsonl"`, `CAPACITY_UID=<your uid>`, and `CAPACITY_GID=<your gid>` on separate lines. Obtain the numeric IDs with `id -u` and `id -g`. This lets the container read the selected private file as its existing owner.
-4. Create `state/` writable by that user, with mode 0700. Run `docker compose up -d --build` from this directory.
-5. Inspect `state/status.json`. It must say `mode: "observe_only"` and `automatic_retry_enabled: false`. `docker compose stop` stops observation without removing data.
+The existing Docker observer is separate: `observer.py` has no network, ports, credentials, host binary execution, or delivery transport. Its `mode: "observe_only"` and `automatic_retry_enabled: false` remain correct. `compose.yaml` installs that diagnostic, not the native adapter.
 
-Do not use `rm`, volume removal, or Docker pruning to clean up this package. Keep local scope, `.env`, state, raw transcripts, backup copies, and local integration evidence out of public repositories.
+## Local data and preservation
 
-## What is still required for automatic recovery
+Private scope/configuration, exact thread/terminal/account identifiers, transcript pointers, status, logs, and snapshots stay in ignored `.env`, `scope.json`, `state/`, `local/`, and `*.local.json`. Do not publish them or raw rollouts/terminal output. `.dockerignore` excludes them from image build context. Sources and state were preserved before native adapter changes; the earlier Docker image was retained under a preservation tag.
 
-A supported host integration must make the existing terminal's delivery interface available to the container, or Orca must expose a native capacity retry hook. It must prove the same thread/account/process/model and latest failure, atomically refuse active work, bind one durable request ID, and reobserve user stop/new input immediately before submission. The policy's delivery intent is not proof of submission. A real integration must verify the receipt's `turn_started` without resending on silence.
-
-No live capacity failure was forced, and no live prompt was sent during validation.
+The initial Docker-to-macOS UNIX socket mount was rejected. Orca's WebSocket requires separate pairing/E2EE. The native scheduled precheck runs through the existing host app and removes that transport obstacle without copying credentials or starting a host service.

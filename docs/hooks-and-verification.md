@@ -15,3 +15,11 @@ Codex Broker의 실제 시각 검수는 별도 로그인 전에는 사용할 수
 실제 런타임·설정 지원 여부는 설치한 Codex/Claude 버전과 프로젝트 신뢰에 따라 확인해야 합니다. provider 용량 오류는 모델 응답 전 발생할 수 있으므로 프로젝트 PostToolUse만으로 해결할 수 없습니다. `capacity-retry`의 정책 구현과 실제 전달 활성화 상태를 구분합니다.
 
 0.5.0부터 원천 적용 계약을 네 번째 가이드로 설치하고, 독립 검수 입력과 pipeline fingerprint에 그 해시를 연결합니다. 로컬 관리 가이드가 수정되면 설치기는 설정을 바꾸지 않고 거절합니다. 새 가이드를 연결한 수동·테스트 검증이 호스트 자동 Hook 발화를 의미하지 않습니다.
+
+## Capacity native 예약 재개
+
+`harness/capacity-retry/native_precheck.py`는 프로젝트 디자인 Hook과 별개다. 개발 환경에서는 기존 Orca1.4.230의 예약 shell precheck로 활성화했지만 공개 패키지 복사만으로 다른 환경에 설치되지는 않는다. `native-scope.example.json`은 실제 thread·terminal·account·rollout·개인 state 경로가 없는 자리표시자다. 실제 scope·상태·인증은 배포하지 않는다. Docker observer의 전달 비활성 상태도 유지한다.
+
+provider가 쓴 구조화된 `server_overloaded` 이벤트와 정확한 용량 오류 문구만 새 재시도를 시작한다. 기준은 오류 발생시각+60초이며 예약 지연·앱 sleep 때문에 더 늦을 수 있다. 사용자 지시·멈춤·진행 중 작업·draft가 우선하고, 보내기 직전 scope·화면을 다시 확인하고, 기본 placeholder를 허용할 때 현재 host 버전도1.4.230인지 재확인한다. 읽기와 전송 전체는 atomic하지 않은 best-effort이며, 불명 전송을 새 요청으로 반복하지 않는다.
+
+54개 검사는 fake clock·fake provider 이벤트·비공개 fake CLI 기반이다. 실제 예약 precheck 실행과 현재 작업에서0건 전송을 확인했지만, 실 capacity 장애를 주입하거나 복구 성공을 관찰하지는 않았다. scheduled 전용 wrapper는 항상 nonzero로 끝나 placeholder prompt를 건너뛴다. Orca의 수동 Run은 precheck를 우회하므로 사용하지 않는다. 버전별 설치·중지 방법과 검증 경계는 [native 안내](../harness/capacity-retry/README.md)를 따른다.

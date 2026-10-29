@@ -713,6 +713,30 @@
     "research/ux-author-library/group-a.json": {
       "source": "DA_Plugin_Sets/research/ux-author-library/group-a.json",
       "source_sha256": "e77b732353080c3608919d283fcdbc80df7b145a697085260bc280a1656b010c"
+    },
+    "harness/capacity-retry/native_precheck.py": {
+      "source": "ux-lab/harness/capacity-retry/native_precheck.py",
+      "source_sha256": "b3913412482454957403f7940fcc6627cd8e98e2d2db06271ab689ece5c2a5fa"
+    },
+    "harness/capacity-retry/test_native_precheck.py": {
+      "source": "ux-lab/harness/capacity-retry/test_native_precheck.py",
+      "source_sha256": "50da6213f30aedd5b8cd90aa3dfbf11d3f74263ff5f61f2839dc458e50a5490c"
+    },
+    "harness/capacity-retry/native-scope.example.json": {
+      "source": "ux-lab/harness/capacity-retry/native-scope.example.json",
+      "source_sha256": "ef205b20d51cc6490d05bb66826f9b7d6b813df26213c6a2a6025cd72172ac6c"
+    },
+    "harness/capacity-retry/README.md": {
+      "source": "ux-lab/harness/capacity-retry/README.md",
+      "source_sha256": "b7e30a905a29ad2cdc453e877100f75980f6da7534f182fb4decf44070580a19"
+    },
+    "harness/capacity-retry/VALIDATION.json": {
+      "source": "ux-lab/harness/capacity-retry/VALIDATION.json",
+      "source_sha256": "fd53d929b0d14e00688105ab9849095acb89189bf555044f197a54e752305fa2"
+    },
+    "harness/capacity-retry/retry_state.py": {
+      "source": "ux-lab/harness/capacity-retry/retry_state.py",
+      "source_sha256": "7269340eff38b7ef4ef300212992d69fe778fe2faabb65ab6d4d353300d3519e"
     }
   }
 }

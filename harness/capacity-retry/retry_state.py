@@ -57,6 +57,7 @@ class RetryState:
     last_event_id: str | None = None
     seen: list = field(default_factory=list)
     retries: int = 0
+    require_atomic_guard: bool = True
 
     def __post_init__(self):
         if any(not isinstance(value, str) or not value.strip() for value in
@@ -107,9 +108,8 @@ class RetryState:
     def due(self, now, proof):
         """Return one durable delivery intent only with a fresh, exact host proof.
 
-        The transport must atomically require sendable status, bind the process
-        incarnation, and reuse request_id after ambiguous replies. This policy does
-        not pretend that a terminal read followed by a raw write is atomic.
+        Native adapters may explicitly opt into fresh best-effort preflight checks.
+        That mode does not claim the read and complete prompt write are atomic.
         """
         if not self.pending or now < self.pending["due_at"] or self.status != "waiting":
             return None
@@ -123,7 +123,7 @@ class RetryState:
         if proof.get("active_work") or proof.get("user_stopped") or proof.get("new_message"):
             self.cancel("host_activity_or_user_override")
             return None
-        if not proof.get("transport_ready") or not proof.get("atomic_sendable_guard"):
+        if not proof.get("transport_ready") or (self.require_atomic_guard and not proof.get("atomic_sendable_guard")):
             self.status, self.reason = "blocked", "same_session_delivery_transport_unavailable"
             return None
         if any(proof.get(key) is not False for key in ("active_work", "user_stopped", "new_message")):

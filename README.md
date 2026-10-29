@@ -7,7 +7,7 @@
 | 플러그인 | 버전 | 구성 |
 |---|---|---|
 | `da-development-method` | 0.2.0 | 신규. gstack 기반 개발·라우팅·피드백 회수 |
-| `scenario-ui-ux` | 0.4.0 | 신규. 디자인 레퍼런스·정보 구조·DESIGN 계약·실제 UX 수리 |
+| `scenario-ui-ux` | 0.5.0 | 신규. 디자인 레퍼런스·정보 구조·DESIGN 계약·실제 UX 수리 |
 | `ux-judgment` | — | Scenario 하위 skill. UX 저자 10명·원문 24개·조건부 판단 20개 |
 | `text-wireframe-planner` | 2.0.0 | 개편. 사용자 과업별 진입·행동·결과 와이어프레임 |
 | `craft-ui-motion` | 2.0.0 | 개편. 여백·타이포·목적 있는 모션·반응형 구조 |
@@ -78,3 +78,17 @@ python3 scripts/verify-distribution.py
 ```
 
 배포 시 실제 실행 결과와 경계는 [검증 상태](docs/verification-status.md)에 기록합니다. 공개본은 설치 코드·연구·일반화한 경험을 포함하며, 개인 DB·판단 원문·인증·실행 세션·제품 이미지와 DB 백업은 포함하지 않습니다. 개발 과정의 제품과 원본 증거는 기존 로컬 보관소에 유지됩니다.
+
+## 원천별 실제 실행 랩 · 0.5.0
+
+기존 목록에서 빠졌던 원문·통합·실행 검증을 세 개의 컨테이너 랩으로 보완했습니다. [조사·선별 기록](research/reference-gap-20261029/README.md)과 [적용 계약](plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-adoption.md)에 범위를 구분합니다.
+
+| 랩 | 기본 접속 | 검증한 범위 |
+|---|---|---|
+| [Interaction](harness/reference-labs/interaction/README.md) | http://127.0.0.1:8871 | Next·React·Tailwind, CSS/Motion/Anime.js/Animate.css/GSAP 5개 판의 동일 과업 |
+| [Motion Canvas](harness/reference-labs/canvas/README.md) | http://127.0.0.1:8872 | 실제 Player·Stage 프레임·PNG·재생/정지·반복 출력·보존 |
+| [Anti-slop / Unslop](harness/reference-labs/anti-slop/README.md) | http://127.0.0.1:8873/after.html | 선별 규칙·전후/반례·키보드·선택 상태 보존 |
+
+각 디렉터리에서 `docker compose up -d --build`로 실행합니다. 기존 개발 실험실8861–8863과 충돌하지 않게 공개본은8871–8873을 사용합니다. 실제 제품 사용과 독립 synthetic 실험은 다릅니다. 모션 랩은 짧은 상세 열기/닫기 과업이며 모든 layout·spring·타임라인 기능이나 사용자 선호 우위를 검증하지 않았습니다. Motion Canvas 범위는 브라우저 렌더와 PNG이며 영상 인코딩은 포함하지 않습니다.
+
+공개 복사본도 새 이미지로 빌드하고 실제 브라우저 과업을 검증했습니다. 각 `VERIFICATION.json`에 원래 실험과 공개 포트·helper·Origin 경계 차이를 기록합니다. 테스트용 Playwright는 루트의 `npm ci`와 `npx playwright install chromium`으로 준비합니다. 서비스는 컨테이너에서 실행합니다.

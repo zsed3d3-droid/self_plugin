@@ -1,0 +1,90 @@
+{
+  "format": "scenario-antislop-adapter/v1",
+  "scope": "lab-only, selected critique heuristics; no global agent installer",
+  "sources": [
+    {
+      "name": "Anti-slop",
+      "repository": "miqdadbadjuber/anti-slop",
+      "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+      "license": "MIT",
+      "paths": [
+        "skills/antislop/SKILL.md",
+        "skills/antislop-ui/SKILL.md"
+      ]
+    },
+    {
+      "name": "Unslop UI",
+      "repository": "yuwen-lu/unslop-ui",
+      "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db",
+      "license": "MIT",
+      "paths": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "group-boundary",
+      "symptom": "Repeated nested borders obscure the group and row hierarchy.",
+      "adopt": "Remove a boundary only when spacing, heading or alignment still communicates the same relationship.",
+      "source": "Both: nested-card/visual hierarchy critique",
+      "countercase": "A separately selectable workspace or permission scope needs a visible boundary.",
+      "verify": "Same heading and row relationship at three widths; confirm real fieldset/legend for choice groups."
+    },
+    {
+      "id": "icon-purpose",
+      "symptom": "Decorative icon tiles compete with titles but encode no additional information.",
+      "adopt": "Remove redundant decoration; retain icons that identify an action, person or chosen scope.",
+      "source": "Unslop UI: icon tile critique; Anti-slop: purpose gate",
+      "countercase": "An explicitly labeled owner marker helps identify the person; do not apply a universal icon-container ban.",
+      "verify": "Title, owner and action remain available in text; compare same information lookup."
+    },
+    {
+      "id": "explicit-state",
+      "symptom": "A dot or color alone carries the workflow state.",
+      "adopt": "Name the state in visible text and make the next action explicit.",
+      "source": "Anti-slop: accessible semantics, state and interaction affordances",
+      "countercase": "A supplementary dot can remain beside an explicit state label.",
+      "verify": "State and action readable without hue; completed/ready distinct; status filter keeps accurate count."
+    },
+    {
+      "id": "keyboard-contract",
+      "symptom": "A clickable generic element does not implement Enter/Space behavior.",
+      "adopt": "Use a native button, dialog focus and a visible focus ring with shared shape.",
+      "source": "Anti-slop R-39 human/accessibility concern",
+      "countercase": "Do not add role=button to a static group or use only screenshots as proof of keyboard behavior.",
+      "verify": "Tab to the action, Enter opens dialog, Escape closes, focus returns to the initiating action."
+    }
+  ],
+  "excluded": [
+    "Global installation and first-run wizard",
+    "Repeated during/after mode questions",
+    "Mandatory four-block report for each small edit",
+    "40 rules as universal hard gates",
+    "Fixed ENERGY/RHYTHM/MOTION dials or forced liveliness",
+    "70/20/10 palette ratios",
+    "Global sans-serif, serif, emoji or icon-container bans",
+    "Forced motion, themes, density or asset purchases"
+  ],
+  "evidence_policy": "Fixture task verification is not user research, preference acceptance or application in a frozen product.",
+  "local_findings": [
+    {
+      "id": "selected-scope-survives-filter",
+      "role": "assistant",
+      "origin": "actual lab sequential task; not a source-author claim",
+      "observed": "Choosing Personal then searching rebuilt the radios with Team checked.",
+      "repair": "Keep selected scope outside render and reuse it on presentation rebuild.",
+      "scope": "Views that rebuild a selectable control while an independent filter changes.",
+      "verify": "Space-select scope, type filter, inspect checked state and matching record; do not infer user preference."
+    },
+    {
+      "id": "visible-focus-shape-needs-frame",
+      "role": "assistant",
+      "origin": "actual inspected native focus frame after functional pass",
+      "observed": "A circular native radio kept a rectangular outline despite its CSS border-radius.",
+      "repair": "Preserve native semantics, replace only that outline with a rounded focus shadow.",
+      "scope": "Tested Chromium radio appearance in this fixture, not all browser engines.",
+      "verify": "Keyboard focus + computed treatment + direct frame inspection; style declaration alone is insufficient."
+    }
+  ]
+}

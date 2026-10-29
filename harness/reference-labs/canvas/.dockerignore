@@ -1,0 +1,12 @@
+node_modules
+.next
+dist
+evidence
+verification
+logs
+*.log
+.git
+.env
+.env.*
+auth.json
+credentials.json

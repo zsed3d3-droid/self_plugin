@@ -534,6 +534,20 @@ record={'format':'scenario-browser-observation/v1','status':'pass','task':'Add t
         self.assertEqual(json.loads(result.stdout)['status'], 'fail')
         self.assertEqual(result.stderr, '')
 
+    def test_installed_adoption_guidance_is_preserved_and_tampering_blocks_reinstall(self):
+        installer.install(self.project)
+        guidance = self.project / '.design-hooks/references/reference-adoption.md'
+        self.assertTrue(guidance.is_file(), 'New adoption guidance must reach installed hooks')
+        manifest = json.loads((self.project / '.design-hooks/managed.json').read_text())
+        self.assertEqual(manifest['references']['reference-adoption.md'], audit.digest(guidance.read_bytes()))
+        settings = self.project / '.claude/settings.json'
+        before = settings.read_bytes()
+        guidance.write_text(guidance.read_text() + '\nLocal modification retained.\n')
+        with self.assertRaisesRegex(installer.hook.AuditError, 'modified_managed_hook_reference'):
+            installer.install(self.project)
+        self.assertEqual(settings.read_bytes(), before)
+        self.assertIn('Local modification retained.', guidance.read_text())
+
     def test_installer_preserves_idempotent_conflict_and_trust(self):
         (self.project / '.claude').mkdir()
         existing = {'permissions': {'allow': ['Read']}, 'hooks': {'SessionStart': [{'hooks': [{'type': 'command', 'command': 'echo preserved'}]}]}}

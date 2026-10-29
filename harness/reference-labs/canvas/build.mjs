@@ -1,0 +1,12 @@
+import {build} from 'esbuild';
+import {mkdir,copyFile,readFile,writeFile,cp} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+await mkdir('dist',{recursive:true});
+const result=await build({entryPoints:['src/main.ts'],bundle:true,format:'esm',outfile:'dist/app.js',target:'es2022',sourcemap:true,metafile:true,loader:{'.glsl':'text'}});
+await copyFile('index.html','dist/index.html');
+await copyFile('style.css','dist/style.css');
+await cp('licenses','dist/licenses',{recursive:true});
+await copyFile('reference-sources.json','dist/reference-sources.json');
+const sources={};for(const path of ['src/main.ts','src/scene.ts','index.html','style.css','package.json','package-lock.json'])sources[path]=createHash('sha256').update(await readFile(path)).digest('hex');
+await writeFile('dist/build-receipt.json',JSON.stringify({builtAt:new Date().toISOString(),node:process.version,recipe:'motion-canvas-native-player-stage-v1',sources,versions:{core:'3.17.2',two:'3.17.2',esbuild:'0.28.2'},runtimeGitHead:'e735a995aa738ca682feb4204a39ee7db7b5d279',reviewedSourcePin:'7b91435c301d530351dcf5ebb91dd139c002e405'},null,2));
+await writeFile('dist/bundle-metafile.json',JSON.stringify(result.metafile,null,2));

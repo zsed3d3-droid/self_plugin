@@ -374,7 +374,7 @@ def critique_stage(project, contract, files, browser, fingerprint):
     ref_root = installed_refs if installed_refs.is_dir() else Path(__file__).resolve().parent.parent / 'references'
     runtime_manifest = Path(__file__).resolve().parent / 'managed.json'
     ref_hashes = read_json(runtime_manifest).get('references', {}) if runtime_manifest.is_file() else None
-    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md'):
+    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md', 'reference-adoption.md'):
         path = ref_root / name
         if path.is_file():
             if ref_hashes is not None and digest(path.read_bytes()) != ref_hashes.get(name):
@@ -490,7 +490,7 @@ def pipeline(project, event='CI', contract_path=None, changed=None, stop_active=
     runtime_hashes = {name: digest(Path(__file__).with_name(name).read_bytes()) for name in ('design-hook.py', 'design-audit.py')}
     installed_refs = Path(__file__).resolve().parent / 'references'
     ref_root = installed_refs if installed_refs.is_dir() else Path(__file__).resolve().parent.parent / 'references'
-    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md'):
+    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md', 'reference-adoption.md'):
         path = ref_root / name
         runtime_hashes['reference:' + name] = digest(path.read_bytes()) if path.is_file() else 'missing'
     fingerprint = digest(json.dumps({'static_report': static, 'runtime_hashes': runtime_hashes}, sort_keys=True))

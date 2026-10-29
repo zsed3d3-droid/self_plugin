@@ -1,0 +1,351 @@
+{
+  "format": "reference-gap-review/v1",
+  "reviewed_at": "2026-10-29",
+  "method": "Read pinned GitHub README, LICENSE (where present), full repository trees for seven projects, relevant actual SKILL files, and three official framework document sources via GitHub connector. Read current official GSAP terms and framework pages via web. No installers, package runtime, authentication or product mutation performed.",
+  "scope": "Only research artifacts in ux-lab/research/reference-gap-20261029. Catalogue/frozen products/public self_plugin untouched.",
+  "entries": [
+    {
+      "id": "next-local",
+      "name": "Next / React / Tailwind",
+      "kind": "official-document-backed local framework profile; not one verified coauthored skill",
+      "license": "Next repository MIT; React documentation CC BY 4.0; Tailwind documentation repository has no root license at inspected pin. Do not infer documentation redistribution from runtime licensing.",
+      "sources": [
+        {
+          "repository": "vercel/next.js",
+          "commit": "94ea1c2110ccd63324116db39820a133cc6e6a20",
+          "path": "docs/01-app/03-api-reference/01-directives/use-client.mdx",
+          "url": "https://github.com/vercel/next.js/blob/94ea1c2110ccd63324116db39820a133cc6e6a20/docs/01-app/03-api-reference/01-directives/use-client.mdx",
+          "git_blob_sha": "5772c035366db28ea93ced58df192ff4c77f8c88",
+          "read_status": "read"
+        },
+        {
+          "repository": "vercel/next.js",
+          "commit": "94ea1c2110ccd63324116db39820a133cc6e6a20",
+          "path": "license.md",
+          "url": "https://github.com/vercel/next.js/blob/94ea1c2110ccd63324116db39820a133cc6e6a20/license.md",
+          "git_blob_sha": "5948ee9bd0de5064423688a2967ab3111c2658ed",
+          "read_status": "read"
+        },
+        {
+          "repository": "reactjs/react.dev",
+          "commit": "0821e7d9428a6c58c922765b891bbffba9ed6249",
+          "path": "src/content/learn/managing-state.md",
+          "url": "https://github.com/reactjs/react.dev/blob/0821e7d9428a6c58c922765b891bbffba9ed6249/src/content/learn/managing-state.md",
+          "git_blob_sha": "ef7b76e04c208ab4fc2a86f67e2a38f4af64672b",
+          "read_status": "read"
+        },
+        {
+          "repository": "reactjs/react.dev",
+          "commit": "0821e7d9428a6c58c922765b891bbffba9ed6249",
+          "path": "LICENSE-DOCS.md",
+          "url": "https://github.com/reactjs/react.dev/blob/0821e7d9428a6c58c922765b891bbffba9ed6249/LICENSE-DOCS.md",
+          "git_blob_sha": "d21a91a914af928e1051424f2fd5d10271471013",
+          "read_status": "read"
+        },
+        {
+          "repository": "tailwindlabs/tailwindcss.com",
+          "commit": "7f92c2213315c195dae583d68752da4042da3ade",
+          "path": "src/docs/theme.mdx",
+          "url": "https://github.com/tailwindlabs/tailwindcss.com/blob/7f92c2213315c195dae583d68752da4042da3ade/src/docs/theme.mdx",
+          "git_blob_sha": "66146b98a5d3cb48f4101486297e3a713c547be2",
+          "read_status": "read"
+        }
+      ],
+      "strength": "Server/client boundary, single ownership of UI state, design tokens mapped to utility classes.",
+      "reject_defaults": [
+        "Do not add use client to every file.",
+        "Do not require Next or Tailwind in an already suitable React/Vite app.",
+        "Do not call React use evidence proof of Next/Tailwind usage."
+      ],
+      "candidate": "Separate Next container: server-rendered experiment library plus a client filter/dialog and Tailwind semantic tokens; compare with an equivalent existing React/CSS task.",
+      "verify": "Build production container; verify hydration has no errors, keyboard dialog focus/return, filter state reset/preservation, token computed styles at 320/390/1440, and direct URL reload. Record Next, React, Tailwind separately.",
+      "gap": "React has prior product use according to root audit; Next and Tailwind application still require their own runtime evidence. Missing combined skill provenance did not prevent applying the official profiles.",
+      "status": "source_reviewed_runtime_not_run_in_this_task"
+    },
+    {
+      "id": "oss-motiondivision-motion",
+      "name": "Motion",
+      "kind": "JavaScript/React/Vue animation runtime",
+      "license": "MIT",
+      "strength": "React/JS APIs for springs, layout transitions, gestures and timeline effects; current README points to a separate free MIT motion-ai skill.",
+      "reject_defaults": [
+        "Do not install Motion+ assets or premium APIs.",
+        "Do not treat advertised 120fps as measured application performance.",
+        "No entrance animation on every element or motion as a prerequisite for actions."
+      ],
+      "candidate": "In the comparison container, animate a selected-row indicator and filter-result layout while keeping controls stable; use motion/react only in its React pane.",
+      "verify": "Same rapid filter/select task with and without motion; assert final selection and focus, interrupted/reversed transition state, reduced-motion behavior, measured frame samples and shipped bundle difference.",
+      "gap": "Existing pointers and source notes are not a runtime import or observed task. A separate ai-kit review is needed before importing that skill or installer.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "9ba8846b6819172cb829e65a9f46433a4de377ab",
+      "sources": [
+        {
+          "repository": "motiondivision/motion",
+          "commit": "9ba8846b6819172cb829e65a9f46433a4de377ab",
+          "path": "README.md",
+          "url": "https://github.com/motiondivision/motion/blob/9ba8846b6819172cb829e65a9f46433a4de377ab/README.md",
+          "git_blob_sha": "135269342568a3c3507accd14881c9bde2a7c090",
+          "read_status": "read"
+        },
+        {
+          "repository": "motiondivision/motion",
+          "commit": "9ba8846b6819172cb829e65a9f46433a4de377ab",
+          "path": "LICENSE.md",
+          "url": "https://github.com/motiondivision/motion/blob/9ba8846b6819172cb829e65a9f46433a4de377ab/LICENSE.md",
+          "git_blob_sha": "81110442c72270dd317667cc52181522647401f2",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-juliangarnier-anime",
+      "name": "Anime.js",
+      "kind": "JavaScript/SVG animation runtime",
+      "license": "MIT",
+      "version": "4.5.0",
+      "strength": "DOM, SVG, CSS and plain object animation; V4 ESM animate/stagger example is present in README.",
+      "reject_defaults": [
+        "README's looping/alternating example is a demonstration, not a product default.",
+        "Do not use visual animation completion to gate saved state.",
+        "Do not duplicate CSS/other animation ownership on the same property."
+      ],
+      "candidate": "Animate one SVG dependency edge when a relation is selected in an explanatory diagram, using V4 animate and a finite run.",
+      "verify": "Assert selected relation and accessible text immediately, final SVG geometry, interruption/selection change without stale highlighting, reduced motion, and no residual animations after unmount.",
+      "gap": "MIT source pointers exist; no actual package runtime/use-task evidence for this catalogue entry yet.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "sources": [
+        {
+          "repository": "juliangarnier/anime",
+          "commit": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+          "path": "README.md",
+          "url": "https://github.com/juliangarnier/anime/blob/01b81be1df6843ccfe0a71c0699a746bf740dd77/README.md",
+          "git_blob_sha": "14403f081e2ba79daaaa68b09fc4bcf04e0ee5f0",
+          "read_status": "read"
+        },
+        {
+          "repository": "juliangarnier/anime",
+          "commit": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+          "path": "LICENSE.md",
+          "url": "https://github.com/juliangarnier/anime/blob/01b81be1df6843ccfe0a71c0699a746bf740dd77/LICENSE.md",
+          "git_blob_sha": "f999fa58ebdda6d8d0f3ae581ebdfe821f09603a",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-animate-css-animate.css",
+      "name": "Animate.css",
+      "kind": "CSS animation utility library",
+      "license": "Hippocratic License 2.1 (not MIT)",
+      "strength": "Ready CSS animation classes; README explicitly documents prefers-reduced-motion support.",
+      "reject_defaults": [
+        "Do not treat its license as a generic MIT grant.",
+        "No perpetual attention effects or animating every heading.",
+        "Keep motion preference rules intact; avoid hidden content that depends on animationend."
+      ],
+      "candidate": "Isolated comparison pane: finite fade feedback after a successful user action, with immediate visible status text and no movement of primary controls.",
+      "verify": "Read the actual computed animation duration in normal and reduced-motion modes; repeat the action while an effect is running, confirm single completion feedback and unchanged focus/layout.",
+      "gap": "Current source review newly confirms the license. Runtime inclusion has not been exercised; keep this a separately scoped experiment rather than silently adding it to frozen products.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "3f8ab233dbbd9d2fe577528d2296382954be3d1a",
+      "sources": [
+        {
+          "repository": "animate-css/animate.css",
+          "commit": "3f8ab233dbbd9d2fe577528d2296382954be3d1a",
+          "path": "README.md",
+          "url": "https://github.com/animate-css/animate.css/blob/3f8ab233dbbd9d2fe577528d2296382954be3d1a/README.md",
+          "git_blob_sha": "c7ae5e378fed2c1981cd155f986e6428e1c3049f",
+          "read_status": "read"
+        },
+        {
+          "repository": "animate-css/animate.css",
+          "commit": "3f8ab233dbbd9d2fe577528d2296382954be3d1a",
+          "path": "LICENSE",
+          "url": "https://github.com/animate-css/animate.css/blob/3f8ab233dbbd9d2fe577528d2296382954be3d1a/LICENSE",
+          "git_blob_sha": "4debcfffb97abd7e10f0917ab5c04dae24be8f94",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-greensock-gsap",
+      "name": "GSAP",
+      "kind": "Sequenced animation runtime",
+      "license": "GSAP Standard No Charge License; not MIT; root tree at inspected pin contains no LICENSE file. README/package point to current external terms.",
+      "version": "3.15.0",
+      "strength": "Coordinated timeline control and animation of CSS/SVG/canvas/objects; README points to useGSAP cleanup in React.",
+      "reject_defaults": [
+        "Free commercial website use does not imply unrestricted open-source redistribution.",
+        "Do not use this to ship a competing visual animation builder; official terms distinguish that use.",
+        "Avoid scroll pin/smooth-scroll hijacking in task workflows."
+      ],
+      "candidate": "A conventional product explainer pane with a short SVG process timeline and explicit replay/stop; no user-facing visual animation authoring feature.",
+      "verify": "Play/pause/replay same timeline, confirm cancellation and resource cleanup, reduced-motion static explanation, stable focus/scroll and measured render traces. Record license scope with the concrete deliverable.",
+      "gap": "Upstream snippets/pointers are not deployed-runtime evidence. Current license must be considered before vendoring or building an animation-editor product.",
+      "external_license_url": "https://gsap.com/community/standard-license/",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2",
+      "sources": [
+        {
+          "repository": "greensock/GSAP",
+          "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2",
+          "path": "README.md",
+          "url": "https://github.com/greensock/GSAP/blob/13e2b790546426a1a2e0e9b409f3f8dc6d6611f2/README.md",
+          "git_blob_sha": "291cd9ced95fd5be5c9d4e982b6eed130e8ff926",
+          "read_status": "read"
+        },
+        {
+          "repository": "greensock/GSAP",
+          "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2",
+          "path": "package.json",
+          "url": "https://github.com/greensock/GSAP/blob/13e2b790546426a1a2e0e9b409f3f8dc6d6611f2/package.json",
+          "git_blob_sha": "6d9c0c424b35d554b930f5efc1e2f43e006809cd",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-motion-canvas-motion-canvas",
+      "name": "Motion Canvas",
+      "kind": "TypeScript generator-based informative vector animation and preview editor",
+      "license": "MIT",
+      "version": "3.17.2 core",
+      "strength": "Programmatic explanatory scenes synchronized to voice-over; README distinguishes the renderer, core, editor and player packages.",
+      "reject_defaults": [
+        "Not a replacement for interactive form/list UI animation.",
+        "Do not load an entire editor into an ordinary product page.",
+        "Do not copy development examples that disable Vite filesystem restrictions into production."
+      ],
+      "candidate": "Separate container produces a 10-second vector explanation of request-to-result flow and serves a player, comparing output fidelity against the existing Remotion reference.",
+      "verify": "Render fixed frame times twice; inspect text bounds at export resolution, deterministic scene timing, preview/export equivalence, keyboard player controls, and container cold start.",
+      "gap": "Appropriate for an explainer/export product, not evidence of improved everyday product controls. No real scene/player package run for this entry yet.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "7b91435c301d530351dcf5ebb91dd139c002e405",
+      "sources": [
+        {
+          "repository": "motion-canvas/motion-canvas",
+          "commit": "7b91435c301d530351dcf5ebb91dd139c002e405",
+          "path": "README.md",
+          "url": "https://github.com/motion-canvas/motion-canvas/blob/7b91435c301d530351dcf5ebb91dd139c002e405/README.md",
+          "git_blob_sha": "446c8db1aa77f01ddea44d0ff89ed42aa03cd54b",
+          "read_status": "read"
+        },
+        {
+          "repository": "motion-canvas/motion-canvas",
+          "commit": "7b91435c301d530351dcf5ebb91dd139c002e405",
+          "path": "LICENSE",
+          "url": "https://github.com/motion-canvas/motion-canvas/blob/7b91435c301d530351dcf5ebb91dd139c002e405/LICENSE",
+          "git_blob_sha": "b30f04e173f68773714b7d9e2652caecbeec53f9",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-miqdadbadjuber-anti-slop",
+      "name": "Anti-slop",
+      "kind": "Six agent skills and design/copy/code rulebook; not a motion runtime",
+      "license": "MIT",
+      "strength": "Purpose-based critique, DESIGN.md context, semantic controls, state/contrast/focus/reduced-motion checks, and prohibition of invented performance claims.",
+      "reject_defaults": [
+        "Do not execute its installer or write global preferences as a side effect of reading.",
+        "Reject repeated during/after mode questions, mandatory first-run approval wizard and every-task four-block report.",
+        "Its 40 mandatory rules, three energy/rhythm/motion dials, numeric effect caps and required liveliness are candidates rather than universal policy."
+      ],
+      "candidate": "Adapter audit of one captured task flow: identify redundant nested surfaces and fake metrics, record one cause and small repair while preserving the user's accepted component.",
+      "verify": "Run same task before/after with screenshots, accessible control names, focus, error recovery, and mobile reflow. Track which rule informed a repair and which was rejected; no self-granted user adoption.",
+      "gap": "Catalogue category is incorrect. Source/SKILL review is now real; automatic skill installation or demonstrated product application still has not happened.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+      "sources": [
+        {
+          "repository": "miqdadbadjuber/anti-slop",
+          "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+          "path": "README.md",
+          "url": "https://github.com/miqdadbadjuber/anti-slop/blob/3005235d030b4793146ad9afe8d01045efd90e1d/README.md",
+          "git_blob_sha": "9b16dcd01352c2cac0563c2fe26879efcc814042",
+          "read_status": "read"
+        },
+        {
+          "repository": "miqdadbadjuber/anti-slop",
+          "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+          "path": "LICENSE",
+          "url": "https://github.com/miqdadbadjuber/anti-slop/blob/3005235d030b4793146ad9afe8d01045efd90e1d/LICENSE",
+          "git_blob_sha": "5fdb95f1efdbd865b9e8958d6ec5f20a06bcb951",
+          "read_status": "read"
+        },
+        {
+          "repository": "miqdadbadjuber/anti-slop",
+          "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+          "path": "skills/antislop/SKILL.md",
+          "url": "https://github.com/miqdadbadjuber/anti-slop/blob/3005235d030b4793146ad9afe8d01045efd90e1d/skills/antislop/SKILL.md",
+          "git_blob_sha": "41e691d138957b7c3d31cbf9951d9e7335d73169",
+          "read_status": "read"
+        },
+        {
+          "repository": "miqdadbadjuber/anti-slop",
+          "commit": "3005235d030b4793146ad9afe8d01045efd90e1d",
+          "path": "skills/antislop-ui/SKILL.md",
+          "url": "https://github.com/miqdadbadjuber/anti-slop/blob/3005235d030b4793146ad9afe8d01045efd90e1d/skills/antislop-ui/SKILL.md",
+          "git_blob_sha": "b11bc8c296526b68632bed4f8fbf546b3d288256",
+          "read_status": "read"
+        }
+      ]
+    },
+    {
+      "id": "oss-yuwen-lu-unslop-ui",
+      "name": "Unslop UI",
+      "kind": "Frontend anti-pattern agent skill; not a motion runtime",
+      "license": "MIT",
+      "strength": "Concrete critique of nested cards, decorative icon boxes, indistinct color hierarchy and slow all-element entrances.",
+      "reject_defaults": [
+        "Reject hard 70/20/10 palette ratios and universal font/emoji/icon-container bans.",
+        "Do not impose sans-serif/neutral/minimal design on every product.",
+        "Reference screenshots of commercial brands do not become reusable product assets."
+      ],
+      "candidate": "Use a source-backed checklist in the comparison lab to remove one unnecessary card wrapper and icon tile while preserving grouping and discoverability.",
+      "verify": "Compare identical information-finding task at 320/390/1440; verify hierarchy, contrast, visible grouping, click/keyboard affordances and focus geometry. Record beneficial and harmful removals separately.",
+      "gap": "Catalogue category is incorrect. This review does not prove that its skill was loaded during previous product work.",
+      "status": "source_reviewed_runtime_not_run_in_this_task",
+      "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db",
+      "sources": [
+        {
+          "repository": "yuwen-lu/unslop-ui",
+          "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db",
+          "path": "README.md",
+          "url": "https://github.com/yuwen-lu/unslop-ui/blob/df1e58a1ab2e75beeaac295ec86c74b3824456db/README.md",
+          "git_blob_sha": "f7f5b005ed4a45aaddf6088d4b68f3911717a281",
+          "read_status": "read"
+        },
+        {
+          "repository": "yuwen-lu/unslop-ui",
+          "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db",
+          "path": "LICENSE",
+          "url": "https://github.com/yuwen-lu/unslop-ui/blob/df1e58a1ab2e75beeaac295ec86c74b3824456db/LICENSE",
+          "git_blob_sha": "005f143bc8352b93de785ad3feb9b7fed7ef0f09",
+          "read_status": "read"
+        },
+        {
+          "repository": "yuwen-lu/unslop-ui",
+          "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db",
+          "path": "SKILL.md",
+          "url": "https://github.com/yuwen-lu/unslop-ui/blob/df1e58a1ab2e75beeaac295ec86c74b3824456db/SKILL.md",
+          "git_blob_sha": "6c35faa56e93f43dd43c9f0e8b991659907565c4",
+          "read_status": "read"
+        }
+      ]
+    }
+  ],
+  "comparison_lab": {
+    "proposal": "New retained container experiment, not edits to frozen products. Keep identical brief and state contract, use separate panes/routes or builds for CSS baseline, Motion, Anime, Animate.css and GSAP. Motion Canvas is a separate informative animation output task. Apply selected Anti-slop/Unslop heuristics as audit sources, not competing global instruction sets.",
+    "evidence": [
+      "Package lock and exact import/version",
+      "Before/after screenshot and source fingerprint",
+      "Task expectation versus observed behavior",
+      "Keyboard/focus/reduced-motion and interruption checks",
+      "Measured shipped bytes and runtime trace, not promised performance",
+      "Conditional adoption/rejection reason per reference"
+    ],
+    "completion": "Reviewing a source, adapting a rule, loading a skill, importing a runtime, passing an actual task and user preference acceptance remain separate statuses."
+  }
+}

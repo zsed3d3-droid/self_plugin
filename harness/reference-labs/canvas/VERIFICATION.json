@@ -1,0 +1,89 @@
+{
+  "format": "reference-lab-public-verification/v1",
+  "status": "public_runtime_verified",
+  "scope": "Native frame renderer and PNG only; no encoded video, editor, audio or user preference claim",
+  "original_proof_sha256": "3abe892c0ab4eddd7d17e869f69a3435d111af60c873290e591e500d1fb3a37c",
+  "original_ui_sha256": {
+    "src/main.ts": "f16bb1d5f9a99ea24bf4af6ec665860d9c810f1658be9eca6fac924d186680fa",
+    "src/scene.ts": "f9bb3ad149b0af7b9a8b3ae555f081c702853e106491609cd452be5e5d96f94a",
+    "index.html": "a6aae55c70a1e3f0bf9f07a44fce0debb25a4394677bfa1cf4c43f2bc1ce9b40",
+    "style.css": "edeb159a422f3625b39801026e961b517f57b869af88f22d74e53a0699ba5e76",
+    "package.json": "76321722e49e661bbc238a011448c5304a31d2ae078bb2f6c32f30b09d4b72d1",
+    "package-lock.json": "364e906fe68ea433b666b7c1a61d3718138e42a509ebbed8b7fe43b5eeaecb5d",
+    "build.mjs": "a743435989ca6d8ca7c18688c463bc7998b67a07b04cac7665f6e581cf748188"
+  },
+  "public_ui_equals_original": true,
+  "original_raw_evidence_not_bundled": true,
+  "packaging_changes": [
+    "Compose name/host8872/independentvolume",
+    "server Origin whitelist8872",
+    "shared browser import",
+    "external unique evidence output",
+    "publication documentation"
+  ],
+  "public_runtime_checks": {
+    "status": "pass",
+    "frames": [
+      {
+        "frame": 0,
+        "sha256": "1dd7f6edfeb1c3a3c11a65a79b64505335ba2dab2e9e1d86a139dd8af8426d9e",
+        "visible_text_outside_canvas": 0,
+        "visible_text_overlaps": 0
+      },
+      {
+        "frame": 150,
+        "sha256": "e0ff4e3fc98806ee8d68b6bb7ada22b8291bf3135318de551c32b32fe37c406b",
+        "visible_text_outside_canvas": 0,
+        "visible_text_overlaps": 0
+      },
+      {
+        "frame": 299,
+        "sha256": "3d2c6448e7ffca4720544ba205f2485b025564419dfdce2d61a538fca8c2df26",
+        "visible_text_outside_canvas": 0,
+        "visible_text_overlaps": 0
+      }
+    ],
+    "native_Player_Stage": true,
+    "runtime_versions": {
+      "core": "3.17.2",
+      "two": "3.17.2"
+    },
+    "repeat_fixed_frame_pixels": "pass",
+    "play_pause": "pass",
+    "mobile_widths": [
+      320,
+      390
+    ],
+    "reduced_motion": "pass",
+    "actual_PNG_POST_GET_SHA": "pass",
+    "original_port_origin_rejected": 403,
+    "restart_persistence": {
+      "status": "pass",
+      "png_files": 4,
+      "metadata_files": 4,
+      "all_bytes_unchanged": true,
+      "private_report_sha256": "dd6de9b69717fb5da5484bbac1b11f117502f2e77d91dcc50f891d4bb664046b"
+    },
+    "raw_report_sha256": "8b9ca0a645a6b09360e49a4caecae460c454f5d91acc6cc484a7931e1d25f9a1",
+    "served_build_source_sha256": {
+      "src/main.ts": "f16bb1d5f9a99ea24bf4af6ec665860d9c810f1658be9eca6fac924d186680fa",
+      "src/scene.ts": "f9bb3ad149b0af7b9a8b3ae555f081c702853e106491609cd452be5e5d96f94a",
+      "index.html": "a6aae55c70a1e3f0bf9f07a44fce0debb25a4394677bfa1cf4c43f2bc1ce9b40",
+      "style.css": "edeb159a422f3625b39801026e961b517f57b869af88f22d74e53a0699ba5e76",
+      "package.json": "76321722e49e661bbc238a011448c5304a31d2ae078bb2f6c32f30b09d4b72d1",
+      "package-lock.json": "364e906fe68ea433b666b7c1a61d3718138e42a509ebbed8b7fe43b5eeaecb5d"
+    },
+    "raw_reports_bundled": false,
+    "direct_visual_review": [
+      "1440 frame299 page",
+      "320 mobile transcript",
+      "1280x720 native frame150"
+    ]
+  },
+  "verified_at": "2026-10-29T11:14:32.855230+00:00",
+  "public_runtime_image": "sha256:ebbc90e8de879db04d654b3606e22bdef157609aa94cdedb80a016f59dbc65c5",
+  "health": "healthy",
+  "shared_browser_sha256": "8717b7635724b4d8a02b0be764ddb134589610a5de76006a7ce704a8c00fee4d",
+  "playwright_version": "1.62.1",
+  "build_metadata_boundary": "Post-build verification/documentation is generated after the runtime build; equality claims cover the listed served UI/build sources, not every image filesystem byte."
+}

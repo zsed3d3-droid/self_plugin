@@ -1,0 +1,23 @@
+name: self-plugin-reference-canvas
+services:
+  app:
+    build: .
+    image: self-plugin/reference-canvas:local
+    ports: ["127.0.0.1:8872:8862"]
+    environment:
+      PORT: "8862"
+      DATA_DIR: /data
+    volumes: [motion-canvas-output:/data]
+    read_only: true
+    tmpfs: [/tmp:size=33554432]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 768m
+    cpus: 2
+    healthcheck:
+      test: [CMD,node,-e,"fetch('http://127.0.0.1:8862/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+volumes:
+  motion-canvas-output:

@@ -1,0 +1,143 @@
+{
+  "retrieved_at": "2026-10-29",
+  "packages": [
+    {
+      "name": "next",
+      "version": "16.4.3",
+      "registry_url": "https://registry.npmjs.org/next/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/next/-/next-16.4.3.tgz",
+      "integrity": "sha512-OqxKTGi9u80FydydsMNYNjnuje9Au+kvHlt2GZ//ftdpDHm1dxKqAaENoOOTX5wKzn+9vaKUNIfZeyZUuLhCnA==",
+      "tarball_sha256": "d37409b7530c4873cd14c0619a7b8734777fd0dc2cae627bb592e5a82f74f8f4",
+      "actual_license_files": [
+        {
+          "file": "licenses/next-license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
+          "bytes": 1079
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "registry_url": "https://registry.npmjs.org/react/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/react/-/react-19.3.1.tgz",
+      "integrity": "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==",
+      "tarball_sha256": "56936913918dcf1f7a6fe58784e79df54b18200a88655ce809cf5e9c4ef871aa",
+      "actual_license_files": [
+        {
+          "file": "licenses/react-LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "registry_url": "https://registry.npmjs.org/react-dom/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz",
+      "integrity": "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==",
+      "tarball_sha256": "8b49975821eec6311e00d2b3f4b8337923253c876517388a33f9839c61ab262e",
+      "actual_license_files": [
+        {
+          "file": "licenses/react-dom-LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.3",
+      "registry_url": "https://registry.npmjs.org/tailwindcss/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz",
+      "integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==",
+      "tarball_sha256": "f1493c5bcb29a80310da63d19282d233ba259479f36561a27146cd4747d1faef",
+      "actual_license_files": [
+        {
+          "file": "licenses/tailwindcss-LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "name": "@tailwindcss/postcss",
+      "version": "4.3.3",
+      "registry_url": "https://registry.npmjs.org/@tailwindcss/postcss/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.3.3.tgz",
+      "integrity": "sha512-JTSZZGQi1AyKirbLN3azmjVzef92tcX7h+iSqPdaeStyFpGpDlKvvpxeOE8njhbUanbRwr3z8DyzhICWnMtQeg==",
+      "tarball_sha256": "82a2a074ada58dec1f3dcac4a6b3ec13591a5c11b3aeef6ecdecb27372555dc4",
+      "actual_license_files": [
+        {
+          "file": "licenses/tailwindcss-postcss-LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "name": "motion",
+      "version": "14.7.1",
+      "registry_url": "https://registry.npmjs.org/motion/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/motion/-/motion-14.7.1.tgz",
+      "integrity": "sha512-o+q7MExUC0RuCUF62HxF9v+fNVX7pUMYZqlyigQJJFAgAsmnnSlAOYeG41hGYkamxFR0rdBA0KXpaBJ28/GGAw==",
+      "tarball_sha256": "d7cb423fc92ac8932611963059719e2dc6d65640ea879255fb7d50b9cb4c307b",
+      "actual_license_files": [
+        {
+          "file": "licenses/motion-LICENSE.md",
+          "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+          "bytes": 1100
+        }
+      ]
+    },
+    {
+      "name": "animejs",
+      "version": "4.5.0",
+      "registry_url": "https://registry.npmjs.org/animejs/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/animejs/-/animejs-4.5.0.tgz",
+      "integrity": "sha512-NQimYX+lz8WaXonGS9zVVoviCIAjONeJayxacUditaivYLqyXgGjFKjuyl0aUUhFKm5MriX9ty1TGovNzoJQWA==",
+      "tarball_sha256": "f1bf4be22ae739bbfefd3ec3651a37a7d178dfa8ce782b0ebe5e39347fcb1706",
+      "actual_license_files": [
+        {
+          "file": "licenses/animejs-LICENSE.md",
+          "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b",
+          "bytes": 1075
+        }
+      ]
+    },
+    {
+      "name": "animate.css",
+      "version": "4.1.1",
+      "registry_url": "https://registry.npmjs.org/animate.css/latest",
+      "metadata_license": "MIT",
+      "tarball": "https://registry.npmjs.org/animate.css/-/animate.css-4.1.1.tgz",
+      "integrity": "sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==",
+      "tarball_sha256": "c51565d3706f687a14b5d919a9743a2feb45d7b7915823d67e6a3ab30759fa75",
+      "actual_license_files": [
+        {
+          "file": "licenses/animate.css-LICENSE",
+          "sha256": "aa4b4f6ba47ac6a4b3443615b5a18576d4d28ad8b3da8b4cb8cb2bd28fdd54b2",
+          "bytes": 1078
+        }
+      ]
+    },
+    {
+      "name": "gsap",
+      "version": "3.15.0",
+      "registry_url": "https://registry.npmjs.org/gsap/latest",
+      "metadata_license": "Standard 'no charge' license: https://gsap.com/standard-license.",
+      "tarball": "https://registry.npmjs.org/gsap/-/gsap-3.15.0.tgz",
+      "integrity": "sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==",
+      "tarball_sha256": "d2e33ad202d4811e9084883f7ff9a27967ac4095caef51ca4c9d20697a253b1c",
+      "actual_license_files": []
+    }
+  ]
+}

@@ -27,3 +27,7 @@ python3 scripts/reference-plan.py --task '업무 추가 모달, 기한 달력, �
 원래 개발 환경에는 실제 Hooks 설정을 만들고 정적/개인 판단/구문/격리 브라우저 경로를 실행했습니다. 전용 Broker 인증·연결이 없는 독립 검수는 not_run으로 gate를 차단합니다. Broker와 Hook의 이미지 첨부·영수증 검사를 구현했으며, 전용 로그인과 실제 시각 추론은 아직 미검증입니다. 사용자 만족은 별도 미평가 상태입니다.
 
 원문/핀/라이선스는 [sources/NOTICE.md](skills/scenario-ui-ux/sources/NOTICE.md)와 `*-research.json`에 있습니다. newly selected source installers/scripts는 실행하지 않습니다. UIUX ProMax 오프라인 검색 코드는 기존 MIT snapshot을 유지합니다. 유료 자산·고정 색상·강제 밀도·필수 3안·중첩 카드를 기본값으로 만들지 않습니다.
+
+## 0.5.0
+
+원천별 상태와 실제 검증 랩을 [적용 계약](skills/scenario-ui-ux/references/reference-adoption.md)에 연결했습니다. Anti-slop·Unslop의 조건별 검수 기준을 네 번째 해시 검증 가이드로 설치·전달합니다. 새 가이드의 변조 거절을 포함한 Hook36검사를 통과했습니다. 실제 실행은 [검증 랩](../../harness/reference-labs/)을 참고합니다. 기존 프로젝트 설치본과 호스트 신뢰는 자동 변경하지 않습니다.

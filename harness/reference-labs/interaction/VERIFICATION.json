@@ -1,0 +1,67 @@
+{
+  "format": "published-reference-lab-verification/v1",
+  "lab": "interaction",
+  "status": "public_build_and_task_checks_passed",
+  "source_scope": "Synthetic documents and browser-local fixture state only.",
+  "original_proof_sha256": "b7748fb631ebcb559550904786bce56e6c10dccec242ed99b400a4f1969f3e85",
+  "original_ui_files_sha256": {
+    "next.config.mjs": "ecb6dcda694b4e7c4992e8bde2a40c42230b18619fcf9ed359c61a58ef8e38ab",
+    "app/layout.js": "36cf3de0f617bbc266e86a90dfc5bb5d8bb8e5eefbdf063ccc052abd8c249a68",
+    "app/page.js": "5b40bea407cd67c036fec50cefd6b7c305a050819556c8d953854d2bde923eef",
+    "app/globals.css": "abf86177fdd0be626d0d234f773ef9482ac6fbc50b8c25371f242aca2a9aee1e",
+    "components/review-task.js": "e6030584d8c0382996b570239f23e784d9f05c44d11c9ba270ba2bd95c76d3d7",
+    "public/third-party-notices.txt": "3b3c9cb5da03616e95debc225e2955e5f07525fb25f1afbc0c3f76b0d83f6bf4",
+    "components/variants/gsap.js": "38c2b47afe0c0db420a3e1929e4a2ca4c2f3a6976bac3a1f7fac51f2f0c730d2",
+    "components/variants/animate-css.js": "e1e7d4879bec3cf82082650d9d887344c3076a86bf82c6fd87c3d62a41bbfe86",
+    "components/variants/motion.js": "0eafab94823cc2ae7510a65a71015b80d4a8de1c6af11654f500d8a956ddc927",
+    "components/variants/anime.js": "7ce1b203da12079b58a615b75ab51148805a02d2678c75caa1a275daf632e5be",
+    "components/variants/css.js": "2c0a5c2eba3327c8409ac019585d7d4088cfde3fa21a1f85cff3e8cc27e981c8",
+    "app/health/route.js": "988295d860344a8ff586363a69cc1c7ce71e1fe335e29fd1cd96a434677a4d29",
+    "app/lab/[mode]/page.js": "4116907f62b195063a0dbecbd20cb6f6e27e1fd1d80e3340f53665f32b49859a"
+  },
+  "unchanged_original_files": 29,
+  "packaging_changed_files": [
+    "verify.mjs",
+    "README.md",
+    ".dockerignore",
+    "compose.yaml"
+  ],
+  "added_files": [
+    "NOTICE.md",
+    "VERIFICATION.json"
+  ],
+  "differences": "Whole public tree differs from original due to host port, Compose project, browser helper/output paths and docs. No UI or animation source changed.",
+  "checks": {
+    "fresh_docker_build": "passed",
+    "health": {
+      "ok": true,
+      "fixture": "static synthetic data; no database",
+      "framework": "Next App Router",
+      "build": "interaction-lab-v1"
+    },
+    "public_matrix": "PASS",
+    "public_matrix_cases": 20,
+    "normal_cases": 15,
+    "reduced_motion_cases": 5,
+    "screenshots_retained_outside_checkout": 25,
+    "representative_captures_viewed": [
+      "css-320-final.png",
+      "gsap-390-final.png",
+      "motion-1440-final.png"
+    ],
+    "served_notices_match_source": true,
+    "served_notices_sha256": "3b3c9cb5da03616e95debc225e2955e5f07525fb25f1afbc0c3f76b0d83f6bf4",
+    "gsap_notice_preserved_in_served_chunks": 9
+  },
+  "limits": [
+    "Original evidence is not the public build proof.",
+    "No human preference, FPS or universal animation capability measured.",
+    "No personal data or original raw execution reports included."
+  ],
+  "verified_at": "2026-10-29T11:11:31.071971+00:00",
+  "public_ui_files_identical_to_original": true,
+  "public_report_sha256": "6fb61ab930fb404de949f612ac234569a82b032abfc399e510ab989b2521be4b",
+  "public_verifier_sha256": "b01a94c166f7661883ad33ab61d410c99bf9e11c1e4fb851ff5062596567389a",
+  "runtime_image_id": "sha256:d83073d4669d92f0497eabb1757a7e802e62b7b51375da542489d80e8935ab41",
+  "public_health_url": "http://127.0.0.1:8871/health"
+}

@@ -1,0 +1,12 @@
+node_modules
+.next
+verification
+*.log
+.git
+
+VERIFICATION.json
+verify.mjs
+README.md
+NOTICE.md
+.env
+*.log

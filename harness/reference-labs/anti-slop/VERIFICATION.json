@@ -1,0 +1,57 @@
+{
+  "format": "reference-lab-public-verification/v1",
+  "status": "public_runtime_verified",
+  "scope": "Synthetic lab only; not a frozen product or user preference acceptance",
+  "original_proof_sha256": "74e9f7c87b7edef26ee02e24e65e825be650266e5cedf0ba70c0afc952a4e21a",
+  "original_source_manifest_sha256": "097315246f840a3800ac4d2a3367beea4ca23d62541cb2282f91081721dc16fe",
+  "original_ui_sha256": {
+    "web/after.html": "1e03fa6ef3f4ee5034c5af1f35c38631ebccb891a2209eb712aee5474405663a",
+    "web/app.js": "2a9308dfac3b10e894a3117c633f548689134312f6f9ab49714368e6d4c464b5",
+    "web/before.html": "06387b007a515b8a40110ca647db2f46fb809bf0fed55632b3cca87345441e42",
+    "web/countercase.html": "9a723d8adbd5ad382643e0bc61e2edc80d0607190ade5fc714eeb006b919c294",
+    "web/index.html": "d293969fd8988c7ffff9ccd6a4526301efac2992cb2a1cac2736a0b2b27c3795",
+    "web/style.css": "4a9cb3ae1595e0c2f8bf3465a829a0a75c586aced5aa033947baff8b3c40d17d"
+  },
+  "public_ui_equals_original": true,
+  "original_evidence_not_bundled": true,
+  "packaging_changes": [
+    "Compose project name",
+    "host port8873",
+    "shared browser import",
+    "private external evidence path",
+    "source provenance and distribution documentation"
+  ],
+  "original_private_matrix": {
+    "cases": 9,
+    "screenshots": 30,
+    "status": "pass"
+  },
+  "public_runtime_checks": {
+    "status": "pass",
+    "cases": 9,
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "screenshots": 30,
+    "scope": "Intentional BEFORE contrast plus AFTER/COUNTERCASE information, keyboard, focus, search/filter and selected-scope continuity checks",
+    "raw_report_sha256": "7b6df2690aa79191e9f182ce7f3a6480ac6ad32cf351e279f21a774efba34f7a",
+    "source_fingerprint": "4b0c45cc10c607db87a58c1fa27a2750b27b6856b5abcc31c7b24332dcad208e",
+    "original_ui_byte_identity_rechecked": true,
+    "served_source_sha256": {
+      "before.html": "06387b007a515b8a40110ca647db2f46fb809bf0fed55632b3cca87345441e42",
+      "after.html": "1e03fa6ef3f4ee5034c5af1f35c38631ebccb891a2209eb712aee5474405663a",
+      "countercase.html": "9a723d8adbd5ad382643e0bc61e2edc80d0607190ade5fc714eeb006b919c294",
+      "app.js": "2a9308dfac3b10e894a3117c633f548689134312f6f9ab49714368e6d4c464b5",
+      "style.css": "4a9cb3ae1595e0c2f8bf3465a829a0a75c586aced5aa033947baff8b3c40d17d"
+    },
+    "raw_reports_bundled": false
+  },
+  "verified_at": "2026-10-29T11:12:14.808498+00:00",
+  "public_runtime_image": "sha256:4a038315a864ae833ffd6b1b1b78a103ab69befbc19bcfc88b9bdcd5fdec1548",
+  "health": "healthy",
+  "health_path": "/after.html",
+  "shared_browser_sha256": "8717b7635724b4d8a02b0be764ddb134589610a5de76006a7ce704a8c00fee4d",
+  "playwright_version": "1.62.1"
+}

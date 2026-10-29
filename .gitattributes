@@ -1,3 +1,4 @@
 # Preserve pinned third-party snapshots byte for byte, including their whitespace.
 plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/** -whitespace
 plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/** -whitespace
+harness/reference-labs/**/licenses/** -whitespace

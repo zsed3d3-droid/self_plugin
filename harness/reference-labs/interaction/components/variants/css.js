@@ -1,0 +1,1 @@
+export function run(el,target,duration,complete){el.style.transition=`opacity ${duration}ms ease`;el.style.opacity=String(target);const timer=setTimeout(complete,duration+20);return()=>{clearTimeout(timer);const value=getComputedStyle(el).opacity;el.style.transition='none';el.style.opacity=value;};}

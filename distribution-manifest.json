@@ -1,6 +1,6 @@
 {
   "format": "self-plugin-distribution/v1",
-  "source_files": 244,
+  "source_files": 326,
   "excludes_itself": true,
   "private_runtime_data_included": false,
   "files": [
@@ -11,8 +11,8 @@
     },
     {
       "path": ".gitattributes",
-      "bytes": 229,
-      "sha256": "5ee825e8029b4a51edcbd151bef5af856dc5f7d57e0b67d4551a49a5ed4976c6"
+      "bytes": 279,
+      "sha256": "52551e8655799dbcb7612ff8d447a795cf95ce51044133aeb3fb6f04bae8a374"
     },
     {
       "path": ".gitignore",
@@ -31,13 +31,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 5020,
-      "sha256": "f0ae5c1f3d322f7c43a1edf61cf7b9b2612132980b5036ce865ff410d517e437"
+      "bytes": 6808,
+      "sha256": "c73361d441f90a00c7d0d20024b0832e54e9628ea672b24642036341529b255c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2207,
-      "sha256": "1f57032db14583b24b08ff03a00e034642969ae8c915435b527f7ca16c8841bd"
+      "bytes": 2935,
+      "sha256": "e8e1dde7b4af37347628db8d777d25d276ddf37936faf34c559ae14fd7acde65"
     },
     {
       "path": "docs/export-origins.json",
@@ -46,13 +46,23 @@
     },
     {
       "path": "docs/hooks-and-verification.md",
-      "bytes": 2504,
-      "sha256": "8f74e15a42cbf2a054207698d64ed0578427a3bfcf1f5b87054374ab43f50f9c"
+      "bytes": 2869,
+      "sha256": "0d70452b239b0ff02c4f5a70522ff4c2fd14bbd8ab9c6d5f8c76737a008b923e"
     },
     {
       "path": "docs/verification-status.md",
-      "bytes": 4001,
-      "sha256": "eec554fd7c7a598b4344570c7ce62a2208c5453cf26330b1c3a6876deb852546"
+      "bytes": 5151,
+      "sha256": "6e8a98324183d2e3bf57200fdcf5bce66536d1459c14c18f2aaf8646cf2d0116"
+    },
+    {
+      "path": "harness/browser/README.md",
+      "bytes": 755,
+      "sha256": "9f0056c83e9036019c2dde2a0ae03067161bae4a685e83598fc36cffa2cbf65c"
+    },
+    {
+      "path": "harness/browser/playwright.mjs",
+      "bytes": 364,
+      "sha256": "8717b7635724b4d8a02b0be764ddb134589610a5de76006a7ce704a8c00fee4d"
     },
     {
       "path": "harness/capacity-retry/.dockerignore",
@@ -320,6 +330,381 @@
       "sha256": "0d9aa25142f3750dfdb40ea8ea876ed54610d258d18a880142b552de279d1fd8"
     },
     {
+      "path": "harness/reference-labs/anti-slop/.dockerignore",
+      "bytes": 38,
+      "sha256": "afa4c8a562fb1c6d140fde5bdb7098a4f25a0cf4c37923c4a4856ec304e8f6a2"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/Dockerfile",
+      "bytes": 373,
+      "sha256": "ec170f3ce667de417673da2d83735df90d11003664317233868d120926a6da4d"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/LICENSE",
+      "bytes": 1290,
+      "sha256": "fbd1b05ad5e7ac02c43e13eceb5de1da879c3769327d1292aba0386c4a0f7180"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/NOTICE.md",
+      "bytes": 900,
+      "sha256": "6960116774b4d378033aa47469c0c51f09daaa67877663f5bb86637199f59da5"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/README.md",
+      "bytes": 1917,
+      "sha256": "426b993a76d45d44c36db6f464b3b59239f402dad45f66ca05d20c41b79c077d"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/VERIFICATION.json",
+      "bytes": 2710,
+      "sha256": "8de36359489af33b6511598119eb1a0fe5d780a2cdc678f1594c24396a8407ad"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/WHY.md",
+      "bytes": 5784,
+      "sha256": "6a3787da3eee78b1ca09514c95ca2c03a962a18a2fe8d05f41fdd251a400c89b"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/adapter.md",
+      "bytes": 2532,
+      "sha256": "60081a989c4f8bd944ac2fee04067c9bc4c0ca0b063df5dd56844a7a3c7d6678"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/compose.yaml",
+      "bytes": 234,
+      "sha256": "8f7342de7ce283bb34de0248ebefb7095038fc2274397b4c2dde83d1c197d9b0"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/licenses/anti-slop-MIT.txt",
+      "bytes": 1084,
+      "sha256": "34e896596d05ea55c798b9fce7d680db990a5935de115be5a8ac8d0863bb0fa8"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/licenses/unslop-ui-MIT.txt",
+      "bytes": 1066,
+      "sha256": "32cbefbabcb5219570753bb1efcce5437aae3003d52d442f9879386d5da15cd2"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/rules.json",
+      "bytes": 4458,
+      "sha256": "992a4dad6e97251ca499aeb69d82e341b46363438f219092ac91530a3713c0ea"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/tests/browser-check.mjs",
+      "bytes": 7386,
+      "sha256": "5b447ae54ec89606898711970637ab6697362b33bcb9ba95d3bfcd512854920b"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/after.html",
+      "bytes": 2522,
+      "sha256": "1e03fa6ef3f4ee5034c5af1f35c38631ebccb891a2209eb712aee5474405663a"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/app.js",
+      "bytes": 3401,
+      "sha256": "2a9308dfac3b10e894a3117c633f548689134312f6f9ab49714368e6d4c464b5"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/before.html",
+      "bytes": 2523,
+      "sha256": "06387b007a515b8a40110ca647db2f46fb809bf0fed55632b3cca87345441e42"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/countercase.html",
+      "bytes": 2576,
+      "sha256": "9a723d8adbd5ad382643e0bc61e2edc80d0607190ade5fc714eeb006b919c294"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/index.html",
+      "bytes": 202,
+      "sha256": "d293969fd8988c7ffff9ccd6a4526301efac2992cb2a1cac2736a0b2b27c3795"
+    },
+    {
+      "path": "harness/reference-labs/anti-slop/web/style.css",
+      "bytes": 7234,
+      "sha256": "4a9cb3ae1595e0c2f8bf3465a829a0a75c586aced5aa033947baff8b3c40d17d"
+    },
+    {
+      "path": "harness/reference-labs/canvas/.dockerignore",
+      "bytes": 101,
+      "sha256": "664434373fb0086da49e22d6e31717cf6ddf654a89954fbb63862cc38f258168"
+    },
+    {
+      "path": "harness/reference-labs/canvas/Dockerfile",
+      "bytes": 384,
+      "sha256": "1281b0ba51e23c5f065a9c5e98aab7d0105f7a398a752268e93985c5a9d65dc3"
+    },
+    {
+      "path": "harness/reference-labs/canvas/LICENSE",
+      "bytes": 1290,
+      "sha256": "fbd1b05ad5e7ac02c43e13eceb5de1da879c3769327d1292aba0386c4a0f7180"
+    },
+    {
+      "path": "harness/reference-labs/canvas/NOTICE.md",
+      "bytes": 815,
+      "sha256": "c954164d5f31e1901b984fbdf5b7d2e91ecb5232c25eab54359ba1ff3aa6f14b"
+    },
+    {
+      "path": "harness/reference-labs/canvas/README.md",
+      "bytes": 2078,
+      "sha256": "a356abc3065610bc4ba094a337ae7c9dda189a61614c7c2dbe4f1e1972e5e82b"
+    },
+    {
+      "path": "harness/reference-labs/canvas/VERIFICATION.json",
+      "bytes": 3838,
+      "sha256": "02f034661d1a7677377e1cb429117008b78de6761ba4f03e4ae86fddfe676b4c"
+    },
+    {
+      "path": "harness/reference-labs/canvas/WHY.md",
+      "bytes": 956,
+      "sha256": "f5342ebf9a951909dfdfff24cadb6808909b33ae28e0d1f9b25beac983118d37"
+    },
+    {
+      "path": "harness/reference-labs/canvas/build.mjs",
+      "bytes": 1215,
+      "sha256": "a743435989ca6d8ca7c18688c463bc7998b67a07b04cac7665f6e581cf748188"
+    },
+    {
+      "path": "harness/reference-labs/canvas/compose.yaml",
+      "bytes": 627,
+      "sha256": "cf546d2bb0cad016a886be327af22c45e956558652ad65224ed7dab2fe0053f6"
+    },
+    {
+      "path": "harness/reference-labs/canvas/index.html",
+      "bytes": 1965,
+      "sha256": "a6aae55c70a1e3f0bf9f07a44fce0debb25a4394677bfa1cf4c43f2bc1ce9b40"
+    },
+    {
+      "path": "harness/reference-labs/canvas/licenses/installed-notices.json",
+      "bytes": 1202758,
+      "sha256": "b72d83f833baedff6979b11cb457ce48c28124d83e7daa8e5d0ff19b560ea483"
+    },
+    {
+      "path": "harness/reference-labs/canvas/licenses/review-pin-LICENSE.txt",
+      "bytes": 1070,
+      "sha256": "b3f12201916c5d478263cd210cf17f3d0c007d03bd574e0b77cac6307953068e"
+    },
+    {
+      "path": "harness/reference-labs/canvas/licenses/runtime-pin-LICENSE.txt",
+      "bytes": 1070,
+      "sha256": "b3f12201916c5d478263cd210cf17f3d0c007d03bd574e0b77cac6307953068e"
+    },
+    {
+      "path": "harness/reference-labs/canvas/package-lock.json",
+      "bytes": 26089,
+      "sha256": "364e906fe68ea433b666b7c1a61d3718138e42a509ebbed8b7fe43b5eeaecb5d"
+    },
+    {
+      "path": "harness/reference-labs/canvas/package.json",
+      "bytes": 269,
+      "sha256": "76321722e49e661bbc238a011448c5304a31d2ae078bb2f6c32f30b09d4b72d1"
+    },
+    {
+      "path": "harness/reference-labs/canvas/reference-sources.json",
+      "bytes": 3744,
+      "sha256": "33f376e11bb7282671ba9adf6883585376e00e539d9f7c6ae254be2ed83ce39f"
+    },
+    {
+      "path": "harness/reference-labs/canvas/server.mjs",
+      "bytes": 3120,
+      "sha256": "488ec8ed00ab68912431311c2a0075907382e61957bf0ca5d44a440d5bddf460"
+    },
+    {
+      "path": "harness/reference-labs/canvas/src/main.ts",
+      "bytes": 4389,
+      "sha256": "f16bb1d5f9a99ea24bf4af6ec665860d9c810f1658be9eca6fac924d186680fa"
+    },
+    {
+      "path": "harness/reference-labs/canvas/src/scene.ts",
+      "bytes": 2566,
+      "sha256": "f9bb3ad149b0af7b9a8b3ae555f081c702853e106491609cd452be5e5d96f94a"
+    },
+    {
+      "path": "harness/reference-labs/canvas/style.css",
+      "bytes": 1521,
+      "sha256": "edeb159a422f3625b39801026e961b517f57b869af88f22d74e53a0699ba5e76"
+    },
+    {
+      "path": "harness/reference-labs/canvas/verify.mjs",
+      "bytes": 5422,
+      "sha256": "9cec5583f03638df11fff50d01f735a000f93a6a1ac4e774bf6bf3e1e64514d6"
+    },
+    {
+      "path": "harness/reference-labs/interaction/.dockerignore",
+      "bytes": 104,
+      "sha256": "63c321066321b73cba9b7bdf8728a5ac506bf02e69b177f0b3fa2ca43a1f47e7"
+    },
+    {
+      "path": "harness/reference-labs/interaction/Dockerfile",
+      "bytes": 565,
+      "sha256": "c5917dbc6989dacb873992e6465274d8d36a1ac7884b06558dc10c58178b05b8"
+    },
+    {
+      "path": "harness/reference-labs/interaction/NOTICE.md",
+      "bytes": 1704,
+      "sha256": "3c134b511b1ea2ed0e4f92a8fbc5b1a2e5992c57f4156334a04f8fb7c256f489"
+    },
+    {
+      "path": "harness/reference-labs/interaction/README.md",
+      "bytes": 3175,
+      "sha256": "bb28fdc71a76b39d764fab1145cabb69d1c270839f21afa90f272dd0a4cc8a96"
+    },
+    {
+      "path": "harness/reference-labs/interaction/VERIFICATION.json",
+      "bytes": 3372,
+      "sha256": "0aeac68f9ac4eeb7dd1dd2e2b74b5b493c82b7fc419fc780556a1da4ca2ecc94"
+    },
+    {
+      "path": "harness/reference-labs/interaction/app/globals.css",
+      "bytes": 3895,
+      "sha256": "abf86177fdd0be626d0d234f773ef9482ac6fbc50b8c25371f242aca2a9aee1e"
+    },
+    {
+      "path": "harness/reference-labs/interaction/app/health/route.js",
+      "bytes": 155,
+      "sha256": "988295d860344a8ff586363a69cc1c7ce71e1fe335e29fd1cd96a434677a4d29"
+    },
+    {
+      "path": "harness/reference-labs/interaction/app/lab/[mode]/page.js",
+      "bytes": 1037,
+      "sha256": "4116907f62b195063a0dbecbd20cb6f6e27e1fd1d80e3340f53665f32b49859a"
+    },
+    {
+      "path": "harness/reference-labs/interaction/app/layout.js",
+      "bytes": 373,
+      "sha256": "36cf3de0f617bbc266e86a90dfc5bb5d8bb8e5eefbdf063ccc052abd8c249a68"
+    },
+    {
+      "path": "harness/reference-labs/interaction/app/page.js",
+      "bytes": 1067,
+      "sha256": "5b40bea407cd67c036fec50cefd6b7c305a050819556c8d953854d2bde923eef"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/review-task.js",
+      "bytes": 6427,
+      "sha256": "e6030584d8c0382996b570239f23e784d9f05c44d11c9ba270ba2bd95c76d3d7"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/variants/animate-css.js",
+      "bytes": 996,
+      "sha256": "e1e7d4879bec3cf82082650d9d887344c3076a86bf82c6fd87c3d62a41bbfe86"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/variants/anime.js",
+      "bytes": 200,
+      "sha256": "7ce1b203da12079b58a615b75ab51148805a02d2678c75caa1a275daf632e5be"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/variants/css.js",
+      "bytes": 301,
+      "sha256": "2c0a5c2eba3327c8409ac019585d7d4088cfde3fa21a1f85cff3e8cc27e981c8"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/variants/gsap.js",
+      "bytes": 218,
+      "sha256": "38c2b47afe0c0db420a3e1929e4a2ca4c2f3a6976bac3a1f7fac51f2f0c730d2"
+    },
+    {
+      "path": "harness/reference-labs/interaction/components/variants/motion.js",
+      "bytes": 213,
+      "sha256": "0eafab94823cc2ae7510a65a71015b80d4a8de1c6af11654f500d8a956ddc927"
+    },
+    {
+      "path": "harness/reference-labs/interaction/compose.yaml",
+      "bytes": 435,
+      "sha256": "e30b44e2c979170a81771bede186d49a3b39f1ceb531c48d1f4e67c930f17fe7"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/animate.css-LICENSE",
+      "bytes": 1078,
+      "sha256": "aa4b4f6ba47ac6a4b3443615b5a18576d4d28ad8b3da8b4cb8cb2bd28fdd54b2"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/animate.css-upstream-3f8ab233-LICENSE",
+      "bytes": 8398,
+      "sha256": "839cb59c82f68291766a76b294a59930523ae36089deca93c0900233f9f6a2b9"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/animejs-LICENSE.md",
+      "bytes": 1075,
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/gsap-dist-header.txt",
+      "bytes": 934,
+      "sha256": "e314ee66670eafcee88b82a1005875f4fe71e442798d0d986b05cda1a6c5d91e"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/gsap-package-notice.txt",
+      "bytes": 190,
+      "sha256": "828924c70390909b0f14fa25b656376c42468eb885a326c0d605343355499c97"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/motion-LICENSE.md",
+      "bytes": 1100,
+      "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/next-license.md",
+      "bytes": 1079,
+      "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/react-LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/react-dom-LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/tailwindcss-LICENSE",
+      "bytes": 1071,
+      "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+    },
+    {
+      "path": "harness/reference-labs/interaction/licenses/tailwindcss-postcss-LICENSE",
+      "bytes": 1071,
+      "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+    },
+    {
+      "path": "harness/reference-labs/interaction/next.config.mjs",
+      "bytes": 672,
+      "sha256": "ecb6dcda694b4e7c4992e8bde2a40c42230b18619fcf9ed359c61a58ef8e38ab"
+    },
+    {
+      "path": "harness/reference-labs/interaction/package-lock.json",
+      "bytes": 59001,
+      "sha256": "ec89eaf20bf3db1275584cbb9a028ab168bcef1dc2f7224938624476ff19cc47"
+    },
+    {
+      "path": "harness/reference-labs/interaction/package-provenance.json",
+      "bytes": 6012,
+      "sha256": "d382deb38155ea5d4630fd5479ced2f9836f717426b7411152b1263ec00ceba8"
+    },
+    {
+      "path": "harness/reference-labs/interaction/package.json",
+      "bytes": 397,
+      "sha256": "6e9f05b9b63e8dd95499bf45e5af6d10feaf46ef8d79274705d253762bf6becd"
+    },
+    {
+      "path": "harness/reference-labs/interaction/postcss.config.mjs",
+      "bytes": 54,
+      "sha256": "cc8f514ba7fda07a2e2828670c99e34275f314b350628d8c2ab39e68e50bf9f8"
+    },
+    {
+      "path": "harness/reference-labs/interaction/public/third-party-notices.txt",
+      "bytes": 9386,
+      "sha256": "3b3c9cb5da03616e95debc225e2955e5f07525fb25f1afbc0c3f76b0d83f6bf4"
+    },
+    {
+      "path": "harness/reference-labs/interaction/verify.mjs",
+      "bytes": 9159,
+      "sha256": "b01a94c166f7661883ad33ab61d410c99bf9e11c1e4fb851ff5062596567389a"
+    },
+    {
       "path": "knowledge/README.md",
       "bytes": 7381,
       "sha256": "17c0057700af0993f219f23bee37ef94592fb5be26791ab35f2e61f7dd9d2b35"
@@ -338,6 +723,16 @@
       "path": "licenses/DA_Plugin_Sets-MIT.txt",
       "bytes": 1085,
       "sha256": "1d205c4b985d780ff2c0fd26184207fae78c1223231dcf64723fb317bc0f7888"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1773,
+      "sha256": "393fe688754205d4fe5c52ac88072a9edd2338daf9253438d392b11135c6789f"
+    },
+    {
+      "path": "package.json",
+      "bytes": 534,
+      "sha256": "4780b4bd846fb51563fd396969a2a2984f658cfc0884312def1b3da48f2ba350"
     },
     {
       "path": "plugins/craft-ui-motion/.codex-plugin/plugin.json",
@@ -527,22 +922,22 @@
     {
       "path": "plugins/scenario-ui-ux/.codex-plugin/plugin.json",
       "bytes": 758,
-      "sha256": "0909d3d13e5d1e645ada2d4a790edacb9ee2792fb35717cf56097cb5601a5f50"
+      "sha256": "f2bc39750d5a5e7f1e7b44439f57871c466c18244abb4ecb39eeb172a9f5783f"
     },
     {
       "path": "plugins/scenario-ui-ux/README.md",
-      "bytes": 3378,
-      "sha256": "311946e0d8a0a6c71af17f04c43e60b78d8987a4d50f2754c50cef3364f683dc"
+      "bytes": 3884,
+      "sha256": "42c64c51782082675c273c1a3465933895f64986f24f0efdbe271866e388d901"
     },
     {
       "path": "plugins/scenario-ui-ux/plugin.json",
       "bytes": 758,
-      "sha256": "0909d3d13e5d1e645ada2d4a790edacb9ee2792fb35717cf56097cb5601a5f50"
+      "sha256": "f2bc39750d5a5e7f1e7b44439f57871c466c18244abb4ecb39eeb172a9f5783f"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md",
-      "bytes": 11140,
-      "sha256": "c15ef6ae0ea01e55afc759ac048e551b37b70f52093e318d2a2a2ee0db354756"
+      "bytes": 11583,
+      "sha256": "03c4beb2a561d51bec04da4222abfd6f977ed9d6fd75c197bcb63746cd153115"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md",
@@ -600,6 +995,11 @@
       "sha256": "7a961e779209985dbf26db26dfaee0c9824a31e16fc9fda760293c86ffd2e638"
     },
     {
+      "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-adoption.md",
+      "bytes": 6319,
+      "sha256": "b5faba62d48a3a0e058b2320cb837362ef29cfed5f1fcbee737e16ea0c5b23b4"
+    },
+    {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-catalog.json",
       "bytes": 10490,
       "sha256": "82e5e36434260e803296af19cb88113b0b965595eb8431925c7accff8b12c481"
@@ -611,8 +1011,8 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/runtime-ux-method.md",
-      "bytes": 19600,
-      "sha256": "f84572024d38fd1dc5885e92fb5ae177b8b4bcc59581b2198e2132fc9c16c4e4"
+      "bytes": 20627,
+      "sha256": "fe2526babcba6a33a4401bea53eb70621ed1fa043ae92f580b33db265538ae2d"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/vision-critique.md",
@@ -626,13 +1026,13 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-hook.py",
-      "bytes": 41888,
-      "sha256": "0f55cec2cabe0988db96aa00f4c01e701fc72f40dc5d0f1607328ec0d326ec7c"
+      "bytes": 41938,
+      "sha256": "e543b9b970740fdc2815507c0818454bc69981198b70f0c16038ddb67e274b98"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py",
-      "bytes": 7213,
-      "sha256": "3181e551f8ef7dfa92820de6d5b0b35587773161906ab91cba07c31da04fd3ff"
+      "bytes": 7238,
+      "sha256": "390cdc8e2397d639737b39bdcc452b7fed60519a9978d8783cd34e4506feac08"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/reference-plan.py",
@@ -806,8 +1206,8 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py",
-      "bytes": 34796,
-      "sha256": "e9dfed2704d8d2ec28f750e27cb9ebd22f79860446231a5822164e3e145e5e7f"
+      "bytes": 35767,
+      "sha256": "52a5bf908f6e21d73738f1f81d804bc969133dc81aa0f9b74fca3cef29d87276"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/NOTICE.md",
@@ -1153,6 +1553,16 @@
       "path": "requirements-dev.txt",
       "bytes": 28,
       "sha256": "5b7bbc2b7851473ea10a566b9010ad7cdf84f5beaa1b8f0a2bbc198fe9e0d463"
+    },
+    {
+      "path": "research/reference-gap-20261029/README.md",
+      "bytes": 4552,
+      "sha256": "bca6580dc5116716f3e580ac9adee457567cef53e4fb81b37a4a0bd230d6bd8d"
+    },
+    {
+      "path": "research/reference-gap-20261029/review.json",
+      "bytes": 21226,
+      "sha256": "b56eb78ddd103c00b66a8cc8fc051044c8194dc1190774f8aa2fad87bc7cfd5a"
     },
     {
       "path": "research/upstreams.json",

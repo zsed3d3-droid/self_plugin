@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-29T10:54:07.344165+00:00",
+  "licenses": [
+    {
+      "file": "licenses/review-pin-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/motion-canvas/motion-canvas/7b91435c301d530351dcf5ebb91dd139c002e405/LICENSE",
+      "sha256": "b3f12201916c5d478263cd210cf17f3d0c007d03bd574e0b77cac6307953068e",
+      "git_blob_sha1": "b30f04e173f68773714b7d9e2652caecbeec53f9"
+    },
+    {
+      "file": "licenses/runtime-pin-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/motion-canvas/motion-canvas/e735a995aa738ca682feb4204a39ee7db7b5d279/LICENSE",
+      "sha256": "b3f12201916c5d478263cd210cf17f3d0c007d03bd574e0b77cac6307953068e",
+      "git_blob_sha1": "b30f04e173f68773714b7d9e2652caecbeec53f9"
+    }
+  ],
+  "packages": [
+    {
+      "name": "@motion-canvas/core",
+      "version": "3.17.2",
+      "latest_observed": "3.17.2",
+      "license": "MIT",
+      "gitHead": "e735a995aa738ca682feb4204a39ee7db7b5d279",
+      "dist": {
+        "shasum": "32902ca1fbcd83c43162dd392793d35b8fe81928",
+        "tarball": "https://registry.npmjs.org/@motion-canvas/core/-/core-3.17.2.tgz",
+        "fileCount": 459,
+        "integrity": "sha512-9M4NxNVR9LLxZ+ykTznMcbMlKjbe2NkmDIlFDl2uOyVkK5wFiRwF7k13a1I/n3BVxJJoKPt9UOQF/wn3LrBXJA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCBygOG9Tn30SnpKvSd/QPKALX2m6aJ2GHihuNkNjBniAIhAMeDpKVaS9QirnZf0VwKAqKcf4rqfJVa0XAevjKy9HRV",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 865449
+      }
+    },
+    {
+      "name": "@motion-canvas/2d",
+      "version": "3.17.2",
+      "latest_observed": "3.17.2",
+      "license": "MIT",
+      "gitHead": "e735a995aa738ca682feb4204a39ee7db7b5d279",
+      "dist": {
+        "shasum": "25afa4603c080d7a1e3a6bc385a4a2b8a4101e80",
+        "tarball": "https://registry.npmjs.org/@motion-canvas/2d/-/2d-3.17.2.tgz",
+        "fileCount": 451,
+        "integrity": "sha512-Q2DMYSmJMTN8vvLcpofHEMuYEjx60z4hjlwbWJnWx3xnb7DU5suovJ47qM2sk46al/RDXJIz6rfALTr33brKaw==",
+        "signatures": [
+          {
+            "sig": "MEQCIHEsV1RPqQaJJCommt6+r4QBNiLckutMRjmPl6sVix4ZAiAwc4d5XQ3fRNGSm043Fi7vUI3wYsBPJ/2QcnYYvJ5pBQ==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 1732849
+      }
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "latest_observed": "0.28.2",
+      "license": "MIT",
+      "gitHead": "609683d892977362a0f99026cb74b96263d728a9",
+      "dist": {
+        "shasum": "0f43bd1bad955b72d24e2261e3abe5957ccf0816",
+        "tarball": "https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCUNxdzUXI/rpHaMMcf/skpuDBkNL7aLEXFFc0dex0NCAIhAMDKoRFFyK2uR0qEIAoCe4pdRrJ3ld2ZCoHNyNuX6ju7",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQC8VkNobVdJrr03U9huHI7n2VhWQ2shvrTvNYB1Mx8gigIgFkrOTUauuovxR8qg94n81hYvSw6PI2qEQkNiqHkmjcg="
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/esbuild@0.28.2",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 147361
+      }
+    }
+  ],
+  "notes": [
+    "Runtime package release pin differs from reviewed repository main pin.",
+    "No commercial artwork, fonts or example scene assets copied."
+  ]
+}

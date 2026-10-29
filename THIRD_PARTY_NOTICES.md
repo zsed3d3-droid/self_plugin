@@ -10,3 +10,7 @@ This distribution combines new orchestration, modified skills and existing reusa
 - Vercel, Remotion, ThreeUI and other sources represented by links or source pointers remain links or pointers. This distribution adds no missing-license source copy, paid assets, proprietary books or designer branding.
 
 Public-distribution changes: repository/maintainer metadata, a filtered seven-plugin marketplace, private-policy placeholders, packaging paths, independent local service configuration and distribution documentation. Original private databases, user decisions and reasons, screenshots supplied by the user, authentication, native sessions and runtime dumps are excluded. Generalized assistant engineering cases are explicitly labeled as such.
+
+## 0.5.0 verification labs
+
+The labs contain independently written fixtures and pinned npm dependencies, with their actual notices in each lab. Motion, Anime.js and Motion Canvas were checked against their pinned licenses. The built animate.css@4.1.1 npm artifact includes its MIT2020 license; the separately inspected current upstream uses Hippocratic2.1. They are separate artifacts and are documented separately. GSAP3.15.0 has its own terms; its original notice is retained in the served production bundle. This is a fixed local comparison fixture, not a visual animation authoring product. No paid Motion+ assets are bundled. Next/React/Tailwind official-document summaries do not claim a jointly authored official skill.

@@ -1,0 +1,15 @@
+{
+  "name": "self-plugin-browser-verification",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pinned shared Playwright runtime for retained reference lab checks",
+  "scripts": {
+    "test:reference:interaction": "node harness/reference-labs/interaction/verify.mjs",
+    "test:reference:anti-slop": "node harness/reference-labs/anti-slop/tests/browser-check.mjs",
+    "test:reference:canvas": "node harness/reference-labs/canvas/verify.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

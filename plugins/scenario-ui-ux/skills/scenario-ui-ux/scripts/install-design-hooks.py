@@ -80,7 +80,7 @@ def install(project, host='both', contract=None):
             raise hook.AuditError('modified_managed_hook_runtime')
         sources[name] = source.read_bytes()
     references = {}
-    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md'):
+    for name in ('runtime-ux-method.md', 'designer-judgment.md', 'personal-ui.md', 'reference-adoption.md'):
         source = Path(__file__).parent.parent / 'references' / name
         if not source.is_file():
             raise hook.AuditError('required_ux_reference_missing')

@@ -1,0 +1,15 @@
+name: self-plugin-reference-interaction
+services:
+  web:
+    build: .
+    ports: ["127.0.0.1:8871:3000"]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp"]
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 6

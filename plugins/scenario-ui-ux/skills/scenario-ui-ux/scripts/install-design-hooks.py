@@ -92,6 +92,10 @@ def install(project, host='both', contract=None):
                          (['--contract', contract] if contract else []))
     hosts = ('codex', 'claude') if host == 'both' else (host,)
     plans = [planned_config(project, item, command) for item in hosts]
+    # Claim only a new/empty artifact root after every install preflight succeeds.
+    # Existing managed evidence stays intact; unknown/symlink roots fail before
+    # any runtime or native configuration writes.
+    hook.artifact_root(project)
     # Hook/config files are install outputs only; source files and DESIGN.md are untouched.
     runtime.mkdir(exist_ok=True)
     for name, data in sources.items():

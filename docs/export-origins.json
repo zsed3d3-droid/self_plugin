@@ -40,19 +40,19 @@
     },
     "plugins/scenario-ui-ux/plugin.json": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/plugin.json",
-      "source_sha256": "65e7937987fd354bf17dc814dede19210daad6099532ad76795259245509a510"
+      "source_sha256": "04f31da3ec12dd8dfd7b0494c52dc617d323075e590e651a6e36fe4ebabd1edc"
     },
     "plugins/scenario-ui-ux/README.md": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/README.md",
-      "source_sha256": "e78983c943f566f4ecd8d14dcf153e0bd051d76df663b29c07715742b266c334"
+      "source_sha256": "56baf253c7a2ef4de73edec294b5663ef46ff2e17c3fbca9f92f5f863a9e587a"
     },
     "plugins/scenario-ui-ux/.codex-plugin/plugin.json": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/.codex-plugin/plugin.json",
-      "source_sha256": "65e7937987fd354bf17dc814dede19210daad6099532ad76795259245509a510"
+      "source_sha256": "04f31da3ec12dd8dfd7b0494c52dc617d323075e590e651a6e36fe4ebabd1edc"
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md",
-      "source_sha256": "5a8c42b859f3056142de65c8c7e06119405b9b407c8705266417af3469e8e3ed"
+      "source_sha256": "cd04c1759673582dcb456806d5ede00ed17adc1aac057d72d76a9847b414c59b"
     },
     "plugins/scenario-ui-ux/skills/ux-judgment/SKILL.md": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/SKILL.md",
@@ -136,7 +136,7 @@
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-hooks.md": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-hooks.md",
-      "source_sha256": "810c12ab3ff1f0a402460f19211b8ac4c901b5d4b5d12055b2acead33a66c48a"
+      "source_sha256": "c112e0fbc44c2aa65cda38c6a3c3a0bf1593d07bfa8472d98684b1676c0c0aa8"
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md",
@@ -148,7 +148,7 @@
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py",
-      "source_sha256": "e9dfed2704d8d2ec28f750e27cb9ebd22f79860446231a5822164e3e145e5e7f"
+      "source_sha256": "224aa6c716f245ef54e69e11075ddcde954e50115f52a028bb2bdd200b55f8f8"
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-hook.py": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-hook.py",
@@ -164,7 +164,7 @@
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py",
-      "source_sha256": "3181e551f8ef7dfa92820de6d5b0b35587773161906ab91cba07c31da04fd3ff"
+      "source_sha256": "f0ce234c7c1a0b875f0a502de2d8e2f48f36c52e9f71273f8db930510ebb7133"
     },
     "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/engineering-research.json": {
       "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/engineering-research.json",
@@ -737,6 +737,16 @@
     "harness/capacity-retry/retry_state.py": {
       "source": "ux-lab/harness/capacity-retry/retry_state.py",
       "source_sha256": "7269340eff38b7ef4ef300212992d69fe778fe2faabb65ab6d4d353300d3519e"
+    },
+    "knowledge/assistant-ux-cases.json": {
+      "source": "knowledge/sources.json",
+      "source_sha256": "379d0f6a57af7ec0132b928aa9253a1a69d341b10441098a1303cf3b60b75dd4",
+      "note": "Manual safe summaries from indexed assistant records; prior51 unchanged, new5 refer to exact private compilation hash and JSON pointers without raw input redistribution."
+    },
+    "knowledge/sources.json": {
+      "source": "Handoff assistant compilation; private raw input omitted",
+      "source_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "note": "Append provenance for five009 summaries; prior source entries unchanged. Closure proof hash is recorded in the public index."
     }
   }
 }

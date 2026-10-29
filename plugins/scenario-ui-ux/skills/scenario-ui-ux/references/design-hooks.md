@@ -89,3 +89,7 @@ python3 .design-hooks/design-hook.py --project . --resolve \
   --decision-reason '사용자가 인증 완료 후 재검증을 요청함' \
   --decision-ref 'conversation:event-id'
 ```
+
+## 첫 설치의 검수 폴더 소유권
+
+실제 UI scaffold·유효한 DESIGN 계약 뒤, 첫 브라우저 관찰·캡처를 쓰기 전에 Hook을 설치한다. 설치기는 모든 기존 설치 preflight가 성공한 후 runtime·native 설정을 쓰기 직전에 기존 `artifact_root` guard로 새/빈 `.design-audit/managed.json`만 초기화한다. 기존 managed 폴더의 marker·예산·보고서·관찰·캡처는 수정하지 않는다. 비어 있지 않은 미관리 artifact 폴더와 symlink는 runtime·호스트 설정 변경 전에 실패한다. 출처가 알려진 과거 산출물의 보존·이관은 별도 작업이며 설치기가 자동 채택하지 않는다. 이 변경은 설치 전체의 파일 시스템 transaction이나 호스트 신뢰 승인, 검수 통과를 뜻하지 않는다.

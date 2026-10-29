@@ -7,7 +7,7 @@
 | 플러그인 | 버전 | 구성 |
 |---|---|---|
 | `da-development-method` | 0.2.0 | 신규. gstack 기반 개발·라우팅·피드백 회수 |
-| `scenario-ui-ux` | 0.5.0 | 신규. 디자인 레퍼런스·정보 구조·DESIGN 계약·실제 UX 수리 |
+| `scenario-ui-ux` | 0.5.1 | 신규. 디자인 레퍼런스·정보 구조·DESIGN 계약·실제 UX 수리 |
 | `ux-judgment` | — | Scenario 하위 skill. UX 저자 10명·원문 24개·조건부 판단 20개 |
 | `text-wireframe-planner` | 2.0.0 | 개편. 사용자 과업별 진입·행동·결과 와이어프레임 |
 | `craft-ui-motion` | 2.0.0 | 개편. 여백·타이포·목적 있는 모션·반응형 구조 |
@@ -92,3 +92,7 @@ python3 scripts/verify-distribution.py
 각 디렉터리에서 `docker compose up -d --build`로 실행합니다. 기존 개발 실험실8861–8863과 충돌하지 않게 공개본은8871–8873을 사용합니다. 실제 제품 사용과 독립 synthetic 실험은 다릅니다. 모션 랩은 짧은 상세 열기/닫기 과업이며 모든 layout·spring·타임라인 기능이나 사용자 선호 우위를 검증하지 않았습니다. Motion Canvas 범위는 브라우저 렌더와 PNG이며 영상 인코딩은 포함하지 않습니다.
 
 공개 복사본도 새 이미지로 빌드하고 실제 브라우저 과업을 검증했습니다. 각 `VERIFICATION.json`에 원래 실험과 공개 포트·helper·Origin 경계 차이를 기록합니다. 테스트용 Playwright는 루트의 `npm ci`와 `npx playwright install chromium`으로 준비합니다. 서비스는 컨테이너에서 실행합니다.
+
+## 0.5.1 · 첫 검수 폴더 초기화
+
+새 프로젝트의 실제 UI scaffold와 DESIGN 계약 뒤, 첫 브라우저 산출물 전에 Hook을 설치합니다. 새/빈 `.design-audit`의 소유 marker를 초기화하고, 기존 예산·관찰은 보존합니다. 비어 있지 않은 미관리 폴더나 symlink는 runtime·native 설정 변경 전에 거절하며 과거 산출물을 자동 채택하지 않습니다. 설치가 검수 통과나 호스트 신뢰 승인은 아닙니다.

@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6863,
-      "sha256": "bd3e881a2a96f717bcef4b1042bc2f903aa375fcce09333626d2081df139d044"
+      "bytes": 7352,
+      "sha256": "e5f327502b63c106ea964ed97f30b91f7721deb01992a3e8e4328510171007e1"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -41,18 +41,18 @@
     },
     {
       "path": "docs/export-origins.json",
-      "bytes": 51571,
-      "sha256": "ba74dcddfd23a441ef1cfce4ce46eef3f05186ad863c09d5f89a3b2fadeb2da9"
+      "bytes": 52287,
+      "sha256": "260511c4fda0eaa81933d6503c187e38f12449e1ddad0cfb68d34e11d72a1787"
     },
     {
       "path": "docs/hooks-and-verification.md",
-      "bytes": 4498,
-      "sha256": "04caa65a48663a569d3a35b5fc2b0767570777b31b4d2d02f9b1e62a012da35e"
+      "bytes": 4853,
+      "sha256": "c7d9fe3a5760cfe7b04b2842f2f3135ea56b4381868a67ed238fd4c82a1dac84"
     },
     {
       "path": "docs/verification-status.md",
-      "bytes": 5607,
-      "sha256": "dd070bca9513477f09713fdc5602951d3cc8e461c8fd0c048275836467938984"
+      "bytes": 6955,
+      "sha256": "ea9fb22fce2687931e349fd1965dd86da21b68323d2b69a0e3e5babad929ec49"
     },
     {
       "path": "harness/browser/README.md",
@@ -721,18 +721,18 @@
     },
     {
       "path": "knowledge/README.md",
-      "bytes": 7381,
-      "sha256": "17c0057700af0993f219f23bee37ef94592fb5be26791ab35f2e61f7dd9d2b35"
+      "bytes": 8985,
+      "sha256": "92d29f69d8b09d27864e19197dff44c1dde4bd07b03b8f45ee703a91df0fed25"
     },
     {
       "path": "knowledge/assistant-ux-cases.json",
-      "bytes": 148927,
-      "sha256": "4007289e5e30d07dadad1ff6ee194483f7e9d59211bd8136d799836e00e1f68e"
+      "bytes": 159384,
+      "sha256": "59ef150b029edc1e8207c71b675a2e1c9d6c3c331ca41272cb0ed554bbcc4992"
     },
     {
       "path": "knowledge/sources.json",
-      "bytes": 2561,
-      "sha256": "f3c21ebae4283c89daf84c5dba60d4947371da16babd7d4a2e7d58a456ffcc02"
+      "bytes": 3067,
+      "sha256": "379d0f6a57af7ec0132b928aa9253a1a69d341b10441098a1303cf3b60b75dd4"
     },
     {
       "path": "licenses/DA_Plugin_Sets-MIT.txt",
@@ -937,22 +937,22 @@
     {
       "path": "plugins/scenario-ui-ux/.codex-plugin/plugin.json",
       "bytes": 758,
-      "sha256": "f2bc39750d5a5e7f1e7b44439f57871c466c18244abb4ecb39eeb172a9f5783f"
+      "sha256": "d077ef7ed84726e5220f3cca29c671a5be610edb91ae2e1319df15af09cfc353"
     },
     {
       "path": "plugins/scenario-ui-ux/README.md",
-      "bytes": 3884,
-      "sha256": "42c64c51782082675c273c1a3465933895f64986f24f0efdbe271866e388d901"
+      "bytes": 4557,
+      "sha256": "e4c71595b2067c8164d9f056996d586d57a6138a1c8ca3bbd67a50481cfb73d4"
     },
     {
       "path": "plugins/scenario-ui-ux/plugin.json",
       "bytes": 758,
-      "sha256": "f2bc39750d5a5e7f1e7b44439f57871c466c18244abb4ecb39eeb172a9f5783f"
+      "sha256": "d077ef7ed84726e5220f3cca29c671a5be610edb91ae2e1319df15af09cfc353"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md",
-      "bytes": 11583,
-      "sha256": "03c4beb2a561d51bec04da4222abfd6f977ed9d6fd75c197bcb63746cd153115"
+      "bytes": 12092,
+      "sha256": "dd5de254ebe4ae186376bee130e9328f239c84446e2acd168c49ee029fe975cf"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md",
@@ -961,8 +961,8 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-hooks.md",
-      "bytes": 14543,
-      "sha256": "810c12ab3ff1f0a402460f19211b8ac4c901b5d4b5d12055b2acead33a66c48a"
+      "bytes": 15359,
+      "sha256": "c112e0fbc44c2aa65cda38c6a3c3a0bf1593d07bfa8472d98684b1676c0c0aa8"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-source-review.md",
@@ -1046,8 +1046,8 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py",
-      "bytes": 7238,
-      "sha256": "390cdc8e2397d639737b39bdcc452b7fed60519a9978d8783cd34e4506feac08"
+      "bytes": 7483,
+      "sha256": "f0ce234c7c1a0b875f0a502de2d8e2f48f36c52e9f71273f8db930510ebb7133"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/reference-plan.py",
@@ -1221,8 +1221,8 @@
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py",
-      "bytes": 35767,
-      "sha256": "52a5bf908f6e21d73738f1f81d804bc969133dc81aa0f9b74fca3cef29d87276"
+      "bytes": 40413,
+      "sha256": "224aa6c716f245ef54e69e11075ddcde954e50115f52a028bb2bdd200b55f8f8"
     },
     {
       "path": "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/NOTICE.md",

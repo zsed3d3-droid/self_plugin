@@ -1,6 +1,6 @@
 {
   "format": "self-plugin-conditional-ux-cases/v1",
-  "episode_count": 51,
+  "episode_count": 56,
   "not_user_feedback": true,
   "records": [
     {
@@ -1950,6 +1950,166 @@
       "limits": [
         "unrelated error 보존은 소스 branch 검토이며 별도 fault injection 미실행.",
         "baselineAPI35/GUI81을 R3 전체 재실행했다고 부르지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "handoff-reviewed-name-protection",
+      "product": "009-handoff",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "source_case_pointer": "/cases/0",
+      "evidence_scope": "Manual safe summary of recorded original runtime experiments and root review. Original causal records were read and compared; this export did not replay the product or memory import. Raw evidence, private identifiers and data are not redistributed.",
+      "title_ko": "저장본에서 검토한 이름을 제안이 지움",
+      "symptom": "저장된 이름 대응을 새 초안으로 가져온 뒤 일괄 제안을 실행하자 검토한 대상 이름이 바뀌었다.",
+      "symptom_basis": "recorded_agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "Recorded original runtime and bounded source diagnosis.",
+        "explanation": "가져온 저장 이름을 명시적으로 검토한 편집으로 표시하지 않아 제안기가 다시 덮을 수 있었다."
+      },
+      "change": "원본 식별자별 저장 이름을 검토한 편집으로 가져와 일괄 제안에서 보호한다.",
+      "countercase": "새 원본이나 아직 검토하지 않은 이름의 제안은 유지한다. 새로운 API flag나 모든 편집 잠금을 추가하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_recorded_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "원래 동일 동선에서 이름 유지와 두 저장 버전의 ZIP·manifest 및 원본 바이트 보존을 확인했다."
+      },
+      "limits": [
+        "고정 합성 데이터와 세 화면 폭의 기록이다. 모든 편집 충돌이나 사용자 채택을 검증하지 않았다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "handoff-version-order-contract",
+      "product": "009-handoff",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "source_case_pointer": "/cases/1",
+      "evidence_scope": "Manual safe summary of recorded original runtime experiments and root review. Original causal records were read and compared; this export did not replay the product or memory import. Raw evidence, private identifiers and data are not redistributed.",
+      "title_ko": "다시 열 때 최신 저장본과 다른 버전이 선택됨",
+      "symptom": "새 버전을 저장한 작업을 다시 열었는데 예전 버전이 먼저 표시됐다.",
+      "symptom_basis": "recorded_agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "Recorded original runtime and bounded source diagnosis.",
+        "explanation": "서버는 최신순으로 내보냈지만 클라이언트는 목록 끝을 최신으로 해석했다."
+      },
+      "change": "선언된 정렬 계약에 따라 최신 버전을 선택하고 명시적인 과거 버전 선택은 별도로 유지한다.",
+      "countercase": "모든 API의 첫 항목이 최신이라고 일반화하지 않는다. 예전 버전과 다운로드 바이트를 지우거나 덮어쓰지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_recorded_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "원래 재열기 실패 동선의 수정판에서 최신 버전이 표시됐고 과거 버전의 ZIP·manifest는 유지됐다."
+      },
+      "limits": [
+        "해당 서버 정렬 계약과 합성 동선의 결과이며 다른 백엔드까지 보장하지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "handoff-library-response-scope",
+      "product": "009-handoff",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "source_case_pointer": "/cases/2",
+      "evidence_scope": "Manual safe summary of recorded original runtime experiments and root review. Original causal records were read and compared; this export did not replay the product or memory import. Raw evidence, private identifiers and data are not redistributed.",
+      "title_ko": "현재 보관 보기와 늦은 목록 응답의 소유권",
+      "symptom": "보관 보기로 전환한 뒤 늦게 끝난 일반 목록 응답이 현재 화면의 행을 채웠다.",
+      "symptom_basis": "recorded_agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "Recorded original runtime and bounded source diagnosis.",
+        "explanation": "행·로딩·오류의 완료 처리가 현재 보기 범위와 요청 순서를 확인하지 않았다."
+      },
+      "change": "현재 보기 범위를 동기 참조로 소유하고 요청 순서까지 일치할 때만 완료 상태를 반영한다.",
+      "countercase": "응답 데이터를 삭제하거나 모든 탐색을 잠그는 수리가 아니다. 데이터베이스 격리 결함으로 부르지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_recorded_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "원래 지연 응답 재현은 보관 보기에 다른 행이 섞였고 수정 뒤 같은 동선에서는 보관 보기의 행이 유지됐다."
+      },
+      "limits": [
+        "이전 제품51건과 별도 하네스4건을 실제 조회했어도 이 보기 경계 결함은 재발했다. 검색 성공을 재발 예방의 증거로 세지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "handoff-create-prerequisite-affordance",
+      "product": "009-handoff",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "source_case_pointer": "/cases/3",
+      "evidence_scope": "Manual safe summary of recorded original runtime experiments and root review. Original causal records were read and compared; this export did not replay the product or memory import. Raw evidence, private identifiers and data are not redistributed.",
+      "title_ko": "입력 전제조건과 추가 동작의 표시 일치",
+      "symptom": "빈 추가 창에서 실제로 수행할 수 없는 추가 동작이 활성 상태로 제시됐다.",
+      "symptom_basis": "recorded_agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "Recorded original runtime and bounded source diagnosis.",
+        "explanation": "동작 표시가 제목·파일 존재 등 수행 전제조건을 반영하지 않았다."
+      },
+      "change": "필수 제목 의미, 알려진 입력·용량 조건, 안정적인 동작 이름과 짧은 이유를 활성 상태에 연결한다.",
+      "countercase": "0바이트 파일은 유효하다. 서버 검증이 최종 권위이며 취소 때 초안을 삭제하거나 오류를 숨기지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_recorded_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "원래 빈 상태에서 유효한 제목·0바이트 파일로 바꾸는 경로와 Escape 후 다시 열었을 때 초안 유지가 확인됐다."
+      },
+      "limits": [
+        "고정 파일과 Chromium 동선의 결과다. 모든 네이티브 파일 선택기나 새로운 사용자 평가를 확인하지 않았다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "handoff-human-time-presentation",
+      "product": "009-handoff",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "source_case_pointer": "/cases/4",
+      "evidence_scope": "Manual safe summary of recorded original runtime experiments and root review. Original causal records were read and compared; this export did not replay the product or memory import. Raw evidence, private identifiers and data are not redistributed.",
+      "title_ko": "저장 시각의 표시와 원본 기록을 분리",
+      "symptom": "결과·이력 화면이 기계용 ISO 시각을 그대로 본문에 표시했다.",
+      "symptom_basis": "coordinator_ux_inference_recorded",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "Recorded original runtime/source diagnosis; the time-readability classification is coordinator inference.",
+        "explanation": "저장 직렬화 값을 사람이 읽는 표시 문구와 구분하지 않았다."
+      },
+      "change": "표시만 지역 날짜·시각과 명시적인 시간대로 바꾸고 semantic datetime·manifest·다운로드 바이트는 유지한다.",
+      "countercase": "원래 ISO를 canonical 기록에서 없애지 않는다. 잘못된 시각은 정직한 fallback으로 표시한다.",
+      "actual_results": {
+        "functional": "pass_in_recorded_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "원래 같은 저장본을 서울·UTC·로스앤젤레스의 세 환경에서 읽고 시간대별 표시와 원본 ZIP·manifest·시각 값 보존을 확인했다."
+      },
+      "limits": [
+        "이 문제의 분류는 coordinator assistant의 가독성 추론이다. 사용자 요청·선호 승인으로 만들지 않으며 모든 locale·시간대를 전수 검사하지 않았다."
       ],
       "knowledge_status": "assistant_experiment_not_user_rule",
       "status": "verified_in_recorded_scope"

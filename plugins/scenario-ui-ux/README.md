@@ -1,4 +1,4 @@
-# Scenario UI/UX 0.4.0
+# Scenario UI/UX 0.5.1
 
 사용자 기능을 레퍼런스·디자이너 판단·실행 검증에 연결하는 gstack 기반 UI 전문 플러그인입니다. 캡처 기능을 더하는 대신, 화면의 구조와 과업에서 발견한 문제를 왜·어떻게 고칠지 다룹니다.
 
@@ -31,3 +31,7 @@ python3 scripts/reference-plan.py --task '업무 추가 모달, 기한 달력, �
 ## 0.5.0
 
 원천별 상태와 실제 검증 랩을 [적용 계약](skills/scenario-ui-ux/references/reference-adoption.md)에 연결했습니다. Anti-slop·Unslop의 조건별 검수 기준을 네 번째 해시 검증 가이드로 설치·전달합니다. 새 가이드의 변조 거절을 포함한 Hook36검사를 통과했습니다. 실제 실행은 [검증 랩](../../harness/reference-labs/)을 참고합니다. 기존 프로젝트 설치본과 호스트 신뢰는 자동 변경하지 않습니다.
+
+## 0.5.1 · 새 검수 폴더 초기화
+
+실제 첫 UI scaffold와 DESIGN 계약을 준비한 뒤 첫 브라우저 산출물 전에 Hook을 설치합니다. 설치기는 계약·runtime·가이드·호스트 설정의 기존 preflight를 마친 뒤 비어 있는 `.design-audit`에 소유 marker만 초기화합니다. 검사 통과·수정 예산·호스트 신뢰를 생성하거나 초기화하지 않습니다. 기존 managed 상태·관찰·캡처는 바이트 그대로 유지하고, 비어 있지 않은 미관리 폴더나 symlink는 runtime·native 설정을 쓰기 전에 거절합니다. 과거 자료의 자동 소유권 채택·이관은 하지 않습니다.

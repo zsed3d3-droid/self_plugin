@@ -534,6 +534,77 @@ record={'format':'scenario-browser-observation/v1','status':'pass','task':'Add t
         self.assertEqual(json.loads(result.stdout)['status'], 'fail')
         self.assertEqual(result.stderr, '')
 
+    def test_installer_bootstraps_owned_artifacts_and_preserves_later_budget_and_observations(self):
+        report = installer.install(self.project)
+        root = self.project / '.design-audit'
+        marker = root / 'managed.json'
+        self.assertTrue(marker.is_file(), 'A successful first install must initialize artifact ownership')
+        self.assertEqual(json.loads(marker.read_text()), {'format': hook.ROOT_FORMAT})
+        self.assertEqual([path.name for path in root.iterdir()], ['managed.json'])
+        self.assertEqual(report['trust'], 'pending_host_review')
+        # A real unit gate failure consumes one repair and retains browser artifacts.
+        # Reinstalling must neither rerun the gate nor reset its budget or evidence.
+        (self.project / 'browser.py').write_text(self.browser_source.replace("'status':'pass'", "'status':'fail'"))
+        failed = self.run_gate()
+        self.assertEqual(failed['status'], 'fail')
+        self.assertEqual(failed['repairs_requested'], 1)
+        before = {str(path.relative_to(self.project)): (path.read_bytes(), path.stat().st_mtime_ns)
+                  for directory in (root, self.project / '.design-hooks', self.project / '.claude', self.project / '.codex')
+                  for path in directory.rglob('*') if path.is_file()}
+        installer.install(self.project)
+        after = {str(path.relative_to(self.project)): (path.read_bytes(), path.stat().st_mtime_ns)
+                 for directory in (root, self.project / '.design-hooks', self.project / '.claude', self.project / '.codex')
+                 for path in directory.rglob('*') if path.is_file()}
+        self.assertEqual(after, before)
+
+    def test_installer_rejects_nonempty_unmanaged_artifacts_before_output_changes(self):
+        root = self.project / '.design-audit'
+        (root / 'browser').mkdir(parents=True)
+        observed = root / 'browser' / 'observation.json'
+        observed.write_bytes(b'{"unclaimed":"retained observation"}\n')
+        (self.project / '.claude').mkdir()
+        (self.project / '.codex').mkdir()
+        claude = self.project / '.claude/settings.json'
+        codex = self.project / '.codex/hooks.json'
+        claude.write_text('{"permissions":{"allow":["Read"]}}\n')
+        codex.write_text('{"hooks":{}}\n')
+        before = {path: (path.read_bytes(), path.stat().st_mtime_ns) for path in (observed, claude, codex)}
+        with self.assertRaisesRegex(installer.hook.AuditError, 'nonempty_unmanaged_artifact_directory'):
+            installer.install(self.project)
+        self.assertEqual(before, {path: (path.read_bytes(), path.stat().st_mtime_ns) for path in before})
+        self.assertFalse((root / 'managed.json').exists())
+        self.assertFalse((self.project / '.design-hooks').exists())
+
+    def test_installer_rejects_symlink_artifacts_before_output_changes(self):
+        outside = self.project / 'external-artifacts'
+        outside.mkdir()
+        sentinel = outside / 'retained.txt'
+        sentinel.write_bytes(b'external evidence must remain unchanged\n')
+        (self.project / '.design-audit').symlink_to(outside, target_is_directory=True)
+        (self.project / '.claude').mkdir()
+        settings = self.project / '.claude/settings.json'
+        settings.write_text('{"permissions":{"allow":["Read"]}}\n')
+        before = {path: (path.read_bytes(), path.stat().st_mtime_ns) for path in (sentinel, settings)}
+        with self.assertRaisesRegex(installer.hook.AuditError, 'symlink_artifact_root'):
+            installer.install(self.project)
+        self.assertEqual(before, {path: (path.read_bytes(), path.stat().st_mtime_ns) for path in before})
+        self.assertEqual([path.name for path in outside.iterdir()], ['retained.txt'])
+        self.assertFalse((self.project / '.design-hooks').exists())
+        self.assertFalse((self.project / '.codex').exists())
+
+    def test_installer_config_preflight_failure_creates_no_artifact_root(self):
+        (self.project / '.claude').mkdir()
+        settings = self.project / '.claude/settings.json'
+        settings.write_text(json.dumps({'hooks': {'Stop': [{'hooks': [{'type': 'command',
+            'command': '.design-hooks/design-hook.py --unmanaged'}]}]}}))
+        before = settings.read_bytes()
+        with self.assertRaisesRegex(installer.hook.AuditError, 'conflicting_managed_design_hook'):
+            installer.install(self.project)
+        self.assertEqual(settings.read_bytes(), before)
+        self.assertFalse((self.project / '.design-audit').exists())
+        self.assertFalse((self.project / '.design-hooks').exists())
+        self.assertFalse((self.project / '.codex').exists())
+
     def test_installed_adoption_guidance_is_preserved_and_tampering_blocks_reinstall(self):
         installer.install(self.project)
         guidance = self.project / '.design-hooks/references/reference-adoption.md'

@@ -64,6 +64,21 @@
       "sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
       "episodes": 6,
       "raw_artifacts_included": false
+    },
+    {
+      "product": "009-handoff",
+      "source": "Handoff assistant compilation; private raw input is not distributed",
+      "sha256": "ce26254420efe1d363b80cd12dd787589df3ce583eb6c2ac37fac18ffe77b1b7",
+      "case_pointers": [
+        "/cases/0",
+        "/cases/1",
+        "/cases/2",
+        "/cases/3",
+        "/cases/4"
+      ],
+      "closure_proof_sha256": "b879efe8db89c50a9605f7671d9f711a36799c92453763f51b66843a5f044958",
+      "episodes": 5,
+      "raw_artifacts_included": false
     }
   ]
 }

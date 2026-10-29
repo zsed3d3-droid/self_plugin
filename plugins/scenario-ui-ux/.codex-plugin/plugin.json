@@ -1,6 +1,6 @@
 {
   "name": "scenario-ui-ux",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Reference-driven UI/UX with a source-backed designer judgment library, DESIGN.md hooks and evidence-based repair.",
   "author": {
     "name": "self_plugin contributors"

@@ -55,6 +55,8 @@ python3 upstream/ui-ux-pro-max/scripts/search.py "task list dialog focus keyboar
 
 프로젝트 DESIGN.md에 과업/화면별 위계, 주요 행동, 기본/확장 노출, 색·간격·타입·radius 토큰, 포커스·선택·오류·로딩·빈 상태, 작은 화면/모션 감소, 채택/제외 레퍼런스를 간결하게 적는다. 검사 가능한 값은 [templates/DESIGN.md](templates/DESIGN.md)의 design-contract에 둔다. 기존 토큰을 보존하고 필요한 수정만 한다.
 
+실제 첫 UI scaffold와 DESIGN 계약이 준비되면 첫 브라우저 캡처·관찰 파일을 만들기 전에 `scripts/install-design-hooks.py --project /path/to/project`를 실행한다. 설치를 통과시키려고 가짜 UI 파일을 만들지 않는다. 설치기는 새/빈 `.design-audit`의 소유 marker만 만들며 검사 통과·예산·신뢰를 부여하지 않는다. 기존 managed 근거는 유지하고 비어 있지 않은 미관리 폴더나 symlink는 자동 채택하지 않는다.
+
 같은 역할의 입력/버튼/포커스는 공용 컴포넌트와 토큰으로 맞춘다. 다른 과업의 밀도까지 획일화하지 않는다. 카드 경계는 독립 선택·비교·소유권에 필요할 때 쓰고 반복된 묶음은 정렬·여백·제목·구분선을 먼저 검토한다. 여백을 없애서 카드 문제를 해결하지 않는다.
 
 ## 5. 필요한 전문 지식을 선택한다

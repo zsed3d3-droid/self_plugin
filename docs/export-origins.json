@@ -1,0 +1,718 @@
+{
+  "format": "self-plugin-export-origins/v1",
+  "note": "Original source references and hashes; exported files may contain documented distribution adaptations. No absolute workstation paths.",
+  "files": {
+    "plugins/da-development-method/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/plugin.json",
+      "source_sha256": "1d37edd11d7287c5aa8e9e7ad78b53a83d524d58ae4e0ff8d33c92e46bed6ee2"
+    },
+    "plugins/da-development-method/README.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/README.md",
+      "source_sha256": "6da2abd27faf26a0134b5dfa2ab5916d15981d4c86963d650e6739ce410ad8bc"
+    },
+    "plugins/da-development-method/rules/AGENTS.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/rules/AGENTS.md",
+      "source_sha256": "8af79aa6bd539c129b7401ed2f1197c8dcc528f272b21a81bfea4e464c5693ad"
+    },
+    "plugins/da-development-method/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/.codex-plugin/plugin.json",
+      "source_sha256": "1d37edd11d7287c5aa8e9e7ad78b53a83d524d58ae4e0ff8d33c92e46bed6ee2"
+    },
+    "plugins/da-development-method/skills/da-development-method/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/skills/da-development-method/SKILL.md",
+      "source_sha256": "f860122cefa9d4af2664694b22de31181db19152678991432145cf1b6b2be78f"
+    },
+    "plugins/da-development-method/skills/da-development-method/references/routing.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/skills/da-development-method/references/routing.md",
+      "source_sha256": "3ed68b1b11d199e130ed40f39eae853bcc36b9e18d2d72a7e16747aa05a5e772"
+    },
+    "plugins/da-development-method/skills/da-development-method/references/feedback-loop.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/skills/da-development-method/references/feedback-loop.md",
+      "source_sha256": "68786d33390839a3d135f342552757d8104ef38e75d965a03b58b0f915987b27"
+    },
+    "plugins/da-development-method/skills/da-development-method/references/execution-and-data.md": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/skills/da-development-method/references/execution-and-data.md",
+      "source_sha256": "e46da671f71f23a491dfe29f88db77c9797ea4be0c4a3525724aca7f0606b218"
+    },
+    "plugins/da-development-method/skills/da-development-method/scripts/sync-decisions.py": {
+      "source": "DA_Plugin_Sets/plugins/da-development-method/skills/da-development-method/scripts/sync-decisions.py",
+      "source_sha256": "967407d559dfeb0faa4ac31783860017c2d3f89b6ba248e6713262145c088790"
+    },
+    "plugins/scenario-ui-ux/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/plugin.json",
+      "source_sha256": "65e7937987fd354bf17dc814dede19210daad6099532ad76795259245509a510"
+    },
+    "plugins/scenario-ui-ux/README.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/README.md",
+      "source_sha256": "e78983c943f566f4ecd8d14dcf153e0bd051d76df663b29c07715742b266c334"
+    },
+    "plugins/scenario-ui-ux/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/.codex-plugin/plugin.json",
+      "source_sha256": "65e7937987fd354bf17dc814dede19210daad6099532ad76795259245509a510"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/SKILL.md",
+      "source_sha256": "5a8c42b859f3056142de65c8c7e06119405b9b407c8705266417af3469e8e3ed"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/SKILL.md",
+      "source_sha256": "7432c0887188f8be1d78cfbef6598b428a33cb51e60e56fd57c829c504f4b587"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/references/practice-contracts.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/references/practice-contracts.md",
+      "source_sha256": "2d9bb37f98782ae2d285b35f25cf833c370f1170ba1e36667ae580f19d4d23b3"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/references/author-index.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/references/author-index.md",
+      "source_sha256": "1b6843a999d43f4bbedae215407193a42953732e9fd5eec6ffd4694c56a469a1"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/references/author-library.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/references/author-library.json",
+      "source_sha256": "a45a3fa0d6966644c5efaa3c988816d67b0f8e7fa1fbf762c961fc8a413c083e"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/tests/test_select_judgment.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/tests/test_select_judgment.py",
+      "source_sha256": "e5d96230f722938d7358787a10759fbbfacddc2e1b4b8e868ef9ecf16488f9c5"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/tests/selection-case-log.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/tests/selection-case-log.json",
+      "source_sha256": "e6c7c9c1fccc22a77bca7d46ad80a518ebec5a6acf2806f42994414dba50b324"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/scripts/select-judgment.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/scripts/select-judgment.py",
+      "source_sha256": "688865ee73e6fff382d8b190598743dc2352a82977a72215f4572f080f8e1f73"
+    },
+    "plugins/scenario-ui-ux/skills/ux-judgment/templates/experience.example.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/ux-judgment/templates/experience.example.json",
+      "source_sha256": "e425d20f2b78c6820c460ff6331baf3cf9be3c69fb2abf7d38fe7659fdc57349"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/designer-judgment.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/designer-judgment.md",
+      "source_sha256": "250293b4b7d24b9af547bd987be12b00606bad4d152b88d1192ab30c0cf3882f"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/gstack-adapter.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/gstack-adapter.md",
+      "source_sha256": "e0a01367c0d8bbcc3ccfbf53ade72052931076957059dedba80eaf36233425ec"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/mengto.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/mengto.md",
+      "source_sha256": "08261ea2b82612e5f53b8effdd1c0197db1f6804eb047151d63579de0c5a8914"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-source-review.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-source-review.md",
+      "source_sha256": "acf128d773b174ff668ac42f3258db84f61c83276c8354cd2943dce1ba2cfdc7"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-catalog.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-catalog.json",
+      "source_sha256": "82e5e36434260e803296af19cb88113b0b965595eb8431925c7accff8b12c481"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/runtime-ux-method.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/runtime-ux-method.md",
+      "source_sha256": "81014e1ffa2d119b853ee24670142478ff7a5c86b62e8d104226f0c9a4074786"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/personal-ui.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/personal-ui.md",
+      "source_sha256": "4899d40f77fdef7c493237f1cf5811ab942b7be8617979dcf792feffdfe907ff"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/engineering-review.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/engineering-review.md",
+      "source_sha256": "4e6f2c338b4edf489b29ad2fe7c65c64b932edcd844b4481fd8b593656900c4d"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/motion-graphics.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/motion-graphics.md",
+      "source_sha256": "b85ac27454d2534cd417bb333c431edcb1114c042ebacb0a136b09dae40aff40"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/layouts.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/layouts.md",
+      "source_sha256": "bebc1404139a75f73a76f7071810449a15029d3b979ce69cf595a357ab6dd127"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/vision-critique.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/vision-critique.md",
+      "source_sha256": "2bef8cf56b69edcf343a345d89991b842fa3bb98b00439e3115dad71141a9568"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/framework-profiles.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/framework-profiles.md",
+      "source_sha256": "a6aef57c7079f82c07d73a761910888cd63bb47dc64f289c2c962ae8d86f381a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-hooks.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/design-hooks.md",
+      "source_sha256": "810c12ab3ff1f0a402460f19211b8ac4c901b5d4b5d12055b2acead33a66c48a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/acceptance.md",
+      "source_sha256": "ec1a4374fc82273e7e52bdb1d61aedc0e1960c91862c2f19e631b3c41e4f3031"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-workflow.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/references/reference-workflow.md",
+      "source_sha256": "6ff6242b2129066f1e3464fb3e2fd7bb0b13f66c85040aaf5ddfaf4be9fe2291"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/tests/test_design_hooks.py",
+      "source_sha256": "e9dfed2704d8d2ec28f750e27cb9ebd22f79860446231a5822164e3e145e5e7f"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-hook.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-hook.py",
+      "source_sha256": "0f55cec2cabe0988db96aa00f4c01e701fc72f40dc5d0f1607328ec0d326ec7c"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-audit.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/design-audit.py",
+      "source_sha256": "54c14f8edf184e8e49d54916bfef5c8d0777b3d9624ad6150e606209fd863443"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/reference-plan.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/reference-plan.py",
+      "source_sha256": "94e63d6d4e9a2965c72872eb52caec88da0afb99942089869243b8f111c1701e"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/scripts/install-design-hooks.py",
+      "source_sha256": "3181e551f8ef7dfa92820de6d5b0b35587773161906ab91cba07c31da04fd3ff"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/engineering-research.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/engineering-research.json",
+      "source_sha256": "1a08ca96ad83a315e7e0e77edc80b9159fb9a728287b631647f9af8fe9464d26"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/core-research.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/core-research.json",
+      "source_sha256": "facc2ffb23045ba105dcbb460d3672e778a06481ea56284bf49d09249cab7029"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/design-research.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/design-research.json",
+      "source_sha256": "ecd0cbd8e3aa9404232f802260917f5171b058a3dca428555067417d568f9587"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/mengto-research.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/mengto-research.json",
+      "source_sha256": "da3408dee10b29b3b42f477a43239e7e5853ad943ade5bd4c7069a09f5dc6de7"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/NOTICE.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/NOTICE.md",
+      "source_sha256": "c3890f75611172491af066948163045b9ebb9689f2d741feba6dbc4c47902056"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/runtime-ux-evidence.example.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/runtime-ux-evidence.example.json",
+      "source_sha256": "7d9d6f4dc9152041abda8a905e642b735e837afab41b0bfd8bc629d53ceb522e"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/design-contract.example.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/design-contract.example.json",
+      "source_sha256": "b8e87c1c0f5ffa5bb0d4592da15818c63d15aa97ff4e722f8947af2fd581a41a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/DESIGN.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/templates/DESIGN.md",
+      "source_sha256": "60a9cfd246f5f0a83e86fa42a133c6cba444df9b340842cb5a6835f2ee52e467"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/NOTICE.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/NOTICE.md",
+      "source_sha256": "1da8e75c1fedc99262d39e6f1be7ce2f47319d2b56f7d77c360d2107a84c1817"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/LICENSE",
+      "source_sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/skill-source.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/skill-source.json",
+      "source_sha256": "74efc9c783d402e53f81308dd3f2fa9b85654c1ca821450b6a65416677fff16f"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/SKILL.md",
+      "source_sha256": "c907cc52137ee6a99db0a5706584b0ed58195c4ba9c7835bd4e7331b571d056c"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/design_system.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/design_system.py",
+      "source_sha256": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/core.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/core.py",
+      "source_sha256": "dfb34cbca66a704a5bfae48c1ab5f82d2a6573b9509c5accceb3d248715a18f6"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/reasoning_contract.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "source_sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/search.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/search.py",
+      "source_sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/validate_data.py": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/scripts/validate_data.py",
+      "source_sha256": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/products.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/products.csv",
+      "source_sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/data-provenance.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/data-provenance.json",
+      "source_sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/icons.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/icons.csv",
+      "source_sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/landing.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/landing.csv",
+      "source_sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/app-interface.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/app-interface.csv",
+      "source_sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/motion.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/motion.csv",
+      "source_sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/ux-guidelines.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/ux-guidelines.csv",
+      "source_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/typography.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/typography.csv",
+      "source_sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/google-fonts.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/google-fonts.csv",
+      "source_sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/styles.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/styles.csv",
+      "source_sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/charts.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/charts.csv",
+      "source_sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/colors.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/colors.csv",
+      "source_sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/react-performance.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/react-performance.csv",
+      "source_sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/phosphor-icons-upstream.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "source_sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/google-font-licenses.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/google-font-licenses.json",
+      "source_sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/ui-reasoning.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/ui-reasoning.csv",
+      "source_sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/catalog-summary.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/catalog-summary.json",
+      "source_sha256": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/threejs.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/threejs.csv",
+      "source_sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/swiftui.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "source_sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/winui.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/winui.csv",
+      "source_sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/uwp.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/uwp.csv",
+      "source_sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nuxtjs.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "source_sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/avalonia.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "source_sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/svelte.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/svelte.csv",
+      "source_sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/laravel.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/laravel.csv",
+      "source_sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/jetpack-compose.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "source_sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/wpf.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/wpf.csv",
+      "source_sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/astro.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/astro.csv",
+      "source_sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/react.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/react.csv",
+      "source_sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/react-native.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/react-native.csv",
+      "source_sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/vue.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/vue.csv",
+      "source_sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/javafx.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/javafx.csv",
+      "source_sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/html-tailwind.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "source_sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nextjs.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "source_sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nuxt-ui.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "source_sha256": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/angular.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/angular.csv",
+      "source_sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/flutter.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/flutter.csv",
+      "source_sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/uno.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/uno.csv",
+      "source_sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/shadcn.csv": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/upstream/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "source_sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/vercel/source-pointer.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/vercel/source-pointer.json",
+      "source_sha256": "21f85fcc255e540bab7af5cde963b2acc0513cd30fadde85197b2a4e7e28b5a2"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/distill.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/distill.md",
+      "source_sha256": "54be6eca781b8e2d0f7e850277b330cade905ee4df4d9986519aac27538af724"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/LICENSE",
+      "source_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/layout.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/layout.md",
+      "source_sha256": "4dd69343bcd2e8f79b00ddb26674b981837f916f61dd408d91561c7b32375616"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/NOTICE.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/impeccable/NOTICE.md",
+      "source_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/LICENSE",
+      "source_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/NOTICE.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/NOTICE.md",
+      "source_sha256": "267f8bcc0e503ef4da3ce0598abcec2b305e1a2f916a4b0a93a2d1a76c403e37"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/LICENSE",
+      "source_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/animation-standards.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/animation-standards.md",
+      "source_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/animation-performance.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/emil-skills/animation-performance.md",
+      "source_sha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/audit-reference-originality.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/audit-reference-originality.md",
+      "source_sha256": "8b8b5e6c6174ff790f08541e444fe64b48f8d078b1f5783b36c3204a690616b6"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/LICENSE",
+      "source_sha256": "b2a071ba22fefd803f4e9d1f5c777dd79c62d191695586a1a73fd4d0ebd051c6"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/design-first-ui-prompting.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/mengto-skills/design-first-ui-prompting.md",
+      "source_sha256": "5e3d4db0eb0ea983f2bedb90f28f358901c292388a7889e2f66ac133ceff743c"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/app-screens.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/app-screens.md",
+      "source_sha256": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/LICENSE": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/LICENSE",
+      "source_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/critique.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/taste-skill/critique.md",
+      "source_sha256": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/remotion/source-pointer.json": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/remotion/source-pointer.json",
+      "source_sha256": "e2128920491db77e00717ce6ae5edc6223ee8e3d46b88fb81e3dd6c5d847b6a2"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/anthropic-frontend/frontend-design.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/anthropic-frontend/frontend-design.md",
+      "source_sha256": "d13da26c72b1a4e2a7a767904bccdc3f7fd2b62628aea89341a40c60d1191813"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/anthropic-frontend/LICENSE.txt": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/anthropic-frontend/LICENSE.txt",
+      "source_sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/references/security-checklist.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/references/security-checklist.md",
+      "source_sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/code-review-and-quality/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/code-review-and-quality/SKILL.md",
+      "source_sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/security-and-hardening/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/security-and-hardening/SKILL.md",
+      "source_sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/code-simplification/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/code-simplification/SKILL.md",
+      "source_sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/browser-testing-with-devtools/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/browser-testing-with-devtools/SKILL.md",
+      "source_sha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9"
+    },
+    "plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/security-and-hardening/references/hardening-patterns.md": {
+      "source": "DA_Plugin_Sets/plugins/scenario-ui-ux/skills/scenario-ui-ux/sources/selected/addy/skills/security-and-hardening/references/hardening-patterns.md",
+      "source_sha256": "2e1b93a502b4cdb0258404441f3aab029b0cce4003fbbcc61af9a2de18bab9ab"
+    },
+    "plugins/text-wireframe-planner/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/text-wireframe-planner/plugin.json",
+      "source_sha256": "d39b228b9300e4e4bba912666aae3a604868d1f6e7064bd172f93f1122e03975"
+    },
+    "plugins/text-wireframe-planner/README.md": {
+      "source": "DA_Plugin_Sets/plugins/text-wireframe-planner/README.md",
+      "source_sha256": "5eec655b95397dcdcdacbd197a86ae8b8b9072d92a3cbb4241cf018b4dbf791d"
+    },
+    "plugins/text-wireframe-planner/rules/AGENTS.md": {
+      "source": "DA_Plugin_Sets/plugins/text-wireframe-planner/rules/AGENTS.md",
+      "source_sha256": "b8e694db3d3b77e1f6a3ec6509a0bba9b0b879372cc49b597a2a5ab42dafafd1"
+    },
+    "plugins/text-wireframe-planner/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/text-wireframe-planner/.codex-plugin/plugin.json",
+      "source_sha256": "d39b228b9300e4e4bba912666aae3a604868d1f6e7064bd172f93f1122e03975"
+    },
+    "plugins/text-wireframe-planner/skills/text-wireframe-planner/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/text-wireframe-planner/skills/text-wireframe-planner/SKILL.md",
+      "source_sha256": "7d46cfd3d77116156797b3779c25c3c7b667d9ba43f80824023d33d5a82701ed"
+    },
+    "plugins/craft-ui-motion/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/plugin.json",
+      "source_sha256": "a079913c94dbdda0952e568dcd9a42b41ef639af716e866756af6a7b8aa60b44"
+    },
+    "plugins/craft-ui-motion/README.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/README.md",
+      "source_sha256": "b27b70e1093199a8e179e793966b4664f2ad985f5ac88c179e19551f59ae48a8"
+    },
+    "plugins/craft-ui-motion/docs/component-recipes.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/docs/component-recipes.md",
+      "source_sha256": "8a35f6979b189ec2daa93f765bb8bd9d43385917b13e1bc5177ea5dffa5ead72"
+    },
+    "plugins/craft-ui-motion/docs/anti-slop-guidelines.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/docs/anti-slop-guidelines.md",
+      "source_sha256": "8a35f6979b189ec2daa93f765bb8bd9d43385917b13e1bc5177ea5dffa5ead72"
+    },
+    "plugins/craft-ui-motion/docs/motion-design-principles.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/docs/motion-design-principles.md",
+      "source_sha256": "8a35f6979b189ec2daa93f765bb8bd9d43385917b13e1bc5177ea5dffa5ead72"
+    },
+    "plugins/craft-ui-motion/rules/responsive-layout.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/rules/responsive-layout.md",
+      "source_sha256": "2ec553d070a65e23a8fa2304793ba9f6bfb77d3975e4061008c0dcdf2ed41230"
+    },
+    "plugins/craft-ui-motion/rules/AGENTS.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/rules/AGENTS.md",
+      "source_sha256": "61650b6d0da12cda9e962ac295dadabc3b45a54763695ecf2541d0c9cddfe183"
+    },
+    "plugins/craft-ui-motion/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/.codex-plugin/plugin.json",
+      "source_sha256": "a079913c94dbdda0952e568dcd9a42b41ef639af716e866756af6a7b8aa60b44"
+    },
+    "plugins/craft-ui-motion/skills/craft-ui-motion/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/skills/craft-ui-motion/SKILL.md",
+      "source_sha256": "517fa50ec919d499b5c65fa37f4309712c1b30bd48a4086fbd028e26bbb3d002"
+    },
+    "plugins/craft-ui-motion/skills/responsive-layout-guard/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/craft-ui-motion/skills/responsive-layout-guard/SKILL.md",
+      "source_sha256": "c447ba50803359e20f818ab1650585e80c30e02a8ec83325adf062eeed7f0af3"
+    },
+    "plugins/live-browser-session/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/plugin.json",
+      "source_sha256": "0401a1d3b29d8448ad911f92180bb9021879b5271880fbbec9b8c8febd479eb1"
+    },
+    "plugins/live-browser-session/README.md": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/README.md",
+      "source_sha256": "5fe0d4216bcda379a0dd4d54d1427de02e4b5f889f0d1aa068ab637dce601454"
+    },
+    "plugins/live-browser-session/tests/test_package.py": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/tests/test_package.py",
+      "source_sha256": "2792381f032555fba73157e4b38004f632a943b9a212c7a70ce9209faa9ae7a9"
+    },
+    "plugins/live-browser-session/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/.codex-plugin/plugin.json",
+      "source_sha256": "0401a1d3b29d8448ad911f92180bb9021879b5271880fbbec9b8c8febd479eb1"
+    },
+    "plugins/live-browser-session/skills/live-browser-session/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/skills/live-browser-session/SKILL.md",
+      "source_sha256": "a0338f5e7bd5cd252908774b4b7cbac6c975c8a9f5ebef64053cd3379e787f81"
+    },
+    "plugins/live-browser-session/skills/live-browser-session/agents/openai.yaml": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/skills/live-browser-session/agents/openai.yaml",
+      "source_sha256": "d61614f049bd70d42adf696d0deb34219296d42eee858afa034fd19e27937d2a"
+    },
+    "plugins/live-browser-session/skills/live-browser-session/scripts/cdp-close.mjs": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/skills/live-browser-session/scripts/cdp-close.mjs",
+      "source_sha256": "0bc1493440e094ba18734a91a43d35701806dbed9029cb6c8eacc4de0db2ea9d"
+    },
+    "plugins/live-browser-session/skills/live-browser-session/scripts/page-guard.mjs": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/skills/live-browser-session/scripts/page-guard.mjs",
+      "source_sha256": "73ebb96214aa391602d9c34b7f8ad1c7eb1616d300bc35eb09f7f3ced2efb8dd"
+    },
+    "plugins/live-browser-session/skills/live-browser-session/scripts/browser-session.sh": {
+      "source": "DA_Plugin_Sets/plugins/live-browser-session/skills/live-browser-session/scripts/browser-session.sh",
+      "source_sha256": "e734bbb7ca6a8f601913ac370b95bd414672f0a097cce0168d4bb0d0aca920f8"
+    },
+    "plugins/plain-writing/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/plugin.json",
+      "source_sha256": "c7915cb27491f4e4129b735a3398ff9dd72ffdce3f12c6e5f108e3c975da9ff4"
+    },
+    "plugins/plain-writing/README.md": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/README.md",
+      "source_sha256": "5e071411fdeea0f817e35cddb5df25eb1d5bd147493cf03fc6b309cc699ddbbd"
+    },
+    "plugins/plain-writing/tests/test_package.py": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/tests/test_package.py",
+      "source_sha256": "152e34501c5f0d171795e88d68f6b20829973a397393a33e91e76a7ba2276a06"
+    },
+    "plugins/plain-writing/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/.codex-plugin/plugin.json",
+      "source_sha256": "c7915cb27491f4e4129b735a3398ff9dd72ffdce3f12c6e5f108e3c975da9ff4"
+    },
+    "plugins/plain-writing/skills/plain-writing/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/skills/plain-writing/SKILL.md",
+      "source_sha256": "95b2698847552558c8dd4777f85f6b096f6491ed3f8f239ce838715f215849dd"
+    },
+    "plugins/plain-writing/skills/plain-writing/references/examples.md": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/skills/plain-writing/references/examples.md",
+      "source_sha256": "4816b5eb424335373ab8c2a36a2641da53a35fb06e29bd0d001b5d8757fa0eae"
+    },
+    "plugins/plain-writing/skills/plain-writing/references/sources.md": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/skills/plain-writing/references/sources.md",
+      "source_sha256": "582d4e956d78fc0decf448eb02e64e5d1b17e77b59998f2a8ea9415c42360573"
+    },
+    "plugins/plain-writing/skills/plain-writing/agents/openai.yaml": {
+      "source": "DA_Plugin_Sets/plugins/plain-writing/skills/plain-writing/agents/openai.yaml",
+      "source_sha256": "7c3c608089014d746e030021eafea2c9b47774f4382c5b886622eb988f9b69d9"
+    },
+    "plugins/unbox-ui/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/plugin.json",
+      "source_sha256": "fc6d7008b5e2b33ce26cccf029016fcd4d5ca97cee1d68d3e6f919373199e5ad"
+    },
+    "plugins/unbox-ui/README.md": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/README.md",
+      "source_sha256": "30c336e87d06fc12b3c9910274562d73611d89a17053c727c939013451d58232"
+    },
+    "plugins/unbox-ui/tests/test_package.py": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/tests/test_package.py",
+      "source_sha256": "aba6612ab17f1212bde8af2cf007d7a525bd2e52c0c36c13c79fca901e345233"
+    },
+    "plugins/unbox-ui/.codex-plugin/plugin.json": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/.codex-plugin/plugin.json",
+      "source_sha256": "fc6d7008b5e2b33ce26cccf029016fcd4d5ca97cee1d68d3e6f919373199e5ad"
+    },
+    "plugins/unbox-ui/skills/unbox-ui/SKILL.md": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/skills/unbox-ui/SKILL.md",
+      "source_sha256": "bd2685127fc57a4cdfa8cc28b63f2f0ad69f9c0d0be175c105696e6c02fcdf8c"
+    },
+    "plugins/unbox-ui/skills/unbox-ui/references/sources.md": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/skills/unbox-ui/references/sources.md",
+      "source_sha256": "644c72858a60a4633ff8594136c2c133d317d3a3f3a8dd1dc2e768bfddc71a06"
+    },
+    "plugins/unbox-ui/skills/unbox-ui/agents/openai.yaml": {
+      "source": "DA_Plugin_Sets/plugins/unbox-ui/skills/unbox-ui/agents/openai.yaml",
+      "source_sha256": "d8fba28379b61db7e6be1588456594ed5f05ba3ad52162bc8afa4122afb0b89c"
+    },
+    "scripts/setup-development.py": {
+      "source": "DA_Plugin_Sets/scripts/setup-development.py",
+      "source_sha256": "8a6e5d681fa50a52eb3b65c02c8132f64e8668becdf5c6a6d75eb6e64502bb69"
+    },
+    "scripts/route-development.py": {
+      "source": "DA_Plugin_Sets/scripts/route-development.py",
+      "source_sha256": "97531349f423e04725ec89c9bec60d72872b10c5e871d77c3aaa25cfb4291d97"
+    },
+    "scripts/setup-gstack.sh": {
+      "source": "DA_Plugin_Sets/scripts/setup-gstack.sh",
+      "source_sha256": "76fd4eac4d663f03261f3234c8c6991c2cf564b18a27d42152c00f47beedb1a0"
+    },
+    "scripts/check-containers.py": {
+      "source": "DA_Plugin_Sets/scripts/check-containers.py",
+      "source_sha256": "bf34ccbd7ad1cdf5eeebaa6097b2d378777d0bb40cb83ebbd790120edebe4880"
+    },
+    "tests/test_development_routing.py": {
+      "source": "DA_Plugin_Sets/tests/test_development_routing.py",
+      "source_sha256": "ca0bcc62e5765c98a5c2319120ef9ffcd07f571736fe14a3b053611245ee9db7"
+    },
+    "tests/test_decision_sync.py": {
+      "source": "DA_Plugin_Sets/tests/test_decision_sync.py",
+      "source_sha256": "715c41dd61d7a831a05320643cc6ef4c98c99a2d60ba802a9d025942e3eb78c4"
+    },
+    "tests/test_container_contract.py": {
+      "source": "DA_Plugin_Sets/tests/test_container_contract.py",
+      "source_sha256": "656828edc6da9db795089a486f5ede92aed44487e8beaf1075fd73f288025c61"
+    },
+    "tests/test_reference_plan.py": {
+      "source": "DA_Plugin_Sets/tests/test_reference_plan.py",
+      "source_sha256": "a69f9c7c797a9732268f8e1af4174f5ef72a48388bd37bac20d5cfac50b1edb0"
+    },
+    "harness/preservation/preserve-product.py": {
+      "source": "ux-lab/tools/preserve-product.py",
+      "source_sha256": "445483fa3090af7bae41bcf317308b52e06545cdcecd9de8de241bb54da08975"
+    },
+    "harness/preservation/README.md": {
+      "source": "ux-lab/tools/README.md",
+      "source_sha256": "2de8ad988e62978913dcb845658eddff21b254f1ae72d2800b15aacb95907daa"
+    },
+    "harness/preservation/tests/test_preserve_product.py": {
+      "source": "ux-lab/tools/tests/test_preserve_product.py",
+      "source_sha256": "81d2ab2ef75bb3c1038d9252d4d197ddbd35bc3ad2d3b3e87a142cbea004d7da"
+    },
+    "licenses/DA_Plugin_Sets-MIT.txt": {
+      "source": "DA_Plugin_Sets/LICENSE",
+      "source_sha256": "1d205c4b985d780ff2c0fd26184207fae78c1223231dcf64723fb317bc0f7888"
+    },
+    "research/upstreams.json": {
+      "source": "DA_Plugin_Sets/research/upstreams.json",
+      "source_sha256": "b64307c95644f59fdffa066a5979bcce5de4a5536dd195c8076fb180fc6ac646"
+    },
+    "research/ux-author-library/group-b.json": {
+      "source": "DA_Plugin_Sets/research/ux-author-library/group-b.json",
+      "source_sha256": "ccee5618ba225abef519e418ce52e32f087534d92389b8e803aa286de603ca1c"
+    },
+    "research/ux-author-library/group-b.md": {
+      "source": "DA_Plugin_Sets/research/ux-author-library/group-b.md",
+      "source_sha256": "a0013a223c531399165bab4bae9266d652bfac0d2eaeae846ffbfad9a40968a3"
+    },
+    "research/ux-author-library/group-a.md": {
+      "source": "DA_Plugin_Sets/research/ux-author-library/group-a.md",
+      "source_sha256": "d23ec1a37147098ed45d6d1d7924081dd571a031bf9ed4d654ffbd6408c28519"
+    },
+    "research/ux-author-library/group-a.json": {
+      "source": "DA_Plugin_Sets/research/ux-author-library/group-a.json",
+      "source_sha256": "e77b732353080c3608919d283fcdbc80df7b145a697085260bc280a1656b010c"
+    }
+  }
+}

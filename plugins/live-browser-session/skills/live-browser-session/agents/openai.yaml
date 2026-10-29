@@ -1,0 +1,4 @@
+interface:
+  display_name: "Live Browser Session"
+  short_description: "사용자가 로그인한 전용 Chrome으로 실제 웹 조회·캡처·기능 테스트 후 세션 정리"
+  default_prompt: "$live-browser-session 전용 Chrome을 열어 줘. 내가 로그인하면 쓰기 요청은 막고 화면을 확인한 뒤, 끝나면 Chrome을 닫고 프로필을 지워 줘."

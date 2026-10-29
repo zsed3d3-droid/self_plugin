@@ -1,0 +1,7 @@
+{
+  "thread_id": "YOUR_EXISTING_THREAD_ID",
+  "terminal_handle": "YOUR_EXISTING_TERMINAL_HANDLE",
+  "terminal_incarnation": "YOUR_EXISTING_PROCESS_INCARNATION",
+  "account_scope": "YOUR_LOCAL_ACCOUNT_SCOPE_HASH",
+  "model_id": "YOUR_EXISTING_MODEL_ID"
+}

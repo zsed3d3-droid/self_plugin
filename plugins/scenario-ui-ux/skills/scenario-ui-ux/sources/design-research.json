@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-29",
+  "sources": [
+    {
+      "id": "taste-skill",
+      "repository": "Leonxlnx/taste-skill",
+      "canonical_url": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "commit_date": "2026-10-24T23:42:19Z",
+      "checked_at": "2026-10-29",
+      "license": "MIT",
+      "license_url": "https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/LICENSE",
+      "files": [
+        {
+          "upstream_path": "LICENSE",
+          "upstream_blob_sha": "48a2f6640b81ff8eca9ce7f6a96337692713ef5b",
+          "url": "https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/LICENSE",
+          "local_path": "sources/selected/taste-skill/LICENSE",
+          "upstream_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+          "local_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+          "modifications": []
+        },
+        {
+          "upstream_path": "skills/taste-skill/references/app-screens.md",
+          "upstream_blob_sha": "784439ed799484a98958764a5bf3ede2a1d25296",
+          "url": "https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/skills/taste-skill/references/app-screens.md",
+          "local_path": "sources/selected/taste-skill/app-screens.md",
+          "upstream_sha256": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4",
+          "local_sha256": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4",
+          "modifications": []
+        },
+        {
+          "upstream_path": "skills/taste-skill/references/critique.md",
+          "upstream_blob_sha": "1989a85c83232e86aec66baf733a843947392b37",
+          "url": "https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/skills/taste-skill/references/critique.md",
+          "local_path": "sources/selected/taste-skill/critique.md",
+          "upstream_sha256": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4",
+          "local_sha256": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4",
+          "modifications": []
+        }
+      ],
+      "skill_entrypoints": [
+        "skills/taste-skill/SKILL.md"
+      ],
+      "retrieval": "GitHub connector get_repo and pinned fetch_file; GitHub contents/tree API for exact copies, hashes and listing. No repository scripts executed.",
+      "verified_entry": "skills/taste-skill/SKILL.md (frontmatter name: design-taste-frontend)",
+      "strengths": [
+        "page와 작업용 app 화면을 먼저 구분",
+        "실제 스크린샷의 읽기 순서·빈 공간·내용 충실도 비교",
+        "장식 제거만으로 끝내지 않고 실제 내용과 주요 행동을 남김"
+      ],
+      "adopt_fragments": [
+        "references/app-screens.md: Page vs app distinction; screen question; truthful data states; restrained navigation",
+        "references/critique.md: rendered-first assessment; concrete screenshot evidence; fix and look again"
+      ],
+      "exclude_defaults": [
+        "무작위로 뽑은 방향과 type/palette를 반드시 채택",
+        "모든 요청 블록을 1440×900 첫 화면에 노출",
+        "색상·폰트·여백 수치를 저자 취향으로 일괄 강제",
+        "광고 페이지 gallery 측정치를 업무 앱 규범으로 전파",
+        "강제 three-direction 비교·상시 dual theme·장식적 시그니처"
+      ],
+      "limitations": [
+        "247개 사이트와 23개 app screen 연구·blind test는 원본 저자의 주장. 제품명과 전체 평가 자료를 별도 독립 검증하지 않음.",
+        "홈페이지·docs의 13 skills 및 옛 절 번호 안내와 pinned tree 파일 구조가 다름. 실제 파일과 frontmatter를 기준으로 삼음."
+      ],
+      "routing": "새 화면의 성격을 구분하거나 generic한 결과를 실제 화면 근거로 재검토할 때. 앱에는 app-screens를 우선하고 marketing/page 규칙은 그대로 적용하지 않음."
+    },
+    {
+      "id": "emil-skills",
+      "repository": "emilkowalski/skills",
+      "canonical_url": "https://github.com/emilkowalski/skills",
+      "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+      "commit_date": "2026-10-11T13:58:32Z",
+      "checked_at": "2026-10-29",
+      "license": "MIT",
+      "license_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/LICENSE",
+      "files": [
+        {
+          "upstream_path": "LICENSE",
+          "upstream_blob_sha": "57b46f1fd11dc62351ea548104a88aa3f659c11b",
+          "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/LICENSE",
+          "local_path": "sources/selected/emil-skills/LICENSE",
+          "upstream_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+          "local_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+          "modifications": []
+        },
+        {
+          "upstream_path": "skills/review-animations/STANDARDS.md",
+          "upstream_blob_sha": "863ea12ea94c1f7a47b5f7e1019e976aa82bd4cd",
+          "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/review-animations/STANDARDS.md",
+          "local_path": "sources/selected/emil-skills/animation-standards.md",
+          "upstream_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+          "local_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+          "modifications": []
+        },
+        {
+          "upstream_path": "skills/animation-performance/SKILL.md",
+          "upstream_blob_sha": "d688dd7c3ba143c6ae17efd2bc665380d5252c5a",
+          "url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/animation-performance/SKILL.md",
+          "local_path": "sources/selected/emil-skills/animation-performance.md",
+          "upstream_sha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+          "local_sha256": "ceb9dd3fe912615830f725a0120ccf8d012d15a6218001a5cd6c15d38e39a957",
+          "modifications": []
+        }
+      ],
+      "skill_entrypoints": [
+        "skills/animate-expo/SKILL.md",
+        "skills/animate/SKILL.md",
+        "skills/animation-performance/SKILL.md",
+        "skills/animation-vocabulary/SKILL.md",
+        "skills/apple-design/SKILL.md",
+        "skills/ask-sonner/SKILL.md",
+        "skills/break-ui/SKILL.md",
+        "skills/emil-design-eng/SKILL.md",
+        "skills/find-animation-opportunities/SKILL.md",
+        "skills/improve-animations/SKILL.md",
+        "skills/mobile-native/SKILL.md",
+        "skills/pick-ui-library/SKILL.md",
+        "skills/prototype/SKILL.md",
+        "skills/review-animations/SKILL.md",
+        "skills/write-swift/SKILL.md"
+      ],
+      "retrieval": "GitHub connector get_repo and pinned fetch_file; GitHub contents/tree API for exact copies, hashes and listing. No repository scripts executed.",
+      "verified_entry": "skills/emil-design-eng/SKILL.md; skills/animation-performance/SKILL.md; skills/review-animations/STANDARDS.md",
+      "strengths": [
+        "모션의 빈도와 역할에 따라 움직임의 필요성 판단",
+        "트리거 기준 origin·중단 가능성·중간 프레임 디버깅",
+        "layout/paint/main-thread 부하를 원인별로 나눠 실제 성능 점검"
+      ],
+      "adopt_fragments": [
+        "skills/review-animations/STANDARDS.md: origin awareness; interruptibility; slow/frame-by-frame review; reduced motion",
+        "skills/animation-performance/SKILL.md: property/pipeline diagnosis; do not claim GPU/60fps from transform alone; verify a real recording"
+      ],
+      "exclude_defaults": [
+        "모든 키보드 동작에서 모션을 무조건 금지",
+        "모든 요소에 stagger·spring·고정 duration을 적용",
+        "transform/opacity만 쓰면 언제나 GPU 또는 일정 fps라고 단정",
+        "미리보기만으로 실제 저성능 기기 테스트를 통과했다고 주장",
+        "유료 강의의 추가 스킬을 공개 MIT 배포물과 동일하게 취급"
+      ],
+      "limitations": [
+        "실행·실기기 벤치마크는 수행하지 않음. 복사한 문서는 설계 참고 자료이며 특정 라이브러리 버전의 성능 보장이 아님.",
+        "공개 저장소 MIT 자료만 확보. aiforui.dev 유료 강의·자산은 열람/반입하지 않음."
+      ],
+      "routing": "모션이 어색하거나 튀고 중간에 좌표가 맞지 않을 때 standards, 버벅임·입력 지연이 있으면 performance 진단. 단순 UI 전체에 모션을 추가하는 근거로 사용하지 않음."
+    },
+    {
+      "id": "impeccable",
+      "repository": "pbakaus/impeccable",
+      "canonical_url": "https://github.com/pbakaus/impeccable",
+      "commit": "7510e233b228864606888d252abacf5e7148bf87",
+      "commit_date": "2026-10-28T15:22:50Z",
+      "checked_at": "2026-10-29",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/pbakaus/impeccable/blob/7510e233b228864606888d252abacf5e7148bf87/LICENSE",
+      "files": [
+        {
+          "upstream_path": "LICENSE",
+          "upstream_blob_sha": "bb3f6d23b1f8025514a62a12b51b47d73e3c9aa9",
+          "url": "https://github.com/pbakaus/impeccable/blob/7510e233b228864606888d252abacf5e7148bf87/LICENSE",
+          "local_path": "sources/selected/impeccable/LICENSE",
+          "upstream_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+          "local_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+          "modifications": []
+        },
+        {
+          "upstream_path": "NOTICE.md",
+          "upstream_blob_sha": "0468271c904ae334cfaf27da6f8df3d5f419a1f0",
+          "url": "https://github.com/pbakaus/impeccable/blob/7510e233b228864606888d252abacf5e7148bf87/NOTICE.md",
+          "local_path": "sources/selected/impeccable/NOTICE.md",
+          "upstream_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+          "local_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+          "modifications": []
+        },
+        {
+          "upstream_path": "skill/reference/layout.md",
+          "upstream_blob_sha": "4b9eadcb10bbcf3e4d8de84ebd0d86d90e804d4b",
+          "url": "https://github.com/pbakaus/impeccable/blob/7510e233b228864606888d252abacf5e7148bf87/skill/reference/layout.md",
+          "local_path": "sources/selected/impeccable/layout.md",
+          "upstream_sha256": "14ba132b6168bf0a7498f8c3fbbb41b73ff704da5dc3688fd842807446e54a05",
+          "local_sha256": "4dd69343bcd2e8f79b00ddb26674b981837f916f61dd408d91561c7b32375616",
+          "modifications": [
+            "relative Markdown links rewritten to pinned canonical upstream; added reference-only modification notice"
+          ]
+        },
+        {
+          "upstream_path": "skill/reference/distill.md",
+          "upstream_blob_sha": "cf8225ce94175f32d0b4f723f67019527ed6836f",
+          "url": "https://github.com/pbakaus/impeccable/blob/7510e233b228864606888d252abacf5e7148bf87/skill/reference/distill.md",
+          "local_path": "sources/selected/impeccable/distill.md",
+          "upstream_sha256": "54be6eca781b8e2d0f7e850277b330cade905ee4df4d9986519aac27538af724",
+          "local_sha256": "54be6eca781b8e2d0f7e850277b330cade905ee4df4d9986519aac27538af724",
+          "modifications": []
+        }
+      ],
+      "skill_entrypoints": [
+        ".agents/skills/impeccable/SKILL.md"
+      ],
+      "retrieval": "GitHub connector get_repo and pinned fetch_file; GitHub contents/tree API for exact copies, hashes and listing. No repository scripts executed.",
+      "verified_entry": "skill/SKILL.src.md (source template); .agents/skills/impeccable/SKILL.md (generated host entry)",
+      "strengths": [
+        "사용 목적·읽기와 작업 모드에 따른 다른 구성",
+        "distill의 점진적 공개와 불필요한 중첩·반복 제거",
+        "layout의 읽기 순서·그룹·여백 리듬·영역별 밀도 점검"
+      ],
+      "adopt_fragments": [
+        "skill/reference/distill.md: assess cognitive load; progressive disclosure; keep necessary functionality and accessibility",
+        "skill/reference/layout.md: content/task topology; proximity before containers; regional density; narrow/zoom/localized state checks"
+      ],
+      "exclude_defaults": [
+        "무채색 화면은 무조건 실패라는 미학 판단",
+        "모든 제품에 signature move·색·새 세계관을 강제",
+        "sidebar를 과업과 관계없이 제거",
+        "항상 3안·독립 reviewer·CLI detector를 수행",
+        "설치 명령·다운로드·후크·drift 수정을 작업의 자동 부수효과로 실행"
+      ],
+      "limitations": [
+        "24 commands·62 deterministic detectors는 README의 현 상태 소개로 확인했으며 CLI/검출기를 실행해 정확도나 수를 별도 검증하지 않음.",
+        "skill/SKILL.md 경로는 없음(404); 실제 source는 SKILL.src.md이며 host용 generated entry가 별도 존재."
+      ],
+      "routing": "한 화면에 모든 폼·옵션이 노출되거나 중첩 카드가 과할 때 distill, 정렬·간격·밀도·반응형 구조 문제는 layout. 현재 사용자가 긍정한 영역은 유지하고 지적한 영역만 범위에 맞춰 변경."
+    }
+  ],
+  "website": {
+    "url": "https://www.tasteskill.dev/",
+    "docs_url": "https://www.tasteskill.dev/docs",
+    "canonical_repository": "Leonxlnx/taste-skill",
+    "independent_source": false,
+    "observation": "Website advertises thirteen skills; inspected pinned repository tree exposes one SKILL.md plus references. Repository snapshot is authoritative for file inventory; marketing counts are not a verified current package contract."
+  },
+  "application_policy": "Upstream material is optional read-only evidence, not automatically activated agent instructions. Current user decisions and scoped product brief override source aesthetic mandates. Source scripts, binaries, hooks, installs and paid services were not run. UI/UX Pro Max provenance already exists elsewhere and is not duplicated here.",
+  "precedence": [
+    "current user request and explicit accepted/rejected decisions",
+    "current product/scenario and confirmed positive/negative examples",
+    "selected source fragments after conflict filtering",
+    "upstream personal aesthetic defaults (not automatically adopted)"
+  ],
+  "web_pages_opened": [
+    "https://www.tasteskill.dev/",
+    "https://www.tasteskill.dev/docs",
+    "https://github.com/Leonxlnx/taste-skill",
+    "https://github.com/emilkowalski/skills",
+    "https://emilkowal.ski/skill",
+    "https://github.com/pbakaus/impeccable"
+  ]
+}

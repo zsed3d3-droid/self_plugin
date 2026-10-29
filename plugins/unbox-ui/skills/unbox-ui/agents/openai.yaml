@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unbox UI"
+  short_description: "중첩 카드와 반복 네모를 줄이고 정보 위계·조작성을 보존"
+  default_prompt: "$unbox-ui 이 화면의 중첩 카드를 점검하고 필요한 경계만 남기도록 수정·검증해줘."

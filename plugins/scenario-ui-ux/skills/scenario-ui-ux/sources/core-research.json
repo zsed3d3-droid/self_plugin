@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-29",
+  "sources": [
+    {
+      "id": "anthropic-frontend",
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "path": "skills/frontend-design",
+      "local_path": "sources/selected/anthropic-frontend",
+      "adopt": [
+        "subject-specific design direction",
+        "intentional type and palette",
+        "useful structural boundaries",
+        "restraint and screenshot self-critique",
+        "user words over author defaults"
+      ],
+      "exclude": [
+        "automatic hero in utility screens",
+        "confirmation round when subject is already explicit",
+        "novelty as success metric"
+      ],
+      "implementation": "Own adapter reads selected upstream guidance; user brief overrides source defaults",
+      "files": [
+        {
+          "local_path": "sources/selected/anthropic-frontend/frontend-design.md",
+          "upstream_path": "skills/frontend-design/SKILL.md",
+          "modifications": [
+            "Renamed for reference-only discovery; trailing newline normalized."
+          ],
+          "local_sha256": "d13da26c72b1a4e2a7a767904bccdc3f7fd2b62628aea89341a40c60d1191813"
+        },
+        {
+          "local_path": "sources/selected/anthropic-frontend/LICENSE.txt",
+          "upstream_path": "skills/frontend-design/LICENSE.txt",
+          "modifications": [
+            "Trailing newline normalized."
+          ],
+          "local_sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0"
+        }
+      ]
+    }
+  ]
+}

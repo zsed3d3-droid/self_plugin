@@ -1,0 +1,23 @@
+{
+  "name": "unbox-ui",
+  "version": "1.5.0",
+  "description": "Review and reduce redundant UI cards and nested visual containers while preserving information hierarchy, interactions, and accessibility.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "repository": "https://github.com/zsed3d3-droid/self_plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Unbox UI",
+    "shortDescription": "중첩 카드·반복 네모를 줄이고 정보 위계와 조작성을 보존",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "$unbox-ui 이 화면의 중첩 카드를 점검하고 필요한 경계만 남기도록 수정·검증해줘."
+    ]
+  }
+}

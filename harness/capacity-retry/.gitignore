@@ -1,0 +1,8 @@
+# Local-only identity, transcript pointers, status, and evidence. Never publish.
+.env
+scope.json
+state/
+local/
+*.local.json
+__pycache__/
+*.pyc

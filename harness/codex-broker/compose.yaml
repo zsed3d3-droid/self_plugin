@@ -1,0 +1,47 @@
+name: self-plugin-codex-broker
+services:
+  db:
+    image: postgres:18.6
+    environment:
+      POSTGRES_USER: broker
+      POSTGRES_DB: broker
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python3 init-env.py}
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U broker -d broker]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+  broker:
+    build:
+      context: .
+      dockerfile: broker/Dockerfile
+    environment:
+      BROKER_DATABASE_URL: ${BROKER_DATABASE_URL:?Run python3 init-env.py}
+      BROKER_TOKEN: ${BROKER_TOKEN:?Run python3 init-env.py}
+      CODEX_HOME: /codex
+      BROKER_OUTPUT_DIR: /outputs
+    ports:
+      - 127.0.0.1:8853:8030
+    volumes:
+      - dedicated-codex-home:/codex
+      - broker-outputs:/outputs
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8030/health',timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 8
+    restart: unless-stopped
+volumes:
+  postgres-data:
+  dedicated-codex-home:
+  broker-outputs:

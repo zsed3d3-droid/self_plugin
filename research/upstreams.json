@@ -1,0 +1,111 @@
+{
+  "checked_at": "2026-10-28",
+  "search_scope": "GitHub repository search: ui ux sorted by stars; animation sorted by stars; selected web UI, UX skill and motion candidates. Not an exhaustive global ranking.",
+  "repositories": [
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "garrytan/gstack",
+      "stars": 138018,
+      "url": "https://github.com/garrytan/gstack",
+      "commit": "9e3308f65adf547b7e4776e5ed22467a2649d2ee"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "stars": 141861,
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "shadcn-ui/ui",
+      "stars": 126789,
+      "url": "https://github.com/shadcn-ui/ui",
+      "commit": "96da9cc7f1aa10580a3741664e2a77c721206c00"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "motiondivision/motion",
+      "stars": 34613,
+      "url": "https://github.com/motiondivision/motion",
+      "commit": "9ba8846b6819172cb829e65a9f46433a4de377ab"
+    },
+    {
+      "branch": "master",
+      "license": "MIT",
+      "repository": "juliangarnier/anime",
+      "stars": 73987,
+      "url": "https://github.com/juliangarnier/anime",
+      "commit": "01b81be1df6843ccfe0a71c0699a746bf740dd77"
+    },
+    {
+      "branch": "main",
+      "license": "NOASSERTION",
+      "repository": "animate-css/animate.css",
+      "stars": 82929,
+      "url": "https://github.com/animate-css/animate.css",
+      "commit": "3f8ab233dbbd9d2fe577528d2296382954be3d1a"
+    },
+    {
+      "branch": "master",
+      "license": null,
+      "repository": "greensock/GSAP",
+      "stars": 29857,
+      "url": "https://github.com/greensock/GSAP",
+      "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2"
+    },
+    {
+      "branch": "main",
+      "license": "NOASSERTION",
+      "repository": "remotion-dev/remotion",
+      "stars": 68474,
+      "url": "https://github.com/remotion-dev/remotion",
+      "commit": "0f730b40a49d25fb71acdc17d71dd07bb5e61d18"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "motion-canvas/motion-canvas",
+      "stars": 19520,
+      "url": "https://github.com/motion-canvas/motion-canvas",
+      "commit": "7b91435c301d530351dcf5ebb91dd139c002e405"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "miqdadbadjuber/anti-slop",
+      "stars": 7392,
+      "url": "https://github.com/miqdadbadjuber/anti-slop",
+      "commit": "13883c779a45291b005c6b1a29e06c0c26715223"
+    },
+    {
+      "branch": "main",
+      "license": "MIT",
+      "repository": "yuwen-lu/unslop-ui",
+      "stars": 13,
+      "url": "https://github.com/yuwen-lu/unslop-ui",
+      "commit": "df1e58a1ab2e75beeaac295ec86c74b3824456db"
+    },
+    {
+      "branch": "main",
+      "license": "NOASSERTION",
+      "repository": "Vincentwei1021/anything2explainer",
+      "stars": 2805,
+      "url": "https://github.com/Vincentwei1021/anything2explainer",
+      "commit": "735c79c8724e897e8971cd59dde7e5aa11e4d6ce",
+      "license_review": {
+        "checked_at": "2026-10-29",
+        "metadata_interpretation": "Original NOASSERTION is GitHub SPDX classification, not an absent LICENSE.",
+        "verified_license": "PolyForm Noncommercial 1.0.0 plus author preface",
+        "license_blob_sha": "0674e76c53992e82024c1cbe9091ba643cd94d77",
+        "pinned_and_checked_main_commit": "735c79c8724e897e8971cd59dde7e5aa11e4d6ce",
+        "source": "https://github.com/Vincentwei1021/anything2explainer/blob/735c79c8724e897e8971cd59dde7e5aa11e4d6ce/LICENSE",
+        "reuse_in_this_project": "Concept/URL only; no code, prompts, templates, fonts or assets copied."
+      }
+    }
+  ]
+}

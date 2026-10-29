@@ -1,0 +1,192 @@
+{
+  "format": "scenario-engineering-research/v1",
+  "reviewed_at": "2026-10-29",
+  "method": [
+    "GitHub connector repository and source inspection",
+    "Canonical GitHub API contents at immutable commit",
+    "Official web documentation cross-check"
+  ],
+  "selection": "Case applicability and verified source contents, not stars alone. No framework migration implied.",
+  "sources": [
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "commit_date": "2026-10-13T20:21:06Z",
+      "license_detected": "MIT",
+      "files": [
+        {
+          "path": "skills/browser-testing-with-devtools/SKILL.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/browser-testing-with-devtools/SKILL.md",
+          "sha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9"
+        },
+        {
+          "path": "skills/code-review-and-quality/SKILL.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-review-and-quality/SKILL.md",
+          "sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e"
+        },
+        {
+          "path": "skills/security-and-hardening/SKILL.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/security-and-hardening/SKILL.md",
+          "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858"
+        },
+        {
+          "path": "skills/code-simplification/SKILL.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-simplification/SKILL.md",
+          "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/LICENSE",
+          "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+        },
+        {
+          "path": "skills/security-and-hardening/references/hardening-patterns.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/security-and-hardening/references/hardening-patterns.md",
+          "sha256": "2e1b93a502b4cdb0258404441f3aab029b0cce4003fbbcc61af9a2de18bab9ab"
+        },
+        {
+          "path": "references/security-checklist.md",
+          "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/references/security-checklist.md",
+          "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755"
+        }
+      ],
+      "reviewed_at": "2026-10-29",
+      "source_kind": "actual-pinned-upstream-files",
+      "copied_files": [
+        "sources/selected/addy/skills/browser-testing-with-devtools/SKILL.md",
+        "sources/selected/addy/skills/code-review-and-quality/SKILL.md",
+        "sources/selected/addy/skills/security-and-hardening/SKILL.md",
+        "sources/selected/addy/skills/code-simplification/SKILL.md",
+        "sources/selected/addy/LICENSE",
+        "sources/selected/addy/skills/security-and-hardening/references/hardening-patterns.md",
+        "sources/selected/addy/references/security-checklist.md"
+      ],
+      "redistribution": "MIT: original files and copyright/license preserved; reference material only, not active host instructions."
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "commit_date": "2026-10-27T21:40:02Z",
+      "license_detected": null,
+      "files": [
+        {
+          "path": "skills/react-best-practices/SKILL.md",
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+          "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355"
+        },
+        {
+          "path": "skills/web-design-guidelines/SKILL.md",
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
+          "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+        },
+        {
+          "path": "README.md",
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/README.md",
+          "sha256": "9429e781e3fb2f005e619b96fe18cdc59f8db38b619a4c98f0c46c86357e56a0"
+        }
+      ],
+      "reviewed_at": "2026-10-29",
+      "source_kind": "actual-pinned-upstream-files",
+      "copied_files": [],
+      "redistribution": "No LICENSE file or license grant found at pinned commit; own adapter and source pointers only. README/frontmatter labels do not resolve missing grant."
+    },
+    {
+      "repository": "remotion-dev/skills",
+      "commit": "30d4553ecd46fbc5212fd0ff006ae43af522158b",
+      "commit_date": "2026-10-26T11:37:34Z",
+      "license_detected": null,
+      "files": [
+        {
+          "path": "skills/remotion-best-practices/SKILL.md",
+          "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/skills/remotion-best-practices/SKILL.md",
+          "sha256": "b4cfddd463ca44b6127aac813c5f8330f5fe2587f516af5ddfdb0fda453cf8eb"
+        },
+        {
+          "path": "README.md",
+          "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/README.md",
+          "sha256": "aefb2c5438ef70ed050af4ef1e450ecea7aef66d11390761032c349fd9666450"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/package.json",
+          "sha256": "bc9fff15a5a57df7ecac4f4862ad0dd1b6d9620562ac7d2b1c0b00ed73ad7a90"
+        }
+      ],
+      "reviewed_at": "2026-10-29",
+      "source_kind": "actual-pinned-upstream-files",
+      "copied_files": [],
+      "redistribution": "No LICENSE file or license grant found at pinned commit; own adapter and source pointers only. README/frontmatter labels do not resolve missing grant."
+    },
+    {
+      "repository": "PatrickJS/awesome-cursorrules",
+      "commit": "b044f956f021b6e8877f16781bcfc466a6a120e9",
+      "commit_date": "2026-05-30T18:01:29Z",
+      "license_detected": "CC0-1.0",
+      "files": [
+        {
+          "path": "rules/nextjs-react-tailwind-cursorrules-prompt-file.mdc",
+          "url": "https://github.com/PatrickJS/awesome-cursorrules/blob/b044f956f021b6e8877f16781bcfc466a6a120e9/rules/nextjs-react-tailwind-cursorrules-prompt-file.mdc",
+          "sha256": "7e0a2cc3473f2daedd8fda78500108a0392513b3a954f50e162b2c6114728bdc"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/PatrickJS/awesome-cursorrules/blob/b044f956f021b6e8877f16781bcfc466a6a120e9/LICENSE",
+          "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+        }
+      ],
+      "reviewed_at": "2026-10-29",
+      "source_kind": "actual-pinned-upstream-files",
+      "copied_files": [],
+      "redistribution": "CC0-1.0 detected; no source copied. Origin investigation only, not an official combined framework skill."
+    }
+  ],
+  "official_profiles": [
+    {
+      "topic": "Next.js server/client boundary",
+      "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components"
+    },
+    {
+      "topic": "React effects",
+      "url": "https://react.dev/learn/you-might-not-need-an-effect"
+    },
+    {
+      "topic": "Tailwind theme tokens",
+      "url": "https://tailwindcss.com/docs/theme"
+    },
+    {
+      "topic": "OWASP Top 10 2025",
+      "url": "https://top10.owasp.org/2025/"
+    },
+    {
+      "topic": "Remotion commercial eligibility",
+      "url": "https://www.remotion.dev/docs/license"
+    },
+    {
+      "topic": "Codex hooks and trust",
+      "url": "https://learn.chatgpt.com/docs/hooks"
+    },
+    {
+      "topic": "Claude hooks",
+      "url": "https://code.claude.com/docs/en/hooks"
+    }
+  ],
+  "license_findings": [
+    {
+      "repository": "vercel-labs/agent-skills",
+      "evidence": "README states MIT and react skill metadata says MIT, but no LICENSE in pinned tree.",
+      "issue": "https://github.com/vercel-labs/agent-skills/issues/334",
+      "action": "Do not vendor upstream text until grant clarified."
+    },
+    {
+      "repository": "remotion-dev/skills",
+      "evidence": "No LICENSE in pinned tree; private package metadata has no license. Remotion product license does not grant skill redistribution.",
+      "action": "Do not vendor upstream text."
+    }
+  ],
+  "excluded_assumptions": [
+    "nextjs-react-tailwind is not an official combined framework skill; matching origin is a community Cursor rules file.",
+    "Security checklists are not a complete penetration test or certification.",
+    "A passing runtime test is not user approval of visual preference.",
+    "No screenshot or framework performance claim without actual evidence."
+  ]
+}

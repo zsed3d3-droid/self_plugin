@@ -1,0 +1,23 @@
+{
+  "name": "da-development-method",
+  "version": "0.2.0",
+  "description": "Connect gstack planning, text wireframes, UI/UX, plain writing and live browser verification.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "repository": "https://github.com/zsed3d3-droid/self_plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DA Development Method",
+    "shortDescription": "Connect gstack planning, text wireframes, UI/UX, plain writing and live browser verification.",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "$da-development-method 사용자 과업에 맞춰 설계하고 구현·검증해줘."
+    ]
+  }
+}

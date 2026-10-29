@@ -1,0 +1,69 @@
+{
+  "format": "self-plugin-local-case-sources/v1",
+  "note": "Source hashes identify local compilation inputs, not bundled evidence or a new verification run.",
+  "sources": [
+    {
+      "product": "001-proofline",
+      "source": "ux-lab/experiences/proofline-context-identity.json",
+      "sha256": "bc62520841f50075a3e4e8484edf3f76faa68cd882342e3d1c0f57badf079012",
+      "episodes": 1,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "001-proofline",
+      "source": "ux-lab/experiences/proofline-retention-workspace.json",
+      "sha256": "18081c4dcdd3d2194215b312026b6c1f5a7fb9804083f60fd39fe39075631704",
+      "episodes": 1,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "002-spine",
+      "source": "ux-lab/experiences/spine-ux-cycles-complete-v2.json",
+      "sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "episodes": 5,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "003-cadence",
+      "source": "ux-lab/experiences/cadence-ux-experiments-complete-v1.json",
+      "sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "episodes": 8,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "004-offcut",
+      "source": "ux-lab/experiences/offcut-ux-experiments-complete-v1.json",
+      "sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "episodes": 8,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "005-clearing",
+      "source": "ux-lab/experiences/clearing-ux-experiments-complete-v1.json",
+      "sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "episodes": 8,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "006-looproom",
+      "source": "ux-lab/experiences/looproom-ux-experiments-complete-v1.json",
+      "sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "episodes": 7,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "007-cueframe",
+      "source": "ux-lab/experiences/cueframe-ux-experiments-complete-v1.json",
+      "sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "episodes": 7,
+      "raw_artifacts_included": false
+    },
+    {
+      "product": "008-commonhour",
+      "source": "ux-lab/products/008-commonhour/evidence/experience.json",
+      "sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "episodes": 6,
+      "raw_artifacts_included": false
+    }
+  ]
+}

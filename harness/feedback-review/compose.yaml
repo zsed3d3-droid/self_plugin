@@ -1,0 +1,16 @@
+name: self-plugin-feedback-review
+services:
+  expert-review:
+    build: .
+    ports: ["127.0.0.1:${REVIEW_PORT:-8851}:8840"]
+    environment:
+      REVIEW_DATA: /data
+      REVIEW_ORIGINS: http://localhost:${REVIEW_PORT:-8851},http://127.0.0.1:${REVIEW_PORT:-8851}
+    volumes: [review-data:/data]
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    restart: unless-stopped
+volumes:
+  review-data:

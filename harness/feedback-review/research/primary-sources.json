@@ -1,0 +1,312 @@
+[
+  {
+    "repository": "garrytan/gstack",
+    "checked_at": "2026-10-28",
+    "stars": 138020,
+    "license": "MIT",
+    "updated_at": "2026-10-28T12:52:34Z",
+    "url": "https://github.com/garrytan/gstack",
+    "commits": [
+      {
+        "sha": "9e3308f65adf547b7e4776e5ed22467a2649d2ee",
+        "url": "https://github.com/garrytan/gstack/commit/9e3308f65adf547b7e4776e5ed22467a2649d2ee",
+        "message": "v1.91.293.0 fix(harness): error lines print again; register qm stops at QM's pack cap instead of claiming QM works (GSTA-135) (#3532)",
+        "date": "2026-10-28T10:16:23Z",
+        "author": "Garry Tan"
+      },
+      {
+        "sha": "219f7488bbbfc33e5199ea4a5f3d31f188a7369d",
+        "url": "https://github.com/garrytan/gstack/commit/219f7488bbbfc33e5199ea4a5f3d31f188a7369d",
+        "message": "v1.91.292.0 Stable channel: a regression exception beside the security one, and the stale weekly wording (#3533)",
+        "date": "2026-10-28T09:59:40Z",
+        "author": "Garry Tan"
+      },
+      {
+        "sha": "6f27f0c269cb33ad60b300ec10df63c2b9f296ba",
+        "url": "https://github.com/garrytan/gstack/commit/6f27f0c269cb33ad60b300ec10df63c2b9f296ba",
+        "message": "v1.91.291.0 release: stamp #3527 (/ship and /autoplan size their review to the diff) (#3530)",
+        "date": "2026-10-28T06:40:56Z",
+        "author": "Garry Tan"
+      }
+    ]
+  },
+  {
+    "repository": "earendil-works/pi",
+    "checked_at": "2026-10-28",
+    "stars": 118466,
+    "license": "MIT",
+    "updated_at": "2026-10-28T11:56:33Z",
+    "url": "https://github.com/earendil-works/pi",
+    "commits": [
+      {
+        "sha": "c3d8ce44d3231c7e46071d2d859f41ca7d39d21b",
+        "url": "https://github.com/earendil-works/pi/commit/c3d8ce44d3231c7e46071d2d859f41ca7d39d21b",
+        "message": "docs(chord): slice 8 is registries and host.root; the harness object is p3's",
+        "date": "2026-10-28T11:56:31Z",
+        "author": "Mario Zechner"
+      },
+      {
+        "sha": "bb6ae4b8ef0901ea8ecaaa6f142b5b30dd8c690c",
+        "url": "https://github.com/earendil-works/pi/commit/bb6ae4b8ef0901ea8ecaaa6f142b5b30dd8c690c",
+        "message": "docs(chord): self.follow in design and slices",
+        "date": "2026-10-28T11:50:41Z",
+        "author": "Mario Zechner"
+      },
+      {
+        "sha": "e4c58271b82c83a43e1ab91e4ea3bfff542d5bba",
+        "url": "https://github.com/earendil-works/pi/commit/e4c58271b82c83a43e1ab91e4ea3bfff542d5bba",
+        "message": "docs(chord): slice 6b D9, self.follow; spec decided",
+        "date": "2026-10-28T11:50:25Z",
+        "author": "Mario Zechner"
+      }
+    ]
+  },
+  {
+    "repository": "simonw/llm",
+    "checked_at": "2026-10-28",
+    "stars": 12678,
+    "license": "Apache-2.0",
+    "updated_at": "2026-10-21T14:29:00Z",
+    "url": "https://github.com/simonw/llm",
+    "commits": [
+      {
+        "sha": "aebaca27f9acb6cc56ba4b33ab81e08d6dcb3bc3",
+        "url": "https://github.com/simonw/llm/commit/aebaca27f9acb6cc56ba4b33ab81e08d6dcb3bc3",
+        "message": "Add -u/--usage to llm chat (#1754)",
+        "date": "2026-10-21T14:28:59Z",
+        "author": "xilinghuiye"
+      },
+      {
+        "sha": "cbeeb8f2b93b642107e51c735c7eb55734355da1",
+        "url": "https://github.com/simonw/llm/commit/cbeeb8f2b93b642107e51c735c7eb55734355da1",
+        "message": "Fix for tool spec kwargs starting with true/false/null (#1704)",
+        "date": "2026-10-18T23:29:12Z",
+        "author": "Olamide Faniyan"
+      },
+      {
+        "sha": "8f11ba38c8366931ba79e8ad6afcd732637cd182",
+        "url": "https://github.com/simonw/llm/commit/8f11ba38c8366931ba79e8ad6afcd732637cd182",
+        "message": "Sync execute_tool_calls: error result, not raise, when a tool has no implementation (#1724)",
+        "date": "2026-10-18T23:23:39Z",
+        "author": "Chen Yufeiyang"
+      }
+    ]
+  },
+  {
+    "repository": "tobi/qmd",
+    "checked_at": "2026-10-28",
+    "stars": 30707,
+    "license": "MIT",
+    "updated_at": "2026-10-15T03:04:06Z",
+    "url": "https://github.com/tobi/qmd",
+    "commits": [
+      {
+        "sha": "86d2365d17fc682e491c2c53d1e4a884aee8682a",
+        "url": "https://github.com/tobi/qmd/commit/86d2365d17fc682e491c2c53d1e4a884aee8682a",
+        "message": "Merge pull request #1072 from tobi/types/check-whole-project",
+        "date": "2026-10-15T03:04:06Z",
+        "author": "Tobias Lütke"
+      },
+      {
+        "sha": "e42c857c90bd09bd769c35a27e635924472c707f",
+        "url": "https://github.com/tobi/qmd/commit/e42c857c90bd09bd769c35a27e635924472c707f",
+        "message": "fix(types): type-check the tests, benches and scripts, not just the build",
+        "date": "2026-10-14T23:48:07Z",
+        "author": "Tobi Lütke"
+      },
+      {
+        "sha": "e473e795db010ffc856a7c986bf3db39b9aba511",
+        "url": "https://github.com/tobi/qmd/commit/e473e795db010ffc856a7c986bf3db39b9aba511",
+        "message": "build: set rootDir so the build compiles with TypeScript 7",
+        "date": "2026-10-14T23:09:32Z",
+        "author": "Tobi Lütke"
+      }
+    ]
+  },
+  {
+    "repository": "obra/superpowers",
+    "checked_at": "2026-10-28",
+    "stars": 306972,
+    "license": "MIT",
+    "updated_at": "2026-10-23T03:48:57Z",
+    "url": "https://github.com/obra/superpowers",
+    "commits": [
+      {
+        "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "url": "https://github.com/obra/superpowers/commit/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "message": "Release v7.0.1: brainstorming retune, skills that better survive compaction, contribution templates (#2581)",
+        "date": "2026-10-21T21:00:49Z",
+        "author": "Jesse Vincent"
+      },
+      {
+        "sha": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+        "url": "https://github.com/obra/superpowers/commit/b739a8af570e10a95898f2bdf6cec97467fa6c12",
+        "message": "Templates: require a human-written summary and the filer's instructions (#2570)",
+        "date": "2026-10-20T20:13:37Z",
+        "author": "Jesse Vincent"
+      },
+      {
+        "sha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+        "url": "https://github.com/obra/superpowers/commit/bb92a77741419a4ab5f06e711a283343f1ada0c3",
+        "message": "Release v7.0.0: rebuilt brainstorming, Antigravity Marketplace manifest, Windows hook fixes (#2489)",
+        "date": "2026-10-10T00:28:04Z",
+        "author": "Jesse Vincent"
+      }
+    ]
+  },
+  {
+    "repository": "steipete/agent-scripts",
+    "checked_at": "2026-10-28",
+    "stars": 7417,
+    "license": "MIT",
+    "updated_at": "2026-10-20T04:35:51Z",
+    "url": "https://github.com/steipete/agent-scripts",
+    "commits": [
+      {
+        "sha": "1159adf26ad007df38b87debb107d3946008d38b",
+        "url": "https://github.com/steipete/agent-scripts/commit/1159adf26ad007df38b87debb107d3946008d38b",
+        "message": "fix(release-mac-app): verify appcasts with the public Sparkle key",
+        "date": "2026-10-20T04:35:41Z",
+        "author": "Peter Steinberger"
+      },
+      {
+        "sha": "6232f9b84bba00bc6594b0443116f58d5654f647",
+        "url": "https://github.com/steipete/agent-scripts/commit/6232f9b84bba00bc6594b0443116f58d5654f647",
+        "message": "docs(codex-first): note codex-resume --stop always resumes",
+        "date": "2026-10-18T22:41:25Z",
+        "author": "Peter Steinberger"
+      },
+      {
+        "sha": "54f7017ecfe8e1b5574c8c747860be95ac2288dc",
+        "url": "https://github.com/steipete/agent-scripts/commit/54f7017ecfe8e1b5574c8c747860be95ac2288dc",
+        "message": "docs(codex-first): route security audits to Daybreak Red",
+        "date": "2026-10-18T22:28:34Z",
+        "author": "Peter Steinberger"
+      }
+    ]
+  },
+  {
+    "repository": "karpathy/autoresearch",
+    "checked_at": "2026-10-28",
+    "stars": 98756,
+    "license": null,
+    "updated_at": "2026-03-26T00:07:37Z",
+    "url": "https://github.com/karpathy/autoresearch",
+    "commits": [
+      {
+        "sha": "228791fb499afffb54b46200aca536f79142f117",
+        "url": "https://github.com/karpathy/autoresearch/commit/228791fb499afffb54b46200aca536f79142f117",
+        "message": "Merge pull request #342 from kaizen-38/feat/bug-fix",
+        "date": "2026-03-26T00:07:37Z",
+        "author": "Andrej"
+      },
+      {
+        "sha": "e6d79c123441a53d91bb8df7adf4db45cf120bf1",
+        "url": "https://github.com/karpathy/autoresearch/commit/e6d79c123441a53d91bb8df7adf4db45cf120bf1",
+        "message": "Enhance README with more project context and links",
+        "date": "2026-03-21T02:13:39Z",
+        "author": "Andrej"
+      },
+      {
+        "sha": "f32ab047a298737d459ac9ded1bc2fc399505159",
+        "url": "https://github.com/karpathy/autoresearch/commit/f32ab047a298737d459ac9ded1bc2fc399505159",
+        "message": "fix(analysis): define best_bpb before y-axis scaling",
+        "date": "2026-03-19T16:43:33Z",
+        "author": "kaizen-38"
+      }
+    ]
+  },
+  {
+    "repository": "emilkowalski/vaul",
+    "checked_at": "2026-10-28",
+    "stars": 8663,
+    "license": "MIT",
+    "updated_at": "2025-10-03T19:25:32Z",
+    "url": "https://github.com/emilkowalski/vaul",
+    "commits": [
+      {
+        "sha": "3e97aac6a38e4481bade71d7233ed6002e80f9b0",
+        "url": "https://github.com/emilkowalski/vaul/commit/3e97aac6a38e4481bade71d7233ed6002e80f9b0",
+        "message": "Explain maintenance",
+        "date": "2025-10-03T19:25:32Z",
+        "author": "Emil Kowalski"
+      },
+      {
+        "sha": "ca8ca474fb4a2864ffd2cd03d268a86842a9094e",
+        "url": "https://github.com/emilkowalski/vaul/commit/ca8ca474fb4a2864ffd2cd03d268a86842a9094e",
+        "message": "fix: Added missing modal prop to Drawer.Root (#580)",
+        "date": "2025-07-25T21:48:21Z",
+        "author": "Myron Scerri"
+      },
+      {
+        "sha": "29d6e661387997e1eb506ca3ab7c47da41a44100",
+        "url": "https://github.com/emilkowalski/vaul/commit/29d6e661387997e1eb506ca3ab7c47da41a44100",
+        "message": "Update playwright.yml (#587)",
+        "date": "2025-07-25T21:47:41Z",
+        "author": "Santiago"
+      }
+    ]
+  },
+  {
+    "repository": "fastapi/full-stack-fastapi-template",
+    "checked_at": "2026-10-28",
+    "stars": 46093,
+    "license": "MIT",
+    "updated_at": "2026-10-26T10:47:36Z",
+    "url": "https://github.com/fastapi/full-stack-fastapi-template",
+    "commits": [
+      {
+        "sha": "f4bcfaba7c85be3c6332cc74a20819f586dcdbc6",
+        "url": "https://github.com/fastapi/full-stack-fastapi-template/commit/f4bcfaba7c85be3c6332cc74a20819f586dcdbc6",
+        "message": "📝 Update release notes",
+        "date": "2026-10-26T10:47:35Z",
+        "author": "latest-changes[bot]"
+      },
+      {
+        "sha": "0a351e3629651c11d4a972c7ac5da53796475920",
+        "url": "https://github.com/fastapi/full-stack-fastapi-template/commit/0a351e3629651c11d4a972c7ac5da53796475920",
+        "message": "⬆ Bump certifi from 2026.6.17 to 2026.10.19 (#2518)",
+        "date": "2026-10-26T10:47:31Z",
+        "author": "dependabot[bot]"
+      },
+      {
+        "sha": "b1125d8839482cb7bbae603ddc6d0081bf87532e",
+        "url": "https://github.com/fastapi/full-stack-fastapi-template/commit/b1125d8839482cb7bbae603ddc6d0081bf87532e",
+        "message": "📝 Update release notes",
+        "date": "2026-10-15T16:04:31Z",
+        "author": "latest-changes[bot]"
+      }
+    ]
+  },
+  {
+    "repository": "tailwindlabs/tailwindcss",
+    "checked_at": "2026-10-28",
+    "stars": 98008,
+    "license": "MIT",
+    "updated_at": "2026-10-19T15:50:56Z",
+    "url": "https://github.com/tailwindlabs/tailwindcss",
+    "commits": [
+      {
+        "sha": "8cc0551b1217d36dc565840b90920964d37cb46c",
+        "url": "https://github.com/tailwindlabs/tailwindcss/commit/8cc0551b1217d36dc565840b90920964d37cb46c",
+        "message": "Add changelog entry for #20591 (#20594)",
+        "date": "2026-10-19T15:50:54Z",
+        "author": "Robin Malfait"
+      },
+      {
+        "sha": "a982d5b20b013d540a5a979a6335d782dcdcbd78",
+        "url": "https://github.com/tailwindlabs/tailwindcss/commit/a982d5b20b013d540a5a979a6335d782dcdcbd78",
+        "message": "Decode single-digit hexadecimal CSS escapes (#20591)",
+        "date": "2026-10-19T15:17:02Z",
+        "author": "양지우"
+      },
+      {
+        "sha": "fda34f88769c7c88889a81777fad9ded9b137e50",
+        "url": "https://github.com/tailwindlabs/tailwindcss/commit/fda34f88769c7c88889a81777fad9ded9b137e50",
+        "message": "Canonicalization: only ignore `--tw-{property}` next to the related property (#20593)",
+        "date": "2026-10-19T12:53:01Z",
+        "author": "Robin Malfait"
+      }
+    ]
+  }
+]

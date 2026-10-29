@@ -1,0 +1,25 @@
+{
+  "format": "scenario-source-pointer/v1",
+  "repository": "vercel-labs/agent-skills",
+  "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+  "reviewed_at": "2026-10-29",
+  "upstream_files": [
+    {
+      "path": "skills/react-best-practices/SKILL.md",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355"
+    },
+    {
+      "path": "skills/web-design-guidelines/SKILL.md",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/README.md",
+      "sha256": "9429e781e3fb2f005e619b96fe18cdc59f8db38b619a4c98f0c46c86357e56a0"
+    }
+  ],
+  "redistribution": "No LICENSE file or license grant found at pinned commit; own adapter and source pointers only. README/frontmatter labels do not resolve missing grant.",
+  "local_adapter": "../../../references/framework-profiles.md"
+}

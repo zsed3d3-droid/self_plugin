@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "diagnostic_observer_active": true,
+  "automatic_retry_enabled": false,
+  "delivery_status": "blocked_by_current_host_integration",
+  "applied_component": "read_only_docker_observer",
+  "policy_tests": {"passed": 31, "failed": 0, "clock": "injected", "real_wait_seconds": 0},
+  "host_versions": {"orca": "1.4.230", "codex_cli": "0.165.0"},
+  "live_validation": {
+    "observer_health": "healthy",
+    "network_mode": "none",
+    "active_work_detected": true,
+    "real_rollout_append_followed": true,
+    "pending_retries_after_startup_baseline": 0,
+    "prompts_sent": 0,
+    "credentials_mounted": false,
+    "host_daemon_created": false,
+    "new_login_requested": false,
+    "live_failure_injected": false,
+    "docker_mac_unix_socket_mount": "rejected_bind_source_path_does_not_exist",
+    "docker_to_host_tcp_6768": "reachable_but_separate_pairing_and_e2ee_required"
+  },
+  "public_package_excludes": ["scope.json", ".env", "state/", "local/", "*.local.json", "raw_rollouts", "terminal_output", "account_credentials"]
+}

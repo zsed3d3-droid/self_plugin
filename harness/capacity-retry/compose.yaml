@@ -1,0 +1,20 @@
+name: uxlab-capacity-retry
+services:
+  observer:
+    build: .
+    image: uxlab/capacity-retry-observer:local
+    user: "${CAPACITY_UID:-65534}:${CAPACITY_GID:-65534}"
+    restart: unless-stopped
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    volumes:
+      - ./scope.json:/config/scope.json:ro
+      - ${CAPACITY_ROLLOUT:?Set the exact root rollout path}:/input/rollout.jsonl:ro
+      - ./state:/state
+    healthcheck:
+      test: [CMD, python, -c, "import json,time; s=json.load(open('/state/status.json')); assert time.time()-s['updated_at']<10 and s['mode']=='observe_only'"]
+      interval: 10s
+      timeout: 2s
+      retries: 3

@@ -1,0 +1,23 @@
+{
+  "name": "scenario-ui-ux",
+  "version": "0.4.0",
+  "description": "Reference-driven UI/UX with a source-backed designer judgment library, DESIGN.md hooks and evidence-based repair.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "repository": "https://github.com/zsed3d3-droid/self_plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Scenario UI/UX",
+    "shortDescription": "Reference-driven UI/UX with a source-backed designer judgment library, DESIGN.md hooks and evidence-based repair.",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "$scenario-ui-ux 사용자 과업에 맞춰 설계하고 구현·검증해줘."
+    ]
+  }
+}

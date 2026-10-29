@@ -1,0 +1,11 @@
+{
+  "name": "craft-ui-motion",
+  "version": "2.0.0",
+  "description": "Task-driven interface planning and craft without mandatory visual styles or repeated approval gates.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "repository": "https://github.com/zsed3d3-droid/self_plugin"
+}

@@ -1,0 +1,14 @@
+{
+  "format": "uxlab-upstream-skill-pointer/v1",
+  "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+  "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+  "path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+  "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/28b3b8dee8c976df4fa3e94aed4e092ad43fcb03/.claude/skills/ui-ux-pro-max/SKILL.md",
+  "checked_at": "2026-10-28T20:07:00Z",
+  "provider": "GitHub connector fetch",
+  "scope": "Original skill entry retained alongside previously selected data/scripts. Existing user decisions and project requirements override recommendations. No existing product guidance or archived source rewritten.",
+  "license": "MIT; retained upstream LICENSE",
+  "file_sha256": "c907cc52137ee6a99db0a5706584b0ed58195c4ba9c7835bd4e7331b571d056c",
+  "blob_sha": "41f8e2fd7f8c568228d0b55186ebe3f7b4007377",
+  "text_normalization": "A terminal newline is present in the retained local Markdown; local SHA is computed from retained file bytes."
+}

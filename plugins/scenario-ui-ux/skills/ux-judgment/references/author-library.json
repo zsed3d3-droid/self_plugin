@@ -1,0 +1,2527 @@
+{
+  "format": "ux-judgment-library/v1",
+  "checked_at": "2026-10-29",
+  "status": "research_candidates_not_user_decisions",
+  "notice_ko": "공개 원문을 조사한 자체 요약과 적용 가설이다. 저자의 명성·주장은 개인 승인이나 실제 제품 성과가 아니다. 원문 전문·이미지·유료 자산을 복제하지 않았다.",
+  "priority_ko": [
+    "사용자 현재 요청과 연결된 비공개 프로젝트 판단의 실제 이유",
+    "범위가 일치하는 채택된 개인 규칙과 프로젝트 계약",
+    "이번 과업에 선택한 후보와 검증 결과"
+  ],
+  "preserve_ko": [
+    "좋아한 영역과 기능·보안·접근성을 보존한다.",
+    "특정 화면의 긍정 평가는 해당 화면·과업 범위로 유지하며 다른 제품의 전역 취향으로 확대하지 않는다.",
+    "서비스의 컨테이너 원칙과 승인된 MLX 호스트 예외를 따른다."
+  ],
+  "promotion": {
+    "automatic": false,
+    "initial_recipe_status": "candidate",
+    "workflow_ko": "후보 선택 → 작은 변경 → 같은 사례의 기능·시각 검증 → 사용자 평가 → 해당 범위의 채택/거절 이유 기록",
+    "user_preference_initial_status": "not_evaluated"
+  },
+  "search": {
+    "method": "offline_lexical_tags_and_explicit_aliases",
+    "semantic": false,
+    "specific_concepts": [
+      {
+        "id": "state-intent-mismatch",
+        "terms": [
+          "mental model",
+          "멘탈 모델",
+          "상태 불일치",
+          "상태불일치",
+          "의도 불일치",
+          "mapping",
+          "매핑"
+        ],
+        "context_groups": [
+          [
+            "좌표",
+            "위치",
+            "선택",
+            "의도",
+            "pin",
+            "coordinates"
+          ],
+          [
+            "덮어",
+            "이전 초안",
+            "다른 값",
+            "불일치",
+            "저장 상태",
+            "overwritten",
+            "mismatch"
+          ]
+        ],
+        "targets": [
+          {
+            "recipe_id": "uxb-norman-discovery",
+            "weight": 12
+          },
+          {
+            "recipe_id": "A-DS-1",
+            "weight": 10
+          },
+          {
+            "recipe_id": "A-AB-2",
+            "weight": 8
+          }
+        ],
+        "reason_ko": "선택한 의도와 실제 좌표·상태의 충돌을 나타내는 명시적 어휘다. 조작/복귀, 실제 상태 feedback, 제품 행동 일관성 후보를 먼저 확인한다.",
+        "attribution": "our_lexical_routing_adapter_not_author_claim",
+        "observed_case_id": "proofline-pin-draft-override-20261029"
+      }
+    ],
+    "aliases": {
+      "research-paralysis": [
+        "조사 과잉",
+        "방법론 선택",
+        "조사만",
+        "research paralysis"
+      ],
+      "perspective-blindspot": [
+        "관점",
+        "첫 사용자",
+        "복구 관점"
+      ],
+      "structural-tradeoff": [
+        "구조 비교",
+        "목록 상세",
+        "병렬",
+        "navigation tradeoff"
+      ],
+      "preference-mismatch": [
+        "답답",
+        "기본 앱",
+        "사용자 선호",
+        "취향",
+        "preference"
+      ],
+      "retrieval-mismatch": [
+        "검색 결과",
+        "최신 판단",
+        "과거 판단",
+        "정확한 개수",
+        "retrieval"
+      ],
+      "capability-unclear": [
+        "빈 질문창",
+        "무엇을 물어",
+        "예시 질문",
+        "capability"
+      ],
+      "state-unclear": [
+        "진행 상태",
+        "저장 중",
+        "중복 클릭",
+        "실행 상태",
+        "loading"
+      ],
+      "repair-scope": [
+        "국소 수정",
+        "전체 재설계",
+        "수정 범위"
+      ],
+      "risk-mismatch": [
+        "실패 비용",
+        "되돌림",
+        "검증 깊이",
+        "rollback"
+      ],
+      "incoherent-flow": [
+        "제품 일관성",
+        "기본값 모순",
+        "생성 화면"
+      ],
+      "broken-handoff": [
+        "전달 누락",
+        "todo 누락",
+        "할 일 누락",
+        "todo 중복",
+        "끊어진 과업"
+      ],
+      "hidden-action": [
+        "조작 발견",
+        "숨은 동작",
+        "포커스",
+        "드롭다운",
+        "달력",
+        "escape",
+        "esc"
+      ],
+      "overgeneralized-rule": [
+        "전역 취향",
+        "카드 금지",
+        "피드백 일반화"
+      ],
+      "continuity-loss": [
+        "자료 보존",
+        "서비스 중단",
+        "내보내기",
+        "세션 종료"
+      ],
+      "feature-undiscoverable": [
+        "기능 발견",
+        "설정 이탈",
+        "진입 경로"
+      ],
+      "misattributed-ai": [
+        "책임 배정",
+        "담당자",
+        "불확실",
+        "요약 원문"
+      ],
+      "simultaneous-exposure": [
+        "동시 노출",
+        "모든 거",
+        "전부 펼침",
+        "카드 중첩",
+        "너무 많"
+      ],
+      "scope-leak": [
+        "영구 선호",
+        "동일 세션",
+        "지속 범위",
+        "실행 권한",
+        "resume"
+      ],
+      "tone-mismatch": [
+        "오류 문구",
+        "완료 문구",
+        "농담",
+        "축하",
+        "감정"
+      ],
+      "fragile-environment": [
+        "느린 연결",
+        "초안 손실",
+        "재접속",
+        "업로드 실패"
+      ],
+      "research": [
+        "사용자 연구",
+        "research"
+      ],
+      "development": [
+        "개발",
+        "구현"
+      ],
+      "onboarding": [
+        "첫 진입",
+        "온보딩"
+      ],
+      "recovery": [
+        "복구",
+        "취소"
+      ],
+      "information-architecture": [
+        "정보 구조"
+      ],
+      "wireframe": [
+        "와이어프레임"
+      ],
+      "navigation": [
+        "동선",
+        "뒤로가기"
+      ],
+      "visual-review": [
+        "시각 검토"
+      ],
+      "personalization": [
+        "개인화"
+      ],
+      "feedback": [
+        "피드백"
+      ],
+      "memory": [
+        "경험 기억",
+        "기억"
+      ],
+      "search": [
+        "검색"
+      ],
+      "evaluation": [
+        "평가"
+      ],
+      "ai": [
+        "llm",
+        "codex",
+        "ai"
+      ],
+      "async": [
+        "비동기"
+      ],
+      "microinteraction": [
+        "마이크로인터랙션"
+      ],
+      "errors": [
+        "오류"
+      ],
+      "bugfix": [
+        "버그"
+      ],
+      "maintenance": [
+        "유지보수"
+      ],
+      "verification": [
+        "검증"
+      ],
+      "experiments": [
+        "실험"
+      ],
+      "design-review": [
+        "디자인 검수"
+      ],
+      "workflow": [
+        "업무 흐름",
+        "과업"
+      ],
+      "backend": [
+        "백엔드"
+      ],
+      "traceability": [
+        "출처"
+      ],
+      "controls": [
+        "컨트롤",
+        "dropdown",
+        "calendar",
+        "focus"
+      ],
+      "mobile": [
+        "모바일"
+      ],
+      "accessibility": [
+        "접근성"
+      ],
+      "keyboard": [
+        "키보드"
+      ],
+      "sessions": [
+        "세션"
+      ],
+      "data": [
+        "자료",
+        "데이터"
+      ],
+      "operations": [
+        "운영"
+      ],
+      "offboarding": [
+        "종료"
+      ],
+      "metrics": [
+        "계측"
+      ],
+      "meetings": [
+        "회의"
+      ],
+      "summarization": [
+        "요약"
+      ],
+      "handoff": [
+        "인계"
+      ],
+      "progressive-disclosure": [
+        "점진 공개"
+      ],
+      "forms": [
+        "입력",
+        "폼"
+      ],
+      "routing": [
+        "라우팅"
+      ],
+      "long-running-work": [
+        "지속 작업"
+      ],
+      "copy": [
+        "문구"
+      ],
+      "motion": [
+        "모션",
+        "애니메이션"
+      ],
+      "design-system": [
+        "디자인 시스템"
+      ],
+      "responsive": [
+        "반응형"
+      ],
+      "performance": [
+        "성능"
+      ],
+      "offline": [
+        "오프라인"
+      ],
+      "requirements": [
+        "요구사항"
+      ]
+    },
+    "notice_ko": "이 검색은 명시적 태그·동의어·키워드 매칭이다. 의미검색·UX 진단·사용자 만족 검증을 수행하지 않는다."
+  },
+  "evidence_kinds": {
+    "principle_synthesis": "저자의 원칙 정리. 해당 글의 새 대조 실험은 아님.",
+    "reported_user_research": "저자가 사용자 연구를 수행했다고 설명함. 이번 라이브러리에서 원자료를 재분석하지 않음.",
+    "author_case_retrospective": "직접 참여한 저자의 회고. 독립적 인과 효과 검증은 아님.",
+    "reported_client_case": "저자가 전하는 고객 사례. 익명/성과 수치의 재현성 제한을 보존함.",
+    "reasoned_essay": "사례를 이용한 주장·분류·전망. 보편 법칙이나 개인 선호로 자동 채택하지 않음."
+  },
+  "imports": [
+    {
+      "group": "a",
+      "repository_path": "research/ux-author-library/group-a.json",
+      "sha256": "74ab332b3708b0804428cbc3b04e19fd37f9a5a6651a34a81c29eb101464dade",
+      "checked_at": "2026-10-29",
+      "content_type": "independent_research_summary"
+    },
+    {
+      "group": "b",
+      "repository_path": "research/ux-author-library/group-b.json",
+      "sha256": "ccee5618ba225abef519e418ce52e32f087534d92389b8e803aa286de603ca1c",
+      "checked_at": "2026-10-29",
+      "content_type": "independent_research_summary"
+    }
+  ],
+  "authors": [
+    {
+      "id": "sarah-doody",
+      "name": "Sarah Doody",
+      "canonical_home": "https://www.sarahdoody.com/",
+      "source_ids": [
+        "SD1",
+        "SD2",
+        "SD3"
+      ],
+      "identity_context": {
+        "checked_at": "2026-10-29",
+        "status": "official_homepage_read",
+        "related_page": "https://www.sarahdoody.com/ux-notebook-newsletter/",
+        "note_ko": "공식 사이트의 The UX Notebook 뉴스레터 링크를 확인했다. 2017 글의 동명 웹사이트 재구상은 과거 프로젝트 맥락으로만 사용한다."
+      },
+      "philosophy": {
+        "attribution": "author_argument",
+        "source_ids": [
+          "SD1",
+          "SD2",
+          "SD3"
+        ],
+        "summary_ko": "방법론 활동량보다 행동으로 배울 수 있는 문제 해결과 관점 전환을 중시한다."
+      },
+      "limitations_ko": [
+        "실패를 빨리 배우자는 철학을 실제 데이터 손실·인증 실패·무단 배포 허용으로 확장하지 않는다.",
+        "조사 기한은 저자의 개인 경험이며 모든 프로젝트에 같은 시간 제한을 적용하지 않는다."
+      ],
+      "excluded_sources": [],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0"
+      }
+    },
+    {
+      "id": "irene-au",
+      "name": "Irene Au",
+      "canonical_home": "https://www.ireneau.com/",
+      "source_ids": [
+        "IA1",
+        "IA2"
+      ],
+      "identity_context": {
+        "checked_at": "2026-10-29",
+        "status": "official_homepage_read",
+        "note_ko": "현재 홈페이지의 소개를 확인했지만 현직·약력을 규칙의 권위 근거로 재인용하지 않는다."
+      },
+      "philosophy": {
+        "attribution": "author_argument",
+        "source_ids": [
+          "IA1",
+          "IA2"
+        ],
+        "summary_ko": "만들고 비교할 수 있는 형태로 선택을 돕고, 기능적 결과와 사람이 느끼는 결과를 반복적으로 다룬다."
+      },
+      "limitations_ko": [
+        "공간 설계의 선호·비례를 웹 UI의 고정 간격이나 필수 미학으로 복사하지 않는다.",
+        "공감→제작→테스트를 경직된 단계 gate나 모든 작업의 재승인 절차로 만들지 않는다."
+      ],
+      "excluded_sources": [],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/1"
+      }
+    },
+    {
+      "id": "luke-wroblewski",
+      "name": "Luke Wroblewski",
+      "canonical_home": "https://www.lukew.com/",
+      "source_ids": [
+        "LW1",
+        "LW2",
+        "LW3"
+      ],
+      "identity_context": {
+        "checked_at": "2026-10-29",
+        "status": "official_homepage_and_current_article_links_read",
+        "note_ko": "홈페이지의 2026-10-26 최신 링크까지 확인했다. 아래 채택 후보는 구체적인 개인 도구 구현·평가 경험이 있는 글을 골랐다."
+      },
+      "philosophy": {
+        "attribution": "our_synthesis_of_author_reports",
+        "source_ids": [
+          "LW1",
+          "LW2",
+          "LW3"
+        ],
+        "summary_ko": "실제 질문과 소유한 자료에 맞춰 도구를 바꾸고, 근거·표현·사람의 비교 평가를 함께 다룬다."
+      },
+      "limitations_ko": [
+        "최신 홈 링크의 기술 낙관론을 환각·정확성 문제 소멸의 사실 근거로 쓰지 않는다.",
+        "채택된 브로커·인증·컨테이너·명시적 실행 정책이 이 사례보다 우선한다."
+      ],
+      "excluded_sources": [],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2"
+      }
+    },
+    {
+      "id": "dan-saffer",
+      "name": "Dan Saffer",
+      "canonical_home": "https://www.odannyboy.com/",
+      "source_ids": [
+        "DS1",
+        "DS2",
+        "DS3"
+      ],
+      "identity_context": {
+        "checked_at": "2026-10-29",
+        "status": "official_homepage_and_author_publication_index_read",
+        "publication_index": "https://www.odannyboy.com/books/",
+        "note_ko": "오래된 저자 소개의 현직은 재인용하지 않는다."
+      },
+      "philosophy": {
+        "attribution": "our_synthesis_of_author_texts",
+        "source_ids": [
+          "DS1",
+          "DS2",
+          "DS3"
+        ],
+        "summary_ko": "작동하는 기술과 화면 사이의 작은 상태·신호·사람의 접점을 실제 제약 안에서 설계한다."
+      },
+      "limitations_ko": [
+        "작은 상세에 집중하는 것을 큰 사용자 과업·정보 구조 무시로 해석하지 않는다.",
+        "초기 모델·최종 책·후대 요약을 한 버전으로 합치지 않는다."
+      ],
+      "excluded_sources": [
+        {
+          "url": "https://microinteractions.com/",
+          "checked_at": "2026-10-29",
+          "status": "excluded_unrelated_redirect",
+          "method": "web_open_403_then_canonical_https_fetch",
+          "note_ko": "공식 홈페이지의 오래된 책 링크가 현재 책과 무관한 상업 사이트로 redirect되었다. 새 도메인의 콘텐츠·다운로드는 사용하지 않았다."
+        },
+        {
+          "url": "https://programming.oreilly.com/2013/06/getting-to-signature-moments-with-microinteractions.html",
+          "checked_at": "2026-10-29",
+          "status": "excluded_redirect_to_generic_radar_homepage",
+          "note_ko": "원문 대신 일반 Radar 홈으로 redirect되어 글을 읽은 것으로 계산하지 않았다."
+        }
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3"
+      }
+    },
+    {
+      "id": "andy-budd",
+      "name": "Andy Budd",
+      "canonical_home": "https://andybudd.com/",
+      "source_ids": [
+        "AB1",
+        "AB2",
+        "AB3"
+      ],
+      "identity_context": {
+        "checked_at": "2026-10-29",
+        "status": "official_homepage_verified_via_canonical_https",
+        "provided_domain_normalization": "anybudd.com → andybudd.com",
+        "web_tool_status": "403_for_homepage_and_some_articles",
+        "fallback": "canonical HTTPS fetch with visible title/body; no proxy or paywall content",
+        "note_ko": "공식 페이지 자체의 이름·제목·내부 글 경로를 확인했다. 사용자 입력의 오타로 보이는 도메인은 원문 근거로 쓰지 않았다."
+      },
+      "philosophy": {
+        "attribution": "our_synthesis_of_author_arguments",
+        "source_ids": [
+          "AB1",
+          "AB2",
+          "AB3"
+        ],
+        "summary_ko": "산출 속도보다 결정의 비용·가역성·제품 일관성을 함께 판단하며 실제로 다시 고칠 수 있는 운영을 중시한다."
+      },
+      "limitations_ko": [
+        "빠른 제작을 더 많은 모델·도구·컨테이너 도입의 자동 근거로 쓰지 않는다.",
+        "코드 생성 실험을 production 자동 배포·추가 승인 의식·전면 재설계로 확대하지 않는다."
+      ],
+      "excluded_sources": [],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4"
+      }
+    },
+    {
+      "id": "don-norman",
+      "name": "Don Norman",
+      "canonical_home": "https://jnd.org/",
+      "source_ids": [
+        "b-norman-hcd",
+        "b-norman-gestures"
+      ],
+      "identity_context": "두 글 모두 저자의 jnd.org에 게시되어 있고, 공동 저자 글은 두 사람을 함께 명시한다.",
+      "philosophy": null,
+      "limitations_ko": [],
+      "excluded_sources": [],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/0"
+      }
+    },
+    {
+      "id": "brenda-laurel",
+      "name": "Brenda Laurel",
+      "canonical_home": "https://www.tauzero.com/Brenda_Laurel/",
+      "source_ids": [
+        "b-laurel-humanism",
+        "b-laurel-new-players"
+      ],
+      "identity_context": "저자 이름의 tauzero.com 홈페이지가 Recent Talks로 연결하며 두 연설의 전문을 직접 제공한다. 오래된 개인 아카이브이며 현직 확인 자료로 사용하지 않는다.",
+      "philosophy": null,
+      "limitations_ko": [],
+      "excluded_sources": [],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/1"
+      }
+    },
+    {
+      "id": "jared-spool",
+      "name": "Jared M. Spool",
+      "canonical_home": "https://articles.centercentre.com/",
+      "source_ids": [
+        "b-spool-strategy",
+        "b-spool-two-party-ai"
+      ],
+      "identity_context": "https://articles.uie.com/가 Center Centre 원문 아카이브로 이동하며 두 글에 저자와 게시일이 명시되어 있다.",
+      "philosophy": null,
+      "limitations_ko": [],
+      "excluded_sources": [],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/2"
+      }
+    },
+    {
+      "id": "jakob-nielsen",
+      "name": "Jakob Nielsen",
+      "canonical_home": "https://www.uxtigers.com/",
+      "source_ids": [
+        "b-nielsen-heuristics",
+        "b-nielsen-ai-styles"
+      ],
+      "identity_context": "https://www.uxtigers.com/about는 본인 사이트이며 2023년 이후 새 글의 본거지라고 명시한다. NN/g 고전 원문과 최근 개인 논설을 분리한다.",
+      "philosophy": null,
+      "limitations_ko": [],
+      "excluded_sources": [],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/3"
+      }
+    },
+    {
+      "id": "aarron-walter",
+      "name": "Aarron Walter",
+      "canonical_home": "https://aarronwalter.com/",
+      "source_ids": [
+        "b-walter-mailchimp",
+        "b-walter-rtsl"
+      ],
+      "identity_context": "개인 홈페이지의 portfolio가 두 사례 본문으로 연결된다. 홍보·회고 성격을 별도 표시하고 수상·사업 규모를 인과 증거로 삼지 않는다.",
+      "philosophy": null,
+      "limitations_ko": [],
+      "excluded_sources": [],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/4"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "SD1",
+      "author_id": "sarah-doody",
+      "title": "Designing With Lenses: See ideas through a different design lens",
+      "canonical_url": "https://www.sarahdoody.com/designing-with-lenses/",
+      "published_date": "2017-09-11",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "자신의 UX Notebook 웹사이트 재구상에서 조사 기한을 정했다고 설명한다. 오래 조사하는 것이 행동을 피하는 진척감이 될 수 있다고 지적한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "read_limit_ko": "본문에서 조사 기한과 관점 전환 설명을 확인했다. 영상의 구체적 세 렌즈는 확인하지 않았다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0/sources/0"
+      }
+    },
+    {
+      "id": "SD2",
+      "author_id": "sarah-doody",
+      "title": "Are You Stuck In Research Mode?",
+      "canonical_url": "https://www.sarahdoody.com/are-you-stuck-in-research-mode/",
+      "published_date": "2016-01-23",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "학습자들이 어떤 방법론을 골라야 할지 몰라 시작하지 못한다고 묻는 경험에서, 도구와 활동 과잉보다 문제 해결에 초점을 맞추자고 주장한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0/sources/1"
+      }
+    },
+    {
+      "id": "SD3",
+      "author_id": "sarah-doody",
+      "title": "Accelerate Failure & Get More Insights In To Your Work",
+      "canonical_url": "https://www.sarahdoody.com/accelerate-failure/",
+      "published_date": "2017-11-28",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "가정을 오래 다듬으며 실패를 피하기보다 일찍 배우고 반복할 수 있는 문화를 제안한다. 측정된 제품 효과를 제공하는 실험 보고는 아니다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0/sources/2"
+      }
+    },
+    {
+      "id": "IA1",
+      "author_id": "irene-au",
+      "title": "The Architecture of Creative Collaboration",
+      "canonical_url": "https://www.ireneau.com/blog/the-architecture-of-creative-collaboration",
+      "published_date": "2025-12-15",
+      "date_basis": "current_page_jsonld_datePublished; original_publication_not_established",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "집을 의뢰한 고객 입장에서 건축가가 거친 대안·낮은 충실도 모형·반복을 통해 tradeoff를 이해하게 한 경험을 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "historical_context": "2014–2017 house project; text explicitly references 99U 2017",
+        "outcome_limit_ko": "저자가 A/B라고 표현하지만 무작위 대조 실험은 아니다. 게시 메타데이터를 경험 발생일로 쓰지 않는다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/1/sources/0"
+      }
+    },
+    {
+      "id": "IA2",
+      "author_id": "irene-au",
+      "title": "Rethinking the canonical design process diagram, and a call for beauty",
+      "canonical_url": "https://www.ireneau.com/blog/rethinking-the-canonical-design-process-diagram-and-a-call-for-beauty",
+      "published_date": "2025-12-15",
+      "date_basis": "current_page_jsonld_datePublished",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "과거 저비용 사용성 관찰 환경을 직접 만든 경험과, 출시 후 다음 기능으로 이동하지 말고 만들고 검증하며 반복해야 한다는 주장을 연결한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "outcome_limit_ko": "기능 측정과 느껴지는 품질을 함께 보자는 주장은 저자의 관점이다. 일화·타인에게 들은 설명은 독립 실험 결과가 아니다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/1/sources/1"
+      }
+    },
+    {
+      "id": "LW1",
+      "author_id": "luke-wroblewski",
+      "title": "Ask LukeW: A New Retrieval System",
+      "canonical_url": "https://www.lukew.com/ff/2157/ask-lukew-a-new-retrieval-system",
+      "published_date": "2026-08-17",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "개인 자료 검색에서 날짜·자료 종류·개수 같은 질문 차이를 처리하고 문맥을 보완했다. 자동 평가가 개선을 보고했지만 직접 100쌍을 비교하니 구 시스템이 이겨 버그를 찾아 고쳤다고 보고한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "outcome_limit_ko": "평가 구성·원시 투표·효과 크기는 독립 확인하지 않았다. 75/25 배합과 chunk 전략은 그 서비스 설정이지 보편 최적값이 아니다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2/sources/0"
+      }
+    },
+    {
+      "id": "LW2",
+      "author_id": "luke-wroblewski",
+      "title": "Always Asking People to Ask",
+      "canonical_url": "https://www.lukew.com/ff/2160/always-asking-people-to-ask",
+      "published_date": "2026-09-08",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reported_user_research",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "빈 질문창의 사용 어려움에 대해 추천 질문을 읽는 것만으로 목적 이해에 도움이 됐다는 사용성 관찰을 보고하고, 최근 자료로 만든 답을 먼저 보여주는 흐름을 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "outcome_limit_ko": "추천 질문에 대한 보고와 초기 답변 UI의 효과는 구분한다. 후자의 통제 실험 결과를 제시한 글은 아니다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2/sources/1"
+      }
+    },
+    {
+      "id": "LW3",
+      "author_id": "luke-wroblewski",
+      "title": "Ask LukeW: Instant Content Indexing",
+      "canonical_url": "https://www.lukew.com/ff/2168/ask-lukew-instant-content-indexing",
+      "published_date": "2026-10-20",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "자신의 글·음성·영상·PDF·이미지를 변경 감지해 유형별로 처리하고 원문 순간/페이지를 연결했다. 중복될 게시물은 제외하고 삭제한 글의 반영도 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "outcome_limit_ko": "실제 corpus나 인프라를 내려받거나 실행하지 않았다. 저자가 설명한 구현·개선 주장이다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2/sources/2"
+      }
+    },
+    {
+      "id": "DS1",
+      "author_id": "dan-saffer",
+      "title": "New Book: Microinteractions",
+      "canonical_url": "https://www.odannyboy.com/2012/07/new-book-microinteractions/",
+      "published_date": "2012-07-09",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "상태 변경 등 작고 제한된 상호작용의 상세를 제품 경험의 일부로 설명하며 trigger·규칙·feedback 등을 다루는 초기 책 계획을 소개한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "version_limit_ko": "출간 전 글은 다섯 부분을 나열한다. 이 글로 최종 책의 네 부분 모델을 확인했다고 주장하지 않는다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3/sources/0"
+      }
+    },
+    {
+      "id": "DS2",
+      "author_id": "dan-saffer",
+      "title": "Tackling Maintenance Projects",
+      "canonical_url": "https://boxesandarrows.com/tackling-maintenance-projects/",
+      "published_date": "2002-11-04",
+      "date_basis": "visible_byline; linked_from_author_site",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "기존 제품 수정에서 밑줄을 링크라고 생각했으나 실제로는 숨은 설명을 여는 컨트롤이었던 경험을 소개한다. 실제 클릭·소스·기술 제약을 확인하고 범위를 정하자고 제안한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "historical_limit_ko": "Flash 등 당시 기술과 조직 사례는 현재 권장 스택이 아니다. 오래된 소개 직함은 사용하지 않는다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3/sources/1"
+      }
+    },
+    {
+      "id": "DS3",
+      "author_id": "dan-saffer",
+      "title": "The UX of Commercial Drones",
+      "canonical_url": "https://uxmag.com/articles/the-ux-of-commercial-drones",
+      "published_date": "2014-01-09",
+      "date_basis": "visible_byline; linked_from_author_site",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "배송 데모의 도착·인수·안전 상태 등 비어 있는 고객 접점을 질문하고 진행/의도 신호를 제안한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "evidence_limit_ko": "2014 데모에 대한 전망·설계 제안이며 저자가 운영한 상용 드론 실험이나 현행 규정 근거가 아니다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3/sources/2"
+      }
+    },
+    {
+      "id": "AB1",
+      "author_id": "andy-budd",
+      "title": "Designing Fast and Slow",
+      "canonical_url": "https://andybudd.com/archives/2026/07/designing-fast-and-slow",
+      "published_date": "2026-07-23",
+      "date_basis": "visible_byline_via_canonical_https",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "실험이라고 부르지만 실패한 기능을 되돌리지 않아 사실상 영구 결정이 되는 문제를 지적한다. 이 결정이 실제로 가역적인지, 실패 비용과 재방문 주체가 무엇인지 묻는다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "fetch_method": "web_search_primary_index_then_canonical_https_body_read; web_open_403"
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4/sources/0"
+      }
+    },
+    {
+      "id": "AB2",
+      "author_id": "andy-budd",
+      "title": "The Battle Between Shipping and Perfection: A Designer’s Dilemma",
+      "canonical_url": "https://andybudd.com/archives/2024/12/the-battle-between-shipping-and-perfection-a-designer-s-dilemma",
+      "published_date": "2024-12-06",
+      "date_basis": "visible_byline",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "큰 조직의 출하 관성 속에서 연구를 재작업 위험 감소로 설명하고, 영향이 큰 문제와 작은 구현 개선·초기 프로토타입에 집중하자고 제안한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4/sources/1"
+      }
+    },
+    {
+      "id": "AB3",
+      "author_id": "andy-budd",
+      "title": "Notes from the future of design",
+      "canonical_url": "https://andybudd.com/archives/2026/07/notes-from-the-future-of-design",
+      "published_date": "2026-07-09",
+      "date_basis": "visible_byline_via_canonical_https",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "자신이 참석한 디자인 리더 모임에서 도구·역할 변화와 품질 문제를 관찰했다. 그럴듯한 생성 화면도 제품 맥락·행동·전체 일관성이 틀릴 수 있다고 주장한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "independent_outcome_verification": false,
+        "verbatim_excerpt": null,
+        "fetch_method": "web_search_primary_index_then_canonical_https_body_read; web_open_403",
+        "evidence_limit_ko": "모임의 관찰·의견이며 업계 전체를 대표하는 표본 연구가 아니다."
+      },
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4/sources/2"
+      }
+    },
+    {
+      "id": "b-norman-hcd",
+      "author_id": "don-norman",
+      "title": "The Four Fundamental Principles of Human-Centered Design and Application",
+      "canonical_url": "https://jnd.org/the-four-fundamental-principles-ofhuman-centered-design-and-application/",
+      "published_date": "2019-07-23",
+      "date_basis": "visible_publication_date_in_research",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "principle_synthesis",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "표면 증상보다 원인을 찾고, 관계자들의 실제 활동과 연결 과정을 관찰하며, 당사자와 작은 시제품을 반복 평가하자고 제안한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "update_note": "본문에 2023년 후속 저서 안내가 추가됨.",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "현장 관찰, 시스템 관점, 참여형 반복 설계를 권한다. DesignX 등의 이전 연구를 참조하지만 이 글에서 새 실험 결과를 제시하지는 않는다.",
+        "limits": "거대 사회 시스템 논의를 소규모 앱에 그대로 적용하면 조사와 문서 비용이 과해질 수 있다.",
+        "reuse": "원문 링크와 자체 요약만 저장. 사이트의 CC BY-NC 4.0 표기를 전체 콘텐츠나 코드의 무제한 재사용 허가로 확장하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/0/sources/0"
+      }
+    },
+    {
+      "id": "b-norman-gestures",
+      "author_id": "don-norman",
+      "title": "Gestural Interfaces: A Step Backwards In Usability",
+      "canonical_url": "https://jnd.org/gestural-interfaces-a-step-backwards-in-usability/",
+      "published_date": "2010-05-28",
+      "date_basis": "visible_publication_date_in_research",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "reported_user_research",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "당시 모바일 앱의 숨겨진 제스처, 불규칙한 뒤로 가기, 취소 불가 문제를 지적한다. 새 상호작용의 장점도 인정하면서 발견 가능성과 복구 경로를 요구한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "coauthors": [
+          "Don Norman",
+          "Jakob Nielsen"
+        ],
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "저자들의 기기 사용 관찰과 NN/g의 초기 iPad 사용자 시험을 인용한다. 인용된 연구 원자료는 이번 조사에서 확인하지 않았다.",
+        "limits": "2010년 OS 사례는 현재 동작의 증거가 아니다. 모든 작업을 항상 화면에 노출하라는 규칙으로 일반화하지 않는다.",
+        "reuse": "ACM 저자 게시본의 별도 권리 안내가 있다. 본문과 그림을 재배포하지 않고 독자 요약과 링크만 제공한다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/0/sources/1"
+      }
+    },
+    {
+      "id": "b-laurel-humanism",
+      "author_id": "brenda-laurel",
+      "title": "Technological Humanism and Values-Driven Design",
+      "canonical_url": "https://www.tauzero.com/Brenda_Laurel/Recent_Talks/Technological_Humanism.html",
+      "published_date": "1998-04",
+      "date_basis": "month",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "reported_user_research",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "Purple Moon 이전의 조사에서 가치와 질문을 명시하고 문헌, 전문가, 아이들과 부모의 자료를 결합한 과정을 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "date_precision": "month",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "아동 약 1,100명 인터뷰와 별도 설문·부모 조사를 수행했다고 보고한다. 참여자 수와 성과는 저자 서술이며 원자료나 표집을 독립 검증하지 않았다.",
+        "limits": "1990년대 미국 아동의 집단 경향을 현재 한국 사용자나 개인의 선호로 대입할 수 없다.",
+        "reuse": "명시된 자유 이용 라이선스를 확인하지 못했다. 전문·인터뷰 영상·사진을 복제하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/1/sources/0"
+      }
+    },
+    {
+      "id": "b-laurel-new-players",
+      "author_id": "brenda-laurel",
+      "title": "New Players, New Games",
+      "canonical_url": "https://www.tauzero.com/Brenda_Laurel/Recent_Talks/NewPlayersNewGames.html",
+      "published_date": "1999",
+      "date_basis": "year_from_authors_talk_index",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "회사의 폐업, 커뮤니티 단절, 응답 운영 비용을 함께 돌아본다. 조사 결과를 실제 설계 지침으로 바꾸고 예외에는 이유를 남긴 과정을 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "date_precision": "year_from_authors_talk_index",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "친구와 함께하는 인터뷰, 사진 기반 조사, 연구 요약의 설계 원칙화, 사이트 종료와 임시 재개를 직접 회고한다.",
+        "limits": "활발한 참여와 수상이 수익성이나 지속 가능성을 보장하지 않았다는 실패 사례다. 커뮤니티를 모든 제품에 추가할 근거는 아니다.",
+        "reuse": "원문 권리를 유지하며 자체 요약과 링크만 저장한다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/1/sources/1"
+      }
+    },
+    {
+      "id": "b-spool-strategy",
+      "author_id": "jared-spool",
+      "title": "Experience Strategists Approach UX Differently",
+      "canonical_url": "https://articles.centercentre.com/experience-strategists-approach-ux-differently/",
+      "published_date": "2026-03-06",
+      "date_basis": "visible_publication_date_in_research",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "reported_client_case",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "청구 업무 현장 관찰로 기존 결제 기능의 발견·설정 문제를 찾고, 정보 구조와 도입 흐름을 개선한 익명 고객 사례를 전한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "관찰, 이해관계자 면담, 이용량 계측, 배포 후 재방문을 설명한다. 원문 성과 수치는 익명 사례의 보고이며 통제 실험으로 확인하지 않았다.",
+        "limits": "제품·표본·다른 변경의 영향이 공개되지 않는다. 결제 기간이나 매출 개선 비율을 우리 제품의 예상 효과로 쓰지 않는다.",
+        "reuse": "원문은 저작권을 유지한다. 전문과 이미지를 복제하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/2/sources/0"
+      }
+    },
+    {
+      "id": "b-spool-two-party-ai",
+      "author_id": "jared-spool",
+      "title": "Nobody Likes Being on the Receiving End of AI",
+      "canonical_url": "https://articles.centercentre.com/nobody-likes-being-on-the-receiving-end-of-ai/",
+      "published_date": "2026-02-06",
+      "date_basis": "visible_publication_date_in_research",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "AI로 편해지는 사람과 그 처리의 대상이 되는 사람을 함께 고려하자고 주장한다. 보낸 사람·읽는 사람의 이해가 다를 수 있다는 문제 제기다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "이메일 요약·채용·교육 사례를 사용하는 논설이다. 모든 사람이 AI를 싫어한다는 실증 조사 결과는 제시하지 않는다.",
+        "limits": "도발적인 제목을 보편적인 사용자 선호로 채택하지 않는다. 개인용 단독 작업과 타인에게 영향을 주는 흐름을 구분한다.",
+        "reuse": "자체 요약과 출처 링크만 보관한다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/2/sources/1"
+      }
+    },
+    {
+      "id": "b-nielsen-heuristics",
+      "author_id": "jakob-nielsen",
+      "title": "10 Usability Heuristics for User Interface Design",
+      "canonical_url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "published_date": "1994-04-24",
+      "date_basis": "visible_publication_date_in_research",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "principle_synthesis",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "상태 안내, 익숙한 용어, 복구, 일관성, 오류 예방 등을 평가 축으로 제시한다. 미니멀리즘은 과업과 무관한 정보를 줄이는 뜻이라고 설명한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "reviewed": "2024-01-30",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "1990년 Molich와의 개발과 1994년 249개 사용성 문제 분석을 근거로 설명한다. 인용 논문의 원자료를 이번 조사에서 재분석하지 않았다.",
+        "limits": "본문 스스로 넓은 휴리스틱임을 밝힌다. 한 레이아웃의 우월성이나 사용자 취향을 증명하지 않는다.",
+        "reuse": "저자와 원문 주소를 명시한다. 허용 안내를 전문·포스터·이미지 재배포 허가로 확장하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/3/sources/0"
+      }
+    },
+    {
+      "id": "b-nielsen-ai-styles",
+      "author_id": "jakob-nielsen",
+      "title": "3 AI Interaction Styles: Turn-Taking, Task Agents, Always-On",
+      "canonical_url": "https://www.uxtigers.com/post/ai-interaction-styles",
+      "published_date": "2026-10-14",
+      "date_basis": "year_from_article_context_and_current_archive",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "reasoned_essay",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "질문·한 번의 과업·지속 역할을 구분하고, 지속성보다 시작 주체와 완료 조건을 보자고 제안한다. 권한과 지속성은 별개이며 장기 사용 근거가 적다고 인정한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "date_precision": "year_from_article_context_and_current_archive",
+        "read_method": "public_html_full_text_relevant_sections",
+        "reported_action_or_basis": "최근 제품 사례와 연구를 연결한 분류·설계 제안이다. 언급한 제품의 기능·발표일은 이 라이브러리의 검증된 사실로 수입하지 않는다.",
+        "limits": "본문도 장기 현장 연구 부족을 명시한다. 전망이나 분류를 검증된 표준으로 취급하지 않는다.",
+        "reuse": "저자의 논설을 독립 요약하며 원문·삽화·제품 홍보 자료를 복제하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/3/sources/1"
+      }
+    },
+    {
+      "id": "b-walter-mailchimp",
+      "author_id": "aarron-walter",
+      "title": "Mailchimp",
+      "canonical_url": "https://aarronwalter.com/portfolio/mailchimp",
+      "published_date": null,
+      "date_basis": "publication_date_not_disclosed",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "컴포넌트 체계, 사용자 연구, 발송 후 성취의 표현, 사용자 감정에 따른 문체 작업을 회고한다. 문체 가이드의 주도자는 Kate Kiefer Lee라고 밝힌다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "period_described": "2008–2016; 개별 사례 2010–2015",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "직접 참여한 설계 활동과 화면 예시가 있다. 특정 연출이 매출이나 전체 사용자 만족을 높였다는 비교 자료는 없다.",
+        "limits": "발송 캠페인의 감정 곡선이 업무 도구의 모든 완료 행동에 적용되지는 않는다. 타인의 작업을 단일 저자의 업적으로 합치지 않는다.",
+        "reuse": "사례와 화면의 저작권을 유지한다. 캐릭터·스타일·문구를 복제하지 않는다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/4/sources/0"
+      }
+    },
+    {
+      "id": "b-walter-rtsl",
+      "author_id": "aarron-walter",
+      "title": "Resolve to Save Lives",
+      "canonical_url": "https://aarronwalter.com/portfolio/rtsl",
+      "published_date": null,
+      "date_basis": "publication_date_not_disclosed",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_text_read_in_group_research",
+      "evidence_kind": "author_case_retrospective",
+      "claim_attribution": "author_statement_or_report",
+      "author_claim_ko": "보건 담당자와의 협업, 기기·통신 제약, 현장부터 의사결정자까지 이어지는 업무를 설명한다. ZEBRA에서는 기존 DHIS2 기반을 사용했다고 보고한다.",
+      "independent_outcome_verification": false,
+      "source_metadata": {
+        "period_described": "2020–2022",
+        "read_method": "public_html_full_text",
+        "reported_action_or_basis": "여러 직군이 참여한 설계 sprint와 기존 운영 인프라 연계를 회고한다. 배포되었다는 서술은 있으나 오류율이나 건강 성과의 통제 비교는 없다.",
+        "limits": "긴급 대응기의 Google Sheets·Node.js 선택을 일반 서비스의 권장 스택으로 복제할 수 없다. 보건 도메인 전문 지식을 대신하지 않는다.",
+        "reuse": "원문과 화면을 가져오지 않고 맥락·제약의 독자 요약만 제공한다."
+      },
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/4/sources/1"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "id": "A-SD-1",
+      "author_id": "sarah-doody",
+      "title_ko": "다음 결정을 바꾸는 질문만 조사한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "SD1",
+          "SD2"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "research-paralysis"
+      ],
+      "task_tags": [
+        "research",
+        "development"
+      ],
+      "keywords": [
+        "조사 과잉",
+        "방법론 선택",
+        "조사 기한"
+      ],
+      "trigger_ko": "명확한 수정인데 방법론 선택·레퍼런스 수집만 반복된다.",
+      "diagnosis_question_ko": "어떤 미확인 사실이 다음 구현 결정을 실제로 바꾸는가?",
+      "small_repair_ko": [
+        "질문·지금 가진 근거·멈출 조건을 작업 기록에 적는다.",
+        "이미 요구가 명확하면 해당 흐름의 작은 구현/프로토타입으로 전환한다.",
+        "모든 요청에 인터뷰·워크숍·대안 수를 고정하지 않는다."
+      ],
+      "preserve_ko": [
+        "필요한 위험 조사",
+        "명확한 사용자 요구"
+      ],
+      "tradeoffs_ko": [
+        "조사 시간을 줄이면 모르는 조건을 놓칠 수 있어 종료 조건과 재검증이 필요하다."
+      ],
+      "countercases_ko": [
+        "문제 자체가 불명확하거나 되돌리기 어려운 권한·데이터 변경은 조사 깊이를 유지한다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "기존 화면의 한 수정에 필요한 질문을 추려 구현 결정을 내릴 수 있는지 확인한다.",
+          "수정 후 같은 과업을 실행해 조사 생략 때문에 놓친 오류가 없는지 확인한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "SD1",
+        "SD2"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0/recipes/0",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-SD-2",
+      "author_id": "sarah-doody",
+      "title_ko": "같은 화면을 다른 과업 관점으로 반박한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "SD1",
+          "SD3"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "perspective-blindspot"
+      ],
+      "task_tags": [
+        "research",
+        "onboarding",
+        "recovery"
+      ],
+      "keywords": [
+        "관점",
+        "첫 사용자",
+        "복구 경로"
+      ],
+      "trigger_ko": "만든 사람에게는 명확하지만 첫 진입·실패 복구가 비어 있다.",
+      "diagnosis_question_ko": "현재 관점에서 당연시한 행동·지식·기기 조건은 무엇인가?",
+      "small_repair_ko": [
+        "새 사용자/반복 사용자, 정상/오류 등 이번 과업에 유효한 대조 관점을 고른다.",
+        "선택한 관점으로 같은 task를 실행하고 차이를 구체적 상태로 기록한다.",
+        "원글의 영상에서 세 렌즈 이름을 확인한 것으로 주장하지 않는다."
+      ],
+      "preserve_ko": [
+        "실제 근거와 추정의 구분"
+      ],
+      "tradeoffs_ko": [
+        "관점은 빠진 조건을 찾지만 근거 없는 persona를 늘리면 절차만 커진다."
+      ],
+      "countercases_ko": [
+        "사소한 CSS 수정에 근거 없는 persona 여러 개를 만들어 절차를 늘리지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "첫 진입에서 주요 행동을 찾고 오류 후 초안을 복구하는 경로를 재현한다.",
+          "추정한 어려움은 가설로 남기고 실제 사용자 관찰과 구별한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "SD1",
+        "SD3"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/0/recipes/1",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-IA-1",
+      "author_id": "irene-au",
+      "title_ko": "갈등이 있는 구조만 낮은 비용으로 비교한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "IA1"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "structural-tradeoff"
+      ],
+      "task_tags": [
+        "information-architecture",
+        "wireframe",
+        "navigation"
+      ],
+      "keywords": [
+        "목록 상세",
+        "병렬",
+        "구조 비교"
+      ],
+      "trigger_ko": "목록/상세 병렬 또는 전환처럼 서로 다른 사용 가치가 충돌한다.",
+      "diagnosis_question_ko": "사용자가 고를 수 있을 만큼 tradeoff가 실제 콘텐츠로 보이는가?",
+      "small_repair_ko": [
+        "같은 데이터·과업을 두 구조에 대입해 비교할 수 있게 만든다.",
+        "차이가 정보 구조라면 색·폰트 마감 전에 텍스트 흐름/가벼운 프로토타입으로 확인한다.",
+        "대안 수·충실도·별도 승인 단계를 모든 수정에 강제하지 않는다."
+      ],
+      "preserve_ko": [
+        "같은 콘텐츠와 과업",
+        "이미 확정된 선택"
+      ],
+      "tradeoffs_ko": [
+        "대안 비교는 구조 갈등을 드러내지만 이미 정해진 작은 수정에는 비용이 더 크다."
+      ],
+      "countercases_ko": [
+        "이미 사용자 선택이 명확한 수정이나 픽셀 오류는 대안 탐색을 반복하지 않는다.",
+        "저충실도에서 검증할 수 없는 실제 touch·모션·focus 문제는 실행 환경으로 옮긴다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "동일 회의를 찾고 상세를 읽고 목록 맥락으로 돌아오는 task를 두 방향에서 비교한다.",
+          "무엇을 얻고 잃는지 기록한 후 선택된 방향만 구현·검증한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "IA1"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/1/recipes/0",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-IA-2",
+      "author_id": "irene-au",
+      "title_ko": "기능 통과와 감각적 피드백을 분리해 반복한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "IA2"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "preference-mismatch"
+      ],
+      "task_tags": [
+        "visual-review",
+        "personalization",
+        "feedback"
+      ],
+      "keywords": [
+        "답답",
+        "기본 앱",
+        "좋아한 부분",
+        "사용자 선호"
+      ],
+      "trigger_ko": "테스트는 통과했지만 사용자가 답답하거나 기본 앱 같다고 평가한다.",
+      "diagnosis_question_ko": "남은 문제가 행동 성공인가, 위계·밀도·표현의 경험인가?",
+      "small_repair_ko": [
+        "assertion 결과와 사용자 원문·화면/영역·기기·과업을 별도 필드로 둔다.",
+        "좋아한 영역을 보존하면서 지적한 한 축을 바꿔 같은 과업을 다시 확인한다.",
+        "사용자 재평가가 없으면 선호 상태는 미평가로 남긴다."
+      ],
+      "preserve_ko": [
+        "프로젝트에서 실제 긍정 평가를 받은 컴포넌트 구성",
+        "기능·접근성"
+      ],
+      "tradeoffs_ko": [
+        "감각 평가가 필요해도 실제 사용자 재평가 전에는 만족을 대신 판정할 수 없다."
+      ],
+      "countercases_ko": [
+        "사용자 감각을 이유로 정확성·접근성을 낮추지 않는다.",
+        "저자의 미학·영성 설명을 구현 수치나 보편적 사용자 법칙으로 만들지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "예: 좋아한 feedback dialog의 배치·focus는 보존하고 요청한 색만 조정해 전후를 비교한다.",
+          "색 변경이 입력·오류·키보드 경로를 손상하지 않았는지 별도 확인한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "IA2"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/1/recipes/1",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-LW-1",
+      "author_id": "luke-wroblewski",
+      "title_ko": "질문 유형을 보존하고 새 검색을 직접 비교한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "LW1"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "retrieval-mismatch"
+      ],
+      "task_tags": [
+        "memory",
+        "search",
+        "evaluation"
+      ],
+      "keywords": [
+        "검색 결과",
+        "최신 판단",
+        "과거 판단",
+        "정확한 개수"
+      ],
+      "trigger_ko": "개인 경험 검색이 최신/과거·원문 찾기·정확한 개수를 같은 의미검색으로 뭉갠다.",
+      "diagnosis_question_ko": "사용자가 원하는 것은 내용 해석인가, 특정 자료인가, 시점/집계 조건인가?",
+      "small_repair_ko": [
+        "원문·작성 시점·출처·사용자의 판단 변경을 보존한다.",
+        "날짜/종류/집계 조건은 명시적으로 처리하고 모호한 숫자를 LLM이 만들어내지 않게 한다.",
+        "이전/새 검색을 같은 질문으로 비교하고 자동 평가와 본인 판단의 불일치를 조사한다."
+      ],
+      "preserve_ko": [
+        "원문·시점·판단 변경",
+        "이전 검색과의 비교 가능성"
+      ],
+      "tradeoffs_ko": [
+        "검색 경로를 늘리면 제어와 평가가 복잡해지므로 질문 차이가 필요할 때만 추가한다."
+      ],
+      "countercases_ko": [
+        "모든 질문에 classifier·reranker 여러 단계를 강제로 추가하지 않는다.",
+        "저자 설정의 가중치·chunk 크기·평가 쌍 수를 최적 상수로 복사하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "최신 판단·과거 판단·자료 제목·정확한 개수·근거 없는 질문을 포함한 고정 질문 세트를 비교한다.",
+          "source별 relevance와 인용 정확성을 확인하고 실제 사용자 선택은 별도 저장한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "LW1"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2/recipes/0",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-LW-2",
+      "author_id": "luke-wroblewski",
+      "title_ko": "빈 AI 화면에 할 수 있는 일과 근거를 보여준다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "LW2",
+          "LW3"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "capability-unclear"
+      ],
+      "task_tags": [
+        "onboarding",
+        "memory",
+        "ai"
+      ],
+      "keywords": [
+        "빈 질문창",
+        "예시 질문",
+        "무엇을 물어",
+        "자료 범위"
+      ],
+      "trigger_ko": "사용자가 개인 학습/검색 기능에서 무엇을 물어야 할지 모르고, 적재 자료도 확인할 수 없다.",
+      "diagnosis_question_ko": "기능의 범위·입력 원천·출력 결과를 시작 전에 알 수 있는가?",
+      "small_repair_ko": [
+        "실제 수행 가능한 예시 질문과 현재 자료 범위를 보여준다.",
+        "사용자 선택으로 가져온 자료의 provenance·원문 위치·변경/삭제 상태를 추적한다.",
+        "기존 생성 결과나 정적 예시를 표시할 수 있지만 화면 진입만으로 AI/유료 작업을 실행하지 않는다."
+      ],
+      "preserve_ko": [
+        "명시적 import·AI 실행",
+        "원문 위치와 삭제 반영"
+      ],
+      "tradeoffs_ko": [
+        "시작 안내는 도움이 될 수 있으나 임의의 답변 생성이나 자료 수집을 정당화하지 않는다."
+      ],
+      "countercases_ko": [
+        "개인 로그를 임의로 긁거나 X 등의 자동 수집을 동의 없이 활성화하지 않는다.",
+        "추천 질문과 자동 답변을 광고성 가짜 결과로 채우지 않는다.",
+        "자료가 적은 경우 과한 ingestion 서비스보다 명시적 import로 시작한다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "처음 보는 사람이 가능한 task를 설명하고 예시에서 실제 검색을 시작할 수 있는지 확인한다.",
+          "삭제/변경한 자료와 중복 자료가 답변 근거에 어떻게 반영되는지 확인한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "LW2",
+        "LW3"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/2/recipes/1",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-DS-1",
+      "author_id": "dan-saffer",
+      "title_ko": "작은 행동도 시작·진행·결과·반복 계약을 갖게 한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "DS1",
+          "DS3"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "state-unclear"
+      ],
+      "task_tags": [
+        "async",
+        "microinteraction",
+        "errors"
+      ],
+      "keywords": [
+        "저장 중",
+        "진행 상태",
+        "전사",
+        "중복 클릭",
+        "재시도"
+      ],
+      "trigger_ko": "저장·전사·요약이 시작됐는지, 끝났는지, 다시 눌러도 되는지 모른다.",
+      "diagnosis_question_ko": "사용자 동작과 실제 작업 상태가 어떤 신호로 연결되는가?",
+      "small_repair_ko": [
+        "버튼 trigger, 실행 조건, 진행·완료·실패 feedback, 취소/반복 동작을 상태별로 정의한다.",
+        "진행 중/완료/결과 없음/서비스 불가를 구별한다. 미인증·실패를 성공처럼 표시하지 않는다.",
+        "중복 요청 방지·요청 id·stale 응답 제어는 이 프로젝트의 구현 제안으로 다룬다."
+      ],
+      "preserve_ko": [
+        "실제 실행 상태",
+        "초안과 반복 동작"
+      ],
+      "tradeoffs_ko": [
+        "상태 신호를 늘리면 반복 업무의 알림 소음이 될 수 있어 필요한 신호만 남긴다."
+      ],
+      "countercases_ko": [
+        "모든 작은 작업에 spinner·toast·축하 모션을 붙이지 않는다.",
+        "물리 드론의 안전 제안을 웹 서비스 보안의 검증 근거로 대신하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "느린 응답·실패·재시도·연속 클릭·화면 이탈 후 복귀에서 상태와 결과 일치를 확인한다.",
+          "실제 AI가 없으면 unavailable을 보여주고 가짜 회의 요약을 만들지 않는지 확인한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "DS1",
+        "DS3"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3/recipes/0",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-DS-2",
+      "author_id": "dan-saffer",
+      "title_ko": "기존 화면의 진짜 동작부터 확인해 수정 범위를 고른다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "DS2"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "repair-scope"
+      ],
+      "task_tags": [
+        "bugfix",
+        "maintenance"
+      ],
+      "keywords": [
+        "국소 수정",
+        "전체 재설계",
+        "기존 동작"
+      ],
+      "trigger_ko": "조그만 추가 요구가 전체 재설계로 번지거나 실제 구조 문제가 CSS 처방으로 끝난다.",
+      "diagnosis_question_ko": "현재 컨트롤은 무엇을 하며 결함은 그 영역에 국한되는가?",
+      "small_repair_ko": [
+        "기존 실행 경로와 데이터/컴포넌트 의존성을 확인한다.",
+        "한 영역으로 해결 가능하면 실제 캡처 위 작은 변경으로 설명하고 같은 경로를 검증한다.",
+        "국소 수정으로 과업을 해결할 수 없을 때만 구조 변경의 근거·영향 범위를 기록한다."
+      ],
+      "preserve_ko": [
+        "기존 화면의 장점",
+        "연결된 과업 동작"
+      ],
+      "tradeoffs_ko": [
+        "국소 수리는 회귀 범위를 줄이지만 구조적 원인을 가리는 임시 처방이 될 수도 있다."
+      ],
+      "countercases_ko": [
+        "원글의 외형을 기능보다 우선할 수 있다는 주장은 채택하지 않는다.",
+        "조직 마찰을 이유로 보안·접근성·데이터 결함을 묵인하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "현재 컨트롤의 클릭/키보드/뒤로가기 동작을 먼저 재현한다.",
+          "변경한 영역과 연결된 한 단계 전후에서 회귀와 정보 손실을 확인한다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "DS2"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/3/recipes/1",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-AB-1",
+      "author_id": "andy-budd",
+      "title_ko": "검증 깊이를 실패 비용과 복구 가능성에 맞춘다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "AB1",
+          "AB2"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "risk-mismatch"
+      ],
+      "task_tags": [
+        "development",
+        "verification",
+        "experiments"
+      ],
+      "keywords": [
+        "되돌림",
+        "실패 비용",
+        "검증 깊이",
+        "rollback"
+      ],
+      "trigger_ko": "작은 수정에도 전체 절차를 강요하거나 큰 변경을 임시 실험이라며 방치한다.",
+      "diagnosis_question_ko": "틀리면 무엇을 잃고 누가 언제 되돌릴 수 있는가?",
+      "small_repair_ko": [
+        "변경 범위·실패 영향·되돌림 경로를 짧게 기록한다.",
+        "가역적 국소 수정은 관련 과업만 빠르게 검증한다.",
+        "영속 데이터·권한·결제처럼 비용이 큰 변경은 필요한 검증을 먼저 수행한다.",
+        "실험이면 재검토 조건·담당·유지/철회 기준을 남긴다."
+      ],
+      "preserve_ko": [
+        "되돌림 경로",
+        "보안·데이터 무결성"
+      ],
+      "tradeoffs_ko": [
+        "검증 비용과 실패 비용을 함께 비교하고 실제로 되돌릴 수 없는 변경을 실험으로 포장하지 않는다."
+      ],
+      "countercases_ko": [
+        "빠르게 출시하자는 주장을 실제 배포 권한이나 파괴적 변경 허용으로 사용하지 않는다.",
+        "실제로 되돌릴 수 없는 변경에 reversible 라벨을 붙여 절차를 우회하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "작은 스타일 변경과 세션/데이터 구조 변경의 서로 다른 실패·복구 경로를 검토한다.",
+          "같은 과업 결과·회귀·rollback 가능성을 확인하고 실험을 방치하지 않는지 후속 기록을 본다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "AB1",
+        "AB2"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4/recipes/0",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "A-AB-2",
+      "author_id": "andy-budd",
+      "title_ko": "생성 화면의 외형과 제품 일관성을 따로 비평한다",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "AB3"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "incoherent-flow"
+      ],
+      "task_tags": [
+        "design-review",
+        "workflow"
+      ],
+      "keywords": [
+        "생성 화면",
+        "제품 일관성",
+        "기본값 모순"
+      ],
+      "trigger_ko": "보기에는 익숙하고 세련됐지만 목적·행동·용어·상태가 어긋난다.",
+      "diagnosis_question_ko": "이 컴포넌트 조합이 실제 과업과 시스템의 기존 결정을 지키는가?",
+      "small_repair_ko": [
+        "진입→행동→결과→복구를 따라가며 모순을 구체적 상태로 적는다.",
+        "DESIGN.md와 공유 컴포넌트의 행동·위계·상태 계약을 근거로 수정한다.",
+        "개인 취향이나 AI처럼 보인다는 느낌만으로 자동 위반을 확정하지 않는다."
+      ],
+      "preserve_ko": [
+        "공유된 행동·위계·상태 계약"
+      ],
+      "tradeoffs_ko": [
+        "일관성 검토가 취향 단속으로 바뀌지 않도록 과업의 구체적 모순을 근거로 삼는다."
+      ],
+      "countercases_ko": [
+        "AI trope 탐지를 근거로 모든 gradient·카드·폰트·여백을 금지하지 않는다.",
+        "공통 컴포넌트만 사용했다고 서로 다른 과업의 흐름까지 맞았다고 보지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "cases_ko": [
+          "동일 task를 다른 진입점·viewport에서 실행해 용어·기본값·상태·복귀가 일관되는지 확인한다.",
+          "설계 비평과 사용자 선호는 분리하고 실제 재평가 전에는 만족을 주장하지 않는다."
+        ],
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "AB3"
+      ],
+      "origin": {
+        "group": "a",
+        "json_pointer": "/authors/4/recipes/1",
+        "original_candidate_status": "candidate"
+      }
+    },
+    {
+      "id": "uxb-norman-activity",
+      "author_id": "don-norman",
+      "title_ko": "고장난 화면보다 끊어진 과업을 먼저 찾기",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-norman-hcd"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "broken-handoff"
+      ],
+      "task_tags": [
+        "workflow",
+        "backend",
+        "traceability",
+        "requirements",
+        "bugfix"
+      ],
+      "keywords": [
+        "전달 누락",
+        "할 일 누락",
+        "todo 중복"
+      ],
+      "trigger_ko": "회의에서 나온 할 일이 작업 목록까지 전달되지 않는 등 여러 화면·서비스를 잇는 과업이 실패할 때.",
+      "diagnosis_question_ko": "어느 담당·입력·전달·확인 단계에서 과업이 끊어지는가?",
+      "small_repair_ko": [
+        "담당자·입력·전달·확인 단계를 먼저 적고 실패 지점 한 곳을 고친다. 예를 들어 회의 todo의 원문 위치와 생성된 작업 ID를 연결하여 중복과 누락을 판별한다."
+      ],
+      "preserve_ko": [
+        "회의 원문과 작업의 연결",
+        "중복·누락을 구분할 수 있는 결과"
+      ],
+      "tradeoffs_ko": [
+        "관찰에 시간이 들지만 잘못된 화면 재설계를 줄일 수 있다. 단일 버튼 오타까지 전체 시스템 조사를 강제하지 않는다."
+      ],
+      "countercases_ko": [
+        "한 버튼의 오타나 국소 시각 오류까지 전체 서비스 관찰을 강제하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "합성 회의 3건에 서로 비슷한 todo와 담당자 누락 사례를 준비한다.",
+        "comparison": "현재 전달 흐름과 원문 연결·중복 표시를 추가한 흐름을 비교한다.",
+        "measures": [
+          "누락 및 중복 수",
+          "작업 출처를 찾는 시간",
+          "추가 설명 요청 수"
+        ],
+        "decision": "성공·중복 허용 기준을 실행 전에 정한다. 자동 시험 통과와 실제 사용자의 출처 이해를 별도로 기록한다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-norman-hcd"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/0/principles/0",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-norman-discovery",
+      "author_id": "don-norman",
+      "title_ko": "주요 동작은 찾을 수 있고 잘못 눌러도 돌아올 수 있게",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-norman-gestures"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "hidden-action"
+      ],
+      "task_tags": [
+        "controls",
+        "mobile",
+        "accessibility",
+        "keyboard",
+        "motion"
+      ],
+      "keywords": [
+        "드롭다운",
+        "달력",
+        "포커스",
+        "escape",
+        "esc",
+        "아이콘"
+      ],
+      "trigger_ko": "드롭다운, 달력, 스와이프나 아이콘 전용 조작을 새로 만들 때.",
+      "diagnosis_question_ko": "필요한 동작을 찾고 잘못 조작했을 때 돌아갈 경로가 있는가?",
+      "small_repair_ko": [
+        "핵심 동작에는 문맥에 맞는 이름과 상태를 제공하고 키보드·터치 경로를 유지한다. 중첩 팝업은 첫 Esc로 안쪽만 닫고 초점을 복귀시키는지 검증한다."
+      ],
+      "preserve_ko": [
+        "키보드·터치 조작",
+        "안쪽 팝업부터 닫기·focus 복귀"
+      ],
+      "tradeoffs_ko": [
+        "설명과 복구 장치가 공간을 쓴다. 숙련자 단축 동작은 추가할 수 있으며 고급 작업을 전부 펼칠 필요는 없다."
+      ],
+      "countercases_ko": [
+        "고급 기능을 모두 펼칠 필요는 없으며 숙련자 단축 경로는 유지할 수 있다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "할 일 추가 창의 기한 선택과 잘못된 날짜 취소.",
+        "comparison": "상태 설명이 있는 조작과 아이콘만 있는 조작의 첫 사용을 비교한다.",
+        "measures": [
+          "첫 동작 발견 여부",
+          "잘못된 조작에서의 복구 성공",
+          "키보드 초점 순서",
+          "320/390px 화면 넘침"
+        ],
+        "decision": "기술 검사는 fixture로 수행한다. 발견성 개선 주장은 처음 사용하는 사람의 관찰이 있을 때만 채택한다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-norman-gestures"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/0/principles/1",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-laurel-evidence-to-rule",
+      "author_id": "brenda-laurel",
+      "title_ko": "관찰을 조건과 이유가 있는 구현 지침으로 변환",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-laurel-humanism",
+          "b-laurel-new-players"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "overgeneralized-rule"
+      ],
+      "task_tags": [
+        "personalization",
+        "feedback",
+        "research",
+        "requirements"
+      ],
+      "keywords": [
+        "전역 취향",
+        "카드 금지",
+        "피드백 일반화"
+      ],
+      "trigger_ko": "사용자가 수정 이유를 설명했거나 새 사용자군에 맞춘 경험을 만들 때.",
+      "diagnosis_question_ko": "어떤 사용자 원문·과업·이유에서 이 지침을 얻었으며 어디에는 맞지 않는가?",
+      "small_repair_ko": [
+        "관찰 원문·시나리오·설계 가설·반례·적용 파일을 연결한다. '대시보드가 싫다'를 모든 카드 금지로 바꾸지 않고, 동시 패널이 과업을 방해한 상황과 대안을 기록한다."
+      ],
+      "preserve_ko": [
+        "원문과 이유",
+        "화면·과업의 적용 범위"
+      ],
+      "tradeoffs_ko": [
+        "좁은 범위의 지침은 재사용이 어렵지만 고정관념의 전파를 줄인다. 개인 사용 앱에 대규모 인터뷰를 요구하지 않는다."
+      ],
+      "countercases_ko": [
+        "집단 경향을 개인 선호로 대입하거나 한 화면의 불호를 모든 제품에 적용하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "서로 다른 화면에서 나온 합성 피드백 6개와 충돌하는 이유를 준비한다.",
+        "comparison": "키워드만 일반화한 지침과 상황·원문 연결 지침을 새 시나리오에 적용한다.",
+        "measures": [
+          "근거 없는 일반화 수",
+          "원문 회수 가능 여부",
+          "새 결과에 대한 사용자 평가"
+        ],
+        "decision": "원문 추적 실패나 반대 피드백이 발생하면 가설을 축소한다. 저자 사례의 성별 경향은 제품 규칙으로 저장하지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-laurel-humanism",
+        "b-laurel-new-players"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/1/principles/0",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-laurel-continuity",
+      "author_id": "brenda-laurel",
+      "title_ko": "사용자가 쌓은 관계와 자료의 종료 경로까지 설계",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-laurel-new-players"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "continuity-loss"
+      ],
+      "task_tags": [
+        "sessions",
+        "data",
+        "operations",
+        "offboarding"
+      ],
+      "keywords": [
+        "세션 종료",
+        "내보내기",
+        "자료 보존",
+        "서비스 중단"
+      ],
+      "trigger_ko": "회의·요청 세션, 개인 기억, 장기 자동화처럼 사용자가 시간이 지나며 자료를 쌓을 때.",
+      "diagnosis_question_ko": "서비스가 중단되거나 사용을 끝낼 때 쌓인 자료와 연결은 어떻게 되는가?",
+      "small_repair_ko": [
+        "조회·내보내기·종료 상태를 제공하고 운영 불가 때의 보존 범위를 명시한다. 기존 세션이 불명확하면 새 ID로 재실행하지 않고 상태를 확인하게 한다."
+      ],
+      "preserve_ko": [
+        "내보낸 자료의 연결 무결성",
+        "실제 보존 범위"
+      ],
+      "tradeoffs_ko": [
+        "보존과 내보내기는 구현 비용과 개인정보 부담이 있다. 영구 저장이나 무제한 자동 응답을 약속하지 않는다."
+      ],
+      "countercases_ko": [
+        "영구 보존·무제한 자동 응답을 약속하지 않으며 실제 개인정보 삭제를 테스트하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "가짜 세션·첨부·작업 링크가 있는 환경에서 서비스 중단과 복구를 연습한다.",
+        "comparison": "종료 안내만 있는 흐름과 보존·내보내기 설명이 있는 흐름을 비교한다.",
+        "measures": [
+          "내보낸 자료의 연결 무결성",
+          "중복 실행 수",
+          "사용자가 이해한 보존 범위"
+        ],
+        "decision": "기술적 복구와 사용자 기대를 각각 확인한다. 실제 개인정보 삭제나 서비스 종료는 이 실험에 포함하지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-laurel-new-players"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/1/principles/1",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-spool-find-to-outcome",
+      "author_id": "jared-spool",
+      "title_ko": "기능의 존재와 실제 과업 성과를 따로 계측",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-spool-strategy"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "feature-undiscoverable"
+      ],
+      "task_tags": [
+        "onboarding",
+        "workflow",
+        "metrics",
+        "information-architecture"
+      ],
+      "keywords": [
+        "기능 발견",
+        "설정 이탈",
+        "진입 경로"
+      ],
+      "trigger_ko": "기능은 구현되어 있지만 찾기 어렵거나 설정 단계에서 멈춘다는 피드백이 나올 때.",
+      "diagnosis_question_ko": "기능을 찾지 못하는가, 설정에서 멈추는가, 완료 후에도 유용한 결과가 없는가?",
+      "small_repair_ko": [
+        "새 화면을 늘리기 전에 현재 과업 안에서 진입과 완료 경로를 개선한다. 회의에서 작업으로 이동하는 경로는 버튼 클릭뿐 아니라 생성·출처 확인까지 계측한다."
+      ],
+      "preserve_ko": [
+        "현재 과업 문맥",
+        "완료와 실제 성과의 구분"
+      ],
+      "tradeoffs_ko": [
+        "발견성만 높여 사용량을 늘리면 불필요한 작업도 늘 수 있다. 사용량과 사용자에게 유용한 결과를 함께 본다."
+      ],
+      "countercases_ko": [
+        "클릭·이용량 증가만을 성과로 보지 않고 불필요한 작업 증가도 확인한다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "첫 사용자용 합성 회의에서 할 일 하나를 찾고 완료하도록 한다.",
+        "comparison": "별도 메뉴 진입과 회의 문맥 안의 작업 진입을 비교한다.",
+        "measures": [
+          "기능 발견률",
+          "시작 대비 올바른 완료율",
+          "중도 이탈 단계",
+          "완료 후 재작업"
+        ],
+        "decision": "선정 지표와 중단 기준을 사전에 정한다. 표본이 작으면 수치를 일반화하지 않고 관찰된 장애를 기술한다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-spool-strategy"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/2/principles/0",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-spool-two-party",
+      "author_id": "jared-spool",
+      "title_ko": "AI 사용의 편익과 영향을 받는 당사자를 함께 확인",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-spool-two-party-ai"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "misattributed-ai"
+      ],
+      "task_tags": [
+        "ai",
+        "meetings",
+        "summarization",
+        "handoff"
+      ],
+      "keywords": [
+        "담당자",
+        "책임 배정",
+        "불확실",
+        "요약 원문"
+      ],
+      "trigger_ko": "대화 요약·담당자 추출·공유처럼 AI 결과가 다른 사람의 말이나 책임을 표현할 때.",
+      "diagnosis_question_ko": "AI 사용자와 그 출력의 대상이 된 사람이 각각 무엇을 확인·수정할 수 있는가?",
+      "small_repair_ko": [
+        "요약과 원문 근거를 연결하고 불확실한 담당자를 확정값으로 표시하지 않는다. 초안·확정·공유 여부를 실제 상태로 보여 준다."
+      ],
+      "preserve_ko": [
+        "발언 원문",
+        "불확실성·초안/확정/공유의 실제 상태"
+      ],
+      "tradeoffs_ko": [
+        "근거 확인은 속도를 늦춘다. 낮은 영향의 개인 초안에 반복 승인을 강제하지 않고 책임 변경과 외부 공유에 필요한 검토를 좁힌다."
+      ],
+      "countercases_ko": [
+        "낮은 영향의 개인 초안마다 승인을 추가하지 않으며 타인의 만족을 추정하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "담당자가 모호한 합성 발언과 부정·수정 발언을 포함한 회의.",
+        "comparison": "요약만 보이는 결과와 근거·불확실성을 함께 표시한 결과를 비교한다.",
+        "measures": [
+          "잘못된 책임 배정 수",
+          "근거 확인 시간",
+          "발언자와 검토자의 별도 평가"
+        ],
+        "decision": "두 당사자의 평가를 합산해 가리지 않는다. 타인의 만족도를 실제 관찰 없이 대신 추정하지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-spool-two-party-ai"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/2/principles/1",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-nielsen-task-minimalism",
+      "author_id": "jakob-nielsen",
+      "title_ko": "비어 보이는 화면보다 필요한 정보의 접근성을 평가",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-nielsen-heuristics"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "simultaneous-exposure"
+      ],
+      "task_tags": [
+        "progressive-disclosure",
+        "forms",
+        "information-architecture",
+        "accessibility"
+      ],
+      "keywords": [
+        "동시 노출",
+        "전부 펼침",
+        "모든 거",
+        "패널",
+        "카드 중첩"
+      ],
+      "trigger_ko": "카드와 패널이 많거나 화면을 단순화해 달라는 요청이 있을 때.",
+      "diagnosis_question_ko": "현재 과업에 필요한 정보와 지금은 접어도 되는 정보는 무엇인가?",
+      "small_repair_ko": [
+        "현재 과업에 필요한 정보와 덜 쓰는 정보를 구분해 후자를 접되 다시 찾을 수 있게 한다. 원래의 항목 이름과 저장·오류 상태를 남기고 임의의 여백 비율을 강제하지 않는다."
+      ],
+      "preserve_ko": [
+        "필요 정보·기본값·저장/오류 상태",
+        "접은 기능의 찾을 수 있는 진입점"
+      ],
+      "tradeoffs_ko": [
+        "접으면 스캔 부담은 줄지만 회상 부담과 클릭이 늘 수 있다. 고빈도 비교 데이터는 함께 두는 대안을 검토한다."
+      ],
+      "countercases_ko": [
+        "고빈도 비교 데이터를 분리해 왕복을 늘리거나 여백 비율을 고정하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "회의 읽기, 메모 편집, 오류 복구의 세 시나리오.",
+        "comparison": "전부 펼친 패널과 과업별 점진 공개를 같은 콘텐츠로 비교한다.",
+        "measures": [
+          "필요 정보 발견 성공",
+          "불필요한 왕복 횟수",
+          "오류 복구 성공",
+          "사용자 선호와 이유"
+        ],
+        "decision": "각 시나리오 결과를 따로 남긴다. 선호가 다르면 전역 카드 금지 대신 해당 흐름에만 적용한다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-nielsen-heuristics"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/3/principles/0",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-nielsen-delegation",
+      "author_id": "jakob-nielsen",
+      "title_ko": "요청의 지속 범위와 실행 권한을 분리",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-nielsen-ai-styles"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "scope-leak"
+      ],
+      "task_tags": [
+        "ai",
+        "routing",
+        "memory",
+        "long-running-work"
+      ],
+      "keywords": [
+        "영구 선호",
+        "동일 세션",
+        "resume",
+        "지속 범위",
+        "실행 권한"
+      ],
+      "trigger_ko": "피드백을 장기 기억으로 전환하거나 AI가 여러 요청을 지속 처리할 때.",
+      "diagnosis_question_ko": "이 요청은 일회성 수정인가, 같은 주제의 세션인가, 명시적인 지속 규칙인가?",
+      "small_repair_ko": [
+        "일회성 수정·동일 주제 세션·지속 규칙을 데이터에서 분리한다. 동작에 필요한 기능은 요청으로 라우팅하되 우발적 발언을 영구 선호로 승격하지 않고 적용 근거·범위·폐기 경로를 남긴다."
+      ],
+      "preserve_ko": [
+        "요청의 범위·권한 구분",
+        "규칙 철회와 세션 경계"
+      ],
+      "tradeoffs_ko": [
+        "범위 확인이 필요할 수 있다. 이미 합의된 일회성 개발에 모드 선택이나 반복 승인을 추가하지 않는다."
+      ],
+      "countercases_ko": [
+        "이미 합의된 개발에 모드 선택·반복 승인을 추가하거나 우발적 불만을 영구화하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "일회성 불만과 명시적 영구 규칙을 섞은 합성 요청 집합.",
+        "comparison": "모든 피드백을 영구화한 기억과 범위를 기록한 기억을 후속 과업에 적용한다.",
+        "measures": [
+          "잘못 영구화한 지시 수",
+          "다른 주제 세션 혼합 수",
+          "규칙 철회 성공",
+          "사용자 검토 시간"
+        ],
+        "decision": "장기 효과는 별도 동의한 기간의 관찰로 평가한다. 한 번의 자동 시험만으로 지속 agent의 적합성을 선언하지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-nielsen-ai-styles"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/3/principles/1",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-walter-tone",
+      "author_id": "aarron-walter",
+      "title_ko": "상태와 감정에 맞추되 업무를 방해하지 않는 표현",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-walter-mailchimp"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "tone-mismatch"
+      ],
+      "task_tags": [
+        "copy",
+        "motion",
+        "feedback",
+        "design-system"
+      ],
+      "keywords": [
+        "농담",
+        "축하",
+        "완료 문구",
+        "오류 문구",
+        "감정"
+      ],
+      "trigger_ko": "완료·진행·오류 문구나 성취 애니메이션을 설계할 때.",
+      "diagnosis_question_ko": "이 상태에서 사용자가 알아야 할 다음 행동과 적절한 표현의 온도는 무엇인가?",
+      "small_repair_ko": [
+        "공유 컴포넌트에 상태별 문체를 정하고, 의미 있는 완료에만 짧은 피드백을 검토한다. 저장 실패에는 농담보다 문제와 복구 행동을 먼저 제시한다."
+      ],
+      "preserve_ko": [
+        "오류의 원인과 복구 행동",
+        "reduced motion",
+        "공유 문체"
+      ],
+      "tradeoffs_ko": [
+        "성취 표현은 친근할 수 있지만 반복 업무에는 지연과 소음이 된다. 고유 캐릭터나 축하 연출을 기본값으로 가져오지 않는다."
+      ],
+      "countercases_ko": [
+        "반복 저장마다 성취 연출을 넣거나 실패 상황에 농담을 앞세우지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "반복 저장·첫 회의 정리 완료·네트워크 오류의 합성 상태.",
+        "comparison": "간결한 상태 표현과 짧은 성취 피드백을 비교하고 동작 감소 설정도 확인한다.",
+        "measures": [
+          "상태 이해",
+          "다음 행동 시작 시간",
+          "불쾌감·선호 이유",
+          "reduced-motion 동작"
+        ],
+        "decision": "동작 검사는 자동화하고 감정 평가는 사용자가 판단한다. 소셜 공유나 수상 사례를 현재 효과의 대리 지표로 쓰지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-walter-mailchimp"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/4/principles/0",
+        "original_candidate_status": "not_reviewed"
+      }
+    },
+    {
+      "id": "uxb-walter-constraints",
+      "author_id": "aarron-walter",
+      "title_ko": "실제 기기·연결·운영 흐름을 구현 계약에 포함",
+      "status": "candidate",
+      "claim_vs_inference": {
+        "source_claim_ids": [
+          "b-walter-rtsl"
+        ],
+        "implementation_attribution": "our_operational_hypothesis",
+        "actual_product_outcome": "not_run",
+        "user_preference": "not_evaluated"
+      },
+      "problem_tags": [
+        "fragile-environment"
+      ],
+      "task_tags": [
+        "responsive",
+        "backend",
+        "performance",
+        "offline",
+        "workflow"
+      ],
+      "keywords": [
+        "느린 연결",
+        "초안 손실",
+        "재접속",
+        "업로드 실패"
+      ],
+      "trigger_ko": "모바일·느린 연결·여러 담당자가 이어받는 서비스의 기술 선택을 할 때.",
+      "diagnosis_question_ko": "대상 기기·연결·담당자 인계에서 실제로 어떤 상태가 유실되는가?",
+      "small_repair_ko": [
+        "대상 기기와 네트워크 조건을 정하고 초안 보존·재전송 상태·기존 자료 연결을 먼저 검증한다. 서비스 컨테이너 원칙과 허용된 Mac 음성 엔진 예외를 함께 유지한다."
+      ],
+      "preserve_ko": [
+        "초안·요청 상태",
+        "기존 자료 연결",
+        "컨테이너 원칙과 승인된 MLX 호스트 예외"
+      ],
+      "tradeoffs_ko": [
+        "보존·재시도·통합은 복잡성을 늘린다. 쓰던 인프라가 항상 최선은 아니며 우리 배포·비용·운영 조건과 비교한다."
+      ],
+      "countercases_ko": [
+        "과거 사례의 저장소·프레임워크를 새 서비스 기본값으로 복사하거나 불필요한 인프라를 추가하지 않는다."
+      ],
+      "same_case_verification": {
+        "execution_status": "not_run",
+        "fixture": "합성 음성 업로드와 편집 중인 초안에 지연·실패·재접속을 주입한다.",
+        "comparison": "중단 안내만 있는 흐름과 초안·전송 상태를 보존한 흐름을 비교한다.",
+        "measures": [
+          "초안 손실 수",
+          "중복 요청 수",
+          "재접속 후 복구",
+          "소형 기기 완료 가능 여부"
+        ],
+        "decision": "환경별 결과를 분리한다. 원문에서 쓰인 저장소·프레임워크를 조사 없이 새 프로젝트 기본 스택으로 지정하지 않는다.",
+        "functional_result": "not_run",
+        "user_preference_result": "not_evaluated"
+      },
+      "source_ids": [
+        "b-walter-rtsl"
+      ],
+      "origin": {
+        "group": "b",
+        "json_pointer": "/authors/4/principles/1",
+        "original_candidate_status": "not_reviewed"
+      }
+    }
+  ]
+}

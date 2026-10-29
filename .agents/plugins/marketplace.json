@@ -1,0 +1,85 @@
+{
+  "name": "self-plugin",
+  "interface": {
+    "displayName": "Self Plugin"
+  },
+  "plugins": [
+    {
+      "name": "da-development-method",
+      "source": {
+        "source": "local",
+        "path": "./plugins/da-development-method"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "scenario-ui-ux",
+      "source": {
+        "source": "local",
+        "path": "./plugins/scenario-ui-ux"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "text-wireframe-planner",
+      "source": {
+        "source": "local",
+        "path": "./plugins/text-wireframe-planner"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "craft-ui-motion",
+      "source": {
+        "source": "local",
+        "path": "./plugins/craft-ui-motion"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "live-browser-session",
+      "source": {
+        "source": "local",
+        "path": "./plugins/live-browser-session"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "plain-writing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/plain-writing"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "unbox-ui",
+      "source": {
+        "source": "local",
+        "path": "./plugins/unbox-ui"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

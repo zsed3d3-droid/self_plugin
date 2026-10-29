@@ -1,0 +1,1958 @@
+{
+  "format": "self-plugin-conditional-ux-cases/v1",
+  "episode_count": 51,
+  "not_user_feedback": true,
+  "records": [
+    {
+      "id": "proofline-context-identity-20261029",
+      "product": "001-proofline",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "bc62520841f50075a3e4e8484edf3f76faa68cd882342e3d1c0f57badf079012",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "symptom": "이전 위치의 초안을 유지한 뒤 새 위치를 선택하면 이전 좌표로 댓글 작성창이 열렸다. 일반 댓글도 기존 pin 의도로 바뀌었다.",
+      "cause": {
+        "status": "confirmed_in_scope",
+        "explanation": "version만 사용한 draft key와 saved.pin 우선 복원으로 명시적 새 입력이 덮였다.",
+        "source_reference": "addComment saved?.pin || pin in preserved round-1 source"
+      },
+      "change": [
+        "version+위치/일반 의도별 draft identity",
+        "명시적인 이전 초안 재개",
+        "새 선택을 이전 초안으로 조용히 대체하지 않음"
+      ],
+      "countercase": "오래 걸리는 동일 위치 입력을 이어야 할 때는 명시 재개가 필요하다. 모든 draft를 삭제하거나 무조건 새로 시작하는 반대 규칙은 아니다.",
+      "actual_result": [
+        {
+          "case": "new explicit pin preserves new location",
+          "first": "{\"x\":0.51,\"y\":0.5}",
+          "second": "{\"x\":0.45999999999999996,\"y\":0.5}",
+          "pass": true
+        },
+        {
+          "case": "general comment intent separate",
+          "value": "null",
+          "pass": true
+        }
+      ],
+      "functional_status": "pass_in_this_case",
+      "visual_status": "agent_inspected",
+      "limitations": [
+        "이 후보들이 원래 수리의 원인이라는 인과 주장이 아니라, 원인과 반례를 설명하는 연결이다.",
+        "합성 과업과 독립 에이전트 재현이며 실제 참여자 연구가 아니다."
+      ]
+    },
+    {
+      "id": "proofline-retention-workspace-20261029",
+      "product": "001-proofline",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "18081c4dcdd3d2194215b312026b6c1f5a7fb9804083f60fd39fe39075631704",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "symptom": {
+        "basis": "heuristic_review",
+        "expected": "기본 목록에서 현재 작업을 찾고 이전 QA 자료도 보존한다.",
+        "observed": "합성 QA fixture들이 현재 작업 목록을 채웠다.",
+        "user_feedback_ref": null
+      },
+      "cause": {
+        "status": "confirmed_in_scope",
+        "explanation": "자료 보존을 단일 기본 컬렉션 노출과 동일하게 처리했다.",
+        "evidence_ids": [
+          "E1",
+          "E3"
+        ]
+      },
+      "change": {
+        "status": "implemented",
+        "summary": "가역 archive/restore와 별도 Archived 목록을 제공하고, 명시적으로 소유한 QA proof ID만 API로 보관했다.",
+        "preserve": [
+          "모든 버전/이미지/의견/결정/직접 링크/이벤트",
+          "좋은 샘플과 사용자의 자료",
+          "보관 자료에 접근할 수 있는 명시적 진입점"
+        ],
+        "tradeoffs": [
+          "보관 자료는 진입 한 번이 추가되며 상태/필터를 찾을 수 있어야 한다.",
+          "모든 오래된 항목이나 제목에 QA가 있는 자료를 자동 분류하지 않는다."
+        ]
+      },
+      "actual_results": {
+        "same_case_replayed": true,
+        "functional_status": "pass_in_scope",
+        "visual_review_status": "agent_inspected",
+        "user_preference_status": "not_evaluated",
+        "measurements": [
+          {
+            "name": "active list hides archived proof; archived view opens it",
+            "actual": true,
+            "evidence_id": "E1"
+          },
+          {
+            "name": "all data/image digests survive restart",
+            "actual": true,
+            "evidence_id": "E4"
+          }
+        ]
+      },
+      "limitations": [
+        "참여자 사용성 연구나 사용자 취향 채택이 아니다.",
+        "모든 제품에 보관함을 추가하는 전역 규칙이 아니라 실제 보존 자료가 기본 과업을 가리는 경우다.",
+        "검색은 offline 어휘 경로다. 구조 문제의 자연어 query는 자료/데이터만 매칭해 Laurel 연속성 후보만 반환했으며, agent가 원인을 판단해 simultaneous-exposure 태그로 Nielsen 조건부 후보를 별도 조회했다. 자동 의미 진단 성공으로 기록하지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_local_scope"
+    },
+    {
+      "id": "spine-002-complete-v2-ux-cycle-01",
+      "product": "002-spine",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "summary_ko": "Spine 주기 1 | PNG 글자 누락·투영 이음선\n증상: 표지 글자와 PNG 표면이 깨짐. 확인 원인: 컨테이너 폰트 누락과 삼각형 투영의 안티앨리어싱 경계. 수리: 무료 폰트를 설치하고 표지 매핑을 정사영 아핀 도형으로 교체, 기존 PNG는 보존. 반례(추론): 원근 자체가 핵심인 제품에 정사영을 일괄 강제하지 않음. 재검증(원기록): 새 표지의 Latin 글자와 최종 3규격 PNG 이음선 개선을 검사. 한계: 최초 편집 소스 스냅샷 공백, 사용자 선호 미평가.",
+      "symptom": "Generated cover text is missing and projected texture seams are visible in the actual PNG.",
+      "cause": {
+        "hypothesis": "Container fonts absent; antialiased texture triangle boundaries exposed.",
+        "confirmed": true,
+        "evidence_ids": [
+          "baseline-png",
+          "baseline-review"
+        ]
+      },
+      "change": "Installed free font package for new synthetic covers and later replaced triangle mapping with orthographic affine cover geometry. Existing rasters/exports retained.",
+      "actual_results": {
+        "functional": "New cover rendered Latin letters; final exports show no mesh seams.",
+        "visual": "Directly inspected final square/portrait/story PNGs.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Initial editable source snapshot gap documented."
+      ],
+      "status": "repaired"
+    },
+    {
+      "id": "spine-002-complete-v2-ux-cycle-02",
+      "product": "002-spine",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "summary_ko": "Spine 주기 2 | 이력 열기와 편집 버전 혼동\n증상: 이력을 열면 옛 픽셀이 새 버전 번호로 내보내질 수 있었음. 확인 원인: 이력 데이터와 편집 정체성이 doc 상태를 공유. 수리: historyDoc/editRevision 분리, 초안의 기준 버전 보존, 충돌 때 입력을 유지하고 새 버전 저장을 명시. 반례(추론): 이력 열기만으로 현재 편집 기준을 갱신하면 안 됨. 재검증(원기록): 동일 사례 독립 확인 16개 통과. 한계: 에이전트 과업 재현이며 실제 저자 연구·사용자 선호 검증 아님.",
+      "symptom": "Opening history advanced edit revision without replacing the old state, so an export could contain old pixels labelled as a newer version.",
+      "cause": {
+        "hypothesis": "History data and editing identity shared doc state.",
+        "confirmed": true,
+        "evidence_ids": [
+          "history-repro"
+        ]
+      },
+      "change": "Separate historyDoc and editRevision; dirty draft envelope retains base revision; conflicts preserve input and require explicit new-version action.",
+      "actual_results": {
+        "functional": "16 independent same-case assertions passed.",
+        "visual": "English word breaks and faint seams were separately reported and repaired.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Agent task reproduction, not author usability research."
+      ],
+      "status": "repaired"
+    },
+    {
+      "id": "spine-002-complete-v2-ux-cycle-03",
+      "product": "002-spine",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "summary_ko": "Spine 주기 3 | 모바일 미리보기 왕복·Canvas PNG 불일치\n증상: 이미지·문구 이동이 길고 미리보기/PNG 글자가 달랐음. 확인 원인: 긴 세로 적층과 분리된 Canvas의 문서 맥락 차이. 수리: 작은 화면에 Preview/Edit 전환, 넓은 화면 비교 유지, coverId별 로드와 동일 문서·공유 렌더러로 PNG 출력. 반례(추론): 비교가 잦은 데스크톱까지 분리하면 왕복 증가. 재검증(원기록): 브라우저 33개·그중 PNG 바이트 동일 3개·320/390px 통과. 한계: 실폰 키보드·다른 엔진·사용자 선호 미검증.",
+      "symptom": "Mobile image and quote field required a long scroll trip; PNG comparison also found attached and detached canvases rendered text differently.",
+      "cause": {
+        "hypothesis": "All surfaces were stacked; export canvas had a different document attachment context.",
+        "confirmed": true,
+        "evidence_ids": [
+          "mobile-parent",
+          "parity-fail",
+          "browser-pass"
+        ]
+      },
+      "change": "Sticky Preview/Edit switch on small screens; retain desktop comparison. Cover loads only when coverId changes. Export attaches a hidden canvas to the same document; shared renderer is used. Close dialogs before trigger focus.",
+      "actual_results": {
+        "functional": "33 browser assertions passed including3 PNG byte-equality checks and320/390px export/view-switch tasks.",
+        "visual": "Final outputs and mobile editor/preview opened and inspected.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Native phone keyboard and non-Chromium engines not tested."
+      ],
+      "status": "repaired"
+    },
+    {
+      "id": "spine-002-complete-v2-ux-cycle-04",
+      "product": "002-spine",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "summary_ko": "Spine 주기 4 | 재시도 영수증이 다른 프로젝트·새 의도를 덮음\n증상: 같은 요청 ID의 다른 내용도 성공 처리되고 과거 영수증이 새 저장에 재사용됨. 확인 원인: 키에 정규화 내용·프로젝트·편집 기준 버전이 빠짐. 수리: 서버 JSONB 내용 검증, 브라우저 journal을 project/payload/base별로 묶고 확정 항목은 보존하되 재선택 제외. 반례(추론): 완료 불명 재시도마다 새 ID를 만들면 중복 가능. 재검증(원기록): 실제 20초 완료 불명 후 같은 ID로 단일 새 버전, 경로·reload·새 의도 확인 통과. 한계: 옛 비범위 journal 보존·자동 재생 제외, 시각·선호 주장 없음.",
+      "symptom": "Same request ID with a different payload was falsely acknowledged; a global retry ID crossed projects, and an old journal receipt later captured a new intent.",
+      "cause": {
+        "hypothesis": "Receipt identity omitted normalized payload, project scope or editing base.",
+        "confirmed": true,
+        "evidence_ids": [
+          "independent-state"
+        ]
+      },
+      "change": "Server validates normalized JSONB receipt state; browser journal keys pending saves by project/payload/base revision and retains confirmed entries.",
+      "actual_results": {
+        "functional": "Independent route/reload/new-intent retest passed. Real20second committed timeout reused its request ID and preserved a single new version. Legacy draft recovery passed.",
+        "visual": "No visual-quality claim from these state tests.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Earlier unscoped experimental journal entries retained but excluded from automatic replay."
+      ],
+      "status": "repaired"
+    },
+    {
+      "id": "spine-002-complete-v2-ux-cycle-05",
+      "product": "002-spine",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "c657d3d260993fb1fab7f8483d3912f7bb62e614346e7f5b36400f21badd5ff9",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "summary_ko": "Spine 주기 5 | QA 누적으로 홈 작업이 묻힘·보관 복원 초점\n증상: 합성 QA 19개가 샘플을 묻고 큰 소개가 반복됨. 확인 원인: 가역 보관 경로가 없고 복원 뒤 DOM 반영 전 초점을 이동. 수리: 보관/복원·별도 카드 동작·간결한 재방문 홈, DOM 반영 후 선택 필터 초점, 출처 확인된 QA ID만 보관. 반례(추론): 제목으로 일괄 숨김·삭제하거나 실작업을 임의 보관하지 않음. 재검증(원기록): 보관 9개·독립 보관 20개·홈 4개 통과, 내용/PNG hash 유지. 한계: 빈 보관함은 GET 모사, 실폰·스크린리더·사용자 선호 미검증.",
+      "symptom": "19 mostly synthetic QA projects buried the corrected demo in the default home list.",
+      "cause": {
+        "hypothesis": "No reversible organization path; returning home repeated a large introduction.",
+        "confirmed": true,
+        "evidence_ids": [
+          "home-parent",
+          "archive-pass"
+        ]
+      },
+      "change": "Explicit archive/restore API and view, separate card actions, append-only organization events, compact returning home. Only known synthetic IDs from a provenance manifest were archived.",
+      "actual_results": {
+        "functional": "9 archive assertions passed: default/archive discovery, direct access, restore, immutable content/image hashes, idempotence and320/390px.",
+        "visual": "Independent reviewer inspected the final archive and clean-home screenshots;20 archive conditions and4 clean-home/empty-archive conditions passed. User preference remains unreviewed.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Prior Proofline case was not transferred early enough; recorded as assistant experiment, not user rule."
+      ],
+      "status": "repaired"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-01",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "장면 선택과 편집 맥락을 가까이 두기",
+      "summary_prefix_ko": "Cadence 사례 1 | 장면 이동 마찰\n증상·원인: 큰 미리보기 아래 장면 목록과 위 입력 사이를 왕복. 수리: 공용 장면 strip을 미리보기·입력 위로 옮기고 모바일 preview/edit 분리는 유지. 반례(추론): 긴 제목을 전부 펼쳐 현재 과업을 밀지 않음. 재검증(원기록): 장면별 입력·초안 복구, 390/320 선택→편집→동일 미리보기와 넘침 0 확인. 한계: 참가자 시간·선호는 미측정.",
+      "task": "다른 장면을 고르고 그 장면의 문구를 편집한 뒤 같은 미리보기로 돌아간다.",
+      "symptom": "1440px 첫 화면에서 장면 순서가 큰 preview 아래에 있고 현재 입력은 위에 있어 선택과 편집 사이 스크롤이 필요했다.",
+      "cause": {
+        "basis": "recorded_agent_screenshot_and_source_review",
+        "diagnosis": "장면 선택을 공유 편집 맥락 대신 큰 미리보기의 하단에 붙였다.",
+        "confirmation_scope": "C1-UX 원기록의 배치 진단; 사람의 이동 시간/오류 감소는 측정하지 않음."
+      },
+      "change": "한 공용 scene strip을 preview/form 위에 둔다. 모바일에서는 미리보기와 편집의 분리를 유지하되 strip은 양쪽에서 쓸 수 있게 한다.",
+      "countercase": "모든 장면의 긴 제목/전체 폼을 상시 노출하는 것으로 일반화하지 않는다. strip의 긴 제목은 줄어들 수 있어 현재 편집 제목과 accessible name을 보존한다.",
+      "same_case_verification": "root의 390px 장면 2 선택→편집→같은 장면 미리보기 기록과 owner 최종 브라우저의 1440/390/320 장면·초안·폭 assertion을 대조했다. 이번 편집에서 재실행하지 않았다.",
+      "actual_results": {
+        "recorded_owner_checks": "browser results checks1–11 모두 pass: strip 위치, 장면별 입력·새로고침 identity, 390/320 흐름과 overflow0.",
+        "recorded_root_test": "3 steps, writes=[],errors=[]; selected scene2 preview/edit/return observed.",
+        "harness_correction": "earlier /^02/ locator interruption was aria-label mismatch, product_finding=false; repaired probe was a separate run.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "스크롤/완료 시간 감소의 정량 실험과 실제 강사 사용성 연구 없음.",
+        "원기록 단위의 통과이며 모든 장면 수·모바일 기기·접근성을 검증한 결과가 아님."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-02",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "최신본 열람과 초안 폐기를 구별하기",
+      "summary_prefix_ko": "Cadence 사례 2 | 최신본 읽기 뒤 초안 유실\n원인: 409 뒤 최신본을 열며 유일한 localStorage 초안을 삭제. 수리: state/baseRevision/선택/pending을 append-only shelf에 먼저 보관하고 명시 재개. 반례: 낡은 초안을 모든 진입에서 자동 복원하지 않음. 재검증(원기록): 최신본 열람→초안 재개→충돌 확인→v3 저장, v1/v2 유지. 한계: 5개 확인 뒤 locator 오류로 전체 run은 fail 그대로; 브라우저 저장소 삭제·새 기기는 미보장.",
+      "task": "충돌한 미저장 편집을 남긴 채 서버 최신 버전을 읽고, 필요하면 원래 초안을 명시적으로 재개한다.",
+      "symptom": "409 안내는 초안을 남긴다고 했으나 최신본 읽기 후 draftStorageAfter=null, 입력 문구는 저장된 두 버전에도 없었다.",
+      "cause": {
+        "basis": "actual_failure_record_plus_source_review",
+        "diagnosis": "latest-read가 유일한 local draft를 제거한 다음 서버 state로 대체했다. 읽기와 폐기를 같은 경로로 처리했다.",
+        "confirmed_in_original_case": true
+      },
+      "change": "원래 state/baseRevision/선택 scene/pending request를 별도 append-only draft shelf에 보관한 뒤 최신본을 연다. 이력에서 명시 재개하고 기존 base의 CAS 충돌을 확인한 뒤 새 버전 저장을 선택한다.",
+      "countercase": "보존된 과거 초안을 새 프로젝트 진입 때마다 자동 우선하면 새 의도를 덮는다. 영구 보존이 필요한 다기기 작업에서는 브라우저 localStorage만으로 충분하지 않다.",
+      "same_case_verification": "독립 원실패의 /checks/2=false와 retest /checks/1–3=true를 대조했다. 재검증 run은 후속 hidden desktop locator timeout으로 status=fail 그대로이며, pending undo만 별도 검사했다.",
+      "actual_results": {
+        "recorded_failure": "409 전 초안 있음 → 최신본 읽기 뒤 유일한 초안 없음.",
+        "recorded_repair_checks": "latest read, explicit recovery, recovered save v3 모두 pass; v1/v2 retained.",
+        "whole_retest_run_status": "fail due to subsequent harness locator timeout, not rewritten.",
+        "pending_followup": "remaining pending undo only: undoLocked=true, pass.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "이번 적재는 기존 과업을 재실행하지 않음.",
+        "브라우저 localStorage 삭제/용량/다른 기기 지속성 미검증.",
+        "새 초안 자동 우선 금지는 이 상태 충돌의 조건부 조치이며 모든 복구 UI의 전역 정책이 아님."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-03",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "응답 불명 재시도의 입력 의도를 고정하기",
+      "summary_prefix_ko": "Cadence 사례 3 | 응답 유실 후 수동 생성 중복\n원인: 같은 폼도 매 제출 scene UUID를 다시 만들어 digest/request ID가 변경. 수리: 정규화 state·scene IDs·request UUID를 같은 pending intent에 묶음. 반례: 내용 변경·확인된 성공 뒤 새 작업은 새 ID. 재검증(원기록): commit 후 ACK만 유실→같은 폼 재시도 시 프로젝트 1개, 두 요청·장면 ID 동일; 새 의도는 별도 ID. 한계: 전체 재검증 run은 뒤 locator 오류로 fail이며 모든 네트워크 장애를 시험한 것은 아님.",
+      "task": "수동 생성이 서버에 commit됐는지 알 수 없을 때 같은 입력을 안전하게 재시도한다.",
+      "symptom": "첫 POST가 201 commit된 뒤 응답만 끊자, 변경하지 않은 수동 폼 재시도가 두 프로젝트를 만들었다. 고정 DEMO_STATE 샘플 생성 통과로 이 경계를 대신할 수 없었다.",
+      "cause": {
+        "basis": "actual_controlled_lost_ack_task_and_source_review",
+        "diagnosis": "매 제출마다 scene UUID를 재생성한 후 digest를 계산해, 같은 폼이 다른 state/request UUID로 바뀌었다.",
+        "confirmed_in_original_case": true
+      },
+      "change": "한 form intent의 정규화 state와 생성된 scene IDs, request UUID를 함께 보관한다. 응답이 불명인 재시도에는 그대로 사용하고 실제 내용 변경 또는 확인된 성공 뒤의 새 의도에만 새 식별자를 만든다.",
+      "countercase": "모든 새 프로젝트에 오래된 request UUID를 재사용하면 서로 다른 의도가 합쳐진다. 실패라 추정해 자동으로 새 UUID로 다시 보내는 것도 이 결함을 되살린다.",
+      "same_case_verification": "원실패의 두 request/scene/project IDs와 retest의 동일 요청 2개·같은 scene·단일 프로젝트를 대조했다. acknowledged-success 뒤 새 프로젝트 ID도 별도 assertion으로 확인됐다.",
+      "actual_results": {
+        "recorded_failure_project_count": 2,
+        "recorded_retest_project_count": 1,
+        "recorded_retest": "same pending state/request/scene identity pass; acknowledged new intent pass.",
+        "whole_run": "5 checks passed before unrelated hidden locator failure; run remains fail.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "ACK 유실은 실제 서버 commit 뒤 브라우저 응답을 제어한 agent test다.",
+        "모든 브라우저/중간 프록시/재시작/동시 탭의 exactly-once 보장은 시험하지 않음."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-04",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "완료 후 행동·링크 모양·파일 정체성을 맞추기",
+      "summary_prefix_ko": "Cadence 사례 4 | 완료 후 재생성 버튼·직각 다운로드 링크\n원인: 완료 상태도 내보내기가 주행동, anchor는 button 전용 radius에서 빠짐. 수리: 현재 입력·표현의 완료 MP4는 다운로드로, 공용 action 8px와 링크·focus 유지, 불변 버전 제목으로 파일명. 반례: 옛 recipe 결과를 현재 완료로 재사용하지 않음. 재검증(원기록): 1440/390/320 8px·넘침0, GET 다운로드 hash/렌더수2→2, 이름 변경 후 옛 파일 bytes/이름 유지. 한계: 수정 후 키보드 순서 전체는 재시험 안 함.",
+      "task": "현재 버전·표현의 완성 영상을 다시 생성하지 않고 다운로드하고, 앱 밖에서도 어떤 버전 파일인지 구별한다.",
+      "symptom": "완료 뒤에도 export가 주행동이었고 ready 알림은 MP4 링크를 중복했다. 주행동을 anchor로 바꾸자 radius가 button8px/anchor0px로 갈라졌다.",
+      "cause": {
+        "basis": "root_actual_geometry_and_task_records_plus_frozen_source",
+        "diagnosis": "상태에 따른 최종 행동과 공용 action style의 HTML 요소 범위가 분리돼 있었다. 파일명은 mutable current title 대신 immutable rendered version title이 필요했다.",
+        "confirmation_scope": "radius0 실제 측정, focus3px와 Tab reachability는 수정 전 root기록; 수정 후 focus CSS 보존은 소스 확인."
+      },
+      "change": "현재 input version와 recipe가 맞는 완료 MP4가 있으면 primary를 의미 있는 다운로드 링크로 바꾼다. 공용 action class에8px radius를 적용하고 a:focus-visible3px를 유지한다. 서버는 저장된 해당 버전 제목+vN과 UTF-8 filename/ASCII fallback으로 MP4/TXT를 제공한다.",
+      "countercase": "현재 편집/표현과 다른 옛 파일을 완료 primary로 재사용하지 않는다. 링크를 button처럼 흉내내며 href/keyboard/focus를 없애지 않는다. 프로젝트 제목을 바꿔 과거 파일의 정체성까지 바꾸지 않는다.",
+      "same_case_verification": "수정 전 root radius0/focus/tab측정, 최종 세 폭 radius8/overflow0/GET-only hash·rendercount 대조, owner title-only v2 뒤 v1 MP4 이름·bytes 동일과 TXT filename 안전화 checks를 읽었다.",
+      "actual_results": {
+        "recorded_before": "primary anchor0px; buttons8px; primary reached by Tab and3px outline.",
+        "recorded_after": "1440/390/320 anchor/button8px, overflow0; no writes/errors.",
+        "download": "SHA2336c3fe…; render_count before2 after2.",
+        "immutable_filename": "owner checks7–9 pass: old v1 filename/exactbytes retained, new TXT title UTF8 sanitized.",
+        "focus_after_fix": "frozen CSS still includes a:focus-visible3px; no separate complete final focus traversal evidence claimed.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "다운로드·형태 검증은 GET-only 원기록; 이번 적재는 새 렌더/다운로드 테스트를 하지 않음.",
+        "최종 CSS의 focus보존과 실제 수정 후 전체 키보드/스크린리더 테스트를 구별함."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-05",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "글자 수 대신 실제 출력 경계로 지원 범위를 정하기",
+      "summary_prefix_ko": "Cadence 사례 5 | 유효 180자도 영상 밖으로 잘림\n원인: 논리6줄이 자동10줄로 감겨 720px를 넘음. 수리: 이 composition의 statement3×60/steps3×48/compare2×64 등 명시 범위와 오류·메모 안내, 조용한 자름 금지. 반례: 3줄을 모든 UI·언어에 강제하지 않음. 재검증(원기록): 최대 제목52자·3레이아웃 Player/새 MP4에서 잘림·푸터 겹침0, 최소 간격45.73px; owner API는 옛6줄/긴1줄 거절. 한계: 전 언어·폰트의 완전 증명 아님.",
+      "task": "지원 최대 입력이 실제720p영상에서 모두 읽히도록 작성 범위를 설명하고 잘리는 옛 버전의 새 렌더를 막는다.",
+      "symptom": "제목52CJK+본문180자, nonempty logical lines[170,1,1,1,1,1]은 기존 검증을 통과해도 visual10줄이 돼 last glyph734.47px로720px를 넘었다.",
+      "cause": {
+        "basis": "actual_exact_size_geometry_and_individually_inspected_PNG_records",
+        "diagnosis": "문자 수/논리 줄 수는 사용 폰트·폭·제목 높이에서의 물리적 wrapped height를 제한하지 못했다.",
+        "confirmed_in_original_case": true
+      },
+      "change": "현재720p composition의 지원 문구를 layout별로 명시한다: statement최대3논리줄/60자씩, steps2–3줄/48자씩, compare정확히2줄/64자씩, 전체본문180자·제목52자. 탭은 안내와 함께 거절하고 긴 원문은 메모로 유지한다. 저장된 옛 version도 새 render 전에 validate한다. 숨은 truncation/축소로 오류를 덮지 않는다.",
+      "countercase": "이 보수적 형식은 실제 들어갈 영어 문장에도 명시 줄바꿈을 요구할 수 있다. 다른 화면·폰트·언어에3×60을 전역 규칙으로 복제하지 않는다.",
+      "same_case_verification": "v3 boundary finding과 v4 /steps/2 최대3layout의 geometry·실제MP4/Player 대조, owner final-boundaries의6줄·단일60초과 거절 checks를 읽었다. cinematic reviewer 자신은 invalid POST를 재시험하지 않았다는 한계도 보존했다.",
+      "actual_results": {
+        "recorded_before": "valid six-line input visual10lines, last glyph734.46875>720.",
+        "recorded_after": "statement[60,60,58],steps[48,48,48],compare[64,64],title52: out/overlap=false; min gap45.734375px.",
+        "server_enforcement": "owner final-boundaries checks0/1 pass; independent cinematic review was GET-only and did not POST-test enforcement.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "정수 원점1280×720 isolatedfixture이며 일반 responsive editor캡처가 아님.",
+        "모든 Unicode/폰트/특수공백/모든 텍스트 조합의 물리적 적합 미보증.",
+        "수리의 UX 비용과 실제 사용자 만족은 미평가."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-06",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "강조 중 글자 좌표와 가독성을 보존하기",
+      "summary_prefix_ko": "Cadence 사례 6 | 단계 강조가 한 프레임에6px 점프\n원인: 단계 활성화에서 translateY6→0·opacity를 즉시 전환. 수리: 글자 위치/opacity1은 고정하고12프레임 동안 밑줄·색만 보간. 반례: 관계 이동을 표현할 필요가 있을 때까지 모든 모션을 금지하지 않음. 재검증(원기록): 새 MP4/Player213·214·220·226의 y452.40625px 동일, 밑줄0/0/50/100%. 한계: 이전 낮은 opacity의 불편·교육효과는 미측정, 전체 전환/모든 프레임 검증 아님.",
+      "task": "순서 장면을 읽는 동안 현재 단계의 강조가 글자 위치를 갑자기 바꾸거나 읽기 전 문구를 감추지 않게 한다.",
+      "symptom": "v3 actualadjacentframes123/124와145/146 등에서 각 단계 translateY가6→0으로 변했다. opacity의 단계 전환도 있었으며 annoyance/가독성 저하는 사용자 측정이 아닌 가설이다.",
+      "cause": {
+        "basis": "recorded_adjacent_frame_DOM_measurements_and_decoded_MP4_inspection",
+        "diagnosis": "공간 관계가 아니라 강조 상태를 좌표 이동과 즉시 opacity변경으로 표현했다.",
+        "confirmed_measurement": "step-only one-frame delta -6px; first step combined outer motion -6.55556px.",
+        "legibility_inference": "본문 opacity1 유지가 이 장면에서 읽기 연속성에 유리하다는 조건부 판단; 참가자 효과 미측정."
+      },
+      "change": "본문 anchor와 opacity1을 고정하고 단계 강조는12프레임 동안 underline/color로 보간한다. composition의 typography기본값도 명시한다. 모든 모션 제거가 아닌 강조 수단의 좁은 변경이다.",
+      "countercase": "실제 공간 관계 변화·전환 목적이 있으면 이동이 적절할 수 있다. 이 사례로 애니메이션 전면 금지나 특정 기간의 전역 선호를 만들지 않는다.",
+      "same_case_verification": "v3 three adjacentactivation의 실제측정과 v4새recipe의213/214/220/226 Player·MP4 대응 프레임 기록을 대조했다.",
+      "actual_results": {
+        "recorded_before": "step translateY6→0 in one30fpsframe, three transitions measured.",
+        "recorded_after": "second step y452.40625 at all4frames, transformnone,opacity1,underline0/0/50/100%; actualMP4corresponds in reviewed samples.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "샘플된 두 번째 단계 재현 구간 이외 모든 전환/프레임 미검증.",
+        "H264출력과 Player의 픽셀 완전 동일/참가자 annoyance감소/교육 효과를 주장하지 않음."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-07",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "입력 버전과 표현 코드·결과 바이트를 함께 결속하기",
+      "summary_prefix_ko": "Cadence 사례 7 | 같은 입력이라도 표현 변경 뒤 옛 MP4 재사용 위험\n원인(소스 진단): 입력 버전만으로는 composition 변경을 식별 못 함. 수리: schema/composition/dependency recipe hash를 요청·job·worker·metadata·다운로드 재사용에 묶고 이전 파일은 이력 보존. 반례: 옛 committed receipt 재시도는 같은 옛 job이어야 함. 재검증(원기록): 새20초/9초 MP4의 입력·recipe·bytes 연결, 9프레임 대응, stale/missing recipe409. 한계: 픽셀 동일·전 프레임 검증 아님.",
+      "task": "표현 코드 수정 뒤 현재 입력의 새 출력과 과거 표현의 완료 파일을 구별하고, 불명 요청의 재시도 정체성은 유지한다.",
+      "symptom": "같은 immutable input revision만으로는 새 composition/schema/dependency를 구분할 수 없다. 구형 MP4를 current-ready로 재사용할 위험을 소스 검토로 진단했으며, 실제 stale파일 오인 사용자의 실패를 재현했다고 주장하지 않는다.",
+      "cause": {
+        "basis": "source_review_and_engineering_risk_diagnosis",
+        "diagnosis": "결과 정체성에 input revision뿐 아니라 render recipe가 필요했다.",
+        "actual_user_failure_reproduced": false
+      },
+      "change": "recipe hash를 request/job/worker/metadata/현재 다운로드 재사용에 바인딩한다. 새 요청은 current recipe를 요구하고 worker도build recipe를 확인한다. 기존 committed receipt는 그대로 옛 job을 재생하며 과거표현 MP4를 이력에서 지우지 않는다.",
+      "countercase": "표현 변경 때 기존 receipt를 무조건 무효화해 동일 UUID로 새 렌더를 생성하면 응답 불명의 idempotence가 깨진다. recipe일치와 pixels동일도 별개다.",
+      "same_case_verification": "새canonical20초/max9초 MP4의 input/recipe/downloadSHA·검수 전후sourcehash와9개같은프레임 대응 기록, owner legacyreceipt재생/no new render/missingor stale recipe409 assertions를 대조했다.",
+      "actual_results": {
+        "recorded_bindings": "recipe31c17ef0…f496d84;canonical v1 MP4SHA2336c3fe…;maxv1 MP4SHAe59208fe…;before/after source stable.",
+        "recorded_parity": "9 figurepairs individually inspected by original reviewer; scene/text/emphasis correspondence only.",
+        "recorded_boundaries": "old receipt samejob/no new render; new missing/stale recipe409 pass.",
+        "pixel_diagnostics": "normalizedRGBMAE1.11–1.64%,contentinkbboxdelta≤13px, maxtextfixture0px; no acceptance threshold/causal attribution.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "이전 입력과 새 입력·표현이 다른 v3/v4 metric을 한 변경의 효과로 인과 해석하지 않음.",
+        "샘플9프레임의 내용 대응이며 전프레임 temporalequivalence/픽셀 동일/플랫폼 원인분리 없음."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "cadence-003-complete-v1-experiment-08",
+      "product": "003-cadence",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "ca6f9809ffe33b681296c55b734881757651d4e84a23489ef47847c11e942e05",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "audit 숫자와 실제 배송 코드·도달성을 구분하기",
+      "summary_prefix_ko": "Cadence 사례 8 | audit0이어도 내장 구형 parser 잔존\n원인: high10은 하나의 Zod advisory 전파, override는 이미 번들된 copy를 고치지 않음. 수리: 외부Zod4.6.7·runtime dev분리, 고정composition/폐쇄입력/Studio미노출 경로와 잔존위험 기록. 반례: dev라는 이름·로컬·timeout만으로 안전 판정 금지. 재검증(원기록): lock/audit·실제 parser·entry guard 정적 검토; owner runtime축소·최종 실MP4 별도 보고. 한계: 내장copy 미패치·동적 악용/OOM·전체보안 인증 아님.",
+      "task": "의존성 취약성 숫자가 줄어든 뒤에도 실제 배송된 코드와 외부 입력의 도달 조건을 평가하고 최소 변경의 회귀를 확인한다.",
+      "symptom": "초기 npm metadata의 high10은GHSA-mrhx-c7xc-m3w5 하나의 전이 meta-vulnerability집합이었다. 외부Zod4.6.7 override후 audit0이지만 studio-protocol CJS/ESM와privatecompiledrenderchunks에는구형parser가남았다.",
+      "cause": {
+        "basis": "frozen_primary_source_dependency_and_callflow_review",
+        "diagnosis": "npm dependencyresolution/audit metadata는 upstream배포물에 이미 inline된 코드를 다시 작성하거나 검사하지 못한다.",
+        "confirmation_scope": "원검토는 실제$ZodArray원소순회와patched leading gate부재를 읽었으며 versionstring만으로 판단하지 않음.",
+        "snapshot_warning": "dependency report는 초기검토의frozen sourcehash이며 final RELEASEsource와같다고가정하지않는다."
+      },
+      "change": "공식 patchedminimum4.6.6이상인 외부Zod4.6.7 override를 유지하고build-onlyStudio/CLI/bundler를runtime Node tree에서분리한다. 남는browserchunkcopy는별도로표시하고96kbJSON/manualvalidator/고정localcomposition/rendererloopback/Studio미노출의현재호출제약을유지한다. 공식upstreamrebundle근거없이는vendor문자열패치나무검증protocol교체를하지않는다.",
+      "countercase": "devDependency/로컬이라는label,150초timeout,.max100만으로 안전을증명하지않는다. 임의JS/assets/uploads/외부URL/Studio/API공개를추가하면입력경로를다시검토한다. auditfix--force downgrade를자동선택하지않는다.",
+      "same_case_verification": "기존primaryGHSA/patch/registry와localparser/guard를읽은의존성보고서,ownerinitial/afteraudit,후속runtimefilesystem보고와최종hardened-containeractualMP4ownerartifact를분리해연결했다. 이번작업은audit/build/container/OOM실행없음.",
+      "actual_results": {
+        "original_static_review": "externalZod4.6.7;inline4.5.4oldparserremaining;normalheadlessentryreturnsbeforeStudioimport;noAPI→Studio parserconnectionfound.",
+        "owner_runtime_report": "v2image studio/protocol/bundler absent,Chromiumpresent,renderer4.0.539;notindependentlyexecutedbydependencyreviewer.",
+        "later_owner_actual_render_artifact": "finalbrowserchecks18–20: hardened-containerrealMP4completed720p30silent,boundrevision4,jobdd597fae-7df8-4d0e-b34d-56088789d13b. Functionalregressionisnotsecurityproof.",
+        "remaining": "privatecompiledchunksoldparsernotfullypatched;dynamicimportcoverage/heap/OOMnotmeasured.",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "원검토의upstreamlatest확인은그확인시점의정보이며미래stable상태를보장하지않음.",
+        "새로운공식조사/audit/설치/빌드/컨테이너실행없이기존보고서만정리함.",
+        "모든copy수정/전체보안인증·공개서비스허용·모든의존성검토를뜻하지않음."
+      ],
+      "hypotheses_not_observed": [],
+      "status": "mitigated_in_bounded_scope_with_unpatched_embedded_copy"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-01",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 1 | 비례 SVG가 글자까지 늘림",
+      "summary_prefix_ko": "Offcut 사례 1 | 비례 SVG가 글자까지 늘림\n원인: preserveAspectRatio=none 변환과 길이 단위 폰트 결합. 수리: 도형은 SVG, 글자는 픽셀 HTML층으로 분리하고 짧은 구간은 아래 전체목록으로 읽기. 반례: 모든 짧은 bar에 숫자를 우겨 넣거나 전체 이름·길이를 버리지 않음. 재검증(원기록): 1440/390/320 넘침0·조건부 내부표시·전체목록 확인. 한계: 86px는 이 제품의 문구·글꼴 기준, 모든 화면의 상수나 사용자 승인 아님.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "실제 비례 SVG에 글자도 함께 늘어나 배치 숫자가 세로로 솟음"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "preserveAspectRatio=none의 비등방 좌표 변환과 물리 길이 단위 폰트가 결합됨."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "도형만 SVG에 두고 숫자는 픽셀 글꼴의 독립 HTML층; 실제 구간 폭86px이상에서만 내부 숫자 표시, 아래 전체 부재목록 유지."
+      ],
+      "countercase": [
+        "아주 짧은 구간에도 모든 글자를 우겨 넣지 않음. 구간 내부표시가 없어도 순서·이름·길이는 전체목록으로 읽을 수 있어야 함."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "3폭0overflow, 조건부 내부레이블과 전체목록을 agent가 직접 시각 확인."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Geometry remains nonuniform; only text separated.86px is product/font-specific, not universal UX guidance.",
+        "Owner recorded direct capture inspection; compiler did not re-inspect/replay the original UI."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-02",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 2 | A초안이 B주소의 저장공간을 덮음",
+      "summary_prefix_ko": "Offcut 사례 2 | A초안이 B주소의 저장공간을 덮음\n원인: pid만 B로 바뀐 render에서 A draft를 B key에 effect가 기록. 수리: draftOwner===pid일 때만 저장·복원, owner불명 옛 초안은 명시 복구 후보. 반례: A를 삭제하거나 B를 매번 초기화하지 않음. 재검증(원기록): A1111.1→B2000.2·역방향·reload 5checks 통과. 한계: 서버 오염 판정은 qty타입 비교 오류로 정정; 실제 결함은 브라우저 초안 혼합.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "A초안을 편집한 뒤 direct hash B로 이동하자 B에 A의 입력1111.1이 나타남"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "pid 변경 렌더가 이전 draft를 새 key(pid)에 자동저장하고 GET뒤 다시 복원함."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "draftOwner===pid일 때만 자동저장. 전환시 로딩 상태를 비우고 owner가 일치하는 봉투만 자동복원. 이전 owner없는 기록은 삭제 않고 선반 후보로 보관."
+      ],
+      "countercase": [
+        "이전형식 기록을 무조건 현재계획으로 복원하지 않음. 자동이관이 소유관계를 확정한 것이 아니므로 사용자 명시 복원 경로를 남김."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "독립5checks: A1111.1→B2000.2, B2222.2→A1111.1, reload유지. 원 실패의 raw qty타입 비교 오류는 normalization-note에 별도로 정정."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Raw server-unchanged assertion mixed string/integer qty; normalization-note confirms server unchanged. Browser draft contamination remains valid.",
+        "Legacy unknown-owner entries need explicit recovery. Browser shelf does not guarantee storage survives user clearing or new devices."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-03",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 3 | 모바일 제목이 보조도구에 밀림",
+      "summary_prefix_ko": "Offcut 사례 3 | 모바일 제목이 보조도구에 밀림\n원인: 이력·선반 버튼과 제목이 같은 flex행의 폭을 경쟁. 수리: 모바일 제목을 전체폭행, 도구는 별도행; 긴 무공백은 넘침 방지. 반례: 모든 제목을 강제로 한 줄·축소·생략하지 않음. 재검증(원기록): 같은390px 제목234.39→342px·높이75→37.5px,320px280/33px,3폭 넘침0. 한계: 읽기 시간·실사용자 선호는 미측정.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "390px에서 같은 샘플 제목의 샘/플이 갈라져 두 줄을 차지함"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "이력·선반 도구가 제목과 같은 flex행의 폭을 차지해342px중234.39px만 남김."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "모바일 제목을 전체폭행에 두고 도구를 별도행으로 옮김; keep-all과 긴 무공백 overflow-wrap을 함께 사용."
+      ],
+      "countercase": [
+        "한국어 단어를 유지하되 긴 무공백 제목이 root overflow를 만들지 않도록 함. 데스크톱 배치는 유지."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "root samecase:390title342px/37.5px(이전234.39/75),320280px/33,3폭overflow0."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Same sample title geometry, not every title must fit one line.",
+        "No participant reading-time/realphone/user preference evaluation."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-04",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 4 | root 넘침0이어도 SVG 파일 글자는 잘림",
+      "summary_prefix_ko": "Offcut 사례 4 | root 넘침0이어도 SVG 파일 글자는 잘림\n원인: 고정 SVG 단일 text행의 물리 경계를 검사하지 않음. 수리: 원문을 줄바꿈하고 줄 수로 출력 높이 계산, 새 recipe 결과와 옛 파일 보존. 반례: 조용한 자름·작은 글꼴 압축으로 숨기지 않음. 재검증(원기록): 같은 v1 입력의 새 SVG/print text outside0, 옛 SHA 유지. 한계: 폭예산은 전 언어·폰트 증명 아님; A4 각 페이지는 별도 검증.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "허용80자 제목·재료를 내보낸 SVG에서 오른쪽 글자가 잘림"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "logical 글자수 제한만 확인하고 실제 출력 viewBox의 text bounds를 검사하지 않음."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "모든 제목·재료·부재키에 보수적인 Unicode 폭예산 줄바꿈, 실제 줄수로 header/height 확대. 새 recipe·새plan 생성, 옛 artifact 바이트 유지."
+      ],
+      "countercase": [
+        "조용히 자르거나 작은 글자로 압축하지 않음. 보수적 폭예산도 전세계 폰트의 보증이 아니므로 실제 지원 경계 fixture를 측정."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "같은80자/40자 입력·동일v1새plan에서 SVG title/material/keyBBox내부, print embeddedtextoutside0; 옛 잘린SVG SHA불변."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Root HTMLoverflow0 did not prove exported SVG text fit.",
+        "Unicode width budget is conservative, not all-font/all-language proof. Old clipped artifacts retained."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-05",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 5 | 배포 뒤 같은 완료 요청이409",
+      "summary_prefix_ko": "Offcut 사례 5 | 배포 뒤 같은 완료 요청이409\n원인: 보존한 caller intent 비교에 mutable current recipe를 다시 주입. 수리: 기존 implicit 요청은 저장 recipe로 원래 plan 재생, 새 ID만 현재 recipe. 반례: old ID를 새 엔진으로 재실행하거나 다른 payload도 허용하지 않음. 재검증(원기록): 9checks old plan200·변경409·새 intent·옛3파일 동일, 재시작 후 같은 receipt. 한계: 정확한 소유 QA 범위이며 전체 배포/동시성 보장 아님.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "배포 뒤 동일한 완료 요청을 재전송하니409와 새요청 안내가 나옴"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "서버가 currentRECIPE를 같은 callerintent에 다시 주입해 원래 committed recipe와 비교함."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "implicit recipe의 이미commit된 calculate ID는 저장된 execution recipe로 비교하고 원래job리플레이. 다른project/revision/kind/명시recipe는 계속409; 새ID만 현재엔진 실행."
+      ],
+      "countercase": [
+        "같은 저장버전도 새ID로 새계산할 수 있음. 기존ID를 새엔진으로 재실행하거나 옛결과를 덮지 않음."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "독립9checks 원job200·옛recipe유지/내용변경409/새ID현재recipe/옛3파일동일. DB재시작후 원receipt도 같은plan으로 복귀."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Deployment ECONNREFUSED is an interrupted harness run, not the receipt defect itself.",
+        "Original reviewer recovered exact owned request identity by read-only SELECT; this compiler performs no SQL.",
+        "A replay may retain original queued receipt while the actual preserved plan is completed; it is not another execution."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-06",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 6 | 보관 뒤 키보드 focus가 숨김 버튼으로 감",
+      "summary_prefix_ko": "Offcut 사례 6 | 보관 뒤 키보드 focus가 숨김 버튼으로 감\n원인: DOM 갱신 후 target을 잘린 sr-only 완료버튼으로 지정. 수리: 목록 반영·busy 해제 뒤 보이는 현재 filter에 focus, 안내는 live status로 분리. 반례: body나 임의 다른 filter로 보내지 않음. 재검증(원기록): 진행 중 버튼 clip auto·103.53×36px·3px focus-visible, 자료 hash 동일. 한계: 전체 접근성·터치 target·실제 보조공학 인증 아님.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "키보드 보관 뒤 초점이1px의 완전히 잘린 완료버튼으로 이동함"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "DOM재배치 뒤 focus target을 sr-only button으로 지정함."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "실제 목록갱신 뒤 보이는 React Aria filter trigger로 초점 복귀; 성공 안내는 별도live status 유지."
+      ],
+      "countercase": [
+        "목록을 보관했다는 이유로body로 초점을 보내거나 시각 초점을 숨기지 않음. 다른필터에 임의로 전환하지 않음."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "독립actual button진행중/103×36px/nonclipped/3pxfocus-visible 확인, 자료hash동일."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Visible focus restoration only; not complete accessibility/screenreader/touch-target certification.",
+        "Prior Spine focus evidence did not automatically prevent this failure."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-07",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 7 | A4 재고2의 그림은01·목록은1.1.",
+      "summary_prefix_ko": "Offcut 사례 7 | A4 재고2의 그림은01·목록은1.1.\n원인: 단일 board SVG의 index 재시작, ol 자동번호와 수동 접두 중복. 수리: 전역 start_index 전달·목록 번호 한 번만 유지, 새 recipe와 옛 출력 보존. 반례: 바깥 제목만 고치거나 번호·목록순서를 없애지 않음. 재검증(원기록): 최종5f9693… 같은2재고 A4 전 페이지01/02·목록1/2/3·빈 페이지0. 한계: headless PDF, 물리 프린터·절단 안전 검증 아님.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "existing_recorded_agent_observation",
+        "recorded_symptoms": [
+          "A4 두번째 페이지의 바깥제목은 재고2인데 SVG안은01로 표시됨",
+          "인쇄 부재목록에 1. 1. 긴가로대처럼 번호가 중복됨"
+        ]
+      },
+      "cause": {
+        "basis": "recorded_source_and_task_diagnosis",
+        "explanations": [
+          "전체목록을 단일board로 나누어 svg(one)를 호출하면서 enumerate가0부터 재시작함.",
+          "ordered list의 자동번호와 li텍스트의 수동번호를 함께 출력함."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "svg(start_index=n)으로 원래 재고의 전역번호를 유지. 전체SVG/CSV/print의 같은board identity 보존.",
+        "수동 접두만 제거해ol의 한 번 번호로SVG부재키와 대응. 새recipe/새plan, 옛파일유지."
+      ],
+      "countercase": [
+        "페이지별 소제목만 바꾸고 내부 번호를 방치하지 않음. 기존 잘못된print도 원본으로 보관.",
+        "목록순서를 제거하거나 모든번호를숨겨문제를덮지않음."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "root A4 두페이지 전부 렌더·시각확인:01/02정상,0blank. 실제 물리프린터 검사 아님."
+        },
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "root 같은2재고A4:단일1/2/3목록,01/02재고,0blank·명백한clip없음."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Owner cycles7 and9 are grouped as one print-identity episode, both exact originals retained.",
+        "Headless A4PDF/Poppler pages, not physical printer/cutting/safety checks.",
+        "Intermediate0396 fixed stockindex but still duplicated listprefix; final5f9693 closes both."
+      ],
+      "status": "repaired_in_recorded_scope"
+    },
+    {
+      "id": "offcut-004-complete-v1-experiment-08",
+      "product": "004-offcut",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "e1df589452fd44d07ae85d67e95f75331a84ee1da40493650f66e33c814ef340",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Offcut 사례 8 | 출력 과업보다 SVG/CSV 형식이 앞섬",
+      "summary_prefix_ko": "Offcut 사례 8 | 출력 과업보다 SVG/CSV 형식이 앞섬\n가설 원인: 이름없는 인쇄 아이콘·중복 설명이 행동과 배치를 흐림. 수리: 인쇄용 배치를 텍스트 주행동, SVG/CSV 보조·요약간격만 축소. 반례: 파일형식을 없애거나 인쇄가 모두의 최우선이라고 확정하지 않음. 재검증(원기록): 3폭 키보드로 같은 plan 출력,8px/3px·넘침/쓰기/오류0;390px 첫bar 약795→747.28px. 한계: 평가자 가설이며 실제 사용자 실패·시간·만족 효과 아님.",
+      "task": "재고·부재의 저장 버전과 plan/recipe를 입력·화면·출력까지 일관되게 사용한다.",
+      "symptom": {
+        "basis": "reviewer_heuristic_not_participant_failure",
+        "recorded_symptoms": [
+          "작업실로 가져갈 출력의 진입이 SVG/CSV와 이름없는 프린터아이콘에 의존함"
+        ]
+      },
+      "cause": {
+        "basis": "heuristic_design_diagnosis",
+        "explanations": [
+          "휴리스틱:사용자가 파일형식을 알아야 핵심출력행동을 고를 수 있음. 모바일요약도 실제배치를 아래로 밀었음."
+        ],
+        "actual_user_failure_observed": false
+      },
+      "change": [
+        "주행동을 텍스트·아이콘의 인쇄용배치로 표시,SVG/CSV보조. 같은구조에서 중복 optimal설명을 줄이고 결과요약간격만 축소."
+      ],
+      "countercase": [
+        "원래 파일형식도 유지. 인쇄가 모든 사용자의 최고빈도 행동이라는 사용자 채택 주장은 하지 않음."
+      ],
+      "same_case_verification": [
+        {
+          "functional": "pass_in_recorded_scope",
+          "visual": "agent_inspected_in_cited_records",
+          "user_preference": "not_reviewed",
+          "summary": "3폭overflow0/8px공유곡률/3pxfocus; 키보드로현재출력열림.390첫barY747.28(이전약795). 시간·만족도 연구 미수행."
+        }
+      ],
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_agent_inspection_record_not_replayed_here",
+        "user_preference": "not_reviewed"
+      },
+      "limitations": [
+        "Symptom is reviewer heuristic, not an observed real-user failure.",
+        "Actual keyboard geometry at0396 retains that stage; final5f9693 changes print counter only.",
+        "No minimal-first-board comparison or participant findability/learning/time-saving/preference effect proved."
+      ],
+      "status": "heuristic_repair_with_actual_task_checks"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-01",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "레퍼런스 추천을 CSV 과업에 맞춰 고르기",
+      "summary_prefix_ko": "Clearing 사례 1 | 레퍼런스의 화면 유형과 CSV 과업\n원인: 구현 전 조회가 작업 표 대신 Hero+Features+CTA를 추천. 수리: MASTER를 제외하고 표·검토·오류 복구만 조건부 선택. 반례: 16px·가로스크롤 금지·자동모션을 모든 데이터 표에 강요하지 않음. 재검증(원기록): 조회·선택/제외 영수증과 자체 과업 근거 보존. 한계: Dromo는 정적 이미지, 공개 focus probe는 미확인; 사용자 검증이나 이전 런타임 결함 아님.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "유명 디자인 시스템 조회가 명단 작업실에도 Hero+Features+CTA를 제안했다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "preimplementation_source_choice_not_runtime_failure",
+        "explanation": "일반 디자인 시스템 후보의 화면 유형이 실제 CSV 비교 과업과 맞지 않았다."
+      },
+      "change": "기획 전에 UIUXProMax 원문/조회결과·MengTo 출처감사·SarahDoody 한정 조사 후보를 읽고 기록했다. Hero MASTER는 제외하고 표/오류복구의 조건부 강점만 가져왔다.",
+      "countercase": "좁은 표/데이터 비교에도 일괄 팔레트·16px·모든 가로스크롤 금지·자동모션을 적용하지 않는다. 공개 정적 이미지나 실패한 focus probe를 자체 기능 통과로 기록하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "두 디자인 시스템 조회의 부적합 추천도 보존. stack을 먼저 고른 뒤 React 조회. 원 사용자30개 판단을 우선하며 초기 시장 질문 세 개가 답해진 뒤 범위를 닫았다.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-02",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "빈 셀과 실제 ‘빈 값’ 문자열을 구별하기",
+      "summary_prefix_ko": "Clearing 사례 2 | 빈 셀과 literal ‘빈 값’의 표시 충돌\n원인: 빌드 전 helper가 빈 데이터와 안내를 같은 평문으로 표시. 수리: ‘빈 셀·0자’ 배지·접근성 이름을 표/전체값에 공유. 반례: 실제 문자열·공백·Unicode를 치환하지 않음. 재검증(원기록): 실제24행 전체값과23행 CSV 문자열 비교에서 빈 셀/literal 구분. 한계: 이전 배포 실패 재현이 아닌 소스 발견 후 현재 실행 확인, 사용자 선호 미평가.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "빈 셀을 평문 ‘빈 값’으로 표시하면 실제 문자열 ‘빈 값’과 구분할 수 없었다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "prebuild_source_candidate_then_actual_runtime_check",
+        "explanation": "표/전체값의 공통 helper가 빈 데이터와 literal 내용을 같은 문자로 표현했다."
+      },
+      "change": "빈 셀에 ‘빈 셀·0자’ semantic badge와 접근성 이름을 적용하고 실제 문자열은 원문 텍스트로 보여줬다. 표와 전체값 대화창 모두 같은 helper를 사용한다.",
+      "countercase": "배지로 표시한 것이 데이터 치환이 아니다. 실제 ‘빈 값’ 문자열이나 Unicode/공백을 금지·정규화하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "root 실제24행/전체값 대화창에서 literal과 빈 셀 구분, CSV23행 전체문자열 비교 통과.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-03",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "늦은 응답과 읽기 설정의 소유권 지키기",
+      "summary_prefix_ko": "Clearing 사례 3 | 늦은 응답·다른 config가 현재 초안처럼 보일 위험\n원인: 빌드 전 소스에서 마지막 await의 owner확인/config 현재성 경계 발견. 수리: 회수한 Offcut 사례를 조건부 적용해 file/epoch 확인 뒤 commit, config까지 비교. 반례: 옛 해석·초안 선반·완료 파일은 보존하고 다른 해석의 행 제외는 재사용하지 않음. 재검증(원기록): 독립 A/B 이동·늦은 A GET·설정초안 reload 통과. 한계: 과거 런타임 오염을 재현했다는 주장 아님.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "소스 리뷰에서 일부 마지막 GET 응답이 owner guard 전에 상태를 commit하고, 읽기 config가 현재성 판단에서 빠지는 경계가 보였다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "prebuild_source_candidate_then_independent_delayed_response_test",
+        "explanation": "중간 await만 보호해도 마지막 응답이나 다른 인코딩/구분자 초안 reload가 옛 데이터를 현재 파일/규칙처럼 만들 수 있다."
+      },
+      "change": "Offcut 소유권 사례를 실제 회수한 뒤 draft.owner/file.id/epoch를 적용하고 각 await 뒤 지역 응답→owner확인→commit으로 정리했다. config도 현재성/복원 조건에 포함했다.",
+      "countercase": "이전 버전 출력과 초안을 삭제하지 않는다. 같은 파일/같은 해석에 명시적으로 복원하는 선반과, 다른 해석 행결정 무효화를 구분한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "배포 전 소스의 위험을 수정한 사례이며 배포 실패 재현을 주장하지 않는다. 독립 A/B direct 이동·늦은 A GET·다른 config 초안 reload가 실제 통과했다.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-04",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "보기 상태와 저장 출력 범위를 분리하기",
+      "summary_prefix_ko": "Clearing 사례 4 | 화면 검색·페이지와 출력 범위\n원인 위험: 표시 index/중복 header를 식별자로 쓰거나 화면 행을 출력하면 값이 소실될 수 있음. 수리: sourceRow/columnID·문자열 list·서버 재계산과 signature 기반 명시적 제외. 반례: 충돌을 자동 병합하거나 빈 키를 묶지 않음. 재검증(원기록):24행 중 원본row3 한 행 제외→23행 모든 문자열/SHA 동일, 검색1행도 출력 불변. 한계: 이전 유실 결함 발견 아님; literal/prefix 별도, 모든 Excel·재가져오기 보증 없음.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "명단의 중복·검색·페이지를 편하게 다뤄도 같은 키의 다른 값이나 숨은 행을 조용히 잃으면 안 된다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_runtime_observation",
+        "explanation": "header 문자열을 key로 쓰거나 client표를 출력 원본으로 삼거나, 규칙 변경 후 표시 index 기반 제외를 재사용하면 다른 데이터가 손실될 수 있다."
+      },
+      "change": "list cells/stable columnID/sourceRowID를 쓰고 저장 source/rules에서 서버 재계산한다. signature가 맞는 중복그룹의 구체적 행만 제외하고 최소1행 유지, 빈 키는 묶지 않는다. 검색/페이지는 보기만 바꾼다.",
+      "countercase": "정확한 중복도 자동 삭제가 기본은 아니다. 비키 충돌은 병합하지 않는다. literal CSV와 작은따옴표 별도 변형본은 다른 bytes/정책이며 범용 spreadsheet 보호를 보증하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "24→명시한 한 원본행 제외→23행의 모든 문자열, duplicateheader/CRLF/+phone/NBSP/leading0 보존. 검색1행/작은페이지와 무관하게 전체23행 output SHA 동일.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-05",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "앱 밖에서도 불변 원본·버전 파일을 식별하기",
+      "summary_prefix_ko": "Clearing 사례 5 | 다운로드 파일의 원본·버전 식별\n원인: generic ID만으로 앱 밖의 결과 맥락을 알기 어려움. 수리: Cadence를 실제 cross-topic GET 후 frozen 원본stem·용도·버전·id8과 UTF8/ASCII 이름을 artifact에 고정. 반례: 저장 원본명/bytes를 바꾸거나 현재 제목으로 옛 파일을 재명명하지 않음. 재검증(원기록): 실제 한글 basename·SHA와 새 검토 뒤 옛 파일 동일 확인. 한계: 조건부 전이이며 전역 이름 규칙·사용자 채택 아님.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "완성 파일을 앱 밖에서 보관할 때 generic UUID 이름만으로는 어느 원본/검토인지 식별하기 어렵다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "prebuild_cross_product_retrieval_then_actual_download_check",
+        "explanation": "다운로드 파일명은 화면의 mutable title이나 지금 렌더러 대신 결과가 만들어진 불변 입력과 버전에 대응해야 한다."
+      },
+      "change": "Cadence 사례를 실제 cross-topic GET으로 회수하고 frozen 원본 stem+용도+버전+id8을 artifact metadata에 기록했다. UTF8RFC5987/ASCII fallback, 경로/제어/길이 처리는 다운로드명에만 적용했다.",
+      "countercase": "모든 제품에 같은 이름 공식을 강제하는 규칙이 아니다. 파일명은 데이터 증명이 아니므로 SHA/버전/recipe를 함께 유지한다. 원본명 metadata/bytes를 sanitize하며 바꾸지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "실제 다운로드 basename과 저장 bytes SHA 대조 통과. 과거 artifact는 새 검토 뒤에도 bytes/이름 유지. 원문 reference의 범위를 새 사용자 선호로 승격하지 않았다.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-06",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "숨은 input의 테스트 실패와 실제 조작을 구분하기",
+      "summary_prefix_ko": "Clearing 사례 6 | checkbox harness가 숨은 input을 누름\n원인: .check()가 실제 label 대신 native input 중심을 눌러 custom span에 차단. 수리: 실패 PNG/JSON 보존 후 visible label 클릭·focus+Space로 같은 과업 검사. 반례: force click이나 접근성 제어 제거로 통과시키지 않음. 재검증(원기록): 포인터/Space와 전체 업로드→다운로드 과업 통과. 한계: 원래 실패는 테스트 표면 선택 오류이며 제품 클릭 실패·사용자 피드백으로 세지 않음.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "첫 브라우저 harness의 native checkbox .check()가 custom visible span에 가로막혀 timeout됐다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "harness_failure_classification_then_real_user_surface_test",
+        "explanation": "실사용 표면인 label 대신 숨은 native input의 hit target을 눌렀다. 해당 실패만으로 제품의 사용자 클릭 실패가 확인된 것은 아니었다."
+      },
+      "change": "원 실패 PNG/JSON을 보관하고 실제 visible label 클릭과 focus+Space를 수행했다. 실제 과업과 독립 테스트도 이 경로로 고쳤다.",
+      "countercase": "force click으로 통과시키거나 custom control/접근성을 없애지 않는다. 숨은 locator 실패와 실제 키보드/포인터 결과를 별도로 기록한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "visible label/Space 선택과 canonical 업로드→해석→규칙→제외→확정→다운로드 성공. 최초 실패를 whole-run pass로 고쳐 쓰지 않았다.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-07",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "다음 행동뿐 아니라 첫 데이터 행도 보이게 하기",
+      "summary_prefix_ko": "Clearing 사례 7 | 다음 버튼은 올라왔지만 첫 행은10px만 보임\n원인: 유효 읽기에도 폼·질문·중복 설명·긴 표가 계속 쌓임. 수리: 설정 요약/편집·표 위 primary·3/20행 보기, 유효 제목/토글 한 줄. 반례: 글자 축소·오류설정 숨김·전체값/검색 삭제로 높이를 감추지 않음. 재검증(원기록): 같은24행390×900 next1689.72→613.89→455.23, 첫행889.78→707.33+49. 한계: 최종3폭은 GET-only 위치 검사; 활성 행동/오류/23문자열은 round2, 사용자 만족 아님.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "실제24행390×900에서 next y1689.72. 첫 수리로 next613.89가 됐어도 첫행 top889.78이라10px만 보였다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_runtime_observation",
+        "explanation": "읽기 설정·긴 표 뒤 primary를 두었고, 유효하게 읽은 뒤에도 질문/eyebrow/소개/별도 원본버튼과 중복 설명을 계속 쌓았다."
+      },
+      "change": "유효 config를 편집 가능한 요약으로 접고 primary를 표 위로, 3행 기본/20행보기/전체 검색/전체값 경로 유지. 마지막에는 유효해석만 원본미리보기+quiet 원본받기 같은줄, 짧은3/20 도구로 줄였다. 변경 config/오류는 다시 열린 설정과 next차단, decode링크는 실제 encoding trigger focus.",
+      "countercase": "first row 일부만 보이는 것을 no-overflow로 UX완료하지 않는다. 글자 축소/전역헤더 삭제/이전 버전 제거로 높이를 감추지 않는다. invalid/dirty 읽기 상태는 상세 설정을 계속 보여줘야 한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "Root SAME24-row final:390/320 firstrow707.33+49=756.33, next455.23;1440 firstrow621.55+51, all3widths overflow/errors/writes0. Root personally viewed final390/320read/output390; real actions/configerror/23strings+oldv2bytes remain round2 evidence. Owner gate independently confirms current deployed identity and fullrow/mobile task geometry.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "First final probe assumed sameURL reset in-app stage and timed out on second viewport. Explicit04/01stage selection passed without app changes; partial run retained, not a product defect.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope_root_same24_retested"
+    },
+    {
+      "id": "clearing-005-complete-v1-experiment-08",
+      "product": "005-clearing",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "285424f280d60b27fdf96e3419c0f34ecf68b529367c5642f8bdb27996fb96a2",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "완료 설명보다 파일 받기를 먼저 배치하기",
+      "summary_prefix_ko": "Clearing 사례 8 | 완료 설명이 다운로드보다 먼저 쌓임\n원인: notice·아이콘·큰 요약 뒤에 최종 파일 받기가 위치. 수리: 파일명·버전·유지 행열 뒤 primary, 상세는 disclosure·원본/변형본은 보조. 반례: 다른 config의 옛 검토를 현재 완료로 쓰거나 출력 범위를 숨기지 않음. 재검증(원기록):390/320 download859.91→513.47+46,23개 문자열·옛v2 bytes 동일. 한계: 최종 READ 수리에서 output은 변경 없음; synthetic agent 과업이지 사용자 채택 아님.",
+      "task": "원본 CSV를 보관하고 직접 고른 정리만 검토해 같은 버전의 새 파일을 받는다.",
+      "symptom": "첫 output390의 download top859.91/bottom906으로 필요한 최종 행동이 화면 아래에 걸렸다.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_runtime_observation",
+        "explanation": "완료 notice·아이콘·큰 요약이 주출력보다 먼저 나왔다."
+      },
+      "change": "버전/유지행열/제외수 다음에 literal CSV primary를 두고 형식 상세는 아래 disclosure로 옮겼다. 원본/변경내역/값변형prefix는 보조로 남겼다.",
+      "countercase": "현재 작성config/규칙과 다른 옛 검토를 현재 완료로 재사용하지 않는다. 형식 상세를 숨기는 것이 출력 범위를 모호하게 만드는 뜻은 아니므로 유지수/버전/화면검색 무관을 primary근처에 남겼다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_in_cited_records",
+        "user_preference": "not_reviewed",
+        "summary": "Root SAME24-row:390/320 download513.47+46=559.47, 실제23개문자열+옛v2bytes 동일. Output은 root시각확인 후 범위 수락, 마지막 READ-only수리에서 수정하지 않았다.",
+        "compiler_replay": "not_run",
+        "visual_basis": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Synthetic data and agent tasks; no participant preference adoption.",
+        "Countercase is conditional assistant inference unless explicitly tied to an actual cited test.",
+        "Existing synthetic agent records compiled; original API/browser/core/restart/audit tests not rerun here.",
+        "Functional/visual scope and user preference remain separate; no autonomous self-improvement or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-01",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "늦은 가져오기 응답이 새 선택을 덮음",
+      "summary_prefix_ko": "Looproom 사례 1 | 늦은 가져오기가 새 음원 선택을 덮음\n원인: 이전 소유권 경험을 회수했어도 fetch/decode만 보호하고 import완료는 무조건 선택. 수리: import intent/selection epoch 확인, 완료 원본은 목록에 보존. 반례: 모든 전환을 막거나 완료 원본을 삭제하지 않음. 재검증(원기록): C응답 지연 뒤 B편집 유지, 캐시 receipt와 실제 새POST 완료를 별도 확인. 한계: fe027재검증과5aa0새POST를 구분하며 조회 성공을 자동 예방으로 세지 않음.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "C 실제 업로드 응답 뒤 명시적으로 선택·편집한 B가 C로 바뀜.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "fetch/decode만 소유권을 검사하고 import 완료의 selectSource는 무조건 실행함."
+      },
+      "change": "import intent/selection epoch를 비교하고 원본은 목록에 보존하되 현재 화면을 훔치지 않음.",
+      "countercase": "완료된 원본을 삭제하거나 모든 파일 전환을 막지 않음.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "cached receipt completion과 genuine initialPOST completion을 별도로 실제 확인. 최종 literalPOST는5aa0에서실행.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-02",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "보관 응답이 제목과 오디오 identity를 갈라놓음",
+      "summary_prefix_ko": "Looproom 사례 2 | 보관 응답 뒤 A제목과 B오디오가 섞임\n원인: 늦은 organization응답이 현재 source/epoch 확인 없이 제목·selected를 할당. 수리: 목록 갱신은 유지하되 현재 화면은 원래 owner일 때만 변경. 반례: 실제 보관 성공·원본·구간 버전은 보존. 재검증(원기록): A보관→Escape→B선택→A응답에서 B의 제목/source/profile SHA 일치. 한계: samecase는fe027, 최종5aa0는7개 core소스SHA 동치이지 전체15초 suite 재실행 아님.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "A보관 응답 후 제목/selected는A, 실제buffer/profile SHA는B.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "보관 완료가 원래 source/epoch를 확인하지 않고 현재 identity를 할당함."
+      },
+      "change": "보관 목록은 갱신하고 현재 source/epoch가 맞을 때만 현재 제목/상태/창을 바꿈.",
+      "countercase": "보관은 실제로 성공해야 하며 원본과 구간 버전은 유지함.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "Exact A/B/보관 응답 전달 재검증은fe027;최종5aa0는동일app/backend/engineSHA를확인.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-03",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "잘못된 시각을 둔 채 이전 유효 범위를 저장함",
+      "summary_prefix_ko": "Looproom 사례 3 | invalid9를 보면서 옛1–3초를 저장함\n원인: raw입력과 마지막 유효 loop가 분리됐는데 저장은 engine존재만 확인. 수리: visible raw범위 유효성을 즉시/저장경로에서 재검사해 Save차단. 반례: invalid원문·이전 유효 transport는 보존하고 Escape/유효편집으로 복구. 재검증(원기록): invalid9와 빈A에서 disabled/noDialog/noPOST, 기존loop유지. 한계: 합성 agent사례이며 모든 입력/접근성·사용자 선호 검증 아님.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "유효1–3에서 시작9를 입력하면 오류가 보여도 이전1–3이v1로 저장됨.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "Save eligibility가 raw 입력 유효성 대신 engine 존재만 확인함."
+      },
+      "change": "raw 입력을 즉시 검사해 invalid시 Save를 막고 프로그램 경로에서도 재검사.",
+      "countercase": "invalid 원문과 마지막 유효 transport는 유지; Escape/명시적 유효 편집으로 복구.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "빈 입력·9의 같은사례에서 noDialog/noPOST, Save disabled, 기존 loop/원문 유지.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-04",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "같은 음원의 늦은 저장 확인이 새 편집을 저장됨으로 표시",
+      "summary_prefix_ko": "Looproom 사례 4 | 같은 음원의 늦은 저장 확인이 새 편집을 저장됨으로 표시\n원인: source/epoch만 비교해 .2–1.5요청 뒤 .4–1.5새편집을 구별 못함. 수리: viewRevision/A/B/profile 비교, 옛저장은 이력에 남기고 새편집은dirty유지. 반례: ACK불명때 새ID중복을 만들거나 frozen요청을 현재값으로 바꾸지 않음. 재검증(원기록): 실제15초 timeout 뒤 현재.4–1.5 dirty=true/저장v3.2–1.5 별도. 한계: oldhistory timeout은 원인미확정, 부분run을 전체pass로 바꾸지 않음.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "실제.2–1.5저장→15초timeout→A.4새편집→결과확인에서 .4–1.5가dirty=false.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "source/epoch만 비교해 같은파일의 편집 fingerprint가 바뀐 사실을 놓침."
+      },
+      "change": "viewRevision/A/B/profile을 비교하고 완료된 옛 저장은 목록에 남기되 현재 편집은 유지.",
+      "countercase": "ACK불명때 새ID자동중복을 만들지 않고 frozen 요청 범위·결과확인·동일재시도 유지.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "실제15초 재검증에서 current.4–1.5 dirty=true, savedv3.2–1.5 별도보존; oldfe027test를5aa0실행으로재표시하지않음.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-05",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "일반 저장 확인이 도구를60.59375px밀어냄",
+      "summary_prefix_ko": "Looproom 사례 5 | 반복 저장 때 도구가60.59375px 이동\n원인: normal-flow성공배너가 이름/버전 확인을 중복하며 연습도구 위 높이를 추가. 수리: 기존 작은 상태문구로 일반ACK, 실제오류·재시도는 유지. 반례: 모든 알림/결과identity를 숨기지 않음. 재검증(원기록): 같은17초 source의3–9구간 v1→v2 이동60.59375, v2→v3 여섯제어 shift0·옛버전보존. 한계: 이 과업의 위치안정성이지 모든알림규칙·시간절감·사용자만족 증명 아님.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "같은3–9초v1→v2 저장 뒤 파형/재생/A/B/저장/목록이 모두60.59375px아래로 이동.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "persistent성공banner가 이미 표시된 이름/버전을 반복하며 normalflow높이를 더함."
+      },
+      "change": "기존 quiet draft/status에서 일반 저장을 확인하고 오류/재시도는 유지.",
+      "countercase": "모든 알림을 숨기거나 결과 identity를 감추는 규칙은 아님.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "SAMEsection v2→v3에서 여섯controlrect shift0; 실제 사용자 만족 효과는 미측정.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-06",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "시작 라벨이 desktop/320에서 세로로 갈라짐",
+      "summary_prefix_ko": "Looproom 사례 6 | ‘시작’ 라벨이 desktop/320에서 두 줄\n원인: A표시·두 글자·단위·간격보다 label grid열이 좁음. 수리: 해당 label폭/nowrap만 조정, 입력폭·글자크기·공유제어 유지. 반례: 전체font축소나 rootclipping으로 숨기지 않고 다른영역밀도를 획일화하지 않음. 재검증(원기록):1440/390/320 시작1줄·전체재생/A/B/저장·넘침0. 한계: 실제 agent캡처의 가독성 수리이며 모든언어·기기·사용자취향 승인 아님.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "A/시작/초를 위한 열이 좁아 실제문구 시작이두줄.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "label열의 폭이 chip+글자+단위와 간격보다 작음."
+      },
+      "change": "label열/nowrap만 고치고 같은역할공유곡률·글자크기는 유지.",
+      "countercase": "다른영역밀도나 전제품글꼴/여백을 획일화하지 않음.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "1440/390/320 시작한줄과 wholeplay/AB/save,0overflow 확인.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "looproom-006-complete-v1-experiment-07",
+      "product": "006-looproom",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "a526aca31fd2d0f970215cf9ab2551c794596628cb10e62e266315d40a08fba1",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "0.1초 구간에서 A/B hit target이 겹침",
+      "summary_prefix_ko": "Looproom 사례 7 | 0.1초 A/B칩이 겹쳐 A중앙이 B를 누름\n원인: 30px칩과 실제시간선의 좌표/edge보정을 같은 geometry로 처리,27.921875px겹침. 수리: 시간선은canvas실제x, 가까운 hit영역은위아래·원값기준relative drag. 반례: 숫자/키보드 유지, zoom/DAW추가나 실제경계선 이동 없음. 재검증(원기록):5aa0의7case·6drag·중앙/0초/끝에서 각target·값유지·trueX픽셀확인. 한계: 0.1초는제품한계, 물리터치기기·음향·사용자선호 미검증.",
+      "task": "내 원본 음원의 짧은 A/B구간을 반복하고 이름 있는 버전으로 저장·재개한다.",
+      "symptom": "3–3.1초에서30px칩이27.921875px겹쳐 Acenter를 누르면Bhandler/오류.",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual_agent_runtime_reproduction_and_source_diagnosis",
+        "explanation": "실제timeline좌표와 chip label/hit geometry 및CSSstem을 같은위치로 처리."
+      },
+      "change": "실제경계선은canvas실제x, 가까운칩만위아래배치; pointerdown은원값유지/relative drag.",
+      "countercase": "숫자/키보드를 유지하며 zoom/DAW를 추가하지 않음; edge칩offset이실제경계선을 옮기지 않음.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "original_owner_root_independent_agent_inspection_records",
+        "user_preference": "not_reviewed",
+        "summary": "5aa0의7cases/6actualdrags/trueboundarypixels에서각center정확/클릭값유지/오류0; middle/start/end390+320반례포함.",
+        "compiler_replay": "not_run"
+      },
+      "limitations": [
+        "Synthetic own-tone tasks and agent reproduction, no participant/user-adoption study.",
+        "Every cited report retains actual recipe/stage; source-equivalence does not relabel earlier execution as final.",
+        "Original tests/captures were read, not rerun or reinspected by this compilation.",
+        "No actual participant feedback, universal browser/hardware/accessibility or prevention guarantee."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "repaired_in_local_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-01",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "분리 줄을 한꺼번에 만들던 메모리 증가",
+      "summary_prefix_ko": "Cueframe 사례 1 | 적은 cue라도 separator 줄 객체가 메모리를 키움\n원인: 전체 physical line list를 만든 뒤 block/cue 제한 검사. 수리: generator로 현재 block만 처리·해제, byte span/문법은 유지. 반례: blank특례나 문법축소로 우회하지 않음. 재검증(원기록): 같은128/256KiB hash에서 maxRSS증가32,915,456→147,456B/67,698,688→278,528B. 한계: hostCLI소규모실험, 5MiB앱/OOM/일반peak보증 아님; host/target반복은새사례가 아님.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "허용5MiB와20k cue/64KiB block 제한 전에 모든 physical line의 객체 list를 만들었다. 작은 separator-rich128/256KiB CLI에서 maxRSS가32,915,456/67,698,688B 증가했다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "boundedhostCLIandfrozencode",
+        "explanation": "_lines가source전체line list를 만든 뒤 cue/block 제한을 확인했다. 5MiB OOM은 실행하지 않았다."
+      },
+      "change": "Physical line을 generator로 읽고 현재 block을 처리·해제한다. API/grammar/byte span 정책은 유지한다.",
+      "countercase": "새 문법 제한이나 blank-only 특수처리로 피하지 않는다. 원문·timestamp spans·한 block의 크기 제한과 중간 오류 line을 유지한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "같은256KiB delta278,528B/128KiB147,456B로 감소. 기존13+새separator1 host/target, 독립8그룹 target은각실제기록범위로 통과.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Host측정과Dockertarget검증을구분;5MiB실행/OOM재현/전체성능보장없음.",
+        "기존13/독립8의rerun을새distinct사례수로세지않음.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-02",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "UI build와 계산 의미를 구분",
+      "summary_prefix_ko": "Cueframe 사례 2 | UI수리와 계산 의미의 identity를 분리\n원인 가설: CSS까지 묶은 build가 옛preview를 무효화할 수 있음. 수리: 전체 build와 core/runtime/base/출력정책 engine_recipe 분리. 반례: parser/반올림등 의미변경은 새preview 필요, 옛commit은 그대로. 재검증(원기록): UI변경뒤 enginef03b·옛526B v1/v2/metadata 유지. 한계: prebuild가설이며 옛runtime실패/engine업그레이드 시험 아님; rank0기억8개는교훈회수 아니고005직접code비교가근거.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "처음 source는 전체 HTML/CSS/JS/server build hash를 interpretation/preview/finalize에 함께 묶어 CSS만 바뀌어도 옛 preview가 무효화될 위험이 있었다.",
+      "symptom_basis": "source_review",
+      "cause": {
+        "confirmed_in_scope": false,
+        "basis": "prebuildsourcehypothesispluspostfixidentitywitness",
+        "explanation": "Root의동결005code비교가identity범위를좁혔다. 실제oldruntime오인실패를재현한사례는아니다."
+      },
+      "change": "전체 build.recipe와 semantic engine_recipe를 분리했다. 기존API/DB build_recipe 필드는core+잠긴runtime/base+출력정책의engine identity를 뜻한다.",
+      "countercase": "Core/parser/반올림/runtime/output policy 변화는 새해석/미리보기를 요구한다. 이미commit된옛receipt/불변파일은그대로재생한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "여러UI-onlyfullbuild변경에도enginef03b 동일, owner옛revision및root526Bv1/v2의bytes/metadata가정확히유지됐다.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "실제engine-upgrade/oldreceipt마이그레이션은미실행.",
+        "실제어휘GET8records모두rank0/명시교훈회수없음;기억이예방했다고주장하지않는다.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-03",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "부분 preview를 보존하며 다시 완성",
+      "summary_prefix_ko": "Cueframe 사례 3 | partial preview를 지우지 않고 완성\n원인 가설: exists만으로 파일완료를 판단하면 SQL rollback뒤 partial을 정상으로 볼 수 있음. 수리: 길이/hash확인·불완전bytes별도보존·완성temp fsync/원자공개. 반례: 실패파일/원본/불변수정본 삭제 없음. 재검증(원기록): 수정판의own PID에42B실주입→partial유지+120cue5556B 정답 저장/다운로드. 한계: 수정전운영사고 재현/물리diskcrash시험 아님; 예전41B표기는reviewer오류로보존.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "Source 검토는 SQL rollback 뒤 partial<pid>.preview만 남으면 exists만 보고 건너뛰어 can_save와 실제bytes가 달라질 위험을 찾았다.",
+      "symptom_basis": "source_review",
+      "cause": {
+        "confirmed_in_scope": false,
+        "basis": "prebuildcandidate_then_postfix_fault_witness",
+        "explanation": "원래코드의실패운영을실행한것이아니며수정뒤격리된noPGrow/42Bpartial을주입해대응을검증했다."
+      },
+      "change": "기존preview의길이/hash를확인하고다르면 .retained-UUID에bytes를남긴뒤완성temp를fsync하고원자적으로publish한다.",
+      "countercase": "실패bytes/원본/불변수정본을지우거나덮어쓰지않는다. blockedpreview는DB결과만있고outputfile없음을구분한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "42Bpartial은정확히남고같은recipe의full120cue/5556B artifact가정상저장·다운로드됐다. H2strictJSON/NaN/scalarknown400는별도support증거다.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Source가설을oldruntimebug로부르지않음.",
+        "물리diskcrash/모든filesystemfailure를실행한것은아님.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-04",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "Native BODY 경계와 앱의 focus 계약",
+      "summary_prefix_ko": "Cueframe 사례 4 | native Tab과 앱의 contained-loop 계약\n원인: 열린창Tab6/13/20에서BODY/browser경계를거친뒤다음Tab복귀. 수리: visible/checkedradio focusable의앞뒤edge만wrap·현재입력초기focus. 반례: Escape/Close/trigger복귀 유지, 전체키보드가로채기 없음. 재검증(원기록): 표준producer20Tab contained와Escape/복귀 통과. 한계: 배경앱컨트롤로focus가갔다는뜻이나 전체modal/WCAG실패·인증이 아님; Chromium/agent과업 한정.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "열린조정dialog에서Tab6/13/20번째activeElement가BODY,다음Tab은dialog로돌아왔다. 배경appcontrol로간것은아니었다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual25stepfocussequence",
+        "explanation": "Nativebrowser동작만사용해이앱의contained-loop조건을충족하지못했다. 전체modal/WCAG실패로확대하지않는다."
+      },
+      "change": "현재보이는focusable요소와checkedradio를고르고앞/뒤Tabedge만감싼다. 초기focus는현재보이는입력을우선한다.",
+      "countercase": "Escape/Close와trigger복귀를유지한다. 키보드를전체가로채거나모든모션을금지하지않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "수리뒤표준browser20Tabcontained와Escape/trigger복귀통과.8px공용control/focus는실제캡처로확인.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "Chromium/에이전트과업범위;스크린리더/전브라우저/WCAG전체인증아님.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-05",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "글자 수와 실제 줄 높이는 다름",
+      "summary_prefix_ko": "Cueframe 사례 5 | 159자여도80줄이면 미리보기가 화면을 밀음\n원인: 500자조건만사용해 전체보기없고 본문높이1903.75px/첫행bottom2472.84. 수리: 표3줄·quote2줄/실제overflow와prefix예산, 원문전체reader. 반례: 저장bytes/문법/글자크기는줄이지 않음; unbroken문장도확인. 재검증(원기록): root390/320 본문71.39·다음cuebottom820.78·primarybottom787/797.5, 전체80줄동일. 한계: 제품/fixture수치이며 전역line규칙·실제20cue A-B시험·사용자만족 아님.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "159자/80줄은500자조건을통과해본문전체버튼이없었다. 표첫cue높이1903.75px/행bottom2472.84,anchor창scrollHeight1730/client866으로주행동이밀렸다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "rootactualgeometry_and_source_condition",
+        "explanation": "문자수만잘랐고physical/렌더줄의높이와전체보기발견성을보지않았다."
+      },
+      "change": "표는실제3줄/quote는실제2줄로clamp하고원래시간/번호는분리한다. 실제overflow와DOMprefix예산을함께보며전체원문은기존reader에서그대로확인한다.",
+      "countercase": "본문bytes/저장값을자르거나문법을좁히거나글자를줄이지않는다.500자미만unbroken한글도wrap될수있다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "390/320표preview71.39px/다음cuebottom820.78,quote36px,primary787/797.5.120자unbroken한글전체보기와159자원문동등성통과.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "이숫자는해당fixture/viewport측정이며전제품고정line수규칙이아님.",
+        "부분표시의가독성과사용자만족은참가자연구로검증하지않음.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-06",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "입력 직후 첫 More 클릭이 사라짐",
+      "summary_prefix_ko": "Cueframe 사례 6 | 입력 직후 첫 More클릭이 사라짐\n원인: input뒤동일change가blur에와 interpretation/ordinal이같은quote버튼DOM을교체. 수리: 동일raw no-op·같은quoteDOM유지. 반례: 실제기준ordinal/해석변경은갱신, 클릭재시도로가리지 않음. 재검증(원기록):390/320 target1.234/2.456뒤한번의pointer조작으로원버튼연결/click/전체159자·부모draft/focus보존. 한계: R2실패는그대로, R3와표준producer한시나리오이며subassertion을독립25개로부풀리지 않음.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "Target입력뒤첫Morepointerdown은oldbutton,blur의change가quote를교체한뒤pointerup은newbutton이되어click이없었다.두번째클릭은열렸다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "rootpointerdown_change_focusout_pointerup_trace",
+        "explanation": "이미input에서반영한같은rawchange에도syncAnchorLabels가같은quote/buttonDOM을다시만들었다."
+      },
+      "change": "같은raw값은no-op으로하고interpretation+ordinal이같은quoteDOM을유지한다. target시간만바꿔도원래quote/button은교체하지않는다.",
+      "countercase": "기준ordinal/해석이바뀌면quote는실제로갱신한다. 클릭재시도나직접formdraft삭제로가리지않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "390/320에서입력1.234/2.456직후ONEpointerdown+click으로열리고sameMoreconnected.159자전체/부모입력/focus보존.표준producer한회귀시나리오에포함.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "기존11baseline+한reader시나리오의subassertions이며25개독립검증처럼합산하지않음.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "cueframe-007-complete-v1-experiment-07",
+      "product": "007-cueframe",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "fac7f7e88db57737e011688af9f698a3feb773045570d6bb01ad7ae0a845ad9c",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "긴 본문 끝에서도 Close를 보이게",
+      "summary_prefix_ko": "Cueframe 사례 7 | 긴 reader끝에서 Close가 화면밖\n원인: 본문/header가같은scrollcontainer여서CloseY-1228. 수리: 본문만scroll하고header/Close유지, 전체원문그대로. 반례: 새editor추가/본문삭제 없음, innerEscape·부모raw/focus복귀 유지. 재검증(원기록):390/320 bodyScroll1315/dialogScroll0/CloseY69, pointer·Escape·80줄/부모입력유지. 한계: 한earlier캡처는덮어써복구불가·fresh캡처는새관찰, 모든content/기기/사용자보증 아님.",
+      "task": "원문SRT의비시간bytes를보존하며전체cue시간만명시조정하고불변수정본을받는다.",
+      "symptom": "80줄reader의전체dialog를scroll한뒤CloseX y=-1228로화면밖이었다. Escape는부모입력/focus로돌아갔다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "rootactualbottomreadergeometry",
+        "explanation": "본문과header가같은scrollcontainer였다."
+      },
+      "change": "기존reader의본문만overflow/max-height로scroll하고header/Close는남긴다. 원문은그대로보인다.",
+      "countercase": "새reader/editor를추가하거나본문을자르지않는다. innermostEscape와부모raw입력/focus복귀를유지한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "본문bottom에서Closey69..101에남고ONEpointerClose가부모draft/focus로복귀. dialogScroll0/bodyScroll1315 표준시나리오통과.",
+        "compiler_replay": "not_run",
+        "visual_scope": "original_agent_inspection_records_not_new_compiler_inspection"
+      },
+      "limitations": [
+        "실제159자/80줄/390·320 범위;모든content/기기/사용자선호보장아님.",
+        "Existing reports compiled only; original CLI/API/browser/fault/restart tests not rerun.",
+        "Assistant conditional experience, not participant feedback/user policy/automatic prevention."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-jsonb-value-equality",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "저장 성공과 결과 화면의 값 동일성",
+      "symptom": "fresh-create는201로 v1이 저장됐는데 결과/파일 대신 같은 저장 버튼이 남았다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "preview와 PG JSONB snapshot의 config 값은 같고 객체 key 순서만 달라 JSON.stringify 비교가 false였다."
+      },
+      "change": "객체 key만 canonical 정렬해 비교한다. 배열 순서·문자열·Unicode·값은 유지한다.",
+      "countercase": "GET으로 저장본을 다시 연 Root 경로는 이미 JSONB 순서라 원래도 성공했다. 모든 저장이 실패했다고 일반화하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "수정 후 새 UI 비교 생성→실제201→browser ICS/TXT 이름·hash, reopened 결과와 이전 v1 bytes가 통과했다."
+      },
+      "limits": [
+        "고정된 Chromium 경로와 cited fixture 범위.",
+        "JS object equality의 도메인 정의이며 모든 데이터의 key/order 정규화가 아니다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-mobile-comparison-geometry",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "모바일 비교 위치와 실제 글자 기하",
+      "symptom": "390/320 첫 지역 y703.98/753.97, 행190.59px. SVG 글자가 가로로 눌리고 fold 구별 offset9px였다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "설정/시간축을 먼저 쌓고 endpoint를 여러 수직 띠로 나눴다. viewBox960 preserveAspectRatio none이 glyph까지 가로 축소했다."
+      },
+      "change": "모바일은 이름/수동범위와 날짜·시작/끝을118px 근처 행으로 묶고 offset12px, 전체 이름 읽기를 제공한다. 시간축은 행 뒤 명시 확장, SVG는 도형만/HTML 축라벨이다.",
+      "countercase": "날짜·끝점·offset·수동범위는 남긴다. 행을 줄이려고 원문이나 font를 잘라내지 않는다. Desktop 공통 UTC 축은 유지한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "같은3명25시간 사례 첫 행390 y530.89/320 y563.28·높이118.09·offset12·overflow0. 후속6명/긴 원문·연말 날짜·axis0/72/95 실제 pointer가 통과했다."
+      },
+      "limits": [
+        "측정은 해당 fixture/viewports이며118px을 전역 규칙으로 만들지 않는다.",
+        "축의 시각 검사는 locale·모든 기기·WCAG 인증을 대신하지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-file-first-result",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "확정한 뒤 파일 받기를 먼저",
+      "symptom": "reopened 저장은 성공했지만 확인한 지역3행을 다시 지나390 y862 근처에서 파일을 받았다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "비교 단계의 정보 구조를 결과 단계에도 반복해 다음 행동 앞에 세부를 쌓았다."
+      },
+      "change": "저장 요약 뒤 ICS/TXT actions, 지역별 불변 snapshot은 명시 확장으로 옮긴다.",
+      "countercase": "원문·지역별 snapshot·이전 버전은 그대로 보존한다. 파일 다운로드는 새 저장/재계산을 만들지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "같은3명 결과 CTA390 y354.89/320 y387.28. fresh2명 실제browser UTF8파일명+hash 일치, 옛NYv1 실제browser 파일명+hash 동일."
+      },
+      "limits": [
+        "이 수치는 해당 저장본/제목/viewport의 결과다.",
+        "native calendar import·여러 버전 합치기/업데이트·실제 사용자 선호는 검증하지 않았다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-uncommitted-search",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "검색 글자와 확정 option의 소유권",
+      "symptom": "기존 UTC 뒤07: 검색 중 Save가 가능했고 Tokyo 미선택 상태에서 Apply가 옛Seoul을 전송했다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "RAC onSelectionChange(null)만으로 raw input과 이전 selectedkey가 확실하게 분리되지 않았다."
+      },
+      "change": "실제 native input 편집에서 ID를 비우고 raw query를 유지한다. option/Enter만 확정하며 pending Save/Apply 차단, Escape는 여전히 후보에 있는 이전 ID만 복원한다.",
+      "countercase": "blur로 옛 UTC를 조용히 확정하지 않는다. programmatic label 업데이트와 새 config에서 사라진 이전 ID를 같은 방식으로 취급하지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "R3 같은 실제 time/zone query11조건과 최종 CI에서 raw보존/저장차단/Escape/option·Enter/firstpointer 실제Tokyo request body/Cancel 부모 불변을 확인했다."
+      },
+      "limits": [
+        "실제 IME composition 이벤트는 별도 검증하지 않았다.",
+        "후속 CI 키보드 첫 실패는 Tokyo option 표시 전 ArrowDown한 producer 선행조건 오류로 따로 보존했다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-controlled-popup-intent",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "label 복귀가 popup을 다시 열던 회귀",
+      "symptom": "R2에서 Escape/앞뒤/선택의 label 업데이트가 popup을 다시 열고 다음 Escape를 배경 메뉴가 소비했다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "focused controlled inputValue 변경을 RAC 내부 effect가 검색 의도로 취급했다. 단순 state label 복원만으로 menu lifecycle을 제한하지 못했다."
+      },
+      "change": "공식 ComboBoxStateContext와 menuTrigger manual로 실제 편집/Arrow 의도와 programmatic label 복귀를 구분한다.",
+      "countercase": "새 라이브러리·임의 private state·강제 click·반복 Escape로 회피하지 않는다. 첫 option/Enter와 프로그램 label은 선택 ID를 유지한다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "R3 nested Escape는 원래 zone을 복원하고 부모 dialog를 유지하며 popup을 재열지 않았다. option/Enter·앞뒤와 최종 managed browser도 통과했다."
+      },
+      "limits": [
+        "첫 isOpen prop TypeScript 실패는 배포되지 않은 미지원 API 시도이며 원본 로그를 남겼다.",
+        "RAC 계열 도입 자체를 통과 근거로 삼지 않고 현재 1.22.1 조합 범위만 검증했다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    },
+    {
+      "id": "commonhour-confirmed-request-warning",
+      "product": "008-commonhour",
+      "role": "assistant",
+      "user_preference": "not_reviewed",
+      "user_rule": false,
+      "promotion": false,
+      "source_file_sha256": "b717c94a7f5949af0c65d38c715b6b4623b40bdfea6a94daadef115973f8f142",
+      "evidence_scope": "Summary of recorded local agent/source experiments; original screenshots, sessions, reports and product data are not redistributed. Not replayed by this export.",
+      "title_ko": "완료 확인 뒤 옛 빨간 경고 제거",
+      "symptom": "독립 기능81조건이 통과한 B3/B5 실제 캡처에서 같은 요청 commit 확인 후 옛 결과불명 빨간 경고가 남았다.",
+      "symptom_basis": "agent_task_test",
+      "cause": {
+        "confirmed_in_scope": true,
+        "basis": "actual runtime observations and bounded source/response diagnosis",
+        "explanation": "resolvePending committed branch는 pending을 지웠지만 그 request의 unknown-result error는 지우지 않았다."
+      },
+      "change": "errorOwner/dialogErrorOwner를 request UUID에 귀속하고 같은 active request의 확인에서 그 경고만 지운다. 새 편집·다른 오류는 유지한다.",
+      "countercase": "데이터 commit/새 초안 보존은 원래 통과했다. 새 오류까지 전부 초기화하거나 전체 과업을 실패/성공으로 뭉뚱그리지 않는다.",
+      "actual_results": {
+        "functional": "pass_in_cited_scope",
+        "visual": "agent_inspected_where_cited",
+        "user_preference": "not_reviewed",
+        "summary": "R3 독립 B3/B5 후속53조건: old alert visible→same RID lookup→oldmessage DOM0·새09:30/12:30 선택 보존. old files/receipts retained, own fixtures 재보관."
+      },
+      "limits": [
+        "unrelated error 보존은 소스 branch 검토이며 별도 fault injection 미실행.",
+        "baselineAPI35/GUI81을 R3 전체 재실행했다고 부르지 않는다."
+      ],
+      "knowledge_status": "assistant_experiment_not_user_rule",
+      "status": "verified_in_recorded_scope"
+    }
+  ]
+}

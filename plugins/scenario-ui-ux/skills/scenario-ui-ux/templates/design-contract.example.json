@@ -1,0 +1,99 @@
+{
+  "format": "scenario-design-contract/v1",
+  "task_id": "example-task-001",
+  "design": {
+    "path": "DESIGN.md",
+    "sha256": "3fb8e82c98f82e25692dc77fae1b52bd0fa78fce09dba715b55f1c043368a172"
+  },
+  "scope": {
+    "paths": [
+      "web/style.css",
+      "web/index.html"
+    ],
+    "allow": [
+      {
+        "path": "web/style.css",
+        "rule": "spacing",
+        "values": [
+          "1px"
+        ],
+        "reason": "Existing hairline separation; only this file/value is exempt."
+      }
+    ],
+    "evidence_paths": []
+  },
+  "tokens": {
+    "color": {
+      "--color-text": "#222222",
+      "--color-surface": "#ffffff",
+      "--color-focus": "#526677"
+    },
+    "spacing": {
+      "--space-sm": "8px",
+      "--space-md": "16px"
+    },
+    "typography": {
+      "--font-body": "system-ui, sans-serif",
+      "--font-size-body": "16px",
+      "--line-body": "1.5"
+    },
+    "radius": {
+      "--radius-input": "10px",
+      "--radius-dialog": "18px"
+    }
+  },
+  "utility_classes": {
+    "color": [],
+    "spacing": [],
+    "typography": [],
+    "radius": [],
+    "enabled": false
+  },
+  "shapes": [
+    {
+      "path": "web/style.css",
+      "role": "input",
+      "selector": ".input",
+      "radius": "--radius-input",
+      "reason": "Input and focus treatment share the same geometry."
+    },
+    {
+      "path": "web/style.css",
+      "role": "input-focus",
+      "selector": ".input:focus-visible",
+      "radius": "--radius-input",
+      "reason": "Focus ring must follow the input geometry."
+    }
+  ],
+  "policy": {
+    "required": false,
+    "decisions": ".design-policy/personal-decisions.json",
+    "applications": ".design-policy/decision-application.json"
+  },
+  "checks": {
+    "syntax": {
+      "required": false
+    },
+    "browser": {
+      "required": true,
+      "argv": [
+        "node",
+        "tests/design-browser.mjs"
+      ],
+      "timeout": 60,
+      "record": ".design-audit/browser/observation.json",
+      "require_screenshot": true,
+      "input_paths": [
+        "tests/design-browser.mjs",
+        "package.json",
+        "package-lock.json"
+      ]
+    },
+    "critique": {
+      "enabled": false,
+      "required": false,
+      "require_visual": false
+    }
+  },
+  "max_repairs": 2
+}

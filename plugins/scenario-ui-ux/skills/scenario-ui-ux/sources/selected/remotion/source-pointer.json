@@ -1,0 +1,25 @@
+{
+  "format": "scenario-source-pointer/v1",
+  "repository": "remotion-dev/skills",
+  "commit": "30d4553ecd46fbc5212fd0ff006ae43af522158b",
+  "reviewed_at": "2026-10-29",
+  "upstream_files": [
+    {
+      "path": "skills/remotion-best-practices/SKILL.md",
+      "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/skills/remotion-best-practices/SKILL.md",
+      "sha256": "b4cfddd463ca44b6127aac813c5f8330f5fe2587f516af5ddfdb0fda453cf8eb"
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/README.md",
+      "sha256": "aefb2c5438ef70ed050af4ef1e450ecea7aef66d11390761032c349fd9666450"
+    },
+    {
+      "path": "package.json",
+      "url": "https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/package.json",
+      "sha256": "bc9fff15a5a57df7ecac4f4862ad0dd1b6d9620562ac7d2b1c0b00ed73ad7a90"
+    }
+  ],
+  "redistribution": "No LICENSE file or license grant found at pinned commit; own adapter and source pointers only. README/frontmatter labels do not resolve missing grant.",
+  "local_adapter": "../../../references/framework-profiles.md"
+}

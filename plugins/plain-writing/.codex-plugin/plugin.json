@@ -1,0 +1,23 @@
+{
+  "name": "plain-writing",
+  "version": "0.1.0",
+  "description": "Write and revise AI answers with direct wording, fewer stock contrasts and less repetition, while preserving facts, evidence and uncertainty.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "repository": "https://github.com/zsed3d3-droid/self_plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Plain Writing",
+    "shortDescription": "AI 답변의 불필요한 대조·메타 부정·과장·반복을 줄이는 글쓰기",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "$plain-writing 질문에 바로 답하고 불필요한 대조·부정·과장·반복을 덜어줘. 사실과 필요한 조건은 유지해줘."
+    ]
+  }
+}

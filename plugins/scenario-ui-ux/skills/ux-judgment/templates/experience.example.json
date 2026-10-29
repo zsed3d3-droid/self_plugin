@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "record_kind": "example_not_run",
+  "status": "not_run",
+  "product": {
+    "id": "product-example",
+    "screen": "task-list",
+    "region": "list and create entry",
+    "task": "목록을 확인하다가 항목을 추가하고 기존 맥락으로 돌아간다.",
+    "device": null
+  },
+  "cycle": {
+    "id": "cycle-example-001",
+    "request_id": null,
+    "previous_cycle_id": null,
+    "source_hash": null
+  },
+  "symptom": {
+    "basis": "hypothesis",
+    "expected": "현재 과업에 필요한 정보와 행동을 찾고 완료할 수 있다.",
+    "observed": null,
+    "user_feedback_ref": null,
+    "initial_state": null
+  },
+  "cause": {
+    "status": "hypothesis",
+    "explanation": null,
+    "discriminating_check": null,
+    "evidence_ids": []
+  },
+  "change": {
+    "status": "proposed",
+    "summary": null,
+    "preserve": [],
+    "tradeoffs": []
+  },
+  "evidence": [],
+  "actual_results": {
+    "same_case_replayed": false,
+    "functional_status": "not_run",
+    "visual_review_status": "not_run",
+    "user_preference_status": "not_evaluated",
+    "measurements": [],
+    "user_feedback_ref": null
+  },
+  "limitations": [
+    "실행하지 않은 형식 예시다. 실제 관찰·수정·성공·사용자 승인의 근거가 아니다."
+  ],
+  "source_recipes": ["uxb-nielsen-task-minimalism"],
+  "knowledge_status": "candidate"
+}

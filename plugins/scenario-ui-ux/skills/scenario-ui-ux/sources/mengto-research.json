@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-29",
+  "sources": [
+    {
+      "id": "mengto-skills",
+      "repository": "MengTo/Skills",
+      "commit": "a45892d2fdadab75b31fb16abecc02f101b31c43",
+      "license": "MIT",
+      "local_documents": [
+        "sources/selected/mengto-skills/design-first-ui-prompting.md",
+        "sources/selected/mengto-skills/audit-reference-originality.md",
+        "sources/selected/mengto-skills/LICENSE"
+      ],
+      "upstream_paths": [
+        "agent-skills/ui/design-first-ui-prompting/SKILL.md",
+        "agent-skills/codex/audit-reference-originality/SKILL.md",
+        "LICENSE"
+      ],
+      "adopt": [
+        "task-specific design specification",
+        "local reference packs",
+        "small controlled iteration",
+        "compare distinctive reference overlaps with concrete evidence"
+      ],
+      "exclude": [
+        "forced one accent/hero on every surface",
+        "paid fonts, paid image/video providers or external publishing by default",
+        "delete history to remove similarity: user explicitly requires preservation"
+      ],
+      "executed_upstream_code": false
+    },
+    {
+      "id": "mengto-threeui",
+      "repository": "MengTo/threeui",
+      "commit": "68802d5428071ada5c20db8094b1649e6bb770ed",
+      "license": "MIT application and Community code; per-file asset/font/third-party notices apply",
+      "inspected_paths": [
+        "README.md",
+        "LICENSE",
+        "ASSET-LICENSES.md",
+        "package.json",
+        "src/data/shaders.tsx:1-65"
+      ],
+      "package_version": "1.2.0",
+      "component_code_copied": false,
+      "applied_in_product": false,
+      "adopt": [
+        "study a relevant free component and its live states before selective adaptation",
+        "lazy-load optional visual experiences",
+        "keep geometry and controls distinct from decoration"
+      ],
+      "exclude": [
+        "Pro/Beta assets or paid entitlement workflows",
+        "treat remote thumbnails as covered by repository MIT",
+        "add WebGL to utilitarian task screens without benefit"
+      ],
+      "limits": [
+        "Repository and source inspected; no ThreeUI runtime or GPU performance benchmark executed yet."
+      ]
+    }
+  ]
+}

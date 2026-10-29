@@ -1,0 +1,31 @@
+name: self-plugin-evidence-memory
+services:
+  db:
+    image: postgres:18.6
+    environment:
+      POSTGRES_USER: evidence
+      POSTGRES_DB: evidence
+      POSTGRES_PASSWORD: ${MEMORY_DB_PASSWORD:?Run python3 init-env.py}
+    volumes: [evidence-db:/var/lib/postgresql]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U evidence -d evidence"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+    restart: unless-stopped
+  api:
+    build: .
+    ports: ["127.0.0.1:${MEMORY_PORT:-8852}:8852"]
+    environment:
+      DATABASE_URL: postgresql://evidence:${MEMORY_DB_PASSWORD:?Run python3 init-env.py}@db:5432/evidence
+      MEMORY_API_TOKEN: ${MEMORY_API_TOKEN:?Run python3 init-env.py}
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    restart: unless-stopped
+volumes:
+  evidence-db:

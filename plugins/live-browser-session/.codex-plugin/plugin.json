@@ -1,0 +1,23 @@
+{
+  "name": "live-browser-session",
+  "version": "0.1.0",
+  "description": "Open a dedicated Chrome over CDP for the user to sign in, capture or functionally test real web pages with writes blocked by default, then close Chrome and delete the profile.",
+  "author": {
+    "name": "self_plugin contributors"
+  },
+  "repository": "https://github.com/zsed3d3-droid/self_plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Live Browser Session",
+    "shortDescription": "사용자가 로그인한 전용 Chrome으로 실제 웹 조회·캡처·기능 테스트 후 세션 정리",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "$live-browser-session 전용 Chrome을 열어 줘. 내가 로그인하면 쓰기 요청은 막고 화면을 확인한 뒤, 끝나면 Chrome을 닫고 프로필을 지워 줘."
+    ]
+  }
+}

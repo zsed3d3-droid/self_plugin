@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "record_kind": "example_not_run",
+  "case_id": "still.tasks.create.return",
+  "execution_status": "not_run",
+  "source_hash": null,
+  "scope": {
+    "project": "still",
+    "screen": "tasks",
+    "region": "task creation and list",
+    "task": "업무 목록을 보다가 기한이 있는 할 일을 추가하고 원래 목록으로 돌아간다.",
+    "initial_state": "합성 업무 목록의 중간 위치, 생성 dialog 닫힘",
+    "url": null,
+    "viewport_css_px": { "width": 1440, "height": 900 },
+    "zoom_percent": 100,
+    "input_mode": "keyboard",
+    "data_mode": "synthetic_fixture",
+    "fixture_id": null
+  },
+  "captures": { "before": null, "after": null, "trace": null },
+  "steps": [
+    {
+      "id": "step-1",
+      "action": "할 일 추가를 열고 제목과 기한을 입력한다.",
+      "expected": "현재 과업의 입력이 열리고 의미 있는 첫 요소에 focus가 위치한다.",
+      "observed": null,
+      "evidence_kind": "agent_task_test",
+      "status": "not_run"
+    },
+    {
+      "id": "step-2",
+      "action": "기한 팝업을 연 뒤 Escape를 누르고, 다시 Escape로 생성 dialog를 닫는다.",
+      "expected": "첫 Escape는 안쪽 팝업만 닫고, 두 번째는 dialog를 닫으며 목록의 트리거로 focus가 돌아간다.",
+      "observed": null,
+      "evidence_kind": "agent_task_test",
+      "status": "not_run"
+    },
+    {
+      "id": "step-3",
+      "action": "할 일 추가를 다시 열고 합성 제목과 기한을 입력한 뒤 저장한다.",
+      "expected": "저장된 항목과 기한/상태를 목록에서 확인하고 기존 목록 맥락을 이어간다.",
+      "observed": null,
+      "evidence_kind": "agent_task_test",
+      "status": "not_run"
+    }
+  ],
+  "findings": [
+    {
+      "id": "finding-example",
+      "basis": "hypothesis",
+      "symptom": "예시 가설: 안쪽 팝업과 부모 dialog가 Escape 한 번에 함께 닫힐 수 있다.",
+      "observation": null,
+      "evidence_refs": [],
+      "step_id": "step-2",
+      "impact": "recoverable",
+      "impact_status": "hypothesis",
+      "root_cause": {
+        "status": "hypothesis",
+        "explanation": "예시 가설: key/cancel 이벤트가 열린 overlay 계층에서 중복 처리된다.",
+        "discriminating_check": "각 overlay의 열린 상태, 이벤트 처리와 activeElement를 같은 입력에서 확인한다.",
+        "evidence_refs": []
+      },
+      "repair": {
+        "recipe_ids": ["R3"],
+        "proposal": "가장 안쪽 열린 팝업이 닫기 동작을 처리하고 해당 트리거로 focus를 돌린다.",
+        "preserve": ["부모 dialog의 정상 Escape 닫기", "입력 초안 정책", "키보드 조작"],
+        "tradeoff": "모든 키 이벤트 전파를 막으면 다른 키보드 기능을 손상할 수 있다.",
+        "status": "proposed"
+      },
+      "sources": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/"
+      ]
+    }
+  ],
+  "verification": {
+    "same_case_replayed": false,
+    "source_hash": null,
+    "functional_status": "not_run",
+    "visual_review_status": "not_run",
+    "assertions": [
+      {
+        "id": "escape-inner-only",
+        "expected": "안쪽 팝업 닫힘, 부모 dialog 열림, focus는 팝업 트리거",
+        "actual": null,
+        "status": "not_run",
+        "evidence_refs": []
+      },
+      {
+        "id": "return-to-list",
+        "expected": "dialog 닫힘, 목록 필터와 scroll 맥락 보존, focus는 추가 트리거",
+        "actual": null,
+        "status": "not_run",
+        "evidence_refs": []
+      },
+      {
+        "id": "saved-item-fields",
+        "expected": "합성 제목과 기한이 저장되고 상태 기본값이 화면 표시와 일치한다.",
+        "actual": null,
+        "status": "not_run",
+        "evidence_refs": []
+      }
+    ],
+    "user_preference": {
+      "status": "not_evaluated",
+      "feedback_ref": null,
+      "scope": "still.tasks.create.return"
+    },
+    "overall_status": "not_run",
+    "limits": ["실행하지 않은 형식 예시이며 재현·수정·사용자 승인의 근거가 아니다."]
+  }
+}
